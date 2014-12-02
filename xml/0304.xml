@@ -1,0 +1,1443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/students/rxa890/MathFormulae/texFiles"?>
+<?latexml class="article"?>
+<!-- %“usepackage–euscript˝ -->
+<?latexml package="amsthm"?>
+<?latexml package="amssymb"?>
+<?latexml package="amsxtra"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>Finding Almost Squares II</title>
+  <creator role="author">
+    <personname>Tsz Ho Chan</personname>
+  </creator>
+  <abstract name="Abstract">
+    <p>In this article, we study short intervals that contain another type of “almost square”, an integer <Math mode="inline" xml:id="m1" tex="n" text="n"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math> which can be factored in two different ways <Math mode="inline" xml:id="m2" tex="n=a_{1}b_{1}=a_{2}b_{2}" text="n = a _ 1 * b _ 1 = a _ 2 * b _ 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math> with <Math mode="inline" xml:id="m3" tex="a_{1},a_{2},b_{1},b_{2}" text="list@(a _ 1, a _ 2, b _ 1, b _ 2)"><XMath><XMApp><XMTok meaning="list" role="FENCED" separators=", , ,"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math> close to <Math mode="inline" xml:id="m4" tex="\sqrt{n}" text="square-root@(n)"><XMath><XMApp><XMTok meaning="square-root"/><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMath></Math>.</p>
+  </abstract>
+  <!-- %__ 
+     %__-->
+  <section refnum="1" xml:id="S1">
+    <title><tag close=" ">1</tag>Introduction</title>
+    <!-- %**** 0304.tex Line 25 **** -->
+    <para xml:id="S1.p1">
+      <p>In [<ref labelref="LABEL:C"/>], the author studied the problem of finding “almost squares” in short intervals, namely:</p>
+    </para>
+    <theorem class="ltx_theorem_question" frefnum="Question 1" refnum="1" xml:id="Thmquestion1" labels="LABEL:old">
+      <title class="ltx_runin" font="bold"><tag>Question 1</tag>.</title>
+      <para xml:id="Thmquestion1.p1">
+        <p>
+          <text font="italic">For <Math mode="inline" xml:id="Thmquestion1.p1.m1" tex="0\leq\theta&lt;1/2" text="0 less= theta less 1 / 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="0" role="NUMBER" font="upright">0</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP" font="upright">≤</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok><XMTok meaning="less-than" role="RELOP" font="upright">&lt;</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMApp></XMath></Math>, what is the least <Math mode="inline" xml:id="Thmquestion1.p1.m2" tex="f(\theta)" text="f * theta"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN">f</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN">θ</XMTok></XMApp></XMath></Math> such
+that, for some <Math mode="inline" xml:id="Thmquestion1.p1.m3" tex="c_{1},c_{2}&gt;0" text="list@(c _ 1, c _ 2) &gt; 0"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP" font="upright">&gt;</XMTok><XMApp><XMTok meaning="list" role="FENCED" separators=","/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMApp><XMTok meaning="0" role="NUMBER" font="upright">0</XMTok></XMApp></XMath></Math>, any interval <Math mode="inline" xml:id="Thmquestion1.p1.m4" tex="[x-c_{1}x^{f(\theta)},x+c_{1}x^{f(\theta)}]" text="closed-interval@(x - c _ 1 * x ^ (f * theta), x + c _ 1 * x ^ (f * theta))"><XMath><XMApp><XMTok argclose="]" argopen="[" meaning="closed-interval" role="FENCED" separators=","/><XMApp><XMTok meaning="minus" role="ADDOP" font="upright">-</XMTok><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN">f</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN">θ</XMTok></XMApp></XMApp></XMApp></XMApp><XMApp><XMTok meaning="plus" role="ADDOP" font="upright">+</XMTok><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN">f</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN">θ</XMTok></XMApp></XMApp></XMApp></XMApp></XMApp></XMath></Math> contains an integer <Math mode="inline" xml:id="Thmquestion1.p1.m5" tex="n" text="n"><XMath><XMTok role="UNKNOWN">n</XMTok></XMath></Math> with <Math mode="inline" xml:id="Thmquestion1.p1.m6" tex="n=ab" text="n = a * b"><XMath><XMApp><XMTok meaning="equals" role="RELOP" font="upright">=</XMTok><XMTok role="UNKNOWN">n</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN">a</XMTok><XMTok role="UNKNOWN">b</XMTok></XMApp></XMApp></XMath></Math>, where
+<Math mode="inline" xml:id="Thmquestion1.p1.m7" tex="a" text="a"><XMath><XMTok role="UNKNOWN">a</XMTok></XMath></Math>, <Math mode="inline" xml:id="Thmquestion1.p1.m8" tex="b" text="b"><XMath><XMTok role="UNKNOWN">b</XMTok></XMath></Math> are integers in the interval <Math mode="inline" xml:id="Thmquestion1.p1.m9" tex="[x^{1/2}-c_{2}x^{\theta},x^{1/2}+c_{2}x^{\theta}]" text="closed-interval@(x ^ (1 / 2) - c _ 2 * x ^ theta, x ^ (1 / 2) + c _ 2 * x ^ theta)"><XMath><XMApp><XMTok argclose="]" argopen="[" meaning="closed-interval" role="FENCED" separators=","/><XMApp><XMTok meaning="minus" role="ADDOP" font="upright">-</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok></XMApp></XMApp></XMApp><XMApp><XMTok meaning="plus" role="ADDOP" font="upright">+</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok></XMApp></XMApp></XMApp></XMApp></XMath></Math>? Note: <Math mode="inline" xml:id="Thmquestion1.p1.m10" tex="c_{1}" text="c _ 1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="Thmquestion1.p1.m11" tex="c_{2}" text="c _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMath></Math> may depend on
+<Math mode="inline" xml:id="Thmquestion1.p1.m12" tex="\theta" text="theta"><XMath><XMTok name="theta" role="UNKNOWN">θ</XMTok></XMath></Math>.</text>
+        </p>
+      </para>
+    </theorem>
+    <para xml:id="S1.p2">
+      <p>A similar question is the following:</p>
+    </para>
+    <theorem class="ltx_theorem_question" frefnum="Question 2" refnum="2" xml:id="Thmquestion2" labels="LABEL:new">
+      <title class="ltx_runin" font="bold"><tag>Question 2</tag>.</title>
+      <para xml:id="Thmquestion2.p1">
+        <p>
+          <text font="italic">For <Math mode="inline" xml:id="Thmquestion2.p1.m1" tex="0\leq\theta&lt;1/2" text="0 less= theta less 1 / 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="0" role="NUMBER" font="upright">0</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP" font="upright">≤</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok><XMTok meaning="less-than" role="RELOP" font="upright">&lt;</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMApp></XMath></Math>, what is the least <Math mode="inline" xml:id="Thmquestion2.p1.m2" tex="g(\theta)" text="g * theta"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN">g</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN">θ</XMTok></XMApp></XMath></Math> such
+that, for some <Math mode="inline" xml:id="Thmquestion2.p1.m3" tex="c_{1},c_{2}&gt;0" text="list@(c _ 1, c _ 2) &gt; 0"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP" font="upright">&gt;</XMTok><XMApp><XMTok meaning="list" role="FENCED" separators=","/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMApp><XMTok meaning="0" role="NUMBER" font="upright">0</XMTok></XMApp></XMath></Math>, any interval <Math mode="inline" xml:id="Thmquestion2.p1.m4" tex="[x-c_{1}x^{g(\theta)},x+c_{1}x^{g(\theta)}]" text="closed-interval@(x - c _ 1 * x ^ (g * theta), x + c _ 1 * x ^ (g * theta))"><XMath><XMApp><XMTok argclose="]" argopen="[" meaning="closed-interval" role="FENCED" separators=","/><XMApp><XMTok meaning="minus" role="ADDOP" font="upright">-</XMTok><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN">g</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN">θ</XMTok></XMApp></XMApp></XMApp></XMApp><XMApp><XMTok meaning="plus" role="ADDOP" font="upright">+</XMTok><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN">g</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN">θ</XMTok></XMApp></XMApp></XMApp></XMApp></XMApp></XMath></Math> contains an integer <Math mode="inline" xml:id="Thmquestion2.p1.m5" tex="n" text="n"><XMath><XMTok role="UNKNOWN">n</XMTok></XMath></Math> with <Math mode="inline" xml:id="Thmquestion2.p1.m6" tex="n=a_{1}b_{1}=a_{2}b_{2}" text="n = a _ 1 * b _ 1 = a _ 2 * b _ 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN">n</XMTok><XMTok meaning="equals" role="RELOP" font="upright">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">a</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">b</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp></XMApp><XMTok meaning="equals" role="RELOP" font="upright">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">a</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">b</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMApp></XMApp></XMath></Math>, where
+<Math mode="inline" xml:id="Thmquestion2.p1.m7" tex="a_{1}&lt;a_{2}\leq b_{2}&lt;b_{1}" text="a _ 1 less a _ 2 less= b _ 2 less b _ 1"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">a</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp><XMTok meaning="less-than" role="RELOP" font="upright">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">a</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP" font="upright">≤</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">b</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp><XMTok meaning="less-than" role="RELOP" font="upright">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">b</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp></XMApp></XMath></Math> are integers in the interval <Math mode="inline" xml:id="Thmquestion2.p1.m8" tex="[x^{1/2}-c_{2}x^{\theta},x^{1/2}+c_{2}x^{\theta}]" text="closed-interval@(x ^ (1 / 2) - c _ 2 * x ^ theta, x ^ (1 / 2) + c _ 2 * x ^ theta)"><XMath><XMApp><XMTok argclose="]" argopen="[" meaning="closed-interval" role="FENCED" separators=","/><XMApp><XMTok meaning="minus" role="ADDOP" font="upright">-</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok></XMApp></XMApp></XMApp><XMApp><XMTok meaning="plus" role="ADDOP" font="upright">+</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok></XMApp></XMApp></XMApp></XMApp></XMath></Math>? Note: <Math mode="inline" xml:id="Thmquestion2.p1.m9" tex="c_{1}" text="c _ 1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="Thmquestion2.p1.m10" tex="c_{2}" text="c _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMath></Math> may depend on
+<Math mode="inline" xml:id="Thmquestion2.p1.m11" tex="\theta" text="theta"><XMath><XMTok name="theta" role="UNKNOWN">θ</XMTok></XMath></Math>.</text>
+        </p>
+      </para>
+    </theorem>
+    <para xml:id="S1.p3">
+      <p>Note: Actually, the author first considered Question <ref labelref="LABEL:new"/> and then turned to Question <ref labelref="LABEL:old"/> which has connection to the problem on the distribution of <Math mode="inline" xml:id="S1.p3.m1" tex="n^{2}\alpha\;\;(\mathop{{\rm mod}}1)" content-tex="n^{2}\alpha\pmod{1}" text="annotated@(n ^ 2 * alpha, pmod@(1))"><XMath><XMApp><XMTok meaning="annotated"/><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok name="alpha" role="UNKNOWN" font="italic">α</XMTok></XMApp><XMDual role="MODIFIER"><XMApp role="MODIFIER"><XMTok name="pmod" role="UNKNOWN"/><XMTok meaning="1" role="NUMBER" xml:id="S1.p3.m1.xm1">1</XMTok></XMApp><XMApp close=")" lpadding="5.6pt" open="("><XMTok role="BIGOP">mod</XMTok><XMRef idref="S1.p3.m1.xm1"/></XMApp></XMDual></XMApp></XMath></Math> and the problem on gaps between sums of two squares.</p>
+    </para>
+    <para xml:id="S1.p4">
+      <p>In [<ref labelref="LABEL:C"/>], we showed that <Math mode="inline" xml:id="S1.p4.m1" tex="f(\theta)=1/2" text="f * theta = 1 / 2"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">f</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN" font="italic">θ</XMTok></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math> when <Math mode="inline" xml:id="S1.p4.m2" tex="0\leq\theta&lt;1/4" text="0 less= theta less 1 / 4"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="0" role="NUMBER">0</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="S1.p4.m3" tex="f(1/4)=1/4" text="f * (1 / 4) = 1 / 4"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">f</XMTok><XMApp close=")" open="("><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMath></Math> and <Math mode="inline" xml:id="S1.p4.m4" tex="f(\theta)\geq 1/2-\theta" text="f * theta &gt;= 1 / 2 - theta"><XMath><XMApp><XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">f</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN" font="italic">θ</XMTok></XMApp><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMath></Math>. We conjectured that <Math mode="inline" xml:id="S1.p4.m5" tex="f(\theta)=1/2-\theta" text="f * theta = 1 / 2 - theta"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">f</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN" font="italic">θ</XMTok></XMApp><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMath></Math> for <Math mode="inline" xml:id="S1.p4.m6" tex="1/4&lt;\theta&lt;1/2" text="1 / 4 less theta less 1 / 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math> and gave conditional result when <Math mode="inline" xml:id="S1.p4.m7" tex="1/4&lt;\theta&lt;3/10" text="1 / 4 less theta less 3 / 10"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok><XMTok meaning="10" role="NUMBER">10</XMTok></XMApp></XMApp></XMath></Math>. To Question <ref labelref="LABEL:new"/>, we have the following</p>
+    </para>
+    <theorem class="ltx_theorem_thm" frefnum="Theorem 1.1" refnum="1.1" xml:id="S1.Thmthm1" labels="LABEL:theorem1">
+      <title class="ltx_runin" font="bold"><tag>Theorem 1.1</tag>.</title>
+      <para xml:id="S1.Thmthm1.p1">
+        <p>
+          <text font="italic">For <Math mode="inline" xml:id="S1.Thmthm1.p1.m1" tex="0&lt;\theta&lt;1/4" text="0 less theta less 1 / 4"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="0" role="NUMBER" font="upright">0</XMTok><XMTok meaning="less-than" role="RELOP" font="upright">&lt;</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok><XMTok meaning="less-than" role="RELOP" font="upright">&lt;</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="4" role="NUMBER" font="upright">4</XMTok></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="S1.Thmthm1.p1.m2" tex="g(\theta)" text="g * theta"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN">g</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN">θ</XMTok></XMApp></XMath></Math> does not exist (i.e. all possible products of pairs of integers in <Math mode="inline" xml:id="S1.Thmthm1.p1.m3" tex="[x^{1/2}-c_{2}x^{\theta},x^{1/2}+c_{2}x^{\theta}]" text="closed-interval@(x ^ (1 / 2) - c _ 2 * x ^ theta, x ^ (1 / 2) + c _ 2 * x ^ theta)"><XMath><XMApp><XMTok argclose="]" argopen="[" meaning="closed-interval" role="FENCED" separators=","/><XMApp><XMTok meaning="minus" role="ADDOP" font="upright">-</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok></XMApp></XMApp></XMApp><XMApp><XMTok meaning="plus" role="ADDOP" font="upright">+</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">c</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN">x</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok></XMApp></XMApp></XMApp></XMApp></XMath></Math> are necessarily distinct for large <Math mode="inline" xml:id="S1.Thmthm1.p1.m4" tex="x" text="x"><XMath><XMTok role="UNKNOWN">x</XMTok></XMath></Math>).
+<!-- %**** 0304.tex Line 50 **** --></text>
+        </p>
+      </para>
+    </theorem>
+    <theorem class="ltx_theorem_thm" frefnum="Theorem 1.2" refnum="1.2" xml:id="S1.Thmthm2" labels="LABEL:theorem2">
+      <title class="ltx_runin" font="bold"><tag>Theorem 1.2</tag>.</title>
+      <para xml:id="S1.Thmthm2.p1">
+        <p>
+          <text font="italic">For <Math mode="inline" xml:id="S1.Thmthm2.p1.m1" tex="1/4\leq\theta&lt;1/2" text="1 / 4 less= theta less 1 / 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="4" role="NUMBER" font="upright">4</XMTok></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP" font="upright">≤</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok><XMTok meaning="less-than" role="RELOP" font="upright">&lt;</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="S1.Thmthm2.p1.m2" tex="g(\theta)\geq 1-2\theta" text="g * theta &gt;= 1 - 2 * theta"><XMath><XMApp><XMTok meaning="greater-than-or-equals" name="geq" role="RELOP" font="upright">≥</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN">g</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN">θ</XMTok></XMApp><XMApp><XMTok meaning="minus" role="ADDOP" font="upright">-</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok></XMApp></XMApp></XMApp></XMath></Math>.</text>
+        </p>
+      </para>
+    </theorem>
+    <theorem class="ltx_theorem_thm" frefnum="Theorem 1.3" refnum="1.3" xml:id="S1.Thmthm3" labels="LABEL:theorem3">
+      <title class="ltx_runin" font="bold"><tag>Theorem 1.3</tag>.</title>
+      <para xml:id="S1.Thmthm3.p1">
+        <p>
+          <text font="italic">For <Math mode="inline" xml:id="S1.Thmthm3.p1.m1" tex="1/4\leq\theta\leq 1/3" text="1 / 4 less= theta less= 1 / 3"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="4" role="NUMBER" font="upright">4</XMTok></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP" font="upright">≤</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP" font="upright">≤</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="3" role="NUMBER" font="upright">3</XMTok></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="S1.Thmthm3.p1.m2" tex="g(\theta)\leq 1-\theta" text="g * theta less= 1 - theta"><XMath><XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP" font="upright">≤</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN">g</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN">θ</XMTok></XMApp><XMApp><XMTok meaning="minus" role="ADDOP" font="upright">-</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok></XMApp></XMApp></XMath></Math>.</text>
+        </p>
+      </para>
+    </theorem>
+    <para xml:id="S1.p5">
+      <p>We believe that the lower bound is closer to the truth and conjecture</p>
+    </para>
+    <theorem class="ltx_theorem_conj" frefnum="Conjecture 1.1" refnum="1.1" xml:id="S1.Thmconj1" labels="LABEL:conj1">
+      <title class="ltx_runin" font="bold"><tag>Conjecture 1.1</tag>.</title>
+      <para xml:id="S1.Thmconj1.p1">
+        <p>
+          <text font="italic">For <Math mode="inline" xml:id="S1.Thmconj1.p1.m1" tex="1/4\leq\theta&lt;1/2" text="1 / 4 less= theta less 1 / 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="4" role="NUMBER" font="upright">4</XMTok></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP" font="upright">≤</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok><XMTok meaning="less-than" role="RELOP" font="upright">&lt;</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP" font="upright">/</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="S1.Thmconj1.p1.m2" tex="g(\theta)=1-2\theta" text="g * theta = 1 - 2 * theta"><XMath><XMApp><XMTok meaning="equals" role="RELOP" font="upright">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN">g</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN">θ</XMTok></XMApp><XMApp><XMTok meaning="minus" role="ADDOP" font="upright">-</XMTok><XMTok meaning="1" role="NUMBER" font="upright">1</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER" font="upright">2</XMTok><XMTok name="theta" role="UNKNOWN">θ</XMTok></XMApp></XMApp></XMApp></XMath></Math>.</text>
+        </p>
+      </para>
+    </theorem>
+    <!-- %__ -->
+  </section>
+  <section refnum="2" xml:id="S2">
+    <title><tag close=" ">2</tag>Preliminaries and <Math mode="inline" xml:id="S2.m1" tex="0\leq\theta&lt;1/4" text="0 less= theta less 1 / 4"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="0" role="NUMBER">0</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMath></Math></title>
+    <para xml:id="S2.p1">
+      <p>Suppose <Math mode="inline" xml:id="S2.p1.m1" tex="n=a_{1}b_{1}=a_{2}b_{2}" text="n = a _ 1 * b _ 1 = a _ 2 * b _ 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math> with <Math mode="inline" xml:id="S2.p1.m2" tex="x^{1/2}-c_{2}x^{\theta}\leq a_{1}&lt;a_{2}\leq b_{2}&lt;b_{1}\leq x^{1/2}+c_{2}x^{\theta}" text="x ^ (1 / 2) - c _ 2 * x ^ theta less= a _ 1 less a _ 2 less= b _ 2 less b _ 1 less= x ^ (1 / 2) + c _ 2 * x ^ theta"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp></XMApp></XMath></Math>. Let <Math mode="inline" xml:id="S2.p1.m3" tex="d_{1}=(a_{1},a_{2})" text="d _ 1 = open-interval@(a _ 1, a _ 2)"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok argclose=")" argopen="(" meaning="open-interval" role="FENCED" separators=","/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math> and <Math mode="inline" xml:id="S2.p1.m4" tex="d_{2}=(b_{1},b_{2})" text="d _ 2 = open-interval@(b _ 1, b _ 2)"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok argclose=")" argopen="(" meaning="open-interval" role="FENCED" separators=","/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math> be the greatest common divisors. Then we must have <Math mode="inline" xml:id="S2.p1.m5" tex="d_{1},d_{2}&gt;1" text="list@(d _ 1, d _ 2) &gt; 1"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMApp><XMTok meaning="list" role="FENCED" separators=","/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math>. For otherwise, say <Math mode="inline" xml:id="S2.p1.m6" tex="d_{1}=1" text="d _ 1 = 1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math>, then <Math mode="inline" xml:id="S2.p1.m7" tex="a_{2}" text="a _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> divides <Math mode="inline" xml:id="S2.p1.m8" tex="b_{1}" text="b _ 1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math> which implies <Math mode="inline" xml:id="S2.p1.m9" tex="x^{1/2}+c_{2}x^{\theta}\geq b_{1}\geq 2a_{2}\geq 2x^{1/2}-2c_{2}x^{\theta}" text="x ^ (1 / 2) + c _ 2 * x ^ theta &gt;= b _ 1 &gt;= 2 * a _ 2 &gt;= 2 * x ^ (1 / 2) - 2 * c _ 2 * x ^ theta"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp><XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp></XMApp></XMath></Math>. This is impossible for large <Math mode="inline" xml:id="S2.p1.m10" tex="x" text="x"><XMath><XMTok role="UNKNOWN" font="italic">x</XMTok></XMath></Math> as <Math mode="inline" xml:id="S2.p1.m11" tex="\theta&lt;1/2" text="theta less 1 / 2"><XMath><XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math>. Now, let <Math mode="inline" xml:id="S2.p1.m12" tex="a_{1}=d_{1}e_{1}" text="a _ 1 = d _ 1 * e _ 1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="S2.p1.m13" tex="a_{2}=d_{1}e_{2}" text="a _ 2 = d _ 1 * e _ 2"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="S2.p1.m14" tex="b_{1}=d_{2}f_{1}" text="b _ 1 = d _ 2 * f _ 1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">f</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMApp></XMath></Math> and <Math mode="inline" xml:id="S2.p1.m15" tex="b_{2}=d_{2}f_{2}" text="b _ 2 = d _ 2 * f _ 2"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">f</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math>. Here <Math mode="inline" xml:id="S2.p1.m16" tex="(e_{1},e_{2})=1=(f_{1},f_{2})" text="open-interval@(e _ 1, e _ 2) = 1 = open-interval@(f _ 1, f _ 2)"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok argclose=")" argopen="(" meaning="open-interval" role="FENCED" separators=","/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok argclose=")" argopen="(" meaning="open-interval" role="FENCED" separators=","/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">f</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">f</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math>. Then</p>
+      <equation xml:id="S2.Ex1">
+        <Math mode="display" xml:id="S2.Ex1.m1" tex="n=d_{1}e_{1}d_{2}f_{1}=d_{1}e_{2}d_{2}f_{2}\mbox{ gives }e_{1}f_{1}=e_{2}f_{2}." text="n = d _ 1 * e _ 1 * d _ 2 * f _ 1 = d _ 1 * e _ 2 * d _ 2 * f _ 2 * [ gives ] * e _ 1 * f _ 1 = e _ 2 * f _ 2">
+          <XMath>
+            <XMApp punctuation=".">
+              <XMTok meaning="multirelation"/>
+              <XMTok role="UNKNOWN" font="italic">n</XMTok>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">f</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">f</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                </XMApp>
+                <XMText> gives </XMText>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">f</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">f</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <p>Due to co-primality, <Math mode="inline" xml:id="S2.p1.m17" tex="e_{2}=f_{1}" text="e _ 2 = f _ 1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">f</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMath></Math> and <Math mode="inline" xml:id="S2.p1.m18" tex="e_{1}=f_{2}" text="e _ 1 = f _ 2"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">f</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math>. Therefore,</p>
+      <equation frefnum="(1)" refnum="1" xml:id="S2.E1" labels="LABEL:form">
+        <Math mode="display" xml:id="S2.E1.m1" tex="n=(d_{1}e_{1})(d_{2}e_{2})=(d_{1}e_{2})(d_{2}e_{1})" text="n = d _ 1 * e _ 1 * d _ 2 * e _ 2 = d _ 1 * e _ 2 * d _ 2 * e _ 1">
+          <XMath>
+            <XMApp>
+              <XMTok meaning="multirelation"/>
+              <XMTok role="UNKNOWN" font="italic">n</XMTok>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp close=")" open="(">
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMApp close=")" open="(">
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp close=")" open="(">
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMApp close=")" open="(">
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <p>with <Math mode="inline" xml:id="S2.p1.m19" tex="1&lt;d_{1}&lt;d_{2}" text="1 less d _ 1 less d _ 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="S2.p1.m20" tex="e_{1}&lt;e_{2}" text="e _ 1 less e _ 2"><XMath><XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math> and <Math mode="inline" xml:id="S2.p1.m21" tex="(e_{1},e_{2})=1" text="open-interval@(e _ 1, e _ 2) = 1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok argclose=")" argopen="(" meaning="open-interval" role="FENCED" separators=","/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math>.</p>
+    </para>
+    <!-- %**** 0304.tex Line 75 **** -->
+    <para xml:id="S2.p2">
+      <p>Now, from <Math mode="inline" xml:id="S2.p2.m1" tex="a_{2}-a_{1}\leq 2c_{2}x^{\theta}" text="a _ 2 - a _ 1 less= 2 * c _ 2 * x ^ theta"><XMath><XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="S2.p2.m2" tex="d_{1}\leq d_{1}e_{2}-d_{1}e_{1}\leq 2c_{2}x^{\theta}" text="d _ 1 less= d _ 1 * e _ 2 - d _ 1 * e _ 1 less= 2 * c _ 2 * x ^ theta"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp></XMath></Math>. Similarly, one can deduce that <Math mode="inline" xml:id="S2.p2.m3" tex="d_{2},e_{1},e_{2}\leq 2c_{2}x^{\theta}" text="list@(d _ 2, e _ 1, e _ 2) less= 2 * c _ 2 * x ^ theta"><XMath><XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="list" role="FENCED" separators=", ,"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp></XMath></Math>. Moreover, as <Math mode="inline" xml:id="S2.p2.m4" tex="d_{1}e_{1}=a_{1}\geq x^{1/2}-c_{2}x^{\theta}" text="d _ 1 * e _ 1 = a _ 1 &gt;= x ^ (1 / 2) - c _ 2 * x ^ theta"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp></XMApp></XMath></Math>, we have <Math mode="inline" xml:id="S2.p2.m5" tex="d_{1},e_{1}\geq\frac{1}{2c_{2}}x^{1/2-\theta}-\frac{1}{2}" text="list@(d _ 1, e _ 1) &gt;= (1 / (2 * c _ 2)) * x ^ (1 / 2 - theta) - 1 / 2"><XMath><XMApp><XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok><XMApp><XMTok meaning="list" role="FENCED" separators=","/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="text" meaning="divide" role="MULOP"/><XMTok meaning="1" role="NUMBER">1</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp><XMApp><XMTok mathstyle="text" meaning="divide" role="MULOP"/><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math>. Similarly, <Math mode="inline" xml:id="S2.p2.m6" tex="d_{2},e_{2}\geq\frac{1}{2c_{2}}x^{1/2-\theta}-\frac{1}{2}" text="list@(d _ 2, e _ 2) &gt;= (1 / (2 * c _ 2)) * x ^ (1 / 2 - theta) - 1 / 2"><XMath><XMApp><XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok><XMApp><XMTok meaning="list" role="FENCED" separators=","/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok mathstyle="text" meaning="divide" role="MULOP"/><XMTok meaning="1" role="NUMBER">1</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp><XMApp><XMTok mathstyle="text" meaning="divide" role="MULOP"/><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math>. Summing up, we have</p>
+      <equation frefnum="(2)" refnum="2" xml:id="S2.E2" labels="LABEL:range">
+        <Math mode="display" xml:id="S2.E2.m1" tex="\frac{1}{2c_{2}}x^{1/2-\theta}-\frac{1}{2}\leq d_{1},d_{2},e_{1},e_{2}\leq 2c_%&#10;{2}x^{\theta}." text="formulae@((1 / (2 * c _ 2)) * x ^ (1 / 2 - theta) - 1 / 2 less= list@(d _ 1, d _ 2, e _ 1), e _ 2 less= 2 * c _ 2 * x ^ theta)">
+          <XMath>
+            <XMApp punctuation=".">
+              <XMTok meaning="formulae" separators=","/>
+              <XMApp>
+                <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+                <XMApp>
+                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                          <XMTok role="UNKNOWN" font="italic">c</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                        <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="list" role="FENCED" separators=", ,"/>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+              <XMApp>
+                <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">c</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                    <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <p>From (<ref labelref="LABEL:range"/>), we see that no such <Math mode="inline" xml:id="S2.p2.m7" tex="n" text="n"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math> exists for <Math mode="inline" xml:id="S2.p2.m8" tex="0\leq\theta&lt;1/4" text="0 less= theta less 1 / 4"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="0" role="NUMBER">0</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMath></Math> and hence Theorem <ref labelref="LABEL:theorem1"/>.
+<!-- %__ --></p>
+    </para>
+  </section>
+  <section refnum="3" xml:id="S3">
+    <title><tag close=" ">3</tag>Lower bound for <Math mode="inline" xml:id="S3.m1" tex="g(\theta)" text="g * theta"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">g</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMath></Math></title>
+    <para xml:id="S3.p1">
+      <p>From (<ref labelref="LABEL:form"/>) and (<ref labelref="LABEL:range"/>), we see that an integer <Math mode="inline" xml:id="S3.p1.m1" tex="n=a_{1}b_{1}=a_{2}b_{2}" text="n = a _ 1 * b _ 1 = a _ 2 * b _ 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math>, satisfying the conditions for <Math mode="inline" xml:id="S3.p1.m2" tex="a_{1},a_{2},b_{1},b_{2}" text="list@(a _ 1, a _ 2, b _ 1, b _ 2)"><XMath><XMApp><XMTok meaning="list" role="FENCED" separators=", , ,"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math> in Question <ref labelref="LABEL:new"/>, must be of the form:</p>
+      <equation xml:id="S3.Ex2">
+        <Math mode="display" xml:id="S3.Ex2.m1" tex="n=(d_{1}e_{1})(d_{2}e_{2})\mbox{ with }\frac{1}{2c_{2}}x^{1/2-\theta}-\frac{1}%&#10;{2}\leq d_{1},d_{2},e_{1},e_{2}\leq 2c_{2}x^{\theta}" text="formulae@(n = d _ 1 * e _ 1 * d _ 2 * e _ 2 * [ with ] * (1 / (2 * c _ 2)) * x ^ (1 / 2 - theta) - 1 / 2 less= d _ 1, list@(d _ 2, e _ 1, e _ 2) less= 2 * c _ 2 * x ^ theta)">
+          <XMath>
+            <XMApp>
+              <XMTok meaning="formulae" separators=","/>
+              <XMApp>
+                <XMTok meaning="multirelation"/>
+                <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMApp close=")" open="(">
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                        <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                        <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp close=")" open="(">
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMText> with </XMText>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                          <XMTok role="UNKNOWN" font="italic">c</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                        <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMApp>
+                <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+                <XMApp>
+                  <XMTok meaning="list" role="FENCED" separators=", ,"/>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">c</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                    <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <p>and <Math mode="inline" xml:id="S3.p1.m3" tex="x^{1/2}-c_{2}x^{\theta}\leq d_{1}e_{1}&lt;d_{1}e_{2},\,d_{2}e_{1}&lt;d_{2}e_{2}\leq x%&#10;^{1/2}+c_{2}x^{\theta}" text="formulae@(x ^ (1 / 2) - c _ 2 * x ^ theta less= d _ 1 * e _ 1 less d _ 1 * e _ 2, d _ 2 * e _ 1 less d _ 2 * e _ 2 less= x ^ (1 / 2) + c _ 2 * x ^ theta)"><XMath><XMApp><XMTok meaning="formulae" separators=", "/><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp></XMApp></XMApp></XMath></Math>. In particular, <Math mode="inline" xml:id="S3.p1.m4" tex="e_{2}d_{2}-e_{2}d_{1}\leq 2c_{2}x^{\theta}" text="e _ 2 * d _ 2 - e _ 2 * d _ 1 less= 2 * c _ 2 * x ^ theta"><XMath><XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp></XMath></Math> which implies <Math mode="inline" xml:id="S3.p1.m5" tex="e_{2}-e_{1}\leq 2c_{2}x^{\theta}/d_{2}" text="e _ 2 - e _ 1 less= (2 * c _ 2 * x ^ theta) / d _ 2"><XMath><XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math>. Similarly, <Math mode="inline" xml:id="S3.p1.m6" tex="d_{2}-d_{1}\leq 2c_{2}x^{\theta}/e_{2}" text="d _ 2 - d _ 1 less= (2 * c _ 2 * x ^ theta) / e _ 2"><XMath><XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math>. Thus, the number of such quartuple <Math mode="inline" xml:id="S3.p1.m7" tex="(d_{1},d_{2},e_{1},e_{2})" text="vector@(d _ 1, d _ 2, e _ 1, e _ 2)"><XMath><XMApp><XMTok argclose=")" argopen="(" meaning="vector" role="FENCED" separators=", , ,"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math> is bounded by</p>
+      <equation xml:id="S3.Ex3">
+        <Math mode="display" xml:id="S3.Ex3.m1" tex="\ll\mathop{\sum_{x^{1/2-\theta}\ll d_{2},e_{2}\ll x^{\theta}}}_{x^{1/2}-c_{2}x%&#10;^{\theta}\leq d_{2}e_{2}\leq x^{1/2}+c_{2}x^{\theta}}\frac{x^{\theta}}{e_{2}}%&#10;\frac{x^{\theta}}{d_{2}}\ll\frac{x^{2\theta}}{x^{1/2}}x^{\theta}x^{\epsilon}=x%&#10;^{3\theta-1/2+\epsilon}">
+          <XMath>
+            <XMTok meaning="much-less-than" name="ll" role="RELOP">≪</XMTok>
+            <XMApp scriptpos="mid">
+              <XMTok role="SUBSCRIPTOP" scriptpos="mid2"/>
+              <XMApp role="BIGOP" scriptpos="mid">
+                <XMTok role="SUBSCRIPTOP" scriptpos="mid3"/>
+                <XMTok mathstyle="display" meaning="sum" role="SUMOP" scriptpos="mid">∑</XMTok>
+                <XMApp>
+                  <XMTok meaning="formulae" separators=","/>
+                  <XMApp>
+                    <XMTok meaning="much-less-than" name="ll" role="RELOP">≪</XMTok>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post4"/>
+                      <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                        <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post4"/>
+                      <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="much-less-than" name="ll" role="RELOP">≪</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post4"/>
+                      <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post4"/>
+                      <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                      <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+              <XMApp>
+                <XMTok meaning="multirelation"/>
+                <XMApp>
+                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                    <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                    <XMApp>
+                      <XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                      <XMTok role="UNKNOWN" font="italic">c</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                      <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                      <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+                <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                    <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+                <XMApp>
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                    <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                    <XMApp>
+                      <XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                      <XMTok role="UNKNOWN" font="italic">c</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                      <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                      <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+            <XMApp>
+              <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+              <XMApp>
+                <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+              </XMApp>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                <XMTok meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+            </XMApp>
+            <XMApp>
+              <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+              <XMApp>
+                <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+              </XMApp>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                <XMTok meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+            </XMApp>
+            <XMTok meaning="much-less-than" name="ll" role="RELOP">≪</XMTok>
+            <XMApp>
+              <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+              <XMApp>
+                <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMApp>
+                <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                <XMApp>
+                  <XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+              <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+            </XMApp>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+              <XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok>
+            </XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+              <XMApp>
+                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                <XMApp>
+                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok meaning="3" role="NUMBER">3</XMTok>
+                    <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <p>for any <Math mode="inline" xml:id="S3.p1.m8" tex="\epsilon&gt;0" text="epsilon &gt; 0"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math> as the number of divisor function <Math mode="inline" xml:id="S3.p1.m9" tex="d(n)\ll n^{\epsilon}" text="d * n lessless n ^ epsilon"><XMath><XMApp><XMTok meaning="much-less-than" name="ll" role="RELOP">≪</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">d</XMTok><XMTok close=")" open="(" role="UNKNOWN" font="italic">n</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok></XMApp></XMApp></XMath></Math>. It follows that there are at most <Math mode="inline" xml:id="S3.p1.m10" tex="O(x^{3\theta-1/2+\epsilon})" text="O * x ^ ((3 * theta - 1 / 2) + epsilon)"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">O</XMTok><XMApp close=")" open="("><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok></XMApp></XMApp></XMApp></XMath></Math> such integers <Math mode="inline" xml:id="S3.p1.m11" tex="n" text="n"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math> in the interval <Math mode="inline" xml:id="S3.p1.m12" tex="[x-c_{2}x^{1/2+\theta}/3,x+c_{2}x^{1/2+\theta}/3]" text="closed-interval@(x - (c _ 2 * x ^ (1 / 2 + theta)) / 3, x + (c _ 2 * x ^ (1 / 2 + theta)) / 3)"><XMath><XMApp><XMTok argclose="]" argopen="[" meaning="closed-interval" role="FENCED" separators=","/><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMApp><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMApp></XMApp></XMath></Math>. Therefore, some two consecutive such <Math mode="inline" xml:id="S3.p1.m13" tex="n" text="n"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math>’s have gap</p>
+      <equation xml:id="S3.Ex4">
+        <Math mode="display" xml:id="S3.Ex4.m1" tex="\gg\frac{x^{1/2+\theta}}{x^{3\theta-1/2+\epsilon}}=x^{1-2\theta-\epsilon}.">
+          <XMath>
+            <XMTok meaning="much-greater-than" name="gg" role="RELOP">≫</XMTok>
+            <XMApp>
+              <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+              <XMApp>
+                <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                <XMApp>
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMApp>
+                    <XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                  <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMApp>
+                <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                <XMApp>
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok meaning="3" role="NUMBER">3</XMTok>
+                      <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+              <XMApp>
+                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  <XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok>
+                </XMApp>
+                <XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok>
+              </XMApp>
+            </XMApp>
+            <XMTok role="PERIOD">.</XMTok>
+          </XMath>
+        </Math>
+      </equation>
+      <p>Pick <Math mode="inline" xml:id="S3.p1.m14" tex="y" text="y"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> to be the midpoint between these two integers. Then, for some constant <Math mode="inline" xml:id="S3.p1.m15" tex="c&gt;0" text="c &gt; 0"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>, the interval <Math mode="inline" xml:id="S3.p1.m16" tex="[y-cy^{1-2\theta-\epsilon},y+cy^{1-2\theta-\epsilon}]" text="closed-interval@(y - c * y ^ (1 - 2 * theta - epsilon), y + c * y ^ (1 - 2 * theta - epsilon))"><XMath><XMApp><XMTok argclose="]" argopen="[" meaning="closed-interval" role="FENCED" separators=","/><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">y</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">y</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok></XMApp></XMApp></XMApp></XMApp><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMTok role="UNKNOWN" font="italic">y</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">y</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok></XMApp></XMApp></XMApp></XMApp></XMApp></XMath></Math> does not contain any integer <Math mode="inline" xml:id="S3.p1.m17" tex="n=a_{1}b_{1}=a_{2}b_{2}" text="n = a _ 1 * b _ 1 = a _ 2 * b _ 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math> with <Math mode="inline" xml:id="S3.p1.m18" tex="y^{1/2}-c_{2}y^{\theta}/2\leq a_{1}&lt;a_{2}\leq b_{2}&lt;b_{1}\leq y^{1/2}+c_{2}y^{%&#10;\theta}/2" text="y ^ (1 / 2) - (c _ 2 * y ^ theta) / 2 less= a _ 1 less a _ 2 less= b _ 2 less b _ 1 less= y ^ (1 / 2) + (c _ 2 * y ^ theta) / 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">y</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">y</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">y</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">y</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math> as <Math mode="inline" xml:id="S3.p1.m19" tex="x-c_{2}x^{1/2+\theta}/3\leq y\leq x+c_{2}x^{1/2+\theta}/3" text="x - (c _ 2 * x ^ (1 / 2 + theta)) / 3 less= y less= x + (c _ 2 * x ^ (1 / 2 + theta)) / 3"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMTok role="UNKNOWN" font="italic">y</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMApp></XMApp></XMath></Math>. Consequently, for any constant <Math mode="inline" xml:id="S3.p1.m20" tex="c,c^{\prime}&gt;0" text="list@(c, c ^ prime) &gt; 0"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMApp><XMTok meaning="list" role="FENCED" separators=","/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok name="prime" role="SUPOP">′</XMTok></XMApp></XMApp><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>, there is arbitrarily large <Math mode="inline" xml:id="S3.p1.m21" tex="y" text="y"><XMath><XMTok role="UNKNOWN" font="italic">y</XMTok></XMath></Math> such that the interval <Math mode="inline" xml:id="S3.p1.m22" tex="[y-cy^{1-2\theta-2\epsilon},y+cy^{1-2\theta-2\epsilon}]" text="closed-interval@(y - c * y ^ (1 - 2 * theta - 2 * epsilon), y + c * y ^ (1 - 2 * theta - 2 * epsilon))"><XMath><XMApp><XMTok argclose="]" argopen="[" meaning="closed-interval" role="FENCED" separators=","/><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">y</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">y</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok></XMApp></XMApp></XMApp></XMApp></XMApp><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMTok role="UNKNOWN" font="italic">y</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">c</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">y</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok></XMApp></XMApp></XMApp></XMApp></XMApp></XMApp></XMath></Math> does not contain any integer <Math mode="inline" xml:id="S3.p1.m23" tex="n=a_{1}b_{1}=a_{2}b_{2}" text="n = a _ 1 * b _ 1 = a _ 2 * b _ 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math> with <Math mode="inline" xml:id="S3.p1.m24" tex="y^{1/2}-c^{\prime}y^{\theta}\leq a_{1}&lt;a_{2}\leq b_{2}&lt;b_{1}\leq y^{1/2}+c^{%&#10;\prime}y^{\theta}" text="y ^ (1 / 2) - c ^ prime * y ^ theta less= a _ 1 less a _ 2 less= b _ 2 less b _ 1 less= y ^ (1 / 2) + c ^ prime * y ^ theta"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">y</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok name="prime" role="SUPOP">′</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">y</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">y</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok name="prime" role="SUPOP">′</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">y</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp></XMApp></XMath></Math>. Therefore, <Math mode="inline" xml:id="S3.p1.m25" tex="g(\theta)\geq 1-2\theta-2\epsilon" text="g * theta &gt;= 1 - 2 * theta - 2 * epsilon"><XMath><XMApp><XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">g</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN" font="italic">θ</XMTok></XMApp><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok></XMApp></XMApp></XMApp></XMath></Math> which gives Theorem <ref labelref="LABEL:theorem2"/> by letting <Math mode="inline" xml:id="S3.p1.m26" tex="\epsilon\rightarrow 0" text="epsilon rightarrow 0"><XMath><XMApp><XMTok name="rightarrow" role="ARROW">→</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>.</p>
+    </para>
+    <!-- %__ -->
+  </section>
+  <section refnum="4" xml:id="S4">
+    <title><tag close=" ">4</tag>Upper bound for <Math mode="inline" xml:id="S4.m1" tex="g(\theta)" text="g * theta"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">g</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMath></Math></title>
+    <para xml:id="S4.p1">
+      <p>Proof of Theorem <ref labelref="LABEL:theorem3"/>: For any large <Math mode="inline" xml:id="S4.p1.m1" tex="x" text="x"><XMath><XMTok role="UNKNOWN" font="italic">x</XMTok></XMath></Math>, set <Math mode="inline" xml:id="S4.p1.m2" tex="N=[x^{1/4}]" text="N = x ^ (1 / 4)"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp close="]" open="["><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMApp></XMath></Math> and <Math mode="inline" xml:id="S4.p1.m3" tex="\xi=\{x^{1/4}\}" text="xi = set@(x ^ (1 / 4))"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="xi" role="UNKNOWN" font="italic">ξ</XMTok><XMApp><XMTok argclose="}" argopen="{" meaning="set" role="FENCED"/><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMApp></XMApp></XMath></Math>, the integer part and fractional part of <Math mode="inline" xml:id="S4.p1.m4" tex="x^{1/4}" text="x ^ (1 / 4)"><XMath><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMath></Math> respectively. Based on (<ref labelref="LABEL:form"/>), we are going to pick, for <Math mode="inline" xml:id="S4.p1.m5" tex="0\leq\epsilon\leq 1/2" text="0 less= epsilon less= 1 / 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="0" role="NUMBER">0</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math>,</p>
+      <equation frefnum="(3)" refnum="3" xml:id="S4.E3" labels="LABEL:de">
+        <Math mode="display" xml:id="S4.E3.m1" tex="d_{1}=qN+r_{1},\;d_{2}=qN+r_{2},\;e_{1}=\frac{N+s_{1}}{q},\;e_{2}=\frac{N+s_{2%&#10;}}{q}" text="formulae@(d _ 1 = q * N + r _ 1, formulae@(d _ 2 = q * N + r _ 2, formulae@(e _ 1 = (N + s _ 1) / q, e _ 2 = (N + s _ 2) / q)))">
+          <XMath>
+            <XMApp>
+              <XMTok meaning="formulae" separators=", "/>
+              <XMApp>
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+              <XMApp>
+                <XMTok meaning="formulae" separators=", "/>
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">d</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                      <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="formulae" separators=", "/>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">e</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <!-- %**** 0304.tex Line 100 **** -->
+      <p>for some <Math mode="inline" xml:id="S4.p1.m6" tex="1\leq q\leq N^{\epsilon}" text="1 less= q less= N ^ epsilon"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMTok role="UNKNOWN" font="italic">q</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="S4.p1.m7" tex="0\leq r_{1},r_{2}&lt;N" text="formulae@(0 less= r _ 1, r _ 2 less N)"><XMath><XMApp><XMTok meaning="formulae" separators=","/><XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="UNKNOWN" font="italic">N</XMTok></XMApp></XMApp></XMath></Math> and <Math mode="inline" xml:id="S4.p1.m8" tex="s_{1},s_{2}\ll q" text="list@(s _ 1, s _ 2) lessless q"><XMath><XMApp><XMTok meaning="much-less-than" name="ll" role="RELOP">≪</XMTok><XMApp><XMTok meaning="list" role="FENCED" separators=","/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMTok role="UNKNOWN" font="italic">q</XMTok></XMApp></XMath></Math> with <Math mode="inline" xml:id="S4.p1.m9" tex="N\equiv-s_{1}\equiv-s_{2}\;\;(\mathop{{\rm mod}}q)" content-tex="N\equiv-s_{1}\equiv-s_{2}\pmod{q}" text="N equivalent-to - s _ 1 equivalent-to annotated@(- s _ 2, pmod@(q))"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok meaning="equivalent-to" name="equiv" role="RELOP">≡</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok meaning="equivalent-to" name="equiv" role="RELOP">≡</XMTok><XMApp><XMTok meaning="annotated"/><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMDual role="MODIFIER"><XMApp role="MODIFIER"><XMTok name="pmod" role="UNKNOWN"/><XMTok role="UNKNOWN" xml:id="S4.p1.m9.xm1" font="italic">q</XMTok></XMApp><XMApp close=")" lpadding="5.6pt" open="("><XMTok role="BIGOP">mod</XMTok><XMRef idref="S4.p1.m9.xm1"/></XMApp></XMDual></XMApp></XMApp></XMath></Math>. Our goal is to make</p>
+      <equation xml:id="S4.Ex5">
+        <Math mode="display" xml:id="S4.Ex5.m1" tex="x=(N+\xi)^{4}=N^{4}+4N^{3}\xi+O(N^{2})\approx(qN+r_{1})\frac{N+s_{1}}{q}(qN+r_%&#10;{2})\frac{N+s_{2}}{q}." text="x = (N + xi) ^ 4 = N ^ 4 + 4 * N ^ 3 * xi + O * N ^ 2 approximately-equals (q * N + r _ 1) * ((N + s _ 1) / q) * (q * N + r _ 2) * ((N + s _ 2) / q)">
+          <XMath>
+            <XMApp punctuation=".">
+              <XMTok meaning="multirelation"/>
+              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMApp>
+                <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                <XMApp close=")" open="(">
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                  <XMTok name="xi" role="UNKNOWN" font="italic">ξ</XMTok>
+                </XMApp>
+                <XMTok meaning="4" role="NUMBER">4</XMTok>
+              </XMApp>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMApp>
+                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                <XMApp>
+                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                  <XMTok meaning="4" role="NUMBER">4</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok meaning="4" role="NUMBER">4</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    <XMTok meaning="3" role="NUMBER">3</XMTok>
+                  </XMApp>
+                  <XMTok name="xi" role="UNKNOWN" font="italic">ξ</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok possibleFunction="yes" role="UNKNOWN" font="italic">O</XMTok>
+                  <XMApp close=")" open="(">
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+              <XMTok meaning="approximately-equals" name="approx" role="RELOP">≈</XMTok>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp close=")" open="(">
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMApp>
+                  <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                  <XMApp>
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                      <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                </XMApp>
+                <XMApp close=")" open="(">
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMApp>
+                  <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                  <XMApp>
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                      <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <p>The right hand side above is</p>
+      <equation frefnum="(4)" refnum="4" xml:id="S4.E4" labels="LABEL:approx">
+        <Math mode="display" xml:id="S4.E4.m1" tex="\split=&amp;\Bigl[N^{2}+\Bigl(\frac{r_{1}}{q}+s_{1}\Bigr)N+\frac{r_{1}s_{1}}{q}%&#10;\Bigr]\Bigl[N^{2}+\Bigl(\frac{r_{2}}{q}+s_{2}\Bigr)N+\frac{r_{2}s_{2}}{q}\Bigr%&#10;]\\&#10;=&amp;N^{4}+\Bigl(\frac{r_{1}+r_{2}}{q}+s_{1}+s_{2}\Bigr)N^{3}+\Bigl[\frac{r_{1}s_%&#10;{1}}{q}+\frac{r_{2}s_{2}}{q}+\Bigl(\frac{r_{1}}{q}+s_{1}\Bigr)\Bigl(\frac{r_{2%&#10;}}{q}+s_{2}\Bigr)\Bigr]N^{2}\\&#10;&amp;+\Bigl[\frac{r_{1}s_{1}}{q}\Bigl(\frac{r_{2}}{q}+s_{2}\Bigr)+\frac{r_{2}s_{2}%&#10;}{q}\Bigl(\frac{r_{1}}{q}+s_{1}\Bigr)\Bigr]N+\frac{r_{1}s_{1}r_{2}s_{2}}{q^{2}}" text="[{split}] = [Align] * (N ^ 2 + (r _ 1 / q + s _ 1) * N + (r _ 1 * s _ 1) / q) * (N ^ 2 + (r _ 2 / q + s _ 2) * N + (r _ 2 * s _ 2) / q) = [Align] * N ^ 4 + ((r _ 1 + r _ 2) / q + s _ 1 + s _ 2) * N ^ 3 + ((r _ 1 * s _ 1) / q + (r _ 2 * s _ 2) / q + (r _ 1 / q + s _ 1) * (r _ 2 / q + s _ 2)) * N ^ 2 * [Align] + (((r _ 1 * s _ 1) / q) * (r _ 2 / q + s _ 2) + ((r _ 2 * s _ 2) / q) * (r _ 1 / q + s _ 1)) * N + (r _ 1 * s _ 1 * r _ 2 * s _ 2) / q ^ 2">
+          <XMath>
+            <XMApp>
+              <XMTok meaning="multirelation"/>
+              <ERROR class="undefined">{split}</ERROR>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <ERROR class="undefined">Align</ERROR>
+                <XMApp close="]" open="[">
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMApp close=")" open="(">
+                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                      <XMApp>
+                        <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                          <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                        <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                        <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                        <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                        <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                        <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMApp close="]" open="[">
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMApp close=")" open="(">
+                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                      <XMApp>
+                        <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                          <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                        <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                        <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                        <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMApp>
+                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <ERROR class="undefined">Align</ERROR>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    <XMTok meaning="4" role="NUMBER">4</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp close=")" open="(">
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                          <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                          <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    <XMTok meaning="3" role="NUMBER">3</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp close="]" open="[">
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                          <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                          <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMApp close=")" open="(">
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                            <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                          <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp close=")" open="(">
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                            <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                          <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                  <ERROR class="undefined">Align</ERROR>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp close="]" open="[">
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMApp>
+                        <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                            <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                            <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                      </XMApp>
+                      <XMApp close=")" open="(">
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                            <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                          <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMApp>
+                        <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                            <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                            <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                      </XMApp>
+                      <XMApp close=")" open="(">
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                            <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                          <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                      <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                      <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                      <XMTok role="UNKNOWN" font="italic">r</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                      <XMTok role="UNKNOWN" font="italic">s</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                    <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <p>By Dirichlet’s Theorem on diophantine approximation, we can find integer <Math mode="inline" xml:id="S4.p1.m10" tex="1\leq q\leq N^{\epsilon}" text="1 less= q less= N ^ epsilon"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMTok role="UNKNOWN" font="italic">q</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok></XMApp></XMApp></XMath></Math> such that</p>
+      <equation xml:id="S4.Ex6">
+        <Math mode="display" xml:id="S4.Ex6.m1" tex="\Big|4\xi-\frac{p}{q}\Big|\leq\frac{1}{qN^{\epsilon}}" text="absolute-value@(4 * xi - p / q) less= 1 / (q * N ^ epsilon)">
+          <XMath>
+            <XMApp>
+              <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+              <XMApp>
+                <XMTok argclose="|" argopen="|" meaning="absolute-value" role="FENCED"/>
+                <XMApp>
+                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok meaning="4" role="NUMBER">4</XMTok>
+                    <XMTok name="xi" role="UNKNOWN" font="italic">ξ</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                    <XMTok role="UNKNOWN" font="italic">p</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+              <XMApp>
+                <XMTok mathstyle="display" meaning="divide" role="MULOP"/>
+                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    <XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <p>for some integer <Math mode="inline" xml:id="S4.p1.m11" tex="p" text="p"><XMath><XMTok role="UNKNOWN" font="italic">p</XMTok></XMath></Math>. Fix such a <Math mode="inline" xml:id="S4.p1.m12" tex="q" text="q"><XMath><XMTok role="UNKNOWN" font="italic">q</XMTok></XMath></Math>. Then, pick <Math mode="inline" xml:id="S4.p1.m13" tex="s_{1}&lt;s_{2}&lt;0" text="s _ 1 less s _ 2 less 0"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math> to be the largest two integers such that <Math mode="inline" xml:id="S4.p1.m14" tex="N\equiv-s_{1}\equiv-s_{2}\;\;(\mathop{{\rm mod}}q)" content-tex="N\equiv-s_{1}\equiv-s_{2}\pmod{q}" text="N equivalent-to - s _ 1 equivalent-to annotated@(- s _ 2, pmod@(q))"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="italic">N</XMTok><XMTok meaning="equivalent-to" name="equiv" role="RELOP">≡</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok meaning="equivalent-to" name="equiv" role="RELOP">≡</XMTok><XMApp><XMTok meaning="annotated"/><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMDual role="MODIFIER"><XMApp role="MODIFIER"><XMTok name="pmod" role="UNKNOWN"/><XMTok role="UNKNOWN" xml:id="S4.p1.m14.xm1" font="italic">q</XMTok></XMApp><XMApp close=")" lpadding="5.6pt" open="("><XMTok role="BIGOP">mod</XMTok><XMRef idref="S4.p1.m14.xm1"/></XMApp></XMDual></XMApp></XMApp></XMath></Math>. Clearly, <Math mode="inline" xml:id="S4.p1.m15" tex="s_{1},s_{2}\ll q" text="list@(s _ 1, s _ 2) lessless q"><XMath><XMApp><XMTok meaning="much-less-than" name="ll" role="RELOP">≪</XMTok><XMApp><XMTok meaning="list" role="FENCED" separators=","/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMTok role="UNKNOWN" font="italic">q</XMTok></XMApp></XMath></Math>. Then, one simply picks some <Math mode="inline" xml:id="S4.p1.m16" tex="0&lt;r_{1}&lt;r_{2}\ll q^{2}" text="0 less r _ 1 less r _ 2 lessless q ^ 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok meaning="0" role="NUMBER">0</XMTok><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok meaning="much-less-than" name="ll" role="RELOP">≪</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">q</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math> such that <Math mode="inline" xml:id="S4.p1.m17" tex="\frac{r_{1}+r_{2}}{q}+s_{1}+s_{2}=\frac{p}{q}" text="(r _ 1 + r _ 2) / q + s _ 1 + s _ 2 = p / q"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok mathstyle="text" meaning="divide" role="MULOP"/><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post3"/><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMTok role="UNKNOWN" font="italic">q</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok mathstyle="text" meaning="divide" role="MULOP"/><XMTok role="UNKNOWN" font="italic">p</XMTok><XMTok role="UNKNOWN" font="italic">q</XMTok></XMApp></XMApp></XMath></Math>. With these values for <Math mode="inline" xml:id="S4.p1.m18" tex="q,r_{1},r_{2},s_{1},s_{2}" text="list@(q, r _ 1, r _ 2, s _ 1, s _ 2)"><XMath><XMApp><XMTok meaning="list" role="FENCED" separators=", , , ,"/><XMTok role="UNKNOWN" font="italic">q</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">r</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">s</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math>, (<ref labelref="LABEL:approx"/>) is</p>
+      <equation xml:id="S4.Ex7">
+        <Math mode="display" xml:id="S4.Ex7.m1" tex="=N^{4}+4N^{3}\xi+O(N^{3-\epsilon})+O(q^{2}N^{2})+O(q^{3}N)+O(q^{4})." text="absent = N ^ 4 + 4 * N ^ 3 * xi + O * N ^ (3 - epsilon) + O * q ^ 2 * N ^ 2 + O * q ^ 3 * N + O * q ^ 4">
+          <XMath>
+            <XMApp punctuation=".">
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMTok meaning="absent"/>
+              <XMApp>
+                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                <XMApp>
+                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                  <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                  <XMTok meaning="4" role="NUMBER">4</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok meaning="4" role="NUMBER">4</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    <XMTok meaning="3" role="NUMBER">3</XMTok>
+                  </XMApp>
+                  <XMTok name="xi" role="UNKNOWN" font="italic">ξ</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok possibleFunction="yes" role="UNKNOWN" font="italic">O</XMTok>
+                  <XMApp close=")" open="(">
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                    <XMApp>
+                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                      <XMTok meaning="3" role="NUMBER">3</XMTok>
+                      <XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok possibleFunction="yes" role="UNKNOWN" font="italic">O</XMTok>
+                  <XMApp close=")" open="(">
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok possibleFunction="yes" role="UNKNOWN" font="italic">O</XMTok>
+                  <XMApp close=")" open="(">
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                      <XMTok meaning="3" role="NUMBER">3</XMTok>
+                    </XMApp>
+                    <XMTok role="UNKNOWN" font="italic">N</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok possibleFunction="yes" role="UNKNOWN" font="italic">O</XMTok>
+                  <XMApp close=")" open="(">
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok role="UNKNOWN" font="italic">q</XMTok>
+                    <XMTok meaning="4" role="NUMBER">4</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <p>Hence, we have just constructed an integer <Math mode="inline" xml:id="S4.p1.m19" tex="n=d_{1}e_{1}d_{2}e_{2}" text="n = d _ 1 * e _ 1 * d _ 2 * e _ 2"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math> which is within <Math mode="inline" xml:id="S4.p1.m20" tex="O(N^{3-\epsilon})+O(N^{2+2\epsilon})=O(x^{3/4-\epsilon/4})+O(x^{1/2+\epsilon/2%&#10;})=O(x^{3/4-\epsilon/4})" text="O * N ^ (3 - epsilon) + O * N ^ (2 + 2 * epsilon) = O * x ^ (3 / 4 - epsilon / 4) + O * x ^ (1 / 2 + epsilon / 2) = O * x ^ (3 / 4 - epsilon / 4)"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">O</XMTok><XMApp close=")" open="("><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok></XMApp></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">O</XMTok><XMApp close=")" open="("><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">N</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok></XMApp></XMApp></XMApp></XMApp></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">O</XMTok><XMApp close=")" open="("><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">O</XMTok><XMApp close=")" open="("><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMApp></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">O</XMTok><XMApp close=")" open="("><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMApp></XMApp></XMApp></XMath></Math> from <Math mode="inline" xml:id="S4.p1.m21" tex="x" text="x"><XMath><XMTok role="UNKNOWN" font="italic">x</XMTok></XMath></Math> if <Math mode="inline" xml:id="S4.p1.m22" tex="\epsilon\leq 1/3" text="epsilon less= 1 / 3"><XMath><XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMApp></XMath></Math>. One can easily check that <Math mode="inline" xml:id="S4.p1.m23" tex="a_{1}=d_{1}e_{1}" text="a _ 1 = d _ 1 * e _ 1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="S4.p1.m24" tex="b_{1}=d_{2}e_{2}" text="b _ 1 = d _ 2 * e _ 2"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math>, <Math mode="inline" xml:id="S4.p1.m25" tex="a_{2}=d_{1}e_{2}" text="a _ 2 = d _ 1 * e _ 2"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math> and <Math mode="inline" xml:id="S4.p1.m26" tex="b_{2}=d_{2}e_{1}" text="b _ 2 = d _ 2 * e _ 1"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">d</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">e</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMApp></XMath></Math> are in the interval <Math mode="inline" xml:id="S4.p1.m27" tex="[x^{1/2}-Cx^{1/4+\epsilon/4},x^{1/2}+Cx^{1/4+\epsilon/4}]" text="closed-interval@(x ^ (1 / 2) - C * x ^ (1 / 4 + epsilon / 4), x ^ (1 / 2) + C * x ^ (1 / 4 + epsilon / 4))"><XMath><XMApp><XMTok argclose="]" argopen="[" meaning="closed-interval" role="FENCED" separators=","/><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">C</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMApp></XMApp></XMApp><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">C</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMApp></XMApp></XMApp></XMApp></XMath></Math> for some constant <Math mode="inline" xml:id="S4.p1.m28" tex="C&gt;0" text="C &gt; 0"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMTok role="UNKNOWN" font="italic">C</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>. Set <Math mode="inline" xml:id="S4.p1.m29" tex="\theta=1/4+\epsilon/4" text="theta = 1 / 4 + epsilon / 4"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok name="epsilon" role="UNKNOWN" font="italic">ϵ</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMApp></XMath></Math>. We have, for some <Math mode="inline" xml:id="S4.p1.m30" tex="C^{\prime}&gt;0" text="C ^ prime &gt; 0"><XMath><XMApp><XMTok meaning="greater-than" role="RELOP">&gt;</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">C</XMTok><XMTok name="prime" role="SUPOP">′</XMTok></XMApp><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>, <Math mode="inline" xml:id="S4.p1.m31" tex="n=a_{1}b_{1}=a_{2}b_{2}" text="n = a _ 1 * b _ 1 = a _ 2 * b _ 2"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="italic">n</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMApp></XMath></Math> in the interval <Math mode="inline" xml:id="S4.p1.m32" tex="[x-C^{\prime}x^{1-\theta},x+C^{\prime}x^{1-\theta}]" text="closed-interval@(x - C ^ prime * x ^ (1 - theta), x + C ^ prime * x ^ (1 - theta))"><XMath><XMApp><XMTok argclose="]" argopen="[" meaning="closed-interval" role="FENCED" separators=","/><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">C</XMTok><XMTok name="prime" role="SUPOP">′</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp></XMApp><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">C</XMTok><XMTok name="prime" role="SUPOP">′</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp></XMApp></XMApp></XMath></Math> such that <Math mode="inline" xml:id="S4.p1.m33" tex="a_{1}&lt;a_{2},b_{2}&lt;b_{1}" text="formulae@(a _ 1 less a _ 2, b _ 2 less b _ 1)"><XMath><XMApp><XMTok meaning="formulae" separators=","/><XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMApp></XMApp></XMath></Math> are integers in <Math mode="inline" xml:id="S4.p1.m34" tex="[x^{1/2}-Cx^{\theta},x^{1/2}+Cx^{\theta}]" text="closed-interval@(x ^ (1 / 2) - C * x ^ theta, x ^ (1 / 2) + C * x ^ theta)"><XMath><XMApp><XMTok argclose="]" argopen="[" meaning="closed-interval" role="FENCED" separators=","/><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">C</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="UNKNOWN" font="italic">C</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMApp></XMApp></XMApp></XMath></Math> provided <Math mode="inline" xml:id="S4.p1.m35" tex="1/4\leq\theta\leq 1/4+1/12=1/3" text="1 / 4 less= theta less= 1 / 4 + 1 / 12 = 1 / 3"><XMath><XMApp><XMTok meaning="multirelation"/><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok><XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="12" role="NUMBER">12</XMTok></XMApp></XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMApp></XMath></Math>. This proves Theorem <ref labelref="LABEL:theorem3"/>.
+<!-- %__ --></p>
+    </para>
+  </section>
+  <section refnum="5" xml:id="S5">
+    <title><tag close=" ">5</tag>Open questions</title>
+    <para xml:id="S5.p1">
+      <p>Conjecture <ref labelref="LABEL:conj1"/> may be too hard to prove in the moment. As a starting point, can one show that <Math mode="inline" xml:id="S5.p1.m1" tex="g(1/4)=1/2" text="g * (1 / 4) = 1 / 2"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">g</XMTok><XMApp close=")" open="("><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math>? Or even <Math mode="inline" xml:id="S5.p1.m2" tex="g(1/4)&lt;3/4" text="g * (1 / 4) less 3 / 4"><XMath><XMApp><XMTok meaning="less-than" role="RELOP">&lt;</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">g</XMTok><XMApp close=")" open="("><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMath></Math>? Another possibility would be trying to get some results conditionally like [<ref labelref="LABEL:C"/>]. Also, one may consider <Math mode="inline" xml:id="S5.p1.m3" tex="g(\theta)" text="g * theta"><XMath><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok possibleFunction="yes" role="UNKNOWN" font="italic">g</XMTok><XMTok close=")" name="theta" open="(" role="UNKNOWN" font="italic">θ</XMTok></XMApp></XMath></Math> when <Math mode="inline" xml:id="S5.p1.m4" tex="\theta" text="theta"><XMath><XMTok name="theta" role="UNKNOWN" font="italic">θ</XMTok></XMath></Math> is near to <Math mode="inline" xml:id="S5.p1.m5" tex="1/2" text="1 / 2"><XMath><XMApp><XMTok mathstyle="inline" meaning="divide" role="MULOP">/</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math>. This leads to the problem about gaps between integers that have more than one representation as a sum of two squares.</p>
+    </para>
+    <para xml:id="S5.p2">
+      <break/>
+    </para>
+    <para xml:id="S5.p3">
+      <p><text font="bold">Acknowledgement</text> The author would like to thank the American Institute of Mathematics for providing a stimulating environment to work at.
+<!-- %__ --></p>
+    </para>
+  </section>
+  <para xml:id="p1">
+    <p>Tsz Ho Chan<break/>American Institute of Mathematics<break/>360 Portage Avenue<break/>Palo Alto, CA 94306<break/>U.S.A.<break/>thchan@aimath.org</p>
+  </para>
+</document>
