@@ -1,0 +1,810 @@
+<html>
+  <head>
+    <title>An elemetary proof of an estimate for a number of primes
+…</title>
+    <!--Generated on Thu Jan 19 18:36:50 2017 by LaTeXML (version 0.8.1) http://dlmf.nist.gov/LaTeXML/.-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="LaTeXML.css" type="text/css"/>
+    <link rel="stylesheet" href="ltx-article.css" type="text/css"/>
+    <link rel="stylesheet" href="ltx-amsart.css" type="text/css"/>
+    <script type="text/x-sre-config">
+{"json": "https://cdn.mathjax.org/mathjax/contrib/a11y/mathmaps"}
+</script>
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: {autoNumber: "AMS"} },
+  MMLorHTML: {MSIE: "HTML"},
+  AssistiveMML: {disabled: true},
+  "fast-preview": {disabled: true}
+});
+MathJax.Ajax.config.path["SRE"] = "../mathjax";
+</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"> </script>
+  </head>
+  <body>
+    <div class="ltx_page_main">
+      <div class="ltx_page_content">
+        <article class="ltx_document ltx_authors_1line ltx_leqno">
+          <h1 class="ltx_title ltx_title_document">An elemetary proof of an estimate for a number of primes
+less than the product of the first <span class="math inline" id="m1">\(n\)</span> primes</h1>
+          <div class="ltx_authors">
+            <span class="ltx_creator ltx_role_author">
+              <span class="ltx_personname">Romeo Meštrović
+</span>
+            </span>
+          </div>
+          <div class="ltx_abstract">
+            <h6 class="ltx_title ltx_title_abstract">Abstract.</h6>
+            <p class="ltx_p">Let <span class="math inline" id="m2">\(\alpha\)</span> be a real number such that <span class="math inline" id="m3">\(1&lt;\alpha&lt;2\)</span> and let
+<span class="math inline" id="m4">\(x_{0}=x_{0}(\alpha)\)</span> be a (unique) positive solution of the equation</p>
+            <table id="S0.Ex1" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.Ex1.m1">\[x^{\alpha-1}-\frac{\pi}{e^{2}\sqrt{3}}x+1=0.\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">Then we prove that for each positive integer <span class="math inline" id="m5">\(n>x_{0}\)</span> there exist at least
+<span class="math inline" id="m6">\(\left[n^{\alpha}\right]\)</span> primes between the <span class="math inline" id="m7">\((n+1)\)</span>th prime and the product of
+the first <span class="math inline" id="m8">\(n+1\)</span> primes. In particular, we establish a recent Cooke’s result
+which asserts that for each positive integer <span class="math inline" id="m9">\(n\)</span> there are at least
+<span class="math inline" id="m10">\(n\)</span> primes between the <span class="math inline" id="m11">\((n+1)\)</span>th prime and the product of the first <span class="math inline" id="m12">\(n+1\)</span>
+primes. Our proof is based on an elementary counting method (enumerative
+arguments) and the application of Stirling’s formula to give upper
+bound for some binomial coefficients.</p>
+          </div>
+          <span class="ltx_note ltx_role_footnote">
+            <sup class="ltx_note_mark">†</sup>
+            <span class="ltx_note_outer">
+              <span class="ltx_note_content">
+                <sup class="ltx_note_mark">†</sup>2010 <span class="ltx_text ltx_font_italic">Mathematics Subject
+Classification.</span> Primary 11A41, Secondary 11A51, 11A25.
+<span class="ltx_text ltx_font_italic">Keywords and phrases</span>:
+Euclid’s theorem, infinitude of primes, product of the first <span class="math inline" id="m13">\(n\)</span> primes,
+Bonse’s inequality, Stirling’s formula.</span>
+              </span>
+            </span>
+            <div id="p1" class="ltx_para">
+              <p class="ltx_p">Ever since Euclid of Alexandria, sometimes before
+300 <span class="ltx_text" style="font-size:small;">B.C.</span>, first proved that the number of primes is infinite
+(see Proposition 20 in Book IX of his legendary <span class="ltx_text ltx_font_italic">Elements</span>
+              <cite class="ltx_cite">[]</cite>,
+mathematicians have amused themselves by coming up
+with alternate proofs. For more information about the Euclid’s proof
+of the infinitude of primes see e.g., <cite class="ltx_cite">[, p. 414, Ch. XVIII]</cite>,
+and <cite class="ltx_cite">[, Section 1]</cite>.
+In <cite class="ltx_cite">[]</cite> the author of this article provided a comprehensive
+historical survey of different proofs
+of famous Euclid’s theorem on the infinitude of primes
+which has fascinated generations of mathematicians since its
+first and famous demonstration given by Euclid.
+Quite recently, in <cite class="ltx_cite">[]</cite> the author of this article
+presented a very short and elementary proof of Euclid’s theorem.</p>
+            </div>
+            <div id="p2" class="ltx_para">
+              <p class="ltx_p">Euclid’s proof of the infinitude of primes is a paragon of simplicity:
+<span class="ltx_text ltx_font_italic">given a finite list of
+primes <span class="math inline" id="p2.m1">\(p_{1},p_{2},\ldots p_{n}\)</span>, multiply them together and add one.
+The resulting number, say <span class="math inline" id="p2.m2">\(N=p_{1}p_{2}\cdots p_{n}\)</span>,
+is not divisible by any prime on the list, so any prime factor of <span class="math inline" id="p2.m3">\(N\)</span> is a
+new prime.</span>
+            </p>
+          </div>
+          <div id="p3" class="ltx_para">
+            <p class="ltx_p">A modification of the above Euclid’s proof based on the factorization
+theorem can be found in author’s survey article <cite class="ltx_cite">[, p. 35, Section 4]</cite>.</p>
+          </div>
+          <div id="p4" class="ltx_para">
+            <p class="ltx_p">Notice that numerous proofs of the infinitude of primes
+yield anyone estimate for distribution of primes <cite class="ltx_cite">[]</cite>.
+Applying Euclid’s proof presented above with <span class="math inline" id="p4.m1">\(p_{1}p_{2}\cdots p_{n}-1\)</span>
+instead of <span class="math inline" id="p4.m2">\(p_{1}p_{2}\cdots p_{n}+1\)</span>, we obtain that
+<span class="math inline" id="p4.m3">\(p_{n+1}&lt;p_{1}p_{2}\cdots p_{n}\)</span> for each <span class="math inline" id="p4.m4">\(n\geq 2\)</span>, where <span class="math inline" id="p4.m5">\(p_{k}\)</span> is the <span class="math inline" id="p4.m6">\(k\)</span>th prime.
+In 1907 H. Bonse <cite class="ltx_cite">[]</cite> gave an elementary proof of a stronger inequality,
+now called Bonse’s inequality (for a simple proof
+based on Erdős’ method <cite class="ltx_cite">
+            []</cite> see 
+            <cite class="ltx_cite">[, p. 238, Section 4.6]</cite>):
+if <span class="math inline" id="p4.m7">\(n\geq 4\)</span>, then</p>
+            <table id="S0.E1" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                  <span class="ltx_tag ltx_tag_equation">(1)</span>
+                </td>
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.E1.m1">\[p_{n+1}^{2}&lt;p_{1}p_{2}\cdots p_{n}.\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">Bonse also proved that <span class="math inline" id="p4.m8">\(p_{n+1}^{3}&lt;p_{1}p_{2}\cdots p_{n}\)</span> for all <span class="math inline" id="p4.m9">\(n\geq 5\)</span>.
+In 2000 M. Dalezman <cite class="ltx_cite">[, Theorem 1]</cite>
+gave an elementary proof of stronger inequality
+<span class="math inline" id="p4.m10">\(p_{n+1}p_{n+2}&lt;p_{1}p_{2}\cdots p_{n}\)</span> with <span class="math inline" id="p4.m11">\(n\geq 4\)</span>.
+In 1960 L. Pósa refined firstly
+Bonse’s inequalities by proving that for every integer <span class="math inline" id="p4.m12">\(k>1\)</span>
+there is an <span class="math inline" id="p4.m13">\(n_{k}\)</span> such that <span class="math inline" id="p4.m14">\(p_{n+1}^{k}&lt;p_{1}p_{2}\cdots p_{n}\)</span> for all <span class="math inline" id="p4.m15">\(n>n_{k}\)</span>.
+Further, a syntetic proof (i.e., one not involving the limit concepts of
+analysis) due to S. E. Mamangakis in 1962 <cite class="ltx_cite">[]</cite> for a theorem from which
+specialization lead to the following inequalities: <span class="math inline" id="p4.m16">\(p_{4n}&lt;p_{1}p_{2}\cdots p_{n}\)</span>
+with <span class="math inline" id="p4.m17">\(n\geq 11\)</span> and <span class="math inline" id="p4.m18">\(p_{4n}^{4}&lt;p_{1}p_{2}\cdots p_{4n-9}\)</span> with <span class="math inline" id="p4.m19">\(n\geq 46\)</span>.
+In 1971 S. Reich <cite class="ltx_cite">[]</cite>
+showed that for every positive integer <span class="math inline" id="p4.m20">\(k\)</span> there exists a positive
+integer <span class="math inline" id="p4.m21">\(n_{0}=n_{0}(k)\)</span> such that <span class="math inline" id="p4.m22">\(p_{n+k}^{2}&lt;p_{1}p_{2}\cdots p_{n}\)</span> for all
+<span class="math inline" id="p4.m23">\(n\geq n_{0}\)</span>. Furthermore, using a quite different approach from Bonse’s,
+in 1988 J. Sándor <cite class="ltx_cite">[]</cite> proved that for <span class="math inline" id="p4.m24">\(n\geq 3\)</span>,
+<span class="math inline" id="p4.m25">\(p_{1}p_{2}\cdots p_{n-1}+p_{n}+p_{p_{n}-2}\leq p_{1}p_{2}\cdots p_{n}\)</span>
+and that for <span class="math inline" id="p4.m26">\(n\geq 24\)</span>, <span class="math inline" id="p4.m27">\(p_{n+5}^{2}+p_{[n/2]}^{2}&lt;p_{1}p_{2}\cdots p_{n}\)</span> which is
+sharper than Bonse’s inequality (1).</p>
+          </div>
+          <div id="p5" class="ltx_para">
+            <p class="ltx_p">On the other hand, using arguments of Analytic Number Theory,
+many authors have been obtained stronger inequalities than
+those mentioned above.
+In 1977 H. Gupta and S. P. Khare <cite class="ltx_cite">[]</cite>
+proved that <span class="math inline" id="p5.m1">\({n^{2}\choose n}&lt;p_{1}p_{2}\cdots p_{n}\)</span> for all <span class="math inline" id="p5.m2">\(n\geq 1794\)</span>.
+In 1983 G. Robin <cite class="ltx_cite">[, Théorème 4]</cite> proved that
+<span class="math inline" id="p5.m3">\(n^{n}&lt;p_{1}p_{2}\cdots p_{n}\)</span> for each <span class="math inline" id="p5.m4">\(n\geq 13\)</span>.
+Since by Stirling’s formula easily follows that
+<span class="math inline" id="p5.m5">\({n^{2}\choose n}\sim\frac{e^{n-1}}{\sqrt{2\pi n}}n^{n}\)</span>, it
+follows that the mentioned inequality by Gupta and Khare
+is stronger than those due to Robin.
+Motivated by a result of Gupta and Khare, in 2011 H. Alzer and J. Sándor
+improved their result <cite class="ltx_cite">[, Theorem]</cite>.
+Moreover, using some Rosser-Schoenfeld’s <cite class="ltx_cite">[]</cite> and Robin’s estimates
+<cite class="ltx_cite">[]</cite> for the prime counting function <span class="math inline" id="p5.m6">\(\pi(x)\)</span>
+and Chebyshev function <span class="math inline" id="p5.m7">\(\theta(x)\)</span>, in 2000 L. Panaitopol
+<cite class="ltx_cite">[]</cite> proved that <span class="math inline" id="p5.m8">\(p_{n+1}^{n-\pi(n)}&lt;p_{1}p_{2}\cdots p_{n}\)</span> for every
+<span class="math inline" id="p5.m9">\(n\geq 2\)</span>, where <span class="math inline" id="p5.m10">\(\pi(x)\)</span> is the number of primes <span class="math inline" id="p5.m11">\(\leq x\)</span>.
+This improves Pósa’s inequality in the following form:
+<span class="math inline" id="p5.m12">\(p_{n+1}^{k}&lt;p_{1}p_{2}\cdots p_{n}\)</span> for <span class="math inline" id="p5.m13">\(n\geq 2k\)</span> with given <span class="math inline" id="p5.m14">\(k\geq 1\)</span>.
+M. Hassani <cite class="ltx_cite">[]</cite> refined this inequality in 2006 by proving that for
+<span class="math inline" id="p5.m15">\(n\geq 101\)</span> the exponent <span class="math inline" id="p5.m16">\(n-\pi(n)\)</span> can be replaced by
+<span class="math inline" id="p5.m17">\((1-1/\log n)(n-\pi(n))\)</span>.
+Furthermore, using Panaitopol’s inequality, in 2009
+S. Zhang showed <cite class="ltx_cite">[, Corollary 1]</cite>
+that <span class="math inline" id="p5.m18">\(2^{p_{n+1}}&lt;p_{1}p_{2}\cdots p_{n}\)</span> for all <span class="math inline" id="p5.m19">\(n\geq 10\)</span>.
+This inequality yields an improvement of Pósa’s inequality <cite class="ltx_cite">[]</cite>
+given above and some Bonse-type inequalities. Furthermore,
+various Panaitopol-type inequalities and related limits are recently
+established by J. Sándor <cite class="ltx_cite">[]</cite> and J. Sándor
+and A. Verroken <cite class="ltx_cite">[]</cite>).</p>
+          </div>
+          <div id="p6" class="ltx_para">
+            <p class="ltx_p">Notice that Bonse’s inequality, all its refinemenets and improvements
+presented above does not guarantee the existence of “many primes”
+less than <span class="math inline" id="p6.m1">\(p_{1}p_{2}\cdots p_{n}\)</span>. This is also the case with
+numerous known elementary proof of Euclid’s theorem on the infinitude of
+primes. For example, iterating the second Bonse’s inequality
+we find that <span class="math inline" id="p6.m2">\(p_{n+2}&lt;(p_{1}p_{2}\cdots p_{n})^{4/3}\)</span>, which repeating
+still three times gives <span class="math inline" id="p6.m3">\(p_{n+4}\leq(p_{1}p_{2}\cdots p_{n})^{580/729}\)</span>.
+This shows that for <span class="math inline" id="p6.m4">\(n\geq 4\)</span> there exist at least
+<span class="math inline" id="p6.m5">\(4\)</span> primes between the <span class="math inline" id="p6.m6">\(n\)</span>th prime and the product of the first <span class="math inline" id="p6.m7">\(n\)</span> primes.
+We see from the first Mamangakis’ inequality given above
+that for each <span class="math inline" id="p6.m8">\(n\geq 11\)</span> there are at least <span class="math inline" id="p6.m9">\(3n\)</span> primes between the <span class="math inline" id="p6.m10">\(n\)</span>th
+prime and <span class="math inline" id="p6.m11">\(p_{1}p_{2}\cdots p_{n}\)</span>. Notice also that the first Sándor’s
+inequality presented above and the well known estimation <span class="math inline" id="p6.m12">\(p_{n}>n\log n\)</span> with
+<span class="math inline" id="p6.m13">
+            \(n\geq 5\)</span> (see e.g., 
+            <cite class="ltx_cite">[, (3.10) in Theorem 3]</cite>)
+imply that for each <span class="math inline" id="p6.m14">\(n\geq 2\)</span> there are at least
+<span class="math inline" id="p6.m15">\([n\log n]-2\)</span> primes less than <span class="math inline" id="p6.m16">\(p_{1}p_{2}\cdots p_{n}\)</span>.
+Quite recently in 2011, applying two simple lemmas in
+the Theory of Finite Abelian Groups related to
+the product of some cyclic groups <span class="math inline" id="p6.m17">
+            \(\mathbb{Z}_{m}\)</span>, R. Cooke 
+            <cite class="ltx_cite">[]</cite>
+modified Perott’s proof from 1881 (<cite class="ltx_cite">
+            []</cite>, 
+            <cite class="ltx_cite">[, page 10]</cite>)
+to establish that there are at least <span class="math inline" id="p6.m18">\(n\)</span> primes between the
+<span class="math inline" id="p6.m19">\((n+1)\)</span>th prime and the product of the first <span class="math inline" id="p6.m20">\(n+1\)</span> primes.
+Refining the Euler’s proof of the infinitude of primes presented below,
+in this note we improve Cooke’s result by proving the following
+Bonse-type inequality.</p>
+          </div>
+          <div id="p7" class="ltx_para">
+            <p class="ltx_p">
+              <span class="ltx_text ltx_font_bold">Theorem 1.</span>
+              <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="p7.m1">\(\alpha\)</span> be a real number such that
+<span class="math inline" id="p7.m2">\(1&lt;\alpha&lt;2\)</span> and let <span class="math inline" id="p7.m3">\(x_{0}=x_{0}(\alpha)\)</span> be
+a </span>(<span class="ltx_text ltx_font_italic">unique</span>)<span class="ltx_text ltx_font_italic"> positive solution of the equation</span>
+            </p>
+            <table id="S0.Ex2" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.Ex2.m1">\[x^{\alpha-1}-\frac{\pi}{e^{2}\sqrt{3}}x+1=0.\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">
+              <span class="ltx_text ltx_font_italic">Then for each positive integer <span class="math inline" id="p7.m4">\(n>x_{0}\)</span>
+there exist at least <span class="math inline" id="p7.m5">\(\left[n^{\alpha}\right]\)</span> primes between
+the <span class="math inline" id="p7.m6">\((n+1)\)</span>th prime and the product of the first <span class="math inline" id="p7.m7">\(n+1\)</span> primes.</span>
+            </p>
+          </div>
+          <div id="p8" class="ltx_para">
+            <p class="ltx_p">
+              <span class="ltx_text ltx_font_italic">Moreover, for each positive integer <span class="math inline" id="p8.m1">\(n\)</span> there are at least <span class="math inline" id="p8.m2">\(n\)</span> primes
+between the <span class="math inline" id="p8.m3">\((n+1)\)</span>th prime and the product of the first <span class="math inline" id="p8.m4">\(n+1\)</span> primes.</span>
+            </p>
+          </div>
+          <div id="p9" class="ltx_para">
+            <p class="ltx_p">
+              <span class="ltx_text ltx_font_bold">Remark.</span> The first assertion of Theorem 1
+can be shortly written in terms of the “little <span class="math inline" id="p9.m1">\(o\)</span>” notation as</p>
+              <table id="S0.Ex3" class="ltx_equation">
+                <tr class="ltx_equation ltx_align_baseline">
+                  <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                    <span class="ltx_tag ltx_tag_equation">2</span>
+                  </td>
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_align_center">
+                    <span class="math display" id="S0.Ex3.m1">\[p_{o(n^{2})}&lt;p_{1}p_{2}\cdots p_{n+1}\]</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+              <p class="ltx_p">as <span class="math inline" id="p9.m2">\(n\to\infty\)</span>, where <span class="math inline" id="p9.m3">\(p_{k}\)</span> is the <span class="math inline" id="p9.m4">\(k\)</span>th prime. However, our method applied
+for the proof of Theorem 1 cannot be applied for <span class="math inline" id="p9.m5">\(\alpha=2\)</span>;
+namely, this is because of the inequality (13) with <span class="math inline" id="p9.m6">\(\alpha=2\)</span>
+is clearly satisfied for all <span class="math inline" id="p9.m7">\(m\geq 1\)</span>.</p>
+            </div>
+            <div id="p10" class="ltx_para">
+              <p class="ltx_p">A computation via <span class="ltx_text ltx_font_typewriter">Mathematica 8</span> shows that
+<span class="math inline" id="p10.m1">\(p_{n^{2}}&lt;(p_{n})^{2}\)</span> for each <span class="math inline" id="p10.m2">\(n\geq 5\)</span>. Namely, it is well known
+(see e.g., <cite class="ltx_cite">[]</cite>) that <span class="math inline" id="p10.m3">\(p_{n}\sim n\log n\)</span> as <span class="math inline" id="p10.m4">\(n\to\infty\)</span>, and so
+<span class="math inline" id="p10.m5">\((p_{n})^{2}\sim n^{2}\log^{2}n\)</span> and <span class="math inline" id="p10.m6">\(p_{n^{2}}\sim 2n^{2}\log n\)</span>.
+This immediately implies that <span class="math inline" id="p10.m7">\(2(p_{n})^{2}\sim p_{n^{2}}\log n\)</span>.
+Notice also that using the known estimates
+<span class="math inline" id="p10.m8">\(\log n+\log\log n-3/2&lt;p_{n}/n&lt;\log n+\log\log n-1/2\)</span> with <span class="math inline" id="p10.m9">\(n\geq 6\)</span>
+(see e.g., <cite class="ltx_cite">[, (3.10) and (3.11) in Theorem 3]</cite>) and a verification
+via <span class="ltx_text ltx_font_typewriter">Mathematica 8</span> for <span class="math inline" id="p10.m10">\(1\leq n\leq 1020\)</span>,
+easily follows that <span class="math inline" id="p10.m11">\(2(p_{n})^{2}>p_{n^{2}}\log n\)</span> for all <span class="math inline" id="p10.m12">\(n\geq 1\)</span>.
+Recall also that it is known that the sequence <span class="math inline" id="p10.m13">\((p_{n}/\log n)\)</span>
+is strictly increasing (see e.g., <cite class="ltx_cite">[, p. 106]</cite>).</p>
+            </div>
+            <div id="p11" class="ltx_para">
+              <p class="ltx_p">A motivation for our proof given in the next section comes
+from a less known proof of Euclid’s theorem
+due to Euler in 1736 (published posthumously in 1862
+<cite class="ltx_cite">
+              []</cite>; also see <cite class="ltx_cite">[, Sect. 135]</cite>, 
+              <cite class="ltx_cite">[, p. 413]</cite>
+and citeme3) is in fact the first proof of Euclid’s theorem after those of Euclid
+and C. Goldbach’s proof presented in a letter to L. Euler in July 1730
+(see <cite class="ltx_cite">
+              [, p. 6]</cite> and 
+              <cite class="ltx_cite">[, Appendix C)]</cite>).
+As noticed in Dickson’s History <cite class="ltx_cite">[, p. 413]</cite>
+(see also <cite class="ltx_cite">[, page 80]</cite>), this proof is also attributed in
+1878/9 by Kummer <cite class="ltx_cite">[]</cite> who gave essentially Euler’s argument.
+This Euler’s proof (see e.g., <cite class="ltx_cite">
+              [, pp. 134–135]</cite>, 
+              <cite class="ltx_cite">[]</cite>
+and <cite class="ltx_cite">
+              [, page 3]</cite>; also cf. Pinasco’s proof 
+              <cite class="ltx_cite">[]</cite>)
+is based on the multiplicativity of the <span class="math inline" id="p11.m1">\(\varphi\)</span>-function
+defined as the number of positive integers not exceeding <span class="math inline" id="p11.m2">\(n\)</span> and relatively
+prime to <span class="math inline" id="p11.m3">\(n\)</span>. Namely, if <span class="math inline" id="p11.m4">\(p_{1},p_{2},\ldots,p_{n}\)</span> is a list of distinct <span class="math inline" id="p11.m5">\(n\geq 2\)</span>
+primes with product <span class="math inline" id="p11.m6">\(P\)</span>, then</p>
+              <table id="S0.E2" class="ltx_equation">
+                <tr class="ltx_equation ltx_align_baseline">
+                  <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                    <span class="ltx_tag ltx_tag_equation">(2)</span>
+                  </td>
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_align_center">
+                    <span class="math display" id="S0.E2.m1">\[\varphi(P)=(p_{1}-1)(p_{2}-1)\cdots(p_{n}-1)\geq 2^{n-1}\geq 2.\]</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+              <p class="ltx_p">The inequality (1) together with the definition of the <span class="math inline" id="p11.m7">\(\varphi\)</span>-function
+says there exists at least an integer in the range <span class="math inline" id="p11.m8">\([2,P]\)</span>
+that is relatively prime to <span class="math inline" id="p11.m9">\(P\)</span>, but such an integer has a prime
+factor necessarily different from any of the <span class="math inline" id="p11.m10">\(p_{k}\)</span> with <span class="math inline" id="p11.m11">\(k=1,2,\ldots,n\)</span>.
+This yields the infinitude of primes.</p>
+            </div>
+            <div id="p12" class="ltx_para">
+              <p class="ltx_p">Theorem 1 may be considered as an extension of the above Euler’s result
+in order to obtain the estimate of a number of primes less than
+the product of the first <span class="math inline" id="p12.m1">\(n\)</span> primes.
+Proof of Theorem 1 given in the next section is combinatorial in spirit and
+entirely elementary. It is based on some counting arguments by using
+Stirling’s formula to give upper bound for some binomial coefficients.</p>
+            </div>
+            <section id="S1" class="ltx_section">
+              <h2 class="ltx_title ltx_title_section">
+                <span class="ltx_tag ltx_tag_section">1. </span>Proof of Theorem</h2>
+                <div id="S1.p1" class="ltx_para">
+                  <p class="ltx_p">
+                    <span class="ltx_text ltx_font_bold">Lemma 1.</span>
+                    <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S1.p1.m1">\(k\)</span> and <span class="math inline" id="S1.p1.m2">\(N\)</span>
+be two arbitrary fixed positive integers, and let <span class="math inline" id="S1.p1.m3">\(N(k,n)\)</span>
+be the number of <span class="math inline" id="S1.p1.m4">\(k\)</span>-tuples <span class="math inline" id="S1.p1.m5">\((x_{1},\ldots,x_{k})\)</span> of nonnegative
+integers <span class="math inline" id="S1.p1.m6">\(x_{1},\ldots,x_{k}\)</span> is <span class="math inline" id="S1.p1.m7">\({n+k-1\choose k}\)</span> satisfying
+the inequality</span>
+                  </p>
+                  <table id="S1.Ex4" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.Ex4.m1">\[\sum_{i=1}^{k}x_{i}\leq n.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">
+                    <span class="ltx_text ltx_font_italic">Then</span>
+                  </p>
+                  <table id="S1.Ex5" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.Ex5.m1">\[N(k,n)={n+k\choose n}.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                </div>
+                <div class="ltx_proof">
+                  <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+                  <div id="S1.p2" class="ltx_para">
+                    <p class="ltx_p">For a fixed nonnegative integer <span class="math inline" id="S1.p2.m1">\(m\)</span> with <span class="math inline" id="S1.p2.m2">\(0\leq m\leq n\)</span>,
+denote by <span class="math inline" id="S1.p2.m3">\(M(k,n)\)</span> the number of <span class="math inline" id="S1.p2.m4">\(k\)</span>-tuples
+<span class="math inline" id="S1.p2.m5">\((x_{1},\ldots,x_{k})\)</span> of nonnegative integers <span class="math inline" id="S1.p2.m6">\(x_{1},\ldots,x_{k}\)</span> such that</p>
+                    <table id="S1.Ex6" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex6.m1">\[\sum_{i=1}^{k}x_{i}=m.\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">Then by induction no <span class="math inline" id="S1.p2.m7">\(k\geq 1\)</span> it is easy to prove the well known fact
+that <span class="math inline" id="S1.p2.m8">\(M(k,m)={m+k-1\choose k-1}\)</span> for each <span class="math inline" id="S1.p2.m9">\(k\geq 1\)</span>. Hence, for such a fixed
+<span class="math inline" id="S1.p2.m10">\(k\)</span> we have</p>
+                    <table id="S1.Ex7" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex7.m1">\[N(k,n)=\sum_{m=0}^{n}M(k,m)=\sum_{m=0}^{n}{m+k-1\choose k-1}.\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">Next by induction on <span class="math inline" id="S1.p2.m11">\(n\geq 0\)</span>, using the Pascal’s identity
+<span class="math inline" id="S1.p2.m12">\({r\choose i}+{r\choose i+1}={r+1\choose i+1}\)</span> with <span class="math inline" id="S1.p2.m13">\(0\leq i\leq r-1\)</span>,
+we immediately obtain that the sum on the right hand side of the above
+equality is equal to <span class="math inline" id="S1.p2.m14">\({n+k\choose k}\)</span>. Therefore, we have
+<span class="math inline" id="S1.p2.m15">\(N(k,n)={n+k\choose k}={n+k\choose n}\)</span>, as desired.
+∎</p>
+                  </div>
+                </div>
+                <div id="S1.p3" class="ltx_para">
+                  <p class="ltx_p">
+                    <span class="ltx_text ltx_font_bold">Lemma 2.</span>
+                    <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S1.p3.m1">\(\alpha\)</span> be a real number such that
+<span class="math inline" id="S1.p3.m2">\(\alpha>1\)</span>. Then for each positive integer <span class="math inline" id="S1.p3.m3">\(n\)</span>
+                  </span>
+                </p>
+                <table id="S1.E3" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                      <span class="ltx_tag ltx_tag_equation">(3)</span>
+                    </td>
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S1.E3.m1">\[\frac{1}{n!}{[n^{\alpha}]+n\choose n}&lt;\frac{e^{2n}(n^{\alpha-1}+1)^{n}\sqrt{3}%
+}{2n^{n+1}\pi}\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">
+                  <span class="ltx_text ltx_font_italic">where <span class="math inline" id="S1.p3.m4">\([a]\)</span> denotes the integer part of <span class="math inline" id="S1.p3.m5">\(a\)</span>.
+Furthermore, for all positive integers <span class="math inline" id="S1.p3.m6">\(n\)</span> we have</span>
+                </p>
+                <table id="S1.E4" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                      <span class="ltx_tag ltx_tag_equation">(4)</span>
+                    </td>
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S1.E4.m1">\[\frac{1}{n!}{2n\choose n}&lt;\frac{2^{2n-1/2}e^{n}}{n^{n+1}\pi}.\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+              </div>
+              <div class="ltx_proof">
+                <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+                <div id="S1.p4" class="ltx_para">
+                  <p class="ltx_p">First observe that (3) holds for <span class="math inline" id="S1.p4.m1">\(n=1\)</span>.
+Stirlng’s asymptotic formula
+<span class="math inline" id="S1.p4.m2">\(n!\approx\sqrt{2\pi n}(n/e)^{n}\)</span> as <span class="math inline" id="S1.p4.m3">\(n\to\infty\)</span> is
+often presented in the following refined form due to H. Robbins <cite class="ltx_cite">[]</cite>:
+(also see <cite class="ltx_cite">[]</cite>)</p>
+                  <table id="S1.E5" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                        <span class="ltx_tag ltx_tag_equation">(5)</span>
+                      </td>
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.E5.m1">\[n!=\sqrt{2\pi n}\left(\frac{n}{e}\right)^{n}e^{\gamma_{n}},\quad\frac{1}{12n+1%
+}&lt;\gamma_{n}&lt;\frac{1}{12n},\quad n=1,2,\ldots.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">Then applying (5) to all factorials <span class="math inline" id="S1.p4.m4">\((\left[n^{\alpha}\right]+n)!,\left[n^{\alpha}\right]!,n!\)</span>, where
+<span class="math inline" id="S1.p4.m5">\(n^{\alpha}-1&lt;a:=\left[n^{\alpha}\right]\leq n^{\alpha}\)</span>
+we find that</p>
+                  <table id="S1.E6" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                        <span class="ltx_tag ltx_tag_equation">(6)</span>
+                      </td>
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.E6.m1">\[\begin{split}&amp;\frac{1}{n!}{a+n\choose n}&lt;\frac{a!}{a!(n!)^{2}}\frac{\sqrt{2\pi%
+(a+n)}\left(\frac{a+n}{e}\right)^{a+n}}{\sqrt{2\pi a}\left(\frac{a}{e}\right)^%
+{a}\cdot 2\pi n\left(\frac{n}{e}\right)^{2n}}\times\\
+&amp;e^{1/(12(a+n))-1/(12a+1)-2/(12n+1)}\\
+=&amp;\frac{e^{n}}{2n^{2n+1}\pi}\sqrt{1+\frac{n}{a}}\cdot\left(1+\frac{n}{a}\right%
+)^{a}(a+n)^{n}e^{1/(12(a+n))-1/(12a+1)-2/(12n+1)}.\end{split}\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">Inserting the inequalities</p>
+                  <table id="S1.Ex8" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.Ex8.m1">\[\sqrt{1+\frac{n}{a}}&lt;\sqrt{1+\frac{n}{n^{\alpha}-1}}&lt;\sqrt{1+\frac{n}{n-1}}%
+\leq\sqrt{3},\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">
+                    <span class="math inline" id="S1.p4.m6">\(a+n\leq n^{\alpha}+n\)</span>,</p>
+                    <table id="S1.Ex9" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex9.m1">\[\left(1+\frac{n}{a}\right)^{a}=\left(\left(1+\frac{n}{a}\right)^{a/n}\right)^{%
+n}&lt;e^{n},\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">and</p>
+                    <table id="S1.Ex10" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex10.m1">\[\frac{1}{12(a+n)}-\frac{1}{12a+1}-\frac{2}{12n+1}&lt;\frac{1}{12n}-\frac{2}{12n+1%
+}&lt;0\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">into inequality (6), we find that</p>
+                    <table id="S1.E7" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                          <span class="ltx_tag ltx_tag_equation">(7)</span>
+                        </td>
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.E7.m1">\[\frac{1}{n!}{a+n\choose n}&lt;\frac{e^{2n}\sqrt{3}(n^{\alpha}+n)^{n}}{2\pi n^{2n+%
+1}}=\frac{e^{2n}(n^{\alpha-1}+1)^{n}\sqrt{3}}{2n^{n+1}\pi}.\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">This proves (3). Finally, taking <span class="math inline" id="S1.p4.m7">\(a=n\)</span> into (6) we immediately
+obtain (4).
+∎</p>
+                  </div>
+                </div>
+                <div id="S1.p5" class="ltx_para">
+                  <p class="ltx_p">
+                    <span class="ltx_text ltx_font_bold">Lemma 3.</span>
+                    <span class="ltx_text ltx_font_italic"> The real function <span class="math inline" id="S1.p5.m1">\(f:[0,+\infty)\to{\mathbf{R}}\)</span>
+defined as</span>
+                  </p>
+                  <table id="S1.Ex11" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.Ex11.m1">\[f(x)=e^{2}\sqrt{3}x^{\alpha-1}-\pi x+1\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">
+                    <span class="ltx_text ltx_font_italic">has exactly one positive root. Moreover, if <span class="math inline" id="S1.p5.m2">\(x_{0}=x_{0}(\alpha)\)</span> is this root,
+then <span class="math inline" id="S1.p5.m3">\(f\)</span>
+decreases on <span class="math inline" id="S1.p5.m4">\([x_{0},+\infty)\)</span>.</span>
+                  </p>
+                </div>
+                <div class="ltx_proof">
+                  <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+                  <div id="S1.p6" class="ltx_para">
+                    <p class="ltx_p">The derivative of the function <span class="math inline" id="S1.p6.m1">\(f\)</span> is
+<span class="math inline" id="S1.p6.m2">\(f^{\prime}(x)=e^{2}\sqrt{3}(\alpha-1)x^{\alpha-2}-\pi\)</span> whose a unique real root
+is
+<span class="math inline" id="S1.p6.m3">\(x_{1}=\left(e^{2}\sqrt{3}(\alpha-1)/\pi\right)^{1/(2-\alpha)}\)</span>.
+Therefore, in view of the fact that <span class="math inline" id="S1.p6.m4">\(\alpha-2&lt;0\)</span>, we infer that
+<span class="math inline" id="S1.p6.m5">\(f\)</span> is decreasing on <span class="math inline" id="S1.p6.m6">\([x_{1},\infty)\)</span>. However, since
+<span class="math inline" id="S1.p6.m7">\(f(x_{1})/x_{1}=\pi(2-\alpha)/(\alpha-1)>0\)</span> and so <span class="math inline" id="S1.p6.m8">\(f(x_{1})>0\)</span>,
+and <span class="math inline" id="S1.p6.m9">\(\lim_{x\to+\infty}f(x)=-\infty\)</span>, we conclude that there
+exists a unique positive root <span class="math inline" id="S1.p6.m10">\(x_{0}\)</span> of the function <span class="math inline" id="S1.p6.m11">\(f\)</span>.
+As <span class="math inline" id="S1.p6.m12">\(x_{0}>x_{1}\)</span> we see that <span class="math inline" id="S1.p6.m13">\(f\)</span> decreases on <span class="math inline" id="S1.p6.m14">\([x_{0},+\infty)\)</span>.
+∎</p>
+                  </div>
+                </div>
+                <div class="ltx_proof">
+                  <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof of Theorem..</h6>
+                  <div id="S1.p7" class="ltx_para">
+                    <p class="ltx_p">First consider the case
+when <span class="math inline" id="S1.p7.m1">\(1&lt;\alpha&lt;2\)</span>. Then suppose that the assertion is not true.
+This means that there are
+an <span class="math inline" id="S1.p7.m2">\(\alpha\)</span> with <span class="math inline" id="S1.p7.m3">\(1&lt;\alpha&lt;2\)</span> and
+a positive integer <span class="math inline" id="S1.p7.m4">\(m>x_{0}=x_{0}(\alpha)\)</span> for which
+there are less than <span class="math inline" id="S1.p7.m5">\(\left[m^{\alpha}\right]\)</span> primes between
+the <span class="math inline" id="S1.p7.m6">\((m+1)\)</span>th prime and the product of the first <span class="math inline" id="S1.p7.m7">\(m+1\)</span> primes.
+For such a <span class="math inline" id="S1.p7.m8">\(m\)</span>, let <span class="math inline" id="S1.p7.m9">\(2=p_{1}&lt;3=p_{2}&lt;\cdots&lt;p_{m+1}\)</span>
+be first <span class="math inline" id="S1.p7.m10">\(m+1\)</span> consecutive primes. Accordingly, suppose that
+<span class="math inline" id="S1.p7.m11">\(p_{m+2},\ldots,p_{m+1+k}\)</span> are all the primes between <span class="math inline" id="S1.p7.m12">\(p_{m+1}\)</span> and
+the product <span class="math inline" id="S1.p7.m13">\(P:=p_{1}p_{2}\cdots p_{m+1}\)</span> with <span class="math inline" id="S1.p7.m14">\(k\leq\left[m^{\alpha}\right]-1\)</span>.
+Then every positive integer less than <span class="math inline" id="S1.p7.m15">\(P\)</span> and relatively prime to <span class="math inline" id="S1.p7.m16">\(P\)</span> can be
+factorized as <span class="math inline" id="S1.p7.m17">\(p_{m+2}^{x_{1}}\cdots p_{m+k+1}^{x_{k}}\)</span> with
+nonnegative integers <span class="math inline" id="S1.p7.m18">\(x_{1},\ldots,x_{k}\)</span>. Then obviously
+we have</p>
+                    <table id="S1.Ex12" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex12.m1">\[p_{m+1}^{x_{1}+\cdots+x_{k}}&lt;p_{m+2}^{x_{1}}\cdots p_{m+1+k}^{x_{k}}&lt;P=p_{1}p_%
+{2}\cdots p_{m+1}&lt;p_{m+1}^{m+1},\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">whence it follows that</p>
+                    <table id="S1.E8" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                          <span class="ltx_tag ltx_tag_equation">(8)</span>
+                        </td>
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.E8.m1">\[x_{1}+\cdots+x_{k}\leq m.\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">Then by Lemma 1, a number <span class="math inline" id="S1.p7.m19">\(N(k,m)\)</span> of <span class="math inline" id="S1.p7.m20">\(k\)</span>-tuples
+<span class="math inline" id="S1.p7.m21">\((x_{1},\ldots,x_{k})\)</span> of nonnegative integers <span class="math inline" id="S1.p7.m22">\(x_{i}\)</span>
+satisfying the inequality (7) is equal to <span class="math inline" id="S1.p7.m23">\({m+k\choose k}\)</span>.
+It follows that must be</p>
+                    <table id="S1.E9" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                          <span class="ltx_tag ltx_tag_equation">(9)</span>
+                        </td>
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.E9.m1">\[{m+k\choose m}\geq\varphi(P)=(p_{1}-1)(p_{2}-1)\cdots(p_{m+1}-1).\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">On the other hand, since <span class="math inline" id="S1.p7.m24">\(p_{i}-1\geq 2i\)</span> for all <span class="math inline" id="S1.p7.m25">\(i\geq 5\)</span>, it follows that
+for every <span class="math inline" id="S1.p7.m26">\(n\geq 3\)</span>
+                  </p>
+                  <table id="S1.E10" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                        <span class="ltx_tag ltx_tag_equation">(10)</span>
+                      </td>
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.E10.m1">\[\begin{split}&amp;(p_{1}-1)(p_{2}-1)(p_{3}-1)(p_{4}-1)\cdots(p_{n+1}-1)\\
+&amp;\geq 48\cdot 2^{n-3}\cdot 5\cdot 6\cdots(n+1)=2^{n-2}(n+1)!.\end{split}\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">Then (9) and (10) with <span class="math inline" id="S1.p7.m27">\(n=m\geq 3\)</span> yield
+</p>
+                  <table id="S1.E11" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                        <span class="ltx_tag ltx_tag_equation">(11)</span>
+                      </td>
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.E11.m1">\[2^{m-2}(m+1)\leq\frac{1}{m!}{m+k\choose m}.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">Using the fact that the sequence <span class="math inline" id="S1.p7.m28">\(k\mapsto{m+k\choose m}\)</span>
+(<span class="math inline" id="S1.p7.m29">\(k=1,2,\ldots\)</span>) is increasing, the previous assumption
+<span class="math inline" id="S1.p7.m30">\(k&lt;\left[m^{\alpha}\right]\)</span> and the inequality (3) of Lemma 2,
+we obtain that if <span class="math inline" id="S1.p7.m31">\(m\geq 3\)</span>, then</p>
+                  <table id="S1.E12" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                        <span class="ltx_tag ltx_tag_equation">(12)</span>
+                      </td>
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.E12.m1">\[\frac{1}{m!}{m+k\choose m}&lt;\frac{1}{m!}{[m^{\alpha}]+m\choose m}&lt;\frac{e^{2m}(%
+m^{\alpha-1}+1)^{m}\sqrt{3}}{2m^{m+1}\pi}.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">Now from (11) and (12) it follows that if <span class="math inline" id="S1.p7.m32">\(m\geq 3\)</span> then</p>
+                  <table id="S1.Ex13" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.Ex13.m1">\[2^{m-2}(m+1)&lt;\frac{e^{2m}(m^{\alpha-1}+1)^{m}\sqrt{3}}{2m^{m+1}\pi},\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">or equivalently,</p>
+                  <table id="S1.E13" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                        <span class="ltx_tag ltx_tag_equation">(13)</span>
+                      </td>
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.E13.m1">\[m^{\alpha-1}+1>\frac{2}{e^{2}}\sqrt[m]{\frac{m(m+1)\pi}{2\sqrt{3}}}\cdot m.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">Notice that the inequality (13) also holds for <span class="math inline" id="S1.p7.m33">\(m=1\)</span> and <span class="math inline" id="S1.p7.m34">\(m=2\)</span>.</p>
+                </div>
+                <div id="S1.p8" class="ltx_para">
+                  <p class="ltx_p">Since <span class="math inline" id="S1.p8.m1">\(\pi/(2\sqrt{3})&lt;1\)</span>, it follows that</p>
+                  <table id="S1.Ex14" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.Ex14.m1">\[\sqrt[m]{\frac{m(m+1)\pi}{2\sqrt{3}}}>\sqrt[m]{\frac{\pi}{2\sqrt{3}}}\geq\frac%
+{\pi}{2\sqrt{3}}.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">Substituting this into (13) we have</p>
+                  <table id="S1.E14" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                        <span class="ltx_tag ltx_tag_equation">(14)</span>
+                      </td>
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.E14.m1">\[m^{\alpha-1}+1-\pi m/(e^{2}\sqrt{3})>0.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">However, using the notations of Lemma 3, since <span class="math inline" id="S1.p8.m2">\(m>x_{0}\)</span>
+this lemma gives</p>
+                  <table id="S1.Ex15" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.Ex15.m1">\[m^{\alpha-1}+1-\pi m/(e^{2}\sqrt{3})=f(m)&lt;f(x_{0})=0.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">This contradicts (14), and hence the proof when <span class="math inline" id="S1.p8.m3">\(1&lt;\alpha&lt;2\)</span>
+is finished.</p>
+                </div>
+                <div id="S1.p9" class="ltx_para">
+                  <p class="ltx_p">It remains to prove the assertion for <span class="math inline" id="S1.p9.m1">\(\alpha=1\)</span>.
+Then as in the previous case, suppose that for some <span class="math inline" id="S1.p9.m2">\(m\geq 1\)</span> there exist
+less than <span class="math inline" id="S1.p9.m3">\(m\)</span> primes between <span class="math inline" id="S1.p9.m4">\(p_{m+1}\)</span> and the product
+<span class="math inline" id="S1.p9.m5">\(p_{1}p_{2}\cdots p_{m+1}\)</span>. Then as in the previous case with the
+condition <span class="math inline" id="S1.p9.m6">\(k\leq m-1\)</span> instead of <span class="math inline" id="S1.p9.m7">\(k\leq\left[m^{\alpha}\right]-1\)</span>,
+we arrive to the following inequality analogous to (11):</p>
+                  <table id="S1.E15" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                        <span class="ltx_tag ltx_tag_equation">(15)</span>
+                      </td>
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.E15.m1">\[2^{m-2}(m+1)\leq\frac{1}{m!}{2m-1\choose m}=\frac{1}{2}\cdot\frac{1}{m!}{2m%
+\choose m},\quad m=1,2,\ldots.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">Next from (15) and the inequality (4) of Lemma 2 for all
+<span class="math inline" id="S1.p9.m8">\(m\geq 1\)</span> we get</p>
+                  <table id="S1.Ex16" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.Ex16.m1">\[2^{m-2}(m+1)&lt;\frac{2^{2m-3/2}e^{m}}{m^{m+1}\pi},\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">whence it follows that if <span class="math inline" id="S1.p9.m9">\(m\geq 6\)</span> then</p>
+                  <table id="S1.Ex17" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.Ex17.m1">\[1&lt;\frac{2^{m+1/2}e^{m}}{m^{m+1}(m+1)\pi}=\frac{\sqrt{2}}{m(m+1)\pi}\left(\frac%
+{2e}{m}\right)^{m}&lt;1.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">A contradiction, and hence our assertion is true if <span class="math inline" id="S1.p9.m10">\(m\geq 6\)</span>.
+We immediately verify that between <span class="math inline" id="S1.p9.m11">\(p_{n+1}\)</span> and the product
+<span class="math inline" id="S1.p9.m12">\(p_{1}p_{2}\cdots p_{n+1}\)</span> there are at least <span class="math inline" id="S1.p9.m13">\(n\)</span> primes for all
+<span class="math inline" id="S1.p9.m14">\(n\in\{1,2,3,4,5\}\)</span>. This completes the proof.
+∎</p>
+                </div>
+              </div>
+            </section>
+            <div id="p13" class="ltx_para">
+              <p class="ltx_p">
+                <span class="ltx_text" style="font-size:script;">DEPARTMENT OF MATHEMATICS, MARITIME FACULTY KOTOR,</span>
+              </p>
+            </div>
+            <div id="p14" class="ltx_para">
+              <p class="ltx_p">
+                <span class="ltx_text" style="font-size:script;">UNIVERSITY OF MONTENEGRO</span>
+              </p>
+            </div>
+            <div id="p15" class="ltx_para">
+              <p class="ltx_p">
+                <span class="ltx_text" style="font-size:script;">DOBROTA 36, 85330 KOTOR, MONTENEGRO</span>
+                <span class="ltx_text ltx_font_italic"/>
+              </p>
+            </div>
+            <div id="p16" class="ltx_para">
+              <p class="ltx_p">
+                <span class="ltx_text ltx_font_italic">E-mail address: </span>
+                <span class="ltx_text ltx_font_typewriter">romeo@ac.me</span>
+                <span class="ltx_text ltx_font_italic"/>
+              </p>
+            </div>
+          </article>
+        </div>
+        <footer class="ltx_page_footer">
+          <div class="ltx_page_logo">Generated  on Thu Jan 19 18:36:50 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"/>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

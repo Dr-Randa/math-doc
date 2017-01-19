@@ -1,0 +1,839 @@
+<html>
+  <head>
+    <title>On Additive Combinatorics of Permutations of ℤn.</title>
+    <!--Generated on Thu Jan 19 18:36:42 2017 by LaTeXML (version 0.8.1) http://dlmf.nist.gov/LaTeXML/.-->
+    <!--Document created on .-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="LaTeXML.css" type="text/css"/>
+    <link rel="stylesheet" href="ltx-article.css" type="text/css"/>
+    <script type="text/x-sre-config">
+{"json": "https://cdn.mathjax.org/mathjax/contrib/a11y/mathmaps"}
+</script>
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: {autoNumber: "AMS"} },
+  MMLorHTML: {MSIE: "HTML"},
+  AssistiveMML: {disabled: true},
+  "fast-preview": {disabled: true}
+});
+MathJax.Ajax.config.path["SRE"] = "../mathjax";
+</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"> </script>
+  </head>
+  <body>
+    <div class="ltx_page_main">
+      <div class="ltx_page_content">
+        <article class="ltx_document ltx_authors_1line">
+          <h1 class="ltx_title ltx_title_document">On Additive Combinatorics of Permutations of <span class="math inline" id="m1">\(\mathbb{Z}_{n}\)</span>.</h1>
+          <div class="ltx_authors">
+            <span class="ltx_creator ltx_role_author">
+              <span class="ltx_personname">[
+</span>
+            </span>
+            <span class="ltx_author_before"/>
+            <span class="ltx_creator ltx_role_author">
+              <span class="ltx_personname">[
+</span>
+            </span>
+            <span class="ltx_author_before"/>
+            <span class="ltx_creator ltx_role_author">
+              <span class="ltx_personname">[
+</span>
+            </span>
+          </div>
+          <div class="ltx_abstract">
+            <h6 class="ltx_title ltx_title_abstract">Abstract</h6>
+            <p class="ltx_p">Let <span class="math inline" id="m2">\(\mathbb{Z}_{n}\)</span> denote the ring of integers modulo <span class="math inline" id="m3">\(n\)</span>. In this paper
+we consider two extremal problems on permutations of <span class="math inline" id="m4">\(\mathbb{Z}_{n}\)</span>, namely,
+the maximum size of a collection of permutations such that the sum of any two
+distinct permutations in the collection is again a permutation, and the
+maximum size of a collection of permutations such that the sum of any two
+distinct permutations in the collection
+is not a permutation. Let the sizes be denoted by <span class="math inline" id="m5">\(s(n)\)</span> and <span class="math inline" id="m6">\(t(n)\)</span>
+respectively. The case when <span class="math inline" id="m7">\(n\)</span> is even is trivial in both the cases, with
+<span class="math inline" id="m8">\(s(n)=1\)</span> and <span class="math inline" id="m9">\(t(n)=n!\)</span>. For <span class="math inline" id="m10">\(n\)</span> odd, we prove <span class="math inline" id="m11">\(s(n)\geq(n\phi(n))/2^{k}\)</span>
+where <span class="math inline" id="m12">\(k\)</span> is the number of distinct prime divisors of <span class="math inline" id="m13">\(n\)</span>. When <span class="math inline" id="m14">\(n\)</span> is an
+odd
+prime we prove <span class="math inline" id="m15">\(s(n)\leq\frac{e^{2}}{\pi}n((n-1)/e)^{\frac{n-1}{2}}\)</span>. For the
+second problem, we prove <span class="math inline" id="m16">\(2^{(n-1)/2}.(\frac{n-1}{2})!\leq t(n)\leq 2^{k}.(n-1)!/\phi(n)\)</span> when
+<span class="math inline" id="m17">\(n\)</span> is odd.</p>
+          </div>
+          <div id="p1" class="ltx_para">
+            <p class="ltx_p">1,*]L.SunilChandran1]DeepakRajendraprasad2]NitinSingh<span class="ltx_ERROR undefined">\affil</span>[1]DepartmentofComputerScienceandAutomation,<span class="ltx_ERROR undefined">\affil</span>[2]DepartmentofMathematics,<span class="ltx_ERROR undefined">\affil</span>[]IndianInstituteofScience,Bangalore,India.<span class="ltx_ERROR undefined">\affil</span>[*]Correspondingauthor:sunil@csa.iisc.ernet.in</p>
+          </div>
+          <div id="p2" class="ltx_para">
+            <p class="ltx_p">
+              <span class="ltx_text ltx_font_italic" style="font-size:small;">MSC 2010: <span class="ltx_text ltx_font_upright"> 11A05, 11A07, 11A41, 05E99, 05D05.</span>
+            </span>
+          </p>
+        </div>
+        <section id="S1" class="ltx_section">
+          <h2 class="ltx_title ltx_title_section">
+            <span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+            <div id="S1.p1" class="ltx_para">
+              <p class="ltx_p">For <span class="math inline" id="S1.p1.m1">\(n\in\mathbb{Z}\)</span>, let <span class="math inline" id="S1.p1.m2">\(\mathbb{Z}_{n}\)</span> denote the ring <span class="math inline" id="S1.p1.m3">\(\{0,\ldots,n-1\}\)</span> with
+<span class="math inline" id="S1.p1.m4">\(+\)</span> and <span class="math inline" id="S1.p1.m5">\(.\)</span> as addition and multiplication modulo <span class="math inline" id="S1.p1.m6">\(n\)</span> respectively. Let <span class="math inline" id="S1.p1.m7">\({\cal S}(\mathbb{Z}_{n})\)</span> denote the set of all permutations
+of the set <span class="math inline" id="S1.p1.m8">\(\mathbb{Z}_{n}\)</span>. We are interested in obtaining bounds on the maximum
+size of a subset <span class="math inline" id="S1.p1.m9">\({\cal P}\)</span> of <span class="math inline" id="S1.p1.m10">\({\cal S}(\mathbb{Z}_{n})\)</span> in the case when two distinct permutations
+in <span class="math inline" id="S1.p1.m11">\({\cal P}\)</span> sum up to a permutation (Section <a href="#S3" title="3 Sum of Permutations being Permutation ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
+              <span class="ltx_text ltx_ref_tag">3</span>
+            </a>), and in
+the case when two distinct permutations in <span class="math inline" id="S1.p1.m12">\({\cal P}\)</span> sum up to a
+non-permutation (Section <a href="#S4" title="4 Sum of Permutations being Non-Permutation ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
+            <span class="ltx_text ltx_ref_tag">4</span>
+          </a>). As far as we know the
+problems considered above are new, though a similar looking problem for
+difference of permutations is well studied, in the form of mutually
+orthogonal <span class="ltx_text ltx_font_italic">orthomorphisms</span> of finite groups. For the sake of
+completeness, we discuss the connection between difference of permutations
+problem with the orthomorphisms problem in Section <a href="#S5" title="5 Differences of Permutations being Permutation ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
+          <span class="ltx_text ltx_ref_tag">5</span>
+        </a>. The
+families of permutations we consider have similarities to <span class="ltx_text ltx_font_italic">reverse
+free</span> and <span class="ltx_text ltx_font_italic">reverse full</span> families of permutations as considered by
+Füredi et al. <cite class="ltx_cite">
+        []</cite> and Cibulka 
+        <cite class="ltx_cite">[]</cite>.</p>
+      </div>
+    </section>
+    <section id="S2" class="ltx_section">
+      <h2 class="ltx_title ltx_title_section">
+        <span class="ltx_tag ltx_tag_section">2 </span>Preliminaries</h2>
+        <div id="S2.p1" class="ltx_para">
+          <p class="ltx_p">We review some well known facts and basic results from linear algebra,
+elementary number theory and combinatorics which will be used in later
+sections. A comprehensive reference for linear algebra notions discussed
+below is <cite class="ltx_cite">[]</cite>.</p>
+        </div>
+        <div id="S2.Thmdefn1" class="ltx_theorem ltx_theorem_defn">
+          <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+            <span class="ltx_tag ltx_tag_theorem">Definition 2.1</span> (Vector Spaces, Bilinear Forms, Inner Products).</h6>
+            <div id="S2.Thmdefn1.p1" class="ltx_para">
+              <p class="ltx_p">Let <span class="math inline" id="S2.Thmdefn1.p1.m1">\(V\)</span> be an <span class="math inline" id="S2.Thmdefn1.p1.m2">\(n\)</span>-dimensional vector space over the field <span class="math inline" id="S2.Thmdefn1.p1.m3">\(F\)</span>, which is naturally identified
+with the set <span class="math inline" id="S2.Thmdefn1.p1.m4">\(F^{n}\)</span>, with component-wise addition and scalar multiplication.
+A <span class="ltx_text ltx_font_italic">bilinear form</span> on <span class="math inline" id="S2.Thmdefn1.p1.m5">\(V\)</span> is a function
+<span class="math inline" id="S2.Thmdefn1.p1.m6">\(f:V\times V\rightarrow F\)</span> which is linear in both arguments, i.e,
+<span class="math inline" id="S2.Thmdefn1.p1.m7">\(f(\alpha u+u^{\prime},\beta v+v^{\prime})=\alpha\beta f(u,v)+\alpha f(u,v^{%
+\prime})+\beta f(u^{\prime},v)+f(u^{\prime},v^{\prime})\)</span> for <span class="math inline" id="S2.Thmdefn1.p1.m8">\(u,u^{\prime},v,v^{\prime}\in V\)</span> and <span class="math inline" id="S2.Thmdefn1.p1.m9">\(\alpha,\beta\in F\)</span>. A <span class="ltx_text ltx_font_italic">symmetric </span> bilinear form is a bilinear form <span class="math inline" id="S2.Thmdefn1.p1.m10">\(f\)</span> with <span class="math inline" id="S2.Thmdefn1.p1.m11">\(f(u,v)=f(v,u)\)</span> for
+all <span class="math inline" id="S2.Thmdefn1.p1.m12">\(u,v\in V\)</span>. We will call a symmetric bilinear form on <span class="math inline" id="S2.Thmdefn1.p1.m13">\(V\)</span> as an <span class="ltx_text ltx_font_italic">inner product</span> on <span class="math inline" id="S2.Thmdefn1.p1.m14">\(V\)</span>. The inner product on <span class="math inline" id="S2.Thmdefn1.p1.m15">\(V\)</span> given by
+<span class="math inline" id="S2.Thmdefn1.p1.m16">\(\langle u,v\rangle=u_{1}v_{1}+\cdots+u_{n}v_{n}\)</span> where,
+<span class="math inline" id="S2.Thmdefn1.p1.m17">\(u=(u_{1},\ldots,u_{n})\)</span> and <span class="math inline" id="S2.Thmdefn1.p1.m18">\(v=(v_{1},\ldots,v_{n})\)</span> will be called the <span class="ltx_text ltx_font_italic">standard</span> inner product on <span class="math inline" id="S2.Thmdefn1.p1.m19">\(V\)</span>.
+<span class="ltx_text ltx_font_italic"/>
+            </p>
+          </div>
+        </div>
+        <div id="S2.Thmdefn2" class="ltx_theorem ltx_theorem_defn">
+          <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+            <span class="ltx_tag ltx_tag_theorem">Definition 2.2</span> (Totally isotropic subspaces).</h6>
+            <div id="S2.Thmdefn2.p1" class="ltx_para">
+              <p class="ltx_p">Let <span class="math inline" id="S2.Thmdefn2.p1.m1">\(V\)</span> be an <span class="math inline" id="S2.Thmdefn2.p1.m2">\(n\)</span>-dimensional vector space with the standard inner product
+<span class="math inline" id="S2.Thmdefn2.p1.m3">\(\langle\>,\rangle\)</span>. We say that vectors <span class="math inline" id="S2.Thmdefn2.p1.m4">\(u,v\in V\)</span> are <span class="ltx_text ltx_font_italic">orthogonal</span>,
+denoted by <span class="math inline" id="S2.Thmdefn2.p1.m5">\(u\perp v\)</span>, if
+<span class="math inline" id="S2.Thmdefn2.p1.m6">\(\langle u,v\rangle=0\)</span>. For a subspace <span class="math inline" id="S2.Thmdefn2.p1.m7">\(S\)</span> of <span class="math inline" id="S2.Thmdefn2.p1.m8">\(V\)</span> and a vector <span class="math inline" id="S2.Thmdefn2.p1.m9">\(v\in V\)</span>, we
+say <span class="math inline" id="S2.Thmdefn2.p1.m10">\(v\perp S\)</span> if <span class="math inline" id="S2.Thmdefn2.p1.m11">\(v\perp u\)</span> for all <span class="math inline" id="S2.Thmdefn2.p1.m12">\(u\in S\)</span>. For a subspace <span class="math inline" id="S2.Thmdefn2.p1.m13">\(S\)</span> of <span class="math inline" id="S2.Thmdefn2.p1.m14">\(V\)</span>,
+we define <span class="math inline" id="S2.Thmdefn2.p1.m15">\(S^{\perp}=\{v\in V:v\perp S\}\)</span> which is also a subspace of
+<span class="math inline" id="S2.Thmdefn2.p1.m16">\(V\)</span>. We call a subspace <span class="math inline" id="S2.Thmdefn2.p1.m17">\(S\)</span> of <span class="math inline" id="S2.Thmdefn2.p1.m18">\(V\)</span>
+              <span class="ltx_text ltx_font_italic">totally isotropic</span> if <span class="math inline" id="S2.Thmdefn2.p1.m19">\(S\subseteq S^{\perp}\)</span>, or in other words, any two vectors in <span class="math inline" id="S2.Thmdefn2.p1.m20">\(S\)</span> are orthogonal.
+<span class="ltx_text ltx_font_italic"/>
+            </p>
+          </div>
+        </div>
+        <div id="S2.p2" class="ltx_para">
+          <p class="ltx_p">We know the following fact from linear algebra.</p>
+        </div>
+        <div id="S2.Thmdefn3" class="ltx_theorem ltx_theorem_lemma">
+          <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+            <span class="ltx_tag ltx_tag_theorem">Lemma 2.3</span>.</h6>
+            <div id="S2.Thmdefn3.p1" class="ltx_para">
+              <p class="ltx_p">
+                <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S2.Thmdefn3.p1.m1">\(V\)</span> be an <span class="math inline" id="S2.Thmdefn3.p1.m2">\(n\)</span>-dimensional vector space with the standard inner product. Then for a subspace <span class="math inline" id="S2.Thmdefn3.p1.m3">\(S\)</span> of <span class="math inline" id="S2.Thmdefn3.p1.m4">\(V\)</span>, we have
+<span class="math inline" id="S2.Thmdefn3.p1.m5">\({\rm dim}(S)+{\rm dim}(S^{\perp})=n\)</span>.</span>
+              </p>
+            </div>
+          </div>
+          <div id="S2.p3" class="ltx_para">
+            <p class="ltx_p">Next we discuss some basic notions from elementary number theory that will
+be used in the paper. An element <span class="math inline" id="S2.p3.m1">\(s\in\mathbb{Z}_{n}\)</span> is said to be <span class="ltx_text ltx_font_italic">invertible</span> if there exists <span class="math inline" id="S2.p3.m2">\(t\in\mathbb{Z}_{n}\)</span> such that <span class="math inline" id="S2.p3.m3">\(st=1\)</span> (recall that
+multiplication is in <span class="math inline" id="S2.p3.m4">\(\mathbb{Z}_{n}\)</span>). The set of
+all invertible elements of <span class="math inline" id="S2.p3.m5">\(\mathbb{Z}_{n}\)</span> is called the <span class="ltx_text ltx_font_italic">unit group</span> of
+<span class="math inline" id="S2.p3.m6">\(\mathbb{Z}_{n}\)</span> and is denoted by <span class="math inline" id="S2.p3.m7">\(\mathbb{Z}_{n}^{\times}\)</span>. It is easily seen that
+<span class="math inline" id="S2.p3.m8">\(\mathbb{Z}_{n}^{\times}\)</span> is a group under multiplication. We know that <span class="math inline" id="S2.p3.m9">\(k\in\mathbb{Z}_{n}\)</span> is invertible if and only if <span class="math inline" id="S2.p3.m10">\({\rm gcd}(k,n)=1\)</span>. The cardinality
+of the set <span class="math inline" id="S2.p3.m11">\(\{k\in\mathbb{Z}:1\leq k\leq n-1,\ {\rm gcd}(k,n)=1\}\)</span> is denoted by
+<span class="math inline" id="S2.p3.m12">\(\phi(n)\)</span>, also known as <span class="ltx_text ltx_font_italic">Euler’s totient function</span> in literature. The
+following results are well known.</p>
+          </div>
+          <div id="S2.Thmdefn4" class="ltx_theorem ltx_theorem_lemma">
+            <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+              <span class="ltx_tag ltx_tag_theorem">Lemma 2.4</span>.</h6>
+              <div id="S2.Thmdefn4.p1" class="ltx_para">
+                <p class="ltx_p">
+                  <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S2.Thmdefn4.p1.m1">\(n=\prod_{i=1}^{k}p_{i}^{\alpha_{i}}\)</span>, where <span class="math inline" id="S2.Thmdefn4.p1.m2">\(p_{1},\ldots,p_{k}\)</span> are distinct
+prime divisors of <span class="math inline" id="S2.Thmdefn4.p1.m3">\(n\)</span>. Then <span class="math inline" id="S2.Thmdefn4.p1.m4">\(\phi(n)=\prod_{i=1}^{k}p_{i}^{\alpha_{i}-1}(p_{i}-1)\)</span>.</span>
+                </p>
+              </div>
+            </div>
+            <div id="S2.Thmdefn5" class="ltx_theorem ltx_theorem_lemma">
+              <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                <span class="ltx_tag ltx_tag_theorem">Lemma 2.5</span> (Chinese Remainder Theorem).</h6>
+                <div id="S2.Thmdefn5.p1" class="ltx_para">
+                  <p class="ltx_p">
+                    <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S2.Thmdefn5.p1.m1">\(n=\prod_{i=1}^{k}p_{i}^{\alpha_{i}}\)</span>, where <span class="math inline" id="S2.Thmdefn5.p1.m2">\(p_{1},\ldots,p_{k}\)</span> are distinct
+prime divisors of <span class="math inline" id="S2.Thmdefn5.p1.m3">\(n\)</span>. Then we have the following isomorphism,</span>
+                  </p>
+                  <table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align">
+                    <tr id="S2.Ex1" class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_td ltx_align_right">
+                        <span class="math inline" id="S2.Ex1.m1">\(\displaystyle\mathbb{Z}_{n}\)</span>
+                      </td>
+                      <td class="ltx_td ltx_align_left">
+                        <span class="math inline" id="S2.Ex1.m2">\(\displaystyle\longrightarrow\mathbb{Z}_{p_{1}^{\alpha_{1}}}\times\mathbb{Z}_{p%
+_{2}^{\alpha_{2}}}\times\cdots\times\mathbb{Z}_{p_{k}^{\alpha_{k}}}\)</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                    <tr id="S2.E1" class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_td ltx_align_right">
+                        <span class="math inline" id="S2.E1.m1">\(\displaystyle s\)</span>
+                      </td>
+                      <td class="ltx_td ltx_align_left">
+                        <span class="math inline" id="S2.E1.m2">\(\displaystyle\longmapsto(s\text{\rm\ mod }p_{1}^{\alpha_{1}},\ldots,s\text{\rm%
+\ mod }p_{k}^{\alpha_{k}}).\)</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                        <span class="ltx_tag ltx_tag_equation">(1)</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div id="S2.p4" class="ltx_para">
+                <p class="ltx_p">From the above lemma we see that <span class="math inline" id="S2.p4.m1">\(s=(s_{1},\ldots,s_{k})\)</span> is invertible in
+<span class="math inline" id="S2.p4.m2">\(\mathbb{Z}_{n}\)</span> if and only if <span class="math inline" id="S2.p4.m3">\(s_{i}\)</span> is invertible in <span class="math inline" id="S2.p4.m4">\(\mathbb{Z}_{p_{i}^{\alpha_{i}}}\)</span>
+for all <span class="math inline" id="S2.p4.m5">\(i=1,\ldots,k\)</span>.</p>
+              </div>
+              <div id="S2.p5" class="ltx_para">
+                <p class="ltx_p">Finally we note the following combinatorial result.</p>
+              </div>
+              <div id="S2.Thmdefn6" class="ltx_theorem ltx_theorem_lemma">
+                <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                  <span class="ltx_tag ltx_tag_theorem">Lemma 2.6</span>.</h6>
+                  <div id="S2.Thmdefn6.p1" class="ltx_para">
+                    <p class="ltx_p">
+                      <span class="ltx_text ltx_font_italic">Suppose the edges of the complete graph <span class="math inline" id="S2.Thmdefn6.p1.m1">\(K_{n}\)</span>, <span class="math inline" id="S2.Thmdefn6.p1.m2">\(n\geq 2\)</span> are colored using
+<span class="math inline" id="S2.Thmdefn6.p1.m3">\(k\)</span> colors, such that the subgraph consisting of the edges of any given color is
+bipartite. Then <span class="math inline" id="S2.Thmdefn6.p1.m4">\(n\leq 2^{k}\)</span>.</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="ltx_proof">
+                  <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+                  <div id="S2.p6" class="ltx_para">
+                    <p class="ltx_p">Let <span class="math inline" id="S2.p6.m1">\(V\)</span> denote the vertex set of the complete graph <span class="math inline" id="S2.p6.m2">\(K_{n}\)</span>. We show an
+injection from <span class="math inline" id="S2.p6.m3">\(V\)</span> into the set <span class="math inline" id="S2.p6.m4">\(\{0,1\}^{k}\)</span>. For
+each <span class="math inline" id="S2.p6.m5">\(i\)</span>, choose a partition <span class="math inline" id="S2.p6.m6">\(\{A_{i},B_{i}\}\)</span> of <span class="math inline" id="S2.p6.m7">\(V\)</span> such that all edges of
+color <span class="math inline" id="S2.p6.m8">\(i\)</span> are between the sets <span class="math inline" id="S2.p6.m9">\(A_{i}\)</span> and <span class="math inline" id="S2.p6.m10">\(B_{i}\)</span>. By hypothesis, such a
+bi-partition exists for all <span class="math inline" id="S2.p6.m11">\(i=1,\ldots,k\)</span>. For <span class="math inline" id="S2.p6.m12">\(v\in V\)</span>, define
+<span class="math inline" id="S2.p6.m13">\(\tilde{v}=(v_{1},\ldots,v_{k})\)</span> by,</p>
+                    <table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align">
+                      <tr id="S2.Ex2" class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_td ltx_align_right">
+                          <span class="math inline" id="S2.Ex2.m1">\(\displaystyle v_{i}=\begin{cases}0&amp;\text{ if $v\in A_{i}$ },\\
+1&amp;\text{ if $v\in B_{i}$ }.\end{cases}\)</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">We now show that the map <span class="math inline" id="S2.p6.m14">\(v\mapsto\tilde{v}\)</span> is injective. Let <span class="math inline" id="S2.p6.m15">\(v,w\)</span> be
+two distinct vertices in <span class="math inline" id="S2.p6.m16">\(V\)</span>. Let <span class="math inline" id="S2.p6.m17">\(i\)</span> be the color of the edge <span class="math inline" id="S2.p6.m18">\(vw\)</span>. Then
+we see that <span class="math inline" id="S2.p6.m19">\(\tilde{v},\tilde{w}\)</span> differ in the <span class="math inline" id="S2.p6.m20">\(i^{th}\)</span> component. This
+proves the injectivity of the map <span class="math inline" id="S2.p6.m21">\(v\mapsto\tilde{v}\)</span> and the lemma
+follows.
+∎</p>
+                  </div>
+                </div>
+                <div id="S2.Thmdefn7" class="ltx_theorem ltx_theorem_notation">
+                  <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                    <span class="ltx_tag ltx_tag_theorem">Notation 2.7</span>.</h6>
+                    <div id="S2.Thmdefn7.p1" class="ltx_para">
+                      <p class="ltx_p">We will denote permutations of <span class="math inline" id="S2.Thmdefn7.p1.m1">\(\mathbb{Z}_{n}\)</span> as <span class="math inline" id="S2.Thmdefn7.p1.m2">\(n\)</span>-tuples
+<span class="math inline" id="S2.Thmdefn7.p1.m3">\((\sigma_{1},\ldots,\sigma_{n})\)</span> where
+each <span class="math inline" id="S2.Thmdefn7.p1.m4">\(\sigma_{i}\in\mathbb{Z}_{n}\)</span> and is distinct. This is not to be confused with
+the cycle representation of a permutation, as is customary in algebra. Since we
+do not use cycle representation of permutations in this paper, we hope
+there is no confusion. Let <span class="math inline" id="S2.Thmdefn7.p1.m5">\(\sigma=(\sigma_{1},\ldots,\sigma_{n})\)</span>
+and <span class="math inline" id="S2.Thmdefn7.p1.m6">\(\tau=(\tau_{1},\ldots,\tau_{n})\)</span>, be <span class="math inline" id="S2.Thmdefn7.p1.m7">\(n\)</span>-tuples over <span class="math inline" id="S2.Thmdefn7.p1.m8">\(\mathbb{Z}_{n}\)</span>. Then <span class="math inline" id="S2.Thmdefn7.p1.m9">\(\sigma\pm\tau\)</span> denotes the tuple
+<span class="math inline" id="S2.Thmdefn7.p1.m10">\((\sigma_{1}\pm\tau_{1},\ldots,\sigma_{n}\pm\tau_{n})\)</span>. For <span class="math inline" id="S2.Thmdefn7.p1.m11">\(c\in\mathbb{Z}_{n}\)</span>,
+<span class="math inline" id="S2.Thmdefn7.p1.m12">\(c.\sigma\)</span> will denote the tuple <span class="math inline" id="S2.Thmdefn7.p1.m13">\((c\sigma_{1},\ldots,c\sigma_{n})\)</span>, and
+<span class="math inline" id="S2.Thmdefn7.p1.m14">\(c+\sigma\)</span> will denote the tuple <span class="math inline" id="S2.Thmdefn7.p1.m15">\((c+\sigma_{1},\ldots,c+\sigma_{n})\)</span>.
+<span class="ltx_text ltx_font_italic"/>
+                    </p>
+                  </div>
+                </div>
+                <div id="S2.Thmdefn8" class="ltx_theorem ltx_theorem_lemma">
+                  <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                    <span class="ltx_tag ltx_tag_theorem">Lemma 2.8</span>.</h6>
+                    <div id="S2.Thmdefn8.p1" class="ltx_para">
+                      <p class="ltx_p">
+                        <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S2.Thmdefn8.p1.m1">\(n\)</span> be even and <span class="math inline" id="S2.Thmdefn8.p1.m2">\((a_{1},\ldots,a_{n})\)</span> and <span class="math inline" id="S2.Thmdefn8.p1.m3">\((b_{1},\ldots,b_{n})\)</span> be two
+permutations of <span class="math inline" id="S2.Thmdefn8.p1.m4">\(\mathbb{Z}_{n}\)</span>. Then <span class="math inline" id="S2.Thmdefn8.p1.m5">\(a+b\)</span> is not a permutation of <span class="math inline" id="S2.Thmdefn8.p1.m6">\(\mathbb{Z}_{n}\)</span>.</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ltx_proof">
+                    <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+                    <div id="S2.p7" class="ltx_para">
+                      <p class="ltx_p">Let <span class="math inline" id="S2.p7.m1">\(c=a+b=(c_{1},\ldots,c_{n})\)</span>. Treating <span class="math inline" id="S2.p7.m2">\(a,b,c\)</span> as <span class="math inline" id="S2.p7.m3">\(n\)</span>-tuples over <span class="math inline" id="S2.p7.m4">\(\mathbb{Z}\)</span>
+we have, <span class="math inline" id="S2.p7.m5">\(c_{i}\equiv a_{i}+b_{i}\)</span> (mod <span class="math inline" id="S2.p7.m6">\(n\)</span>). Summing up over all <span class="math inline" id="S2.p7.m7">\(i\)</span>, we have,</p>
+                      <table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align">
+                        <tr id="S2.Ex3" class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_td ltx_align_right">
+                            <span class="math inline" id="S2.Ex3.m1">\(\displaystyle\sum_{i=1}^{n}c_{i}\)</span>
+                          </td>
+                          <td class="ltx_td ltx_align_left">
+                            <span class="math inline" id="S2.Ex3.m2">\(\displaystyle\equiv\sum_{i=1}^{n}(a_{i}+b_{i})\text{ (mod $n$) }\)</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                        <tr id="S2.Ex4" class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_td ltx_align_right">
+                            <span class="math inline" id="S2.Ex4.m1">\(\displaystyle\text{ or, }\sum_{i=1}^{n}(i-1)\)</span>
+                          </td>
+                          <td class="ltx_td ltx_align_left">
+                            <span class="math inline" id="S2.Ex4.m2">\(\displaystyle\equiv\sum_{i=1}^{n}2(i-1)\text{ (mod
+$n$) }\)</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                        <tr id="S2.Ex5" class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_td ltx_align_right">
+                            <span class="math inline" id="S2.Ex5.m1">\(\displaystyle\text{ or, }\frac{n(n-1)}{2}\)</span>
+                          </td>
+                          <td class="ltx_td ltx_align_left">
+                            <span class="math inline" id="S2.Ex5.m2">\(\displaystyle\equiv n(n-1)\equiv 0\text{ (mod $n$) }\)</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">which is a contradiction as <span class="math inline" id="S2.p7.m8">\((n-1)/2\)</span> is not an integer when <span class="math inline" id="S2.p7.m9">\(n\)</span> is even.
+This proves the lemma.
+∎</p>
+                    </div>
+                  </div>
+                  <div id="S2.Thmdefn9" class="ltx_theorem ltx_theorem_lemma">
+                    <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                      <span class="ltx_tag ltx_tag_theorem">Lemma 2.9</span>.</h6>
+                      <div id="S2.Thmdefn9.p1" class="ltx_para">
+                        <p class="ltx_p">
+                          <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S2.Thmdefn9.p1.m1">\(a=(_{0},\ldots,a_{n-1})\)</span> and <span class="math inline" id="S2.Thmdefn9.p1.m2">\(b=(b_{0},\ldots,b_{n-1})\)</span>
+be distinct permutations of the set <span class="math inline" id="S2.Thmdefn9.p1.m3">\(\{0,\ldots,n-1\}\)</span> such that the
+component-wise sums <span class="math inline" id="S2.Thmdefn9.p1.m4">\(c_{i}=a_{i}+b_{i}\)</span> are all distinct. Then there exist <span class="math inline" id="S2.Thmdefn9.p1.m5">\(0\leq j,k\leq n-1\)</span> such that <span class="math inline" id="S2.Thmdefn9.p1.m6">\(c_{j}=c_{k}+1\)</span>.</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="ltx_proof">
+                      <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+                      <div id="S2.p8" class="ltx_para">
+                        <p class="ltx_p">Without loss of generality assume <span class="math inline" id="S2.p8.m1">\(c_{i}=a_{i}+b_{i}\)</span>
+satisfy the ordering <span class="math inline" id="S2.p8.m2">\(c_{0}&lt;c_{1}&lt;\cdots&lt;c_{n-1}\)</span>. Now suppose the claim is
+not true. Then we have,
+<span class="math inline" id="S2.p8.m3">\(c_{i}-c_{i-1}\geq 2\)</span> for <span class="math inline" id="S2.p8.m4">\(1\leq i\leq n-1\)</span>. Summing up we get <span class="math inline" id="S2.p8.m5">\(2n-2\leq\sum_{i=1}^{n-1}(c_{i}-c_{i-1})=c_{n-1}-c_{0}\leq 2n-2\)</span>. Thus <span class="math inline" id="S2.p8.m6">\(c_{i}-c_{i-1}=2\)</span> for all <span class="math inline" id="S2.p8.m7">\(1\leq i\leq n-1\)</span>, which implies <span class="math inline" id="S2.p8.m8">\(c_{i}=2i\)</span> for all <span class="math inline" id="S2.p8.m9">\(0\leq i\leq n-1\)</span>. Now
+<span class="math inline" id="S2.p8.m10">\(a_{0}+b_{0}=c_{0}=0\)</span> implies <span class="math inline" id="S2.p8.m11">\(a_{0}=b_{0}=0\)</span>. Now <span class="math inline" id="S2.p8.m12">\(c_{1}=a_{1}+b_{1}=2\)</span>, therefore we must
+have <span class="math inline" id="S2.p8.m13">\(a_{1}=b_{1}=1\)</span>. Continuing this way, we conclude <span class="math inline" id="S2.p8.m14">\(a_{i}=b_{i}=i\)</span> for all
+<span class="math inline" id="S2.p8.m15">\(0\leq i\leq n-1\)</span>, contradicting the fact that the permutations were
+distinct.
+∎</p>
+                      </div>
+                    </div>
+                  </section>
+                  <section id="S3" class="ltx_section">
+                    <h2 class="ltx_title ltx_title_section">
+                      <span class="ltx_tag ltx_tag_section">3 </span>Sum of Permutations being Permutation</h2>
+                      <div id="S3.p1" class="ltx_para">
+                        <p class="ltx_p">In this section, we consider the maximum size of a collection of
+permutations of <span class="math inline" id="S3.p1.m1">\(\mathbb{Z}_{n}\)</span> such that sum of any two distinct permutations in the
+collection is again a permutation (not necessarily in the collection). A
+collection <span class="math inline" id="S3.p1.m2">\({\cal P}\)</span> of permutations of <span class="math inline" id="S3.p1.m3">\(\mathbb{Z}_{n}\)</span> is said to satisfy property
+<span class="math inline" id="S3.p1.m4">\(\mathbf{(P1)}\)</span> if for any two distinct permutations <span class="math inline" id="S3.p1.m5">\(\sigma,\tau\)</span> in
+<span class="math inline" id="S3.p1.m6">\({\cal P}\)</span>, <span class="math inline" id="S3.p1.m7">\(\sigma+\tau\)</span> is again a permutation of <span class="math inline" id="S3.p1.m8">\(\mathbb{Z}_{n}\)</span>. Let <span class="math inline" id="S3.p1.m9">\(s(n)=\max\{|{\cal P}|:{\cal P}\subseteq{\cal S}(\mathbb{Z}_{n}),{\cal P}\text{%
+ satisfies }\mathbf{(P1)}\}\)</span>.</p>
+                      </div>
+                      <div id="S3.p2" class="ltx_para">
+                        <p class="ltx_p">From Lemma <a href="#S2.Thmdefn8" title="Lemma 2.8. ‣ 2 Preliminaries ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
+                          <span class="ltx_text ltx_ref_tag">2.8</span>
+                          </a>, we note that <span class="math inline" id="S3.p2.m1">\(s(n)=1\)</span> when <span class="math inline" id="S3.p2.m2">\(n\)</span> is even. Now
+we present a construction for the lower bound on <span class="math inline" id="S3.p2.m3">\(s(n)\)</span> when <span class="math inline" id="S3.p2.m4">\(n\)</span> is odd.</p>
+                        </div>
+                        <div id="S3.Thmdefn1" class="ltx_theorem ltx_theorem_lemma">
+                          <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                            <span class="ltx_tag ltx_tag_theorem">Lemma 3.1</span>.</h6>
+                            <div id="S3.Thmdefn1.p1" class="ltx_para">
+                              <p class="ltx_p">
+                                <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S3.Thmdefn1.p1.m1">\(n\)</span> be an odd number <span class="math inline" id="S3.Thmdefn1.p1.m2">\(\geq 3\)</span>. Then <span class="math inline" id="S3.Thmdefn1.p1.m3">\(s(n)\geq(n\phi(n))/2^{k}\)</span> where <span class="math inline" id="S3.Thmdefn1.p1.m4">\(\phi(n)\)</span> is
+the Euler’s totient function and <span class="math inline" id="S3.Thmdefn1.p1.m5">\(k\)</span> is the number of distinct prime
+divisors of <span class="math inline" id="S3.Thmdefn1.p1.m6">\(n\)</span>.</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="ltx_proof">
+                            <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+                            <div id="S3.p3" class="ltx_para">
+                              <p class="ltx_p">Our construction is based on the following observations.</p>
+                              <ol id="I1" class="ltx_enumerate">
+                                <li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+                                  <span class="ltx_tag ltx_tag_enumerate">(a)</span>
+                                  <div id="I1.i1.p1" class="ltx_para">
+                                    <p class="ltx_p">For a permutation <span class="math inline" id="I1.i1.p1.m1">\(\tau\)</span> of <span class="math inline" id="I1.i1.p1.m2">\({\mathbb{Z}}_{n}\)</span>, <span class="math inline" id="I1.i1.p1.m3">\(k.\tau\)</span> is a
+permutation of <span class="math inline" id="I1.i1.p1.m4">\({\mathbb{Z}}_{n}\)</span> if and only if <span class="math inline" id="I1.i1.p1.m5">\(k\)</span> is invertible in
+<span class="math inline" id="I1.i1.p1.m6">\({\mathbb{Z}}_{n}\)</span>.</p>
+                                  </div>
+                                </li>
+                                <li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+                                  <span class="ltx_tag ltx_tag_enumerate">(b)</span>
+                                  <div id="I1.i2.p1" class="ltx_para">
+                                    <p class="ltx_p">For a permutation <span class="math inline" id="I1.i2.p1.m1">\(\tau\)</span> of <span class="math inline" id="I1.i2.p1.m2">\({\mathbb{Z}}_{n}\)</span>, <span class="math inline" id="I1.i2.p1.m3">\(k+\tau\)</span> is a
+permutation for all <span class="math inline" id="I1.i2.p1.m4">\(k\in\mathbb{Z}_{n}\)</span>.</p>
+                                  </div>
+                                </li>
+                                <li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+                                  <span class="ltx_tag ltx_tag_enumerate">(c)</span>
+                                  <div id="I1.i3.p1" class="ltx_para">
+                                    <p class="ltx_p">Let <span class="math inline" id="I1.i3.p1.m1">\(n=\prod_{i=1}^{k}p_{i}^{\alpha_{i}}\)</span>, where <span class="math inline" id="I1.i3.p1.m2">\(p_{i}\)</span>’s are distinct prime
+divisors of <span class="math inline" id="I1.i3.p1.m3">\(n\)</span>. Then there exists a subset <span class="math inline" id="I1.i3.p1.m4">\(S\)</span> of invertible elements of <span class="math inline" id="I1.i3.p1.m5">\(\mathbb{Z}_{n}\)</span> with
+<span class="math inline" id="I1.i3.p1.m6">\(|S|=\prod_{i=1}^{k}p^{\alpha_{i}-1}(p_{i}-1)/2\)</span> such that for any <span class="math inline" id="I1.i3.p1.m7">\(x,y\in S\)</span>,
+<span class="math inline" id="I1.i3.p1.m8">\(x+y\)</span> is invertible in <span class="math inline" id="I1.i3.p1.m9">\(\mathbb{Z}_{n}\)</span>. To describe the set <span class="math inline" id="I1.i3.p1.m10">\(S\)</span>, we use the
+isomorphism in Lemma <a href="#S2.Thmdefn5" title="Lemma 2.5 (Chinese Remainder Theorem). ‣ 2 Preliminaries ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
+                                    <span class="ltx_text ltx_ref_tag">2.5</span>
+                                    </a>.
+Let <span class="math inline" id="I1.i3.p1.m11">\(S=\{s\in\mathbb{Z}_{n}:s=(s_{1},\ldots,s_{k})\text{ where }s_{i}\equiv c_{i}%
+\text{ mod }p_{i}\text{ for some }1\leq c_{i}\leq(p_{i}-1)/2\}\)</span>. Note that in
+the description of <span class="math inline" id="I1.i3.p1.m12">\(S\)</span>, each <span class="math inline" id="I1.i3.p1.m13">\(s_{i}\)</span> has <span class="math inline" id="I1.i3.p1.m14">\(p_{i}^{\alpha_{i}-1}(p_{i}-1)/2\)</span> choices,
+and hence the set <span class="math inline" id="I1.i3.p1.m15">\(S\)</span> has the desired cardinality. Further each element of <span class="math inline" id="I1.i3.p1.m16">\(S\)</span> is invertible in
+<span class="math inline" id="I1.i3.p1.m17">\(\mathbb{Z}_{n}\)</span>. Now for <span class="math inline" id="I1.i3.p1.m18">\(s,t\in S\)</span>, we have
+<span class="math inline" id="I1.i3.p1.m19">\(s+t=(s_{1}+t_{1},\ldots,s_{k}+t_{k})\)</span> where <span class="math inline" id="I1.i3.p1.m20">\(s=(s_{1},\ldots,s_{k})\)</span> and
+<span class="math inline" id="I1.i3.p1.m21">\(t=(t_{1},\ldots,t_{k})\)</span>. By definition of <span class="math inline" id="I1.i3.p1.m22">\(S\)</span>, observe that
+<span class="math inline" id="I1.i3.p1.m23">\(s_{i}+t_{i}\not\equiv 0\)</span> (mod <span class="math inline" id="I1.i3.p1.m24">\(p_{i}\)</span>) for all <span class="math inline" id="I1.i3.p1.m25">\(1\leq i\leq k\)</span>. Thus
+<span class="math inline" id="I1.i3.p1.m26">\(s+t\)</span> is invertible in <span class="math inline" id="I1.i3.p1.m27">\(\mathbb{Z}_{n}\)</span>.</p>
+                                  </div>
+                                </li>
+                              </ol>
+                              <p class="ltx_p">Now consider the set
+<span class="math inline" id="S3.p3.m1">\({\cal P}=\{s.(x+0,x+1,\ldots,x+n-1):s\in S,x\in\mathbb{Z}_{n}\}\)</span>. By
+observations (a),(b) and (c), we see that <span class="math inline" id="S3.p3.m2">\({\cal P}\)</span> consists of
+permutations of <span class="math inline" id="S3.p3.m3">\(\mathbb{Z}_{n}\)</span>. Let <span class="math inline" id="S3.p3.m4">\(\sigma,\tau\)</span> be two distinct
+permutations in <span class="math inline" id="S3.p3.m5">\({\cal P}\)</span> with <span class="math inline" id="S3.p3.m6">\(\sigma=s.(x+0,\ldots,x+n-1)\)</span> and
+<span class="math inline" id="S3.p3.m7">\(\tau=t.(y+0,\ldots,y+n-1)\)</span>. Then
+<span class="math inline" id="S3.p3.m8">\(\sigma+\tau=(sx+ty)+(s+t).(0,1,\ldots,n-1)\)</span>. Since <span class="math inline" id="S3.p3.m9">\(s+t\)</span> is invertible, by
+observations (a) and (b), we conclude that <span class="math inline" id="S3.p3.m10">\(\sigma+\tau\)</span> is a permutation.
+Thus <span class="math inline" id="S3.p3.m11">\({\cal P}\)</span> satisfies <span class="math inline" id="S3.p3.m12">\(\mathbf{(P1)}\)</span>. Finally we observe that <span class="math inline" id="S3.p3.m13">\(|{\cal P}|=n.|S|=n.\prod_{i=1}^{k}p_{i}^{\alpha_{i}-1}(p_{i}-1)/2=(n.\phi(n))/%
+2^{k}\)</span>.
+This proves the lemma.
+∎</p>
+                            </div>
+                          </div>
+                          <div id="S3.Thmdefn2" class="ltx_theorem ltx_theorem_remark">
+                            <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                              <span class="ltx_tag ltx_tag_theorem">Remark 3.2</span>.</h6>
+                              <div id="S3.Thmdefn2.p1" class="ltx_para">
+                                <p class="ltx_p">We note that when <span class="math inline" id="S3.Thmdefn2.p1.m1">\(n\)</span> is a prime number, the bound in Lemma <a href="#S3.Thmdefn1" title="Lemma 3.1. ‣ 3 Sum of Permutations being Permutation ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
+                                  <span class="ltx_text ltx_ref_tag">3.1</span>
+                                </a>
+reduces to <span class="math inline" id="S3.Thmdefn2.p1.m2">\(n(n-1)/2\)</span>.
+<span class="ltx_text ltx_font_italic"/>
+                              </p>
+                            </div>
+                          </div>
+                          <div id="S3.p4" class="ltx_para">
+                            <p class="ltx_p">We now establish an upper bound on <span class="math inline" id="S3.p4.m1">\(s(n)\)</span> in the case when <span class="math inline" id="S3.p4.m2">\(n\)</span> is an odd
+prime.</p>
+                          </div>
+                          <div id="S3.Thmdefn3" class="ltx_theorem ltx_theorem_theo">
+                            <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                              <span class="ltx_tag ltx_tag_theorem">Theorem 3.3</span> (Cauchy-Davenport).</h6>
+                              <div id="S3.Thmdefn3.p1" class="ltx_para">
+                                <p class="ltx_p">
+                                  <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S3.Thmdefn3.p1.m1">\(n\)</span> be any prime number and let <span class="math inline" id="S3.Thmdefn3.p1.m2">\(A,B\subset\mathbb{Z}_{n}\)</span>. Then <span class="math inline" id="S3.Thmdefn3.p1.m3">\(|A+B|\geq\min\{n,|A|+|B|-1\}\)</span>, where <span class="math inline" id="S3.Thmdefn3.p1.m4">\(A+B=\{a+b:a\in A,b\in B\}\)</span>.</span>
+                                </p>
+                              </div>
+                            </div>
+                            <div id="S3.Thmdefn4" class="ltx_theorem ltx_theorem_lemma">
+                              <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                <span class="ltx_tag ltx_tag_theorem">Lemma 3.4</span>.</h6>
+                                <div id="S3.Thmdefn4.p1" class="ltx_para">
+                                  <p class="ltx_p">
+                                    <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S3.Thmdefn4.p1.m1">\(n\)</span> be an odd prime. Then <span class="math inline" id="S3.Thmdefn4.p1.m2">\(s(n)\leq\frac{e^{2}}{\pi}n\left(\frac{n-1}{e}\right)^{\frac{n-1}{2}}\)</span>.</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="ltx_proof">
+                                <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+                                <div id="S3.p5" class="ltx_para">
+                                  <p class="ltx_p">We prove the case <span class="math inline" id="S3.p5.m1">\(n=3\)</span> seperately. It suffices to prove <span class="math inline" id="S3.p5.m2">\(s(3)\leq 3\)</span>. This
+follows from the observation that among any four permutations
+<span class="math inline" id="S3.p5.m3">\(\sigma_{1},\sigma_{2},\sigma_{3},\sigma_{4}\)</span> of
+<span class="math inline" id="S3.p5.m4">\(\mathbb{Z}_{3}\)</span>, there exist permutations <span class="math inline" id="S3.p5.m5">\(\sigma_{i},\sigma_{j}\)</span> such that
+<span class="math inline" id="S3.p5.m6">\(\sigma_{j}\)</span> is obtained from <span class="math inline" id="S3.p5.m7">\(\sigma_{i}\)</span> by interchanging exactly one pair,
+and thus
+<span class="math inline" id="S3.p5.m8">\(\sigma_{i}+\sigma_{j}\)</span> is not a permutation.</p>
+                                </div>
+                                <div id="S3.p6" class="ltx_para">
+                                  <p class="ltx_p">From now on we assume <span class="math inline" id="S3.p6.m1">\(n>3\)</span>. Let <span class="math inline" id="S3.p6.m2">\({\cal P}\)</span> with <span class="math inline" id="S3.p6.m3">\(|{\cal P}|=m\)</span> be a collection of permutations of
+<span class="math inline" id="S3.p6.m4">\({\mathbb{Z}}_{n}\)</span> satisfying <span class="math inline" id="S3.p6.m5">\(\mathbf{(P1)}\)</span>. Let
+<span class="math inline" id="S3.p6.m6">\(A^{i}=(a_{i1},\ldots,a_{in})\)</span> be the permutations in <span class="math inline" id="S3.p6.m7">\({\cal P}\)</span> for
+<span class="math inline" id="S3.p6.m8">\(i=1,\ldots,m\)</span>. Let <span class="math inline" id="S3.p6.m9">\(M\)</span> denote the <span class="math inline" id="S3.p6.m10">\(m\times n\)</span> matrix with <span class="math inline" id="S3.p6.m11">\((i,j)^{th}\)</span>
+entry <span class="math inline" id="S3.p6.m12">\(a_{ij}\)</span>. When <span class="math inline" id="S3.p6.m13">\(n\)</span> is prime the ring <span class="math inline" id="S3.p6.m14">\(\mathbb{Z}_{n}\)</span> is infact a field,
+and thus we can regard the permutations <span class="math inline" id="S3.p6.m15">\(A^{i}\)</span> as vectors in <span class="math inline" id="S3.p6.m16">\(n\)</span>-dimensional
+vector space <span class="math inline" id="S3.p6.m17">\((\mathbb{Z}_{n})^{n}\)</span>. Let <span class="math inline" id="S3.p6.m18">\(\langle\>,\rangle\)</span> be the standard inner product
+on <span class="math inline" id="S3.p6.m19">\(({\mathbb{Z}}_{n})^{n}\)</span>. Then, we note that for a permutation <span class="math inline" id="S3.p6.m20">\(A\)</span> of
+<span class="math inline" id="S3.p6.m21">\(\mathbb{Z}_{n}\)</span> we have,</p>
+                                  <table id="S3.E2" class="ltx_equation">
+                                    <tr class="ltx_equation ltx_align_baseline">
+                                      <td class="ltx_eqn_center_padleft"/>
+                                      <td class="ltx_align_center">
+                                        <span class="math display" id="S3.E2.m1">\[\langle A,A\rangle=\sum_{i=0}^{n-1}i^{2}=\frac{n}{6}(n-1)(2n-1)\equiv 0\quad(%
+\text{mod }n).\]</span>
+                                      </td>
+                                      <td class="ltx_eqn_center_padright"/>
+                                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                        <span class="ltx_tag ltx_tag_equation">(2)</span>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </div>
+                                <div id="S3.p7" class="ltx_para">
+                                  <p class="ltx_p">
+                                    <span class="ltx_text ltx_font_bold">Claim:</span>
+                                    <span class="math inline" id="S3.p7.m1">\({\rm rank}(M)\leq(n-1)/2\)</span>. Let <span class="math inline" id="S3.p7.m2">\(u,v\)</span> be vectors
+corresponding to two different rows in <span class="math inline" id="S3.p7.m3">\(M\)</span>. Then from
+(<a href="#S3.E2" title="(2) ‣ 3 Sum of Permutations being Permutation ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
+                                    <span class="ltx_text ltx_ref_tag">2</span>
+                                    </a>), we have <span class="math inline" id="S3.p7.m4">\(\langle u,u\rangle=\langle v,v\rangle=0\)</span>.
+Further since <span class="math inline" id="S3.p7.m5">\(u+v\)</span> is also a permutation, we have <span class="math inline" id="S3.p7.m6">\(\langle u+v,u+v\rangle=0\)</span>. Using these
+relations, we conclude <span class="math inline" id="S3.p7.m7">\(\langle u,v\rangle=0\)</span> for all <span class="math inline" id="S3.p7.m8">\(u,v\in M\)</span>. Let
+<span class="math inline" id="S3.p7.m9">\(S\)</span> be the subspace spanned by the rows of <span class="math inline" id="S3.p7.m10">\(M\)</span>. Then, by earlier
+observation <span class="math inline" id="S3.p7.m11">\(S\)</span> is totally isotropic, i.e, <span class="math inline" id="S3.p7.m12">\(S\subseteq S^{\perp}\)</span>.
+Combining this with the relation
+<span class="math inline" id="S3.p7.m13">\({\rm dim}(S)+{\rm dim}(S^{\perp})=n\)</span>, we have <span class="math inline" id="S3.p7.m14">\({\rm rank}(M)={\rm dim}(S)\leq\lfloor n/2\rfloor=(n-1)/2\)</span> as <span class="math inline" id="S3.p7.m15">\(n\)</span> is odd.</p>
+                                  </div>
+                                  <div id="S3.p8" class="ltx_para">
+                                    <p class="ltx_p">Let <span class="math inline" id="S3.p8.m1">\(r={\rm rank}(M)\)</span>. We may assume without loss of generality, by permuting the columns of <span class="math inline" id="S3.p8.m2">\(M\)</span> if necessary, that the first <span class="math inline" id="S3.p8.m3">\(r\)</span> columns of <span class="math inline" id="S3.p8.m4">\(M\)</span> are linearly independent.
+Thus there exist linear functions <span class="math inline" id="S3.p8.m5">\(f_{i}:(\mathbb{Z}_{n})^{r}\rightarrow\mathbb{Z}_{n}\)</span> for <span class="math inline" id="S3.p8.m6">\(i=1,\ldots,n-r\)</span> such that a row of <span class="math inline" id="S3.p8.m7">\(M\)</span> can be written
+as <span class="math inline" id="S3.p8.m8">\((x_{1},x_{2},\ldots,x_{r},y_{1},y_{2},\ldots,y_{n-r})\)</span> where
+<span class="math inline" id="S3.p8.m9">\(y_{i}=f_{i}(x_{1},\ldots,x_{r})\)</span>. Thus any two rows in <span class="math inline" id="S3.p8.m10">\(M\)</span>
+have different projection on the first <span class="math inline" id="S3.p8.m11">\(r\)</span> positions.</p>
+                                  </div>
+                                  <div id="S3.p9" class="ltx_para">
+                                    <p class="ltx_p">
+                                      <span class="ltx_text ltx_font_bold">Claim:</span> For any odd number <span class="math inline" id="S3.p9.m1">\(k\in\{1,r\}\)</span>, let <span class="math inline" id="S3.p9.m2">\(M^{\prime}\)</span> be an
+<span class="math inline" id="S3.p9.m3">\(l\times n\)</span> submatrix of <span class="math inline" id="S3.p9.m4">\(M\)</span> in which all the rows agree on the first <span class="math inline" id="S3.p9.m5">\(k\)</span>
+positions. Then at most <span class="math inline" id="S3.p9.m6">\((n-k)/2\)</span> distinct elements of <span class="math inline" id="S3.p9.m7">\(\mathbb{Z}_{n}\)</span> appear in
+any column of <span class="math inline" id="S3.p9.m8">\(M^{\prime}\)</span> beyond <span class="math inline" id="S3.p9.m9">\(k\)</span>. Suppose, for the sake of contradiction, that
+the <span class="math inline" id="S3.p9.m10">\(j\)</span>-th column of <span class="math inline" id="S3.p9.m11">\(M^{\prime}\)</span> for some <span class="math inline" id="S3.p9.m12">\(j>k\)</span> contains more than <span class="math inline" id="S3.p9.m13">\((n-k)/2\)</span>
+elements of <span class="math inline" id="S3.p9.m14">\(\mathbb{Z}_{n}\)</span>. Let <span class="math inline" id="S3.p9.m15">\(B\)</span> be the set of elements that appear in the
+<span class="math inline" id="S3.p9.m16">\(j\)</span>-th column of <span class="math inline" id="S3.p9.m17">\(M^{\prime}\)</span>. By Theorem <a href="#S3.Thmdefn3" title="Theorem 3.3 (Cauchy-Davenport). ‣ 3 Sum of Permutations being Permutation ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
+                                      <span class="ltx_text ltx_ref_tag">3.3</span>
+                                      </a>, <span class="math inline" id="S3.p9.m18">\(|B+B|\geq n-k+1\)</span>. Hence <span class="math inline" id="S3.p9.m19">\(B+B\)</span> contains some <span class="math inline" id="S3.p9.m20">\(2x\)</span> where <span class="math inline" id="S3.p9.m21">\(x\)</span> is the common
+entry in some <span class="math inline" id="S3.p9.m22">\(i\)</span>-th column, <span class="math inline" id="S3.p9.m23">\(i\leq k\)</span>, of <span class="math inline" id="S3.p9.m24">\(M^{\prime}\)</span>. Thus either <span class="math inline" id="S3.p9.m25">\(x\in B\)</span>,
+which violates the property that every row of <span class="math inline" id="S3.p9.m26">\(M^{\prime}\)</span> is a permutation or
+<span class="math inline" id="S3.p9.m27">\(\exists x^{\prime},x^{\prime\prime}\in B,\;x^{\prime}\neq x^{\prime\prime}\)</span> such that <span class="math inline" id="S3.p9.m28">\(x^{\prime}+x^{\prime\prime}=2x\)</span> which
+violates the property that sum of any two rows of <span class="math inline" id="S3.p9.m29">\(M^{\prime}\)</span> is a permutation.</p>
+                                    </div>
+                                    <div id="S3.p10" class="ltx_para">
+                                      <p class="ltx_p">Since <span class="math inline" id="S3.p10.m1">\(M\)</span> is completely determined by its first <span class="math inline" id="S3.p10.m2">\(r\)</span> rows and the above claim, the total number of rows <span class="math inline" id="S3.p10.m3">\(m\)</span> of <span class="math inline" id="S3.p10.m4">\(M\)</span> is at most <span class="math inline" id="S3.p10.m5">\(n\times\prod_{i=2}^{r}\left\lceil(n-i+1)/2\right\rceil\)</span>. Hence <span class="math inline" id="S3.p10.m6">\(m\leq n\left(\prod_{j=0}^{\lfloor r/2\rfloor-1}\left((n-1)/2-j\right)\right)^{2}\)</span> and since <span class="math inline" id="S3.p10.m7">\(r\leq(n-1)/2\)</span>, we get <span class="math inline" id="S3.p10.m8">\(m\leq n\left(\frac{((n-1)/2)!}{(\lceil(n-1)/4\rceil)!}\right)^{2}\)</span> which by Stirling’s approximation gives us <span class="math inline" id="S3.p10.m9">\(m\leq\frac{e^{2}}{\pi}n\left(\frac{n-1}{e}\right)^{\frac{n-1}{2}}\)</span>.
+∎</p>
+                                    </div>
+                                  </div>
+                                </section>
+                                <section id="S4" class="ltx_section">
+                                  <h2 class="ltx_title ltx_title_section">
+                                    <span class="ltx_tag ltx_tag_section">4 </span>Sum of Permutations being Non-Permutation</h2>
+                                    <div id="S4.p1" class="ltx_para">
+                                      <p class="ltx_p">We consider another variant of the previous problem. We now seek a
+collection of permutations of <span class="math inline" id="S4.p1.m1">\(\mathbb{Z}_{n}\)</span> such that any two distinct permutations
+sum up to a non-permutation. We say that a collection <span class="math inline" id="S4.p1.m2">\({\cal P}\)</span> of
+permutations of <span class="math inline" id="S4.p1.m3">\(\mathbb{Z}_{n}\)</span> satisfies property <span class="math inline" id="S4.p1.m4">\(\mathbf{(P2)}\)</span> if any two
+distinct permutations in <span class="math inline" id="S4.p1.m5">\({\cal P}\)</span> sum up to a non-permutation. Let
+<span class="math inline" id="S4.p1.m6">\(t(n)=\max\{|{\cal P}|:{\cal P}\subseteq{\cal S}(\mathbb{Z}_{n}),{\cal P}\text{%
+ satisfies
+}\mathbf{(P2)}\}\)</span>. From Lemma <a href="#S2.Thmdefn8" title="Lemma 2.8. ‣ 2 Preliminaries ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
+                                      <span class="ltx_text ltx_ref_tag">2.8</span>
+                                      </a>, we see that <span class="math inline" id="S4.p1.m7">\(t(n)=n!\)</span>
+when <span class="math inline" id="S4.p1.m8">\(n\)</span> is even. We consider the case when <span class="math inline" id="S4.p1.m9">\(n\)</span> is odd in the following
+lemma.</p>
+                                    </div>
+                                    <div id="S4.Thmdefn1" class="ltx_theorem ltx_theorem_lemma">
+                                      <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                        <span class="ltx_tag ltx_tag_theorem">Lemma 4.1</span>.</h6>
+                                        <div id="S4.Thmdefn1.p1" class="ltx_para">
+                                          <p class="ltx_p">
+                                            <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S4.Thmdefn1.p1.m1">\(n\)</span> be an odd number. Then <span class="math inline" id="S4.Thmdefn1.p1.m2">\(2^{(n-1)/2}.(\frac{n-1}{2})!\leq t(n)\leq 2^{k}(n-1)!/\phi(n)\)</span>, where <span class="math inline" id="S4.Thmdefn1.p1.m3">\(k\)</span> is the number of distinct prime divisors of
+<span class="math inline" id="S4.Thmdefn1.p1.m4">\(n\)</span>.</span>
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class="ltx_proof">
+                                        <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+                                        <div id="S4.p2" class="ltx_para">
+                                          <p class="ltx_p">We prove <span class="math inline" id="S4.p2.m1">\(t(n)\geq 2^{(n-1)/2}.(\frac{n-1}{2})!\)</span>. We say the pair of
+permutations <span class="math inline" id="S4.p2.m2">\((a_{0},\ldots,a_{n-1})\)</span> and <span class="math inline" id="S4.p2.m3">\((b_{0},\ldots,b_{n-1})\)</span> of the set
+<span class="math inline" id="S4.p2.m4">\(\{0,\ldots,n-1\}\)</span> are <span class="ltx_text ltx_font_italic">admissible</span> if the sums <span class="math inline" id="S4.p2.m5">\(a_{i}+b_{i}\)</span>, <span class="math inline" id="S4.p2.m6">\(0\leq i\leq m-1\)</span>, are not all distinct
+(the addition being in <span class="math inline" id="S4.p2.m7">\(\mathbb{Z}\)</span>). We construct a collection <span class="math inline" id="S4.p2.m8">\({\cal P}\)</span> of mutually
+admissible permutations of <span class="math inline" id="S4.p2.m9">\(\{0,\ldots,n-1\}\)</span>. Note that <span class="math inline" id="S4.p2.m10">\({\cal P}\)</span> when
+viewed as a set of permutations of <span class="math inline" id="S4.p2.m11">\(\mathbb{Z}_{n}\)</span>, satisfies <span class="math inline" id="S4.p2.m12">\(\mathbf{(P2)}\)</span>.
+Let <span class="math inline" id="S4.p2.m13">\(m=(n-1)/2\)</span>. For <span class="math inline" id="S4.p2.m14">\(0\leq i\leq m-1\)</span>, let <span class="math inline" id="S4.p2.m15">\(B_{i}=(2i,2i+1)\)</span> and
+<span class="math inline" id="S4.p2.m16">\(\overline{B}_{i}=(2i+1,2i)\)</span>. Let <span class="math inline" id="S4.p2.m17">\(c=c_{0}c_{1}\ldots c_{m-1}\)</span> be a binary string
+of length <span class="math inline" id="S4.p2.m18">\(m\)</span>, and <span class="math inline" id="S4.p2.m19">\(\sigma\)</span> be a permutation of <span class="math inline" id="S4.p2.m20">\(\{0,\ldots,m-1\}\)</span>. Define,
+<span class="math inline" id="S4.p2.m21">\(P_{\sigma,c}=(x_{0},x_{1},\ldots,x_{n-1})\)</span> such that,</p>
+                                          <table id="S4.Ex6" class="ltx_equation">
+                                            <tr class="ltx_equation ltx_align_baseline">
+                                              <td class="ltx_eqn_center_padleft"/>
+                                              <td class="ltx_align_center">
+                                                <span class="math display" id="S4.Ex6.m1">\[(x_{2i},x_{2i+1})=\begin{cases}B_{\sigma(i)}&amp;\text{ if }c_{i}=0,\\
+\overline{B}_{\sigma(i)}&amp;\text{ if }c_{1}=1\end{cases}\]</span>
+                                              </td>
+                                              <td class="ltx_eqn_center_padright"/>
+                                            </tr>
+                                          </table>
+                                          <p class="ltx_p">for all <span class="math inline" id="S4.p2.m22">\(i=0,\ldots,m-1\)</span>. It is easily observed that <span class="math inline" id="S4.p2.m23">\(P_{\sigma,c}\)</span> is a
+permutation of the set <span class="math inline" id="S4.p2.m24">\(\{0,\ldots,n-1\}\)</span> and <span class="math inline" id="S4.p2.m25">\(P_{\sigma,c}\neq P_{\sigma^{\prime},c^{\prime}}\)</span> for <span class="math inline" id="S4.p2.m26">\((\sigma,c)\neq(\sigma^{\prime},c^{\prime})\)</span>. Let <span class="math inline" id="S4.p2.m27">\({\cal P}\)</span>
+denote the collection of permutations <span class="math inline" id="S4.p2.m28">\(\{P_{\sigma,c}\}\)</span>. We now show that
+any two permutations in the collection <span class="math inline" id="S4.p2.m29">\({\cal P}\)</span> are admissible. Let
+<span class="math inline" id="S4.p2.m30">\(P_{\sigma,c}\)</span> and <span class="math inline" id="S4.p2.m31">\(P_{\sigma^{\prime},c^{\prime}}\)</span> be two distinct permutations in <span class="math inline" id="S4.p2.m32">\({\cal P}\)</span>. We consider two cases:</p>
+                                        </div>
+                                        <div id="S4.p3" class="ltx_para">
+                                          <p class="ltx_p">
+                                            <span class="ltx_text ltx_font_bold">Case:</span>
+                                            <span class="math inline" id="S4.p3.m1">\(c\neq c^{\prime}\)</span>. Let <span class="math inline" id="S4.p3.m2">\(i\)</span> be such that <span class="math inline" id="S4.p3.m3">\(c_{i}\neq c^{\prime}_{i}\)</span>.
+Without loss of generality assume <span class="math inline" id="S4.p3.m4">\(c_{i}=0,c^{\prime}_{i}=1\)</span>. Let
+<span class="math inline" id="S4.p3.m5">\(P_{\sigma,c}=(x_{0},\ldots,x_{n-1})\)</span> and
+<span class="math inline" id="S4.p3.m6">\(P_{\sigma^{\prime},c^{\prime}}=(x^{\prime}_{0},\ldots,x^{\prime}_{n-1})\)</span>. Then we have,
+<span class="math inline" id="S4.p3.m7">\((x_{2i},x_{2i+1})=B_{\sigma(i)}=(a,a+1)\)</span> and
+<span class="math inline" id="S4.p3.m8">\((x^{\prime}_{2i},x^{\prime}_{2i+1})=\overline{B}_{\sigma^{\prime}(i)}=(b+1,b)\)</span> for some <span class="math inline" id="S4.p3.m9">\(a,b\)</span>.
+Thus <span class="math inline" id="S4.p3.m10">\(x_{2i}+x^{\prime}_{2i}=x_{2i+1}+x^{\prime}_{2i+1}=a+b+1\)</span>, and hence the permutations
+are admissible.</p>
+                                          </div>
+                                          <div id="S4.p4" class="ltx_para">
+                                            <p class="ltx_p">
+                                              <span class="ltx_text ltx_font_bold">Case:</span>
+                                              <span class="math inline" id="S4.p4.m1">\(c=c^{\prime}\)</span>. In this case we must have <span class="math inline" id="S4.p4.m2">\(\sigma\neq\sigma^{\prime}\)</span>. In the block <span class="math inline" id="S4.p4.m3">\(B_{i}=(2i,2i+1)\)</span>, let us call <span class="math inline" id="S4.p4.m4">\(2i\)</span> as the <span class="ltx_text ltx_font_italic">little</span>
+end and <span class="math inline" id="S4.p4.m5">\(2i+1\)</span> as the <span class="ltx_text ltx_font_italic">big</span> end. Then <span class="math inline" id="S4.p4.m6">\(c=c^{\prime}\)</span> implies that in the
+component-wise addition of <span class="math inline" id="S4.p4.m7">\(P_{\sigma,c}\)</span> and <span class="math inline" id="S4.p4.m8">\(P_{\sigma^{\prime},c^{\prime}}\)</span> the little
+ends are summed with little ends, and big ends are summed with big ends.
+Let <span class="math inline" id="S4.p4.m9">\(L\)</span> be the set of sums of little ends, i.e,
+<span class="math inline" id="S4.p4.m10">\(L=\{2\sigma(i)+2\sigma^{\prime}(i):0\leq i\leq m-1\}\)</span> and <span class="math inline" id="S4.p4.m11">\(B\)</span> be the sums of big
+ends, i.e., <span class="math inline" id="S4.p4.m12">\(B=\{2\sigma(i)+2\sigma^{\prime}(i)+2:0\leq i\leq m-1\}\)</span>. We show that
+<span class="math inline" id="S4.p4.m13">\(L\cap B\)</span> is non-empty which will prove that <span class="math inline" id="S4.p4.m14">\(P_{\sigma,c}\)</span> and
+<span class="math inline" id="S4.p4.m15">\(P_{\sigma^{\prime},c^{\prime}}\)</span> are admissible. By Lemma <a href="#S2.Thmdefn9" title="Lemma 2.9. ‣ 2 Preliminaries ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
+                                              <span class="ltx_text ltx_ref_tag">2.9</span>
+                                              </a>, there
+exist <span class="math inline" id="S4.p4.m16">\(0\leq j,k\leq m-1\)</span> such that <span class="math inline" id="S4.p4.m17">\(\sigma(j)+\sigma^{\prime}(j)=\sigma(k)+\sigma^{\prime}(k)+1\)</span>, or
+<span class="math inline" id="S4.p4.m18">\(2\sigma(j)+2\sigma^{\prime}(j)=2\sigma(k)+2\sigma^{\prime}(k)+2\)</span>. We see that the left
+side of the identity is in <span class="math inline" id="S4.p4.m19">\(L\)</span> and the right side is in <span class="math inline" id="S4.p4.m20">\(B\)</span>. Thus <span class="math inline" id="S4.p4.m21">\(L\cap B\)</span>
+is non-empty.</p>
+                                            </div>
+                                            <div id="S4.p5" class="ltx_para">
+                                              <p class="ltx_p">Hence the collection of permutations <span class="math inline" id="S4.p5.m1">\(P_{\sigma,c}\)</span>, when viewed as
+permutations of <span class="math inline" id="S4.p5.m2">\(\mathbb{Z}_{n}\)</span> satisfy <span class="math inline" id="S4.p5.m3">\(\mathbf{(P2)}\)</span>. Finally we note that
+the number of permutations is <span class="math inline" id="S4.p5.m4">\(2^{m}.m!=2^{(n-1)/2}.(\frac{n-1}{2})!\)</span>.</p>
+                                            </div>
+                                            <div id="S4.p6" class="ltx_para">
+                                              <p class="ltx_p">Next we prove <span class="math inline" id="S4.p6.m1">\(t(n)\leq 2^{k}(n-1)!/\phi(n)\)</span>. Let <span class="math inline" id="S4.p6.m2">\(n=\prod_{i=1}^{k}p_{i}^{\alpha_{i}}\)</span>. We define a relation <span class="math inline" id="S4.p6.m3">\(\sim\)</span> on the set of permutations of
+<span class="math inline" id="S4.p6.m4">\(\mathbb{Z}_{n}\)</span> by <span class="math inline" id="S4.p6.m5">\(\sigma\sim\tau\)</span> if <span class="math inline" id="S4.p6.m6">\(\sigma=t+s.\tau\)</span> for some <span class="math inline" id="S4.p6.m7">\(t\in\mathbb{Z}_{n}\)</span> and <span class="math inline" id="S4.p6.m8">\(s\in\mathbb{Z}_{n}^{\times}\)</span> (recall that <span class="math inline" id="S4.p6.m9">\(\mathbb{Z}_{n}^{\times}\)</span>
+denotes the set of invertible elements of <span class="math inline" id="S4.p6.m10">\(\mathbb{Z}_{n}\)</span>). We show that <span class="math inline" id="S4.p6.m11">\(\sim\)</span> is an
+equivalence relation on <span class="math inline" id="S4.p6.m12">\({\cal S}(\mathbb{Z}_{n})\)</span>. Note that <span class="math inline" id="S4.p6.m13">\(\sigma\sim\sigma\)</span> as
+<span class="math inline" id="S4.p6.m14">\(\sigma=0+1.\sigma\)</span>. To show symmetry, assume <span class="math inline" id="S4.p6.m15">\(\sigma\sim\tau\)</span>. Then
+<span class="math inline" id="S4.p6.m16">\(\sigma=t+s.\tau\)</span> for some <span class="math inline" id="S4.p6.m17">\(t\in\mathbb{Z}_{n}\)</span> and <span class="math inline" id="S4.p6.m18">\(s\in\mathbb{Z}_{n}^{\times}\)</span>.
+Rearranging we have, <span class="math inline" id="S4.p6.m19">\(\tau=-t+s^{-1}.\sigma\)</span>. Thus <span class="math inline" id="S4.p6.m20">\(\tau\sim\sigma\)</span>. To
+show transitivity assume <span class="math inline" id="S4.p6.m21">\(\sigma\sim\tau\)</span> and <span class="math inline" id="S4.p6.m22">\(\tau\sim\gamma\)</span>. Then we
+have, <span class="math inline" id="S4.p6.m23">\(\sigma=t_{1}+s_{1}.\tau\)</span> and <span class="math inline" id="S4.p6.m24">\(\tau=t_{2}+s_{2}.\gamma\)</span> for some <span class="math inline" id="S4.p6.m25">\(t_{1},t_{2}\in\mathbb{Z}_{n}\)</span> and <span class="math inline" id="S4.p6.m26">\(s_{1},s_{2}\in\mathbb{Z}_{n}^{\times}\)</span>. From the previous relations
+we see that <span class="math inline" id="S4.p6.m27">\(\sigma=(t_{1}+s_{1}t_{2})+s_{1}s_{2}.\gamma\)</span>, and therefore
+<span class="math inline" id="S4.p6.m28">\(\sigma\sim\gamma\)</span>. Thus <span class="math inline" id="S4.p6.m29">\(\sim\)</span> is an equivalence relation on <span class="math inline" id="S4.p6.m30">\({\cal S}(\mathbb{Z}_{n})\)</span>. We
+now make the following claim:</p>
+                                            </div>
+                                            <div id="S4.p7" class="ltx_para">
+                                              <p class="ltx_p">
+                                                <span class="ltx_text ltx_font_bold">Claim:</span> Let <span class="math inline" id="S4.p7.m1">\({\cal P}\)</span> be a collection of permutations of
+<span class="math inline" id="S4.p7.m2">\(\mathbb{Z}_{n}\)</span> satisfying <span class="math inline" id="S4.p7.m3">\(\mathbf{(P2)}\)</span>, and <span class="math inline" id="S4.p7.m4">\(\sim\)</span> be the equivalence
+relation on <span class="math inline" id="S4.p7.m5">\({\cal S}(\mathbb{Z}_{n})\)</span> as defined. Then each equivalence class of <span class="math inline" id="S4.p7.m6">\(\sim\)</span>
+contains atmost <span class="math inline" id="S4.p7.m7">\(2^{k}\)</span> permutations from <span class="math inline" id="S4.p7.m8">\({\cal P}\)</span>.</p>
+                                              </div>
+                                              <div id="S4.p8" class="ltx_para">
+                                                <p class="ltx_p">Let <span class="math inline" id="S4.p8.m1">\(\sigma_{1},\ldots,\sigma_{m}\)</span> be permutations from <span class="math inline" id="S4.p8.m2">\({\cal P}\)</span> which belong
+to the same equivalence class. Let <span class="math inline" id="S4.p8.m3">\(\sigma\)</span> be a permutation such that
+<span class="math inline" id="S4.p8.m4">\(\sigma_{i}\sim\sigma\)</span> for all <span class="math inline" id="S4.p8.m5">\(i=1,\ldots,m\)</span>. Let <span class="math inline" id="S4.p8.m6">\(s_{i},t_{i}\)</span> be such that
+<span class="math inline" id="S4.p8.m7">\(\sigma_{i}=t_{i}+s_{i}.\sigma\)</span>. Now
+<span class="math inline" id="S4.p8.m8">\(\sigma_{i}+\sigma_{j}=(t_{i}+t_{j})+(s_{i}+s_{j}).\sigma\)</span>. From observations (a) and
+(b) in the proof of Lemma <a href="#S3.Thmdefn1" title="Lemma 3.1. ‣ 3 Sum of Permutations being Permutation ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
+                                                <span class="ltx_text ltx_ref_tag">3.1</span>
+                                                </a>, we see that <span class="math inline" id="S4.p8.m9">\(\sigma_{i}+\sigma_{j}\)</span> is
+a non-permutation if and only if <span class="math inline" id="S4.p8.m10">\(s_{i}+s_{j}\)</span> is not invertible in <span class="math inline" id="S4.p8.m11">\(\mathbb{Z}_{n}\)</span>.
+Thus <span class="math inline" id="S4.p8.m12">\(p_{r}|(s_{i}+s_{j})\)</span> for some <span class="math inline" id="S4.p8.m13">\(r\)</span>, <span class="math inline" id="S4.p8.m14">\(1\leq r\leq k\)</span>. Consider the edge coloring
+of the complete graph <span class="math inline" id="S4.p8.m15">\(K_{m}\)</span> on vertex set <span class="math inline" id="S4.p8.m16">\(\{1,\ldots,m\}\)</span> using <span class="math inline" id="S4.p8.m17">\(k\)</span> colors
+as follows. We color the edge <span class="math inline" id="S4.p8.m18">\(ij\)</span> with the color <span class="math inline" id="S4.p8.m19">\(\min\{r\in\{1,\ldots,k\}:p_{r}|(s_{i}+s_{j})\}\)</span>.</p>
+                                              </div>
+                                              <div id="S4.p9" class="ltx_para">
+                                                <p class="ltx_p">
+                                                  <span class="ltx_text ltx_font_bold">Subclaim:</span> For each color <span class="math inline" id="S4.p9.m1">\(i\in\{1,\ldots,k\}\)</span>, the edges of
+color <span class="math inline" id="S4.p9.m2">\(i\)</span> span a bipartite subgraph of <span class="math inline" id="S4.p9.m3">\(K_{m}\)</span>. We prove this by showing
+there are no monochromatic odd cycles. Assume <span class="math inline" id="S4.p9.m4">\(v_{1}v_{2}\ldots v_{l}\)</span> is a
+monochromatic odd cycle. Let <span class="math inline" id="S4.p9.m5">\(i\)</span> be the color of the edges in the cycle.
+Then <span class="math inline" id="S4.p9.m6">\(p_{i}|(s_{1}+s_{2}),p_{i}|(s_{2}+s_{3}),\ldots,p_{i}|(s_{l-1}+s_{l}),p_{i}|(s_%
+{l}+s_{1})\)</span>. Adding the above we get <span class="math inline" id="S4.p9.m7">\(p_{i}|2(s_{1}+\cdots+s_{l})\)</span> or <span class="math inline" id="S4.p9.m8">\(p_{i}|(s_{1}+\cdots+s_{l})\)</span> as <span class="math inline" id="S4.p9.m9">\(p_{i}\)</span> is odd. Now, from the <span class="math inline" id="S4.p9.m10">\((l-1)/2\)</span> relations <span class="math inline" id="S4.p9.m11">\(p_{i}|(s_{1}+s_{2}),p_{i}|(s_{3}+s_{4}),\ldots,p_{i}|(s_{l-2}+s_{l-1})\)</span> we get <span class="math inline" id="S4.p9.m12">\(p_{i}|(s_{1}+\cdots+s_{l-1})\)</span>. Combining this with <span class="math inline" id="S4.p9.m13">\(p_{i}|(s_{1}+\cdots+s_{l})\)</span> we
+get <span class="math inline" id="S4.p9.m14">\(p_{i}|s_{l}\)</span> which contradicts the fact that <span class="math inline" id="S4.p9.m15">\(s_{l}\)</span> in invertible in
+<span class="math inline" id="S4.p9.m16">\(\mathbb{Z}_{n}\)</span>. Thus there are no monochromatic odd cycles, and hence edges of
+a fixed color span a bipartite subgraph of <span class="math inline" id="S4.p9.m17">\(K_{m}\)</span>.</p>
+                                                </div>
+                                                <div id="S4.p10" class="ltx_para">
+                                                  <p class="ltx_p">The subclaim allows us to apply Lemma <a href="#S2.Thmdefn6" title="Lemma 2.6. ‣ 2 Preliminaries ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
+                                                    <span class="ltx_text ltx_ref_tag">2.6</span>
+                                                    </a> to the coloring of
+<span class="math inline" id="S4.p10.m1">\(K_{m}\)</span>, and hence we conclude that <span class="math inline" id="S4.p10.m2">\(m\leq 2^{k}\)</span>. This proves the
+claim.</p>
+                                                  </div>
+                                                  <div id="S4.p11" class="ltx_para">
+                                                    <p class="ltx_p">Finally we notice that each equivalence class of <span class="math inline" id="S4.p11.m1">\(\sim\)</span> contains <span class="math inline" id="S4.p11.m2">\(n\phi(n)\)</span>
+elements, and hence there are <span class="math inline" id="S4.p11.m3">\(n!/(n\phi(n))=(n-1)!/\phi(n)\)</span> equivalence
+classes. Now from the claim, each equivalence class contains at most <span class="math inline" id="S4.p11.m4">\(2^{k}\)</span>
+elements from <span class="math inline" id="S4.p11.m5">\({\cal P}\)</span>, and hence <span class="math inline" id="S4.p11.m6">\(|{\cal P}|\leq 2^{k}(n-1)!/\phi(n)\)</span>.
+∎</p>
+                                                  </div>
+                                                </div>
+                                                <div id="S4.Thmdefn2" class="ltx_theorem ltx_theorem_remark">
+                                                  <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                                    <span class="ltx_tag ltx_tag_theorem">Remark 4.2</span>.</h6>
+                                                    <div id="S4.Thmdefn2.p1" class="ltx_para">
+                                                      <p class="ltx_p">We note that for a prime number <span class="math inline" id="S4.Thmdefn2.p1.m1">\(n\)</span>, the upper bound <span class="math inline" id="S4.Thmdefn2.p1.m2">\(\sim(n/e)^{n}\sqrt{n}\)</span>
+whereas the lower bound <span class="math inline" id="S4.Thmdefn2.p1.m3">\(\sim(n/e)^{n/2}\sqrt{n}\)</span>. Thus there is a quadratic
+gap between the upper and lower bounds. We also mention that one way to
+obtain permutations summing up to a non permutation is to consider a family
+of permutations with mutual reverse. Two permutations <span class="math inline" id="S4.Thmdefn2.p1.m4">\(\sigma,\tau\)</span> of
+<span class="math inline" id="S4.Thmdefn2.p1.m5">\(\{0,\ldots,n-1\}\)</span> are said to have a <span class="ltx_text ltx_font_italic">mutual reverse</span> if there exist
+<span class="math inline" id="S4.Thmdefn2.p1.m6">\(i\neq j\)</span> such that <span class="math inline" id="S4.Thmdefn2.p1.m7">\(\sigma(i)=\tau(j)\)</span> and <span class="math inline" id="S4.Thmdefn2.p1.m8">\(\sigma(j)=\tau(i)\)</span>. We call
+such a family of permutations as <span class="ltx_text ltx_font_italic">reverse full</span>. Note that
+a reverse full family of permutations satisfies
+<span class="math inline" id="S4.Thmdefn2.p1.m9">
+                                                      \(\mathbf{(P2)}\)</span>. From a result of Cibulka 
+                                                      <cite class="ltx_cite">[]</cite> on size of
+reverse-free families of permutations, the maximum size of a reverse full
+family of permutations on <span class="math inline" id="S4.Thmdefn2.p1.m10">\(n\)</span> symbols is at most <span class="math inline" id="S4.Thmdefn2.p1.m11">\(n^{n/2+O(\log n)}\)</span>,
+though we are unaware of any non-trivial lower bound for the same. Our
+construction achieves <span class="math inline" id="S4.Thmdefn2.p1.m12">\(\sim(n/e)^{n/2}\sqrt{n}\)</span>, but under a much more
+flexbile constraint.
+<span class="ltx_text ltx_font_italic"/>
+                                                    </p>
+                                                  </div>
+                                                </div>
+                                              </section>
+                                              <section id="S5" class="ltx_section">
+                                                <h2 class="ltx_title ltx_title_section">
+                                                  <span class="ltx_tag ltx_tag_section">5 </span>Differences of Permutations being Permutation</h2>
+                                                  <div id="S5.p1" class="ltx_para">
+                                                    <p class="ltx_p">In this section, we wish to obtain upper and lower bounds on the maximum size of
+set <span class="math inline" id="S5.p1.m1">\({\cal P}\subseteq{\cal S}(\mathbb{Z}_{n})\)</span> such that for any two distinct permutations
+<span class="math inline" id="S5.p1.m2">\(\sigma,\tau\in{\cal P}\)</span>, <span class="math inline" id="S5.p1.m3">\(\sigma-\tau\)</span> is also a permutation of <span class="math inline" id="S5.p1.m4">\(\mathbb{Z}_{n}\)</span>.
+We say that <span class="math inline" id="S5.p1.m5">\({\cal P}\subseteq{\cal S}(\mathbb{Z}_{n})\)</span> satisfies property <span class="math inline" id="S5.p1.m6">\(\mathbf{(P3)}\)</span> if
+for any two <span class="math inline" id="S5.p1.m7">\(\sigma,\tau\in{\cal P}\)</span>, <span class="math inline" id="S5.p1.m8">\(\sigma\neq\tau\)</span>, <span class="math inline" id="S5.p1.m9">\(\sigma-\tau\)</span> is
+a permutation of <span class="math inline" id="S5.p1.m10">\(\mathbb{Z}_{n}\)</span>. Let <span class="math inline" id="S5.p1.m11">\(f(n)=\max\{|{\cal P}|:{\cal P}\subseteq{\cal S}(\mathbb{Z}_{n})\text{
+satisfies }\mathbf{(P3)}\}\)</span>.</p>
+                                                  </div>
+                                                  <div id="S5.Thmdefn1" class="ltx_theorem ltx_theorem_qn">
+                                                    <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                                      <span class="ltx_tag ltx_tag_theorem">Question 5.1</span>.</h6>
+                                                      <div id="S5.Thmdefn1.p1" class="ltx_para">
+                                                        <p class="ltx_p">What is a good estimate for <span class="math inline" id="S5.Thmdefn1.p1.m1">\(f(n)\)</span> as defined above ?
+<span class="ltx_text ltx_font_italic"/>
+                                                      </p>
+                                                    </div>
+                                                  </div>
+                                                  <div id="S5.p2" class="ltx_para">
+                                                    <p class="ltx_p">The above question is only superficially different from the well studied
+problem of finding mutually orthogonal orthomorphisms of finite groups (See
+<cite class="ltx_cite">[]</cite>). For
+a finite group <span class="math inline" id="S5.p2.m1">\(G\)</span>, a bijection <span class="math inline" id="S5.p2.m2">\(\theta:G\rightarrow G\)</span> is called an <span class="ltx_text ltx_font_italic">orthomorphism</span> of <span class="math inline" id="S5.p2.m3">\(G\)</span> if the map <span class="math inline" id="S5.p2.m4">\(x\mapsto\theta(x)-x\)</span> is a bijection. Two
+orthomorphisms <span class="math inline" id="S5.p2.m5">\(\theta,\phi\)</span> are called <span class="ltx_text ltx_font_italic">orthogonal</span> if <span class="math inline" id="S5.p2.m6">\(\theta-\phi\)</span>
+is a bijection. It is not hard to see that a set of <span class="math inline" id="S5.p2.m7">\(k\)</span> permutations of
+<span class="math inline" id="S5.p2.m8">\({\mathbb{Z}}_{n}\)</span> satisfying <span class="ltx_text ltx_font_bold">(P3)</span> gives a set of <span class="math inline" id="S5.p2.m9">\(k-1\)</span> mutually
+orthogonal orthomorphisms
+of <span class="math inline" id="S5.p2.m10">\({\mathbb{Z}}_{n}\)</span> and vice versa. Orthogonal orthomorphisms have been used
+in construction of mutually orthogonal latin squares (MOLS).
+If we write the permutations of <span class="math inline" id="S5.p2.m11">\({\cal P}\)</span> as rows of a matrix,
+we get a <span class="math inline" id="S5.p2.m12">\(|{\cal P}|\times n\)</span> matrix over <span class="math inline" id="S5.p2.m13">\(\mathbb{Z}_{n}\)</span> with the property that the
+difference of any two distinct rows is a permutation of <span class="math inline" id="S5.p2.m14">\(\mathbb{Z}_{n}\)</span>. We point out
+that such matrices have been used in connection with constructions of Latin
+Squares and Orthogonal Arrays (cf. <cite class="ltx_cite">[, Chapter 22]</cite>). Well known
+bounds for mutually orthogonal orthomorphisms yield the following lemma.</p>
+                                                  </div>
+                                                  <div id="S5.Thmdefn2" class="ltx_theorem ltx_theorem_lemma">
+                                                    <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                                      <span class="ltx_tag ltx_tag_theorem">Lemma 5.2</span>.</h6>
+                                                      <div id="S5.Thmdefn2.p1" class="ltx_para">
+                                                        <p class="ltx_p">
+                                                          <span class="ltx_text ltx_font_italic">For <span class="math inline" id="S5.Thmdefn2.p1.m1">\(n\geq 2\)</span>, we have,</span>
+                                                        </p>
+                                                        <ol id="I2" class="ltx_enumerate">
+                                                          <li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+                                                            <span class="ltx_tag ltx_tag_enumerate">(a)</span>
+                                                            <div id="I2.i1.p1" class="ltx_para">
+                                                              <p class="ltx_p">
+                                                                <span class="math inline" id="I2.i1.p1.m1">\(f(n)\leq n-1\)</span>
+                                                                <span class="ltx_text ltx_font_italic">,</span>
+                                                              </p>
+                                                            </div>
+                                                          </li>
+                                                          <li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+                                                            <span class="ltx_tag ltx_tag_enumerate">(b)</span>
+                                                            <div id="I2.i2.p1" class="ltx_para">
+                                                              <p class="ltx_p">
+                                                                <span class="math inline" id="I2.i2.p1.m1">\(f(n)=1\)</span>
+                                                                <span class="ltx_text ltx_font_italic">, when </span>
+                                                                <span class="math inline" id="I2.i2.p1.m2">\(n\)</span>
+                                                                <span class="ltx_text ltx_font_italic"> is an even number,</span>
+                                                              </p>
+                                                            </div>
+                                                          </li>
+                                                          <li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+                                                            <span class="ltx_tag ltx_tag_enumerate">(c)</span>
+                                                            <div id="I2.i3.p1" class="ltx_para">
+                                                              <p class="ltx_p">
+                                                                <span class="math inline" id="I2.i3.p1.m1">\(f(n)=n-1\)</span>
+                                                                <span class="ltx_text ltx_font_italic">, when </span>
+                                                                <span class="math inline" id="I2.i3.p1.m2">\(n\)</span>
+                                                                <span class="ltx_text ltx_font_italic"> is a prime number.</span>
+                                                              </p>
+                                                            </div>
+                                                          </li>
+                                                        </ol>
+                                                      </div>
+                                                    </div>
+                                                    <div id="S5.Thmdefn3" class="ltx_theorem ltx_theorem_qn">
+                                                      <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                                        <span class="ltx_tag ltx_tag_theorem">Question 5.3</span>.</h6>
+                                                        <div id="S5.Thmdefn3.p1" class="ltx_para">
+                                                          <p class="ltx_p">Determine <span class="math inline" id="S5.Thmdefn3.p1.m1">\(f(n)\)</span> for odd composite number <span class="math inline" id="S5.Thmdefn3.p1.m2">\(n\)</span>.
+<span class="ltx_text ltx_font_italic"/>
+                                                        </p>
+                                                      </div>
+                                                    </div>
+                                                    <div id="S5.p3" class="ltx_para">
+                                                      <p class="ltx_p">
+                                                        From results in 
+                                                        <cite class="ltx_cite">[]</cite> if follows that for an odd number <span class="math inline" id="S5.p3.m1">\(n>3\)</span> and <span class="math inline" id="S5.p3.m2">\(n\)</span> not
+divisible by <span class="math inline" id="S5.p3.m3">\(9\)</span>, we have <span class="math inline" id="S5.p3.m4">\(f(n)\geq 3\)</span>.</p>
+                                                      </div>
+                                                    </section>
+                                                  </article>
+                                                </div>
+                                                <footer class="ltx_page_footer">
+                                                  <div class="ltx_page_logo">Generated  on Thu Jan 19 18:36:42 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"/>
+                                                  </a>
+                                                </div>
+                                              </footer>
+                                            </div>
+                                          </body>
+                                        </html>

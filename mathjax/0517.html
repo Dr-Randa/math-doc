@@ -1,0 +1,2170 @@
+<html>
+  <head>
+    <title>Untitled Document</title>
+    <!--Generated on Thu Jan 19 18:36:47 2017 by LaTeXML (version 0.8.1) http://dlmf.nist.gov/LaTeXML/.-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="LaTeXML.css" type="text/css"/>
+    <link rel="stylesheet" href="ltx-article.css" type="text/css"/>
+    <script type="text/x-sre-config">
+{"json": "https://cdn.mathjax.org/mathjax/contrib/a11y/mathmaps"}
+</script>
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: {autoNumber: "AMS"} },
+  MMLorHTML: {MSIE: "HTML"},
+  AssistiveMML: {disabled: true},
+  "fast-preview": {disabled: true}
+});
+MathJax.Ajax.config.path["SRE"] = "../mathjax";
+</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"> </script>
+  </head>
+  <body>
+    <div class="ltx_page_main">
+      <div class="ltx_page_content">
+        <article class="ltx_document">
+          <div class="ltx_abstract">
+            <h6 class="ltx_title ltx_title_abstract">Abstract</h6>
+            <p class="ltx_p">In this paper, we study the continued fraction <span class="math inline" id="m1">\(y(s,r)\)</span> which satisfies the equation <span class="math inline" id="m2">\(y(s,r)y(s+2r,r)=(s+1)(s+2r-1)\)</span> for <span class="math inline" id="m3">\(r>\dfrac{1}{2}\)</span>. This continued fraction is a generalization of the Brouncker’s continued fraction <span class="math inline" id="m4">\(b(s)\)</span>. We extend the formulas for the first and the second logarithmic derivatives of <span class="math inline" id="m5">\(b(s)\)</span> to the case of <span class="math inline" id="m6">\(y(s,r)\)</span>. The asymptotic series for <span class="math inline" id="m7">\(y(s,r)\)</span> at <span class="math inline" id="m8">\(\infty\)</span> are also studied. The generalizations of some Ramanujan’s formulas are presented.</p>
+            <p class="ltx_p">
+              <span class="ltx_text ltx_font_bold">Keywords</span>: Brouncker’s continued fraction, Ramanujan’s formula, Asymptotic series, Functional equations.
+Primary 11A55 Secondary 11J70, 30B70.</p>
+            </div>
+            <div id="p1" class="ltx_para">
+              <p class="ltx_p ltx_align_center">
+                <span class="ltx_text" style="font-size:huge;">Generalized Brouncker’s continued fractions and their logarithmic derivatives</span>
+              </p>
+              <p class="ltx_p ltx_align_center">[0.5cm]</p>
+            </div>
+            <div id="p2" class="ltx_para">
+              <p class="ltx_p ltx_align_center">
+                <span class="ltx_text ltx_font_bold">O.Y. Kushel</span>
+              </p>
+            </div>
+            <div id="p3" class="ltx_para">
+              <p class="ltx_p ltx_align_center">
+                <span class="ltx_text ltx_font_italic">kushel@mail.ru</span>
+              </p>
+            </div>
+            <div id="p4" class="ltx_para">
+              <p class="ltx_p ltx_align_center">Institut für Mathematik, MA 4-5, Technische Universität Berlin,</p>
+              <p class="ltx_p ltx_align_center">D-10623 Berlin, Germany</p>
+            </div>
+            <div id="p5" class="ltx_para">
+              <p class="ltx_p ltx_align_center">June 17, 2014</p>
+            </div>
+            <section id="S1" class="ltx_section">
+              <h2 class="ltx_title ltx_title_section">
+                <span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+                <div id="S1.p1" class="ltx_para">
+                  <p class="ltx_p">The Brouncker’s continued fraction <span class="math inline" id="S1.p1.m1">\(b(s)=s+\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\dfrac{(2n-1)^{2}%
+}{2s}\right)\)</span>
+                   still attracts the attention of researchers due to its role in the theory of orthogonal polynomials and its relations to the Gamma and Beta functions (see <cite class="ltx_cite">[]</cite>, <cite class="ltx_cite">[]</cite>–<cite class="ltx_cite">[]</cite>). Recall the following theorem of Brouncker describing the properties of <span class="math inline" id="S1.p1.m2">\(b(s)\)</span> (see 
+                  <cite class="ltx_cite">[]</cite>, p. 145, Theorem 3.16).</p>
+                </div>
+                <div id="S1.Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+                  <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                    <span class="ltx_tag ltx_tag_theorem">Theorem 1.1</span> (Brouncker)</h6>
+                    <div id="S1.Thmtheorem1.p1" class="ltx_para">
+                      <p class="ltx_p">
+                        <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S1.Thmtheorem1.p1.m1">\(b(s)\)</span> be a function on <span class="math inline" id="S1.Thmtheorem1.p1.m2">\((0,+\infty)\)</span> satisfying the functional equation <span class="math inline" id="S1.Thmtheorem1.p1.m3">\(b(s)b(s+2)=(s+1)^{2}\)</span> and the inequality <span class="math inline" id="S1.Thmtheorem1.p1.m4">\(s&lt;b(s)\)</span> for <span class="math inline" id="S1.Thmtheorem1.p1.m5">\(s>C\)</span>, where <span class="math inline" id="S1.Thmtheorem1.p1.m6">\(C\)</span> is some constant. Then</span>
+                      </p>
+                      <table id="S1.Ex1" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="S1.Ex1.m1">\[b(s)=(s+1)\prod_{n=1}^{\infty}\dfrac{(s+4n-3)(s+4n+1)}{(s+4n-1)^{2}}=s+%
+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{(2n-1)^{2}}{2s}\right)\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">
+                        <span class="ltx_text ltx_font_italic">for every positive <span class="math inline" id="S1.Thmtheorem1.p1.m7">\(s\)</span>.
+</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div id="S1.p2" class="ltx_para">
+                    <p class="ltx_p">
+                      Ramanujan discovered the formula, expressing the Brouncker’s continued fraction in terms of the Gamma function (see 
+                      <cite class="ltx_cite">[]</cite>, p. 153, Theorem 3.25).</p>
+                    </div>
+                    <div id="S1.Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+                      <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                        <span class="ltx_tag ltx_tag_theorem">Theorem 1.2</span> (Ramanujan)</h6>
+                        <div id="S1.Thmtheorem2.p1" class="ltx_para">
+                          <p class="ltx_p">
+                            <span class="ltx_text ltx_font_italic">For every <span class="math inline" id="S1.Thmtheorem2.p1.m1">\(s>0\)</span>
+                          </span>
+                        </p>
+                        <table id="S1.Ex2" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S1.Ex2.m1">\[b(s)=s+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{(2n-1)^{2}}{2s}%
+\right)=4\left[\dfrac{\Gamma(\frac{3+s}{4})}{\Gamma(\frac{1+s}{4})}\right]^{2}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div id="S1.p3" class="ltx_para">
+                      <p class="ltx_p">The following extension of Brouncker’s theorem (Theorem 1) was obtained by Euler
+(see <cite class="ltx_cite">[]</cite>, p. 180, Theorem 4.17).</p>
+                    </div>
+                    <div id="S1.Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+                      <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                        <span class="ltx_tag ltx_tag_theorem">Theorem 1.3</span> (Euler)</h6>
+                        <div id="S1.Thmtheorem3.p1" class="ltx_para">
+                          <p class="ltx_p">
+                            <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S1.Thmtheorem3.p1.m1">\(y(s,r)\)</span> be a positive continuous function satisfying the inequality <span class="math inline" id="S1.Thmtheorem3.p1.m2">\(s&lt;y(s,r)\)</span> and the equation</span>
+                          </p>
+                          <table id="S1.Ex3" class="ltx_equation">
+                            <tr class="ltx_equation ltx_align_baseline">
+                              <td class="ltx_eqn_center_padleft"/>
+                              <td class="ltx_align_center">
+                                <span class="math display" id="S1.Ex3.m1">\[y(s,r)y(s+2r,r)=(s+1)(s+2r-1)\]</span>
+                              </td>
+                              <td class="ltx_eqn_center_padright"/>
+                            </tr>
+                          </table>
+                          <p class="ltx_p">
+                            <span class="ltx_text ltx_font_italic">for any <span class="math inline" id="S1.Thmtheorem3.p1.m3">\(s>0\)</span>, <span class="math inline" id="S1.Thmtheorem3.p1.m4">\(r>\dfrac{1}{2}\)</span>. Then</span>
+                          </p>
+                          <table id="S1.Ex4" class="ltx_equation">
+                            <tr class="ltx_equation ltx_align_baseline">
+                              <td class="ltx_eqn_center_padleft"/>
+                              <td class="ltx_align_center">
+                                <span class="math display" id="S1.Ex4.m1">\[y(s,r)=(s+1)\prod_{n=0}^{\infty}\dfrac{(s+2r-1+4nr)(s+4r+1+4nr)}{(s+2r+1+4nr)(%
+s+4r-1+4nr)}=\]</span>
+                              </td>
+                              <td class="ltx_eqn_center_padright"/>
+                            </tr>
+                          </table>
+                          <table id="S1.Ex5" class="ltx_equation">
+                            <tr class="ltx_equation ltx_align_baseline">
+                              <td class="ltx_eqn_center_padleft"/>
+                              <td class="ltx_align_center">
+                                <span class="math display" id="S1.Ex5.m1">\[=s+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{(2n-1)^{2}r^{2}-(r-1)%
+^{2}}{2s}\right).\]</span>
+                              </td>
+                              <td class="ltx_eqn_center_padright"/>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div id="S1.p4" class="ltx_para">
+                        <p class="ltx_p">
+                          In <cite class="ltx_cite">[]</cite> Ramanujan’s theorem (Theorem 2) was extended to the case of the continued fraction <span class="math inline" id="S1.p4.m1">\(y(s,r)\)</span> (see 
+                          <cite class="ltx_cite">[]</cite>, p. 220, ex. 4.22).</p>
+                        </div>
+                        <div id="S1.Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+                          <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                            <span class="ltx_tag ltx_tag_theorem">Theorem 1.4</span>
+                          </h6>
+                          <div id="S1.Thmtheorem4.p1" class="ltx_para">
+                            <p class="ltx_p">
+                              <span class="ltx_text ltx_font_italic">For every <span class="math inline" id="S1.Thmtheorem4.p1.m1">\(s>0\)</span>, <span class="math inline" id="S1.Thmtheorem4.p1.m2">\(r>\frac{1}{2}\)</span>
+                            </span>
+                          </p>
+                          <table id="S1.Ex6" class="ltx_equation">
+                            <tr class="ltx_equation ltx_align_baseline">
+                              <td class="ltx_eqn_center_padleft"/>
+                              <td class="ltx_align_center">
+                                <span class="math display" id="S1.Ex6.m1">\[y(s,r)=s+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{(2n-1)^{2}r^{2}%
+-(r-1)^{2}}{2s}\right)=4r\dfrac{\Gamma(\frac{s+2r+1}{4r})\Gamma(\frac{s+4r-1}{%
+4r})}{\Gamma(\frac{s+1}{4r})\Gamma(\frac{s+2r-1}{4r})}.\]</span>
+                              </td>
+                              <td class="ltx_eqn_center_padright"/>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div id="S1.p5" class="ltx_para">
+                        <p class="ltx_p">The following exact continued fraction representation for the first logarithmic derivative of <span class="math inline" id="S1.p5.m1">\(b(s)\)</span>
+                      </p>
+                      <table id="S1.Ex7" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="S1.Ex7.m1">\[\dfrac{b^{\prime}}{b}(s)=\dfrac{1}{s+\operatornamewithlimits{K}\limits_{n=1}^{%
+\infty}\left(\frac{n^{2}}{s}\right)}\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">
+                        allows one to obtain the exponential representation for <span class="math inline" id="S1.p5.m2">\(b(s)\)</span> (see 
+                        <cite class="ltx_cite">[]</cite>, p. 192, Theorem 4.25).</p>
+                      </div>
+                      <div id="S1.Thmtheorem5" class="ltx_theorem ltx_theorem_theorem">
+                        <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                          <span class="ltx_tag ltx_tag_theorem">Theorem 1.5</span>
+                        </h6>
+                        <div id="S1.Thmtheorem5.p1" class="ltx_para">
+                          <p class="ltx_p">
+                            <span class="ltx_text ltx_font_italic">For <span class="math inline" id="S1.Thmtheorem5.p1.m1">\(s>0\)</span>
+                          </span>
+                        </p>
+                        <table id="S1.Ex8" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S1.Ex8.m1">\[s+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{(2n-1)^{2}}{2s}\right)%
+=\dfrac{8\pi^{2}}{\Gamma^{4}(\frac{1}{4})}\exp\left\{\int_{0}^{s}\dfrac{dt}{t+%
+\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac{n^{2}}{t}\right)}%
+\right\}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div id="S1.p6" class="ltx_para">
+                      <p class="ltx_p">In this paper, we represent the first logarithmic derivative of <span class="math inline" id="S1.p6.m1">\(y(s,r)\)</span> in the form of the sum of two continued fractions (see Section 4, Corollary 3). For <span class="math inline" id="S1.p6.m2">\(s>|r-1|\)</span>, <span class="math inline" id="S1.p6.m3">\(r>\dfrac{1}{2}\)</span>
+                    </p>
+                  </div>
+                  <div id="S1.p7" class="ltx_para">
+                    <table id="S1.Ex9" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex9.m1">\[\dfrac{\partial}{\partial s}(\ln y)(s,r)=f_{1}(s,r)+f_{2}(s,r),\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="S1.p8" class="ltx_para">
+                    <p class="ltx_p">where</p>
+                    <table id="S1.Ex10" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex10.m1">\[f_{1}(s,r)=\dfrac{1}{2-2r+2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}%
+\left(\frac{n^{2}r^{2}}{1-r+s}\right)}\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                        <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                          <span class="ltx_tag ltx_tag_equation">1</span>
+                        </td>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">and</p>
+                    <table id="S1.Ex11" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex11.m1">\[f_{2}(s,r)=\dfrac{1}{2r-2+2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}%
+\left(\frac{n^{2}r^{2}}{r-1+s}\right)}.\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                        <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                          <span class="ltx_tag ltx_tag_equation">2</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="S1.p9" class="ltx_para">
+                    <p class="ltx_p">Then we extend Theorem 5 to the case of <span class="math inline" id="S1.p9.m1">\(y(s,r)\)</span> (see Section 5, Theorem 9).</p>
+                  </div>
+                  <div id="S1.Thmtheorem9" class="ltx_theorem ltx_theorem_theorem">
+                    <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                      <span class="ltx_tag ltx_tag_theorem">Theorem 1.9</span>
+                    </h6>
+                    <div id="S1.Thmtheorem9.p1" class="ltx_para">
+                      <p class="ltx_p">
+                        <span class="ltx_text ltx_font_italic">For <span class="math inline" id="S1.Thmtheorem9.p1.m1">\(s>|r-1|\)</span>, <span class="math inline" id="S1.Thmtheorem9.p1.m2">\(r>\frac{1}{2}\)</span>
+                      </span>
+                    </p>
+                    <table id="S1.Ex12" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex12.m1">\[y(s,r)=s+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{(2n-1)^{2}r^{2}%
+-(r-1)^{2}}{2s}\right)=\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <table id="S1.Ex13" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex13.m1">\[=8\pi r2^{1-\frac{1}{r}}\dfrac{\Gamma^{2}(\frac{1}{2r})}{\Gamma^{4}(\frac{1}{4%
+r})}\cot(\frac{\pi}{4r})\exp\left\{\int_{0}^{s}(f_{1}(t,r)+f_{2}(t,r))dt\right\},\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">
+                      <span class="ltx_text ltx_font_italic">where <span class="math inline" id="S1.Thmtheorem9.p1.m3">\(f_{1}(t,r)\)</span> and <span class="math inline" id="S1.Thmtheorem9.p1.m4">\(f_{2}(t,r)\)</span> are given by formulas (1) and (2), respectively.</span>
+                    </p>
+                  </div>
+                </div>
+                <div id="S1.p10" class="ltx_para">
+                  <p class="ltx_p">
+                    There is also an exact integral representation of <span class="math inline" id="S1.p10.m1">\(\dfrac{b^{\prime}}{b}(s)\)</span> (see 
+                    <cite class="ltx_cite">[]</cite>, p. 191, Formula 4.71). For <span class="math inline" id="S1.p10.m2">\(s>0\)</span>
+                  </p>
+                  <table id="S1.Ex14" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S1.Ex14.m1">\[\dfrac{b^{\prime}}{b}(s)=\dfrac{1}{s+\operatornamewithlimits{K}\limits_{n=1}^{%
+\infty}\left(\frac{n^{2}}{s}\right)}=2\int_{0}^{+\infty}\dfrac{e^{-sx}dx}{%
+\cosh x}.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                        <span class="ltx_tag ltx_tag_equation">3</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div id="S1.p11" class="ltx_para">
+                  <p class="ltx_p">
+                    Theorem 5 together with (3) imply the following asymptotic relation, which holds for <span class="math inline" id="S1.p11.m1">\(b(s)\)</span> as <span class="math inline" id="S1.p11.m2">\(s\rightarrow+\infty\)</span> (see 
+                    <cite class="ltx_cite">[]</cite>, p. 192, Corollary 4.26).
+</p>
+                    <table id="S1.Ex15" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex15.m1">\[b(s)=s+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{(2n-1)^{2}}{2s}%
+\right)\sim s\exp\left\{-\sum_{k=1}^{\infty}\dfrac{E_{2k}}{2ks^{2k}}\right\},\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">
+                      where <span class="math inline" id="S1.p11.m3">\(E_{2k}\)</span> are the Euler’s numbers. Here the asymptotic power series <span class="math inline" id="S1.p11.m4">\(\exp\left\{-\sum\limits_{k=1}^{\infty}\dfrac{E_{2k}}{2ks^{2k}}\right\}\)</span> arises from replacing <span class="math inline" id="S1.p11.m5">\(x\)</span> in the formal power series <span class="math inline" id="S1.p11.m6">\(\exp(x)=\sum\limits_{n=0}^{\infty}\dfrac{x^{n}}{n!}\)</span> by <span class="math inline" id="S1.p11.m7">\(-\sum\limits_{k=1}^{\infty}\dfrac{E_{2k}}{2ks^{2k}}\)</span> and combining coefficients afterwards (on the possibility of such a substitution see <cite class="ltx_cite">[]</cite>, p. 15, Theorem 124, see also 
+                      <cite class="ltx_cite">[]</cite>, p. 15).</p>
+                    </div>
+                    <div id="S1.p12" class="ltx_para">
+                      <p class="ltx_p">We obtain exact integral representations for both the continued fractions (1) and (2) (see Section 3, Lemma 4). For <span class="math inline" id="S1.p12.m1">\(s>|r-1|\)</span>, <span class="math inline" id="S1.p12.m2">\(r>\frac{1}{2}\)</span>
+                    </p>
+                    <table id="S1.Ex16" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex16.m1">\[\dfrac{1}{2-2r+2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac%
+{n^{2}r^{2}}{1-r+s}\right)}=\frac{1}{2r}\int_{0}^{+\infty}\dfrac{e^{-x\frac{1-%
+r+s}{r}}dx}{\cosh x}.\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <table id="S1.Ex17" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex17.m1">\[\dfrac{1}{2r-2+2s+\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac{%
+n^{2}r^{2}}{r-1+s}\right)}=\frac{1}{2r}\int_{0}^{+\infty}\dfrac{e^{-x\frac{r-1%
++s}{r}}dx}{\cosh x}.\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="S1.p13" class="ltx_para">
+                    <p class="ltx_p">These two formulas together with Theorem 9 allows us to obtain the asymptotic expansion for <span class="math inline" id="S1.p13.m1">\(y(s,r)\)</span> at infinity (see Section 6, Theorem 10), using Euler’s methods.</p>
+                  </div>
+                  <div id="S1.p14" class="ltx_para">
+                    <table id="S1.Ex18" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex18.m1">\[y(s,r)=s+\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\dfrac{(2n-1)^{%
+2}r^{2}-(r-1)^{2}}{2s}\right)\sim\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <table id="S1.Ex19" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex19.m1">\[\sim s\exp\left\{-\sum_{n=1}^{\infty}\dfrac{\sum\limits_{k=0}^{n}\binom{2n}{2k%
+}(r-1)^{2k}r^{2(n-k)}E_{2(n-k)}}{2ns^{2n}}\right\}.\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="S1.p15" class="ltx_para">
+                    <p class="ltx_p">Let us introduce the notation:</p>
+                  </div>
+                  <div id="S1.p16" class="ltx_para">
+                    <table id="S1.Ex20" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex20.m1">\[s^{2}-1+\dfrac{4\times 1^{2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}\dfrac{4\times 1^{2%
+}}{s^{2}-1}\genfrac{}{}{0.0pt}{0}{}{+}\dfrac{4\times 2^{2}}{1}\genfrac{}{}{0.0%
+pt}{0}{}{+}\dfrac{4\times 2^{2}}{s^{2}-1}\genfrac{}{}{0.0pt}{0}{}{+}\genfrac{}%
+{}{0.0pt}{0}{}{\cdots}=s^{2}-1+\operatornamewithlimits{K^{\prime}}_{n=1}^{%
+\infty}\left(\frac{4n^{2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}\frac{4n^{2}}{s^{2}-1}%
+\right).\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="S1.p17" class="ltx_para">
+                    <p class="ltx_p">
+                      Ramanujan stated the following formula for the second logarithmic derivative of <span class="math inline" id="S1.p17.m1">\(b(s)\)</span>, which was proved later by Perron (see <cite class="ltx_cite">[]</cite>, p. 231, Formula (5.6), see also 
+                      <cite class="ltx_cite">[]</cite>).</p>
+                    </div>
+                    <div id="S1.Thmtheorem6" class="ltx_theorem ltx_theorem_theorem">
+                      <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                        <span class="ltx_tag ltx_tag_theorem">Theorem 1.6</span> (Ramanujan’s formula)</h6>
+                        <div id="S1.Thmtheorem6.p1" class="ltx_para">
+                          <p class="ltx_p">
+                            <span class="ltx_text ltx_font_italic">For <span class="math inline" id="S1.Thmtheorem6.p1.m1">\(s>1\)</span>
+                          </span>
+                        </p>
+                        <table id="S1.Ex21" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S1.Ex21.m1">\[(\ln b)^{\prime\prime}(s)=-\int_{0}^{\infty}\dfrac{xe^{-sx}}{\cosh x}dx=-%
+\dfrac{1}{s^{2}-1+\operatornamewithlimits{K^{\prime}}\limits_{n=1}^{\infty}%
+\left(\frac{4n^{2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}\frac{4n^{2}}{s^{2}-1}\right)}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                            <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                              <span class="ltx_tag ltx_tag_equation">4</span>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div id="S1.p18" class="ltx_para">
+                      <p class="ltx_p">We obtain the corresponding formula for the second logarithmic derivative of <span class="math inline" id="S1.p18.m1">\(y(s,r)\)</span>.</p>
+                    </div>
+                    <div id="S1.Thmtheorem12" class="ltx_theorem ltx_theorem_theorem">
+                      <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                        <span class="ltx_tag ltx_tag_theorem">Theorem 1.12</span>
+                      </h6>
+                      <div id="S1.Thmtheorem12.p1" class="ltx_para">
+                        <p class="ltx_p">
+                          <span class="ltx_text ltx_font_italic">For <span class="math inline" id="S1.Thmtheorem12.p1.m1">\(s>\max(1,\ 2r-1)\)</span>, <span class="math inline" id="S1.Thmtheorem12.p1.m2">\(r>\dfrac{1}{2}\)</span>
+                        </span>
+                      </p>
+                      <table id="S1.Ex22" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="S1.Ex22.m1">\[\dfrac{\partial^{2}}{\partial s^{2}}(\ln y)(s,r)=-\dfrac{1}{2r^{2}}\int_{0}^{%
+\infty}\dfrac{x(e^{-\frac{1-r+s}{r}x}+e^{-\frac{r-1+s}{r}x})}{\cosh x}dx=-h_{1%
+}(s,r)-h_{2}(s,r),\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">
+                        <span class="ltx_text ltx_font_italic">where</span>
+                      </p>
+                      <table id="S1.Ex23" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="S1.Ex23.m1">\[h_{1}(s,r)=\dfrac{1}{2(1-2r+s)(1+s)+2\operatornamewithlimits{K^{\prime}}%
+\limits_{n=1}^{\infty}\left(\frac{4n^{2}r^{2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}%
+\frac{4n^{2}r^{2}}{(1-2r+s)(1+s)}\right)},\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                      </table>
+                      <table id="S1.Ex24" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="S1.Ex24.m1">\[h_{2}(s,r)=\dfrac{1}{2(2r-1+s)(s-1)+2\operatornamewithlimits{K^{\prime}}%
+\limits_{n=1}^{\infty}\left(\frac{4n^{2}r^{2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}%
+\frac{4n^{2}r^{2}}{(2r-1+s)(s-1)}\right)}.\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </section>
+                <section id="S2" class="ltx_section">
+                  <h2 class="ltx_title ltx_title_section">
+                    <span class="ltx_tag ltx_tag_section">2 </span>Functional equations for logarithmic derivatives of <span class="math inline" id="S2.m1">\(y(s,r)\)</span>
+                  </h2>
+                  <div id="S2.p1" class="ltx_para">
+                    <p class="ltx_p">
+                      Let us recall the following statement, which will be used later (see 
+                      <cite class="ltx_cite">[]</cite>, p. 152, Lemma 3.23).</p>
+                    </div>
+                    <div id="S2.Thmlemma1" class="ltx_theorem ltx_theorem_lemma">
+                      <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                        <span class="ltx_tag ltx_tag_theorem">Lemma 2.1</span>
+                      </h6>
+                      <div id="S2.Thmlemma1.p1" class="ltx_para">
+                        <p class="ltx_p">
+                          <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S2.Thmlemma1.p1.m1">\(g(s)\)</span> be a monotonic function on <span class="math inline" id="S2.Thmlemma1.p1.m2">\((0,\infty)\)</span>, vanishing at infinity, and <span class="math inline" id="S2.Thmlemma1.p1.m3">\(a>0\)</span> be a positive number. Then the functional equation
+<span class="math inline" id="S2.Thmlemma1.p1.m4">\(f(s)+f(s+a)=g(s)\)</span> has a unique solution, vanishing at infinity, given by the formula</span>
+                        </p>
+                        <table id="S2.Ex25" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S2.Ex25.m1">\[f(s)=\sum_{n=0}^{\infty}(-1)^{n}g(s+na).\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div id="S2.p2" class="ltx_para">
+                      <p class="ltx_p">Let us prove two following statements for the first and the second logarithmic derivatives of <span class="math inline" id="S2.p2.m1">\(y(s,r)\)</span>.</p>
+                    </div>
+                    <div id="S2.Thmlemma2" class="ltx_theorem ltx_theorem_lemma">
+                      <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                        <span class="ltx_tag ltx_tag_theorem">Lemma 2.2</span>
+                      </h6>
+                      <div id="S2.Thmlemma2.p1" class="ltx_para">
+                        <p class="ltx_p">
+                          <span class="ltx_text ltx_font_italic">The functional equation</span>
+                        </p>
+                        <table id="S2.Ex26" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S2.Ex26.m1">\[f(s,r)+f(s+2r,r)=\dfrac{1}{s+1}+\dfrac{1}{s+2r-1}=\dfrac{2(s+r)}{(s+1)(s+2r-1)}\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                            <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                              <span class="ltx_tag ltx_tag_equation">5</span>
+                            </td>
+                          </tr>
+                        </table>
+                        <p class="ltx_p">
+                          <span class="ltx_text ltx_font_italic">has a unique solution, satisfying <span class="math inline" id="S2.Thmlemma2.p1.m1">\(\lim\limits_{s\to\infty}f(s,r)=0\)</span>, which is</span>
+                        </p>
+                        <table id="S2.Ex27" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S2.Ex27.m1">\[f(s,r)=\dfrac{\partial}{\partial s}(\ln y)(s,r).\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div id="S2.p3" class="ltx_para">
+                      <p class="ltx_p">
+                        <span class="ltx_text ltx_font_bold">Proof</span>. The equality <span class="math inline" id="S2.p3.m1">\(y(s,r)y(s+2r,r)=(s+1)(s+2r-1)\)</span> implies</p>
+                        <table id="S2.Ex28" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S2.Ex28.m1">\[\ln(y(s,r)y(s+2r,r))=\ln((s+1)(s+2r-1));\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                        <table id="S2.Ex29" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S2.Ex29.m1">\[\ln y(s,r)+\ln y(s+2r,r)=\ln(s+1)+\ln(s+2r-1)).\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                        <p class="ltx_p">Differentiating by <span class="math inline" id="S2.p3.m2">\(s\)</span>, we obtain</p>
+                        <table id="S2.Ex30" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S2.Ex30.m1">\[\dfrac{\frac{\partial}{\partial s}y(s,r)}{y(s,r)}+\dfrac{\frac{\partial}{%
+\partial s}y(s+2r,r)}{y(s+2r,r)}=\dfrac{1}{s+1}+\dfrac{1}{s+2r-1}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                            <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                              <span class="ltx_tag ltx_tag_equation">6</span>
+                            </td>
+                          </tr>
+                        </table>
+                        <p class="ltx_p">The function <span class="math inline" id="S2.p3.m3">\(f(s)=\dfrac{\frac{\partial}{\partial s}y}{y}(s,r)\)</span> satisfy the conditions of Lemma 1 with <span class="math inline" id="S2.p3.m4">\(a=2r\)</span> and <span class="math inline" id="S2.p3.m5">\(g(s)=\dfrac{2(s+r)}{(s+1)(s+2r-1)}\)</span>. Applying Lemma 1, we complete the proof. <span class="math inline" id="S2.p3.m6">\(\square\)</span>
+                      </p>
+                    </div>
+                    <div id="S2.p4" class="ltx_para">
+                      <p class="ltx_p">Let us examine two equations:</p>
+                    </div>
+                    <div id="S2.p5" class="ltx_para">
+                      <table id="S2.Ex31" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="S2.Ex31.m1">\[f_{1}(s,r)+f_{1}(s+2r,r)=\dfrac{1}{s+1}\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                          <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                            <span class="ltx_tag ltx_tag_equation">7</span>
+                          </td>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">and</p>
+                      <table id="S2.Ex32" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="S2.Ex32.m1">\[f_{2}(s,r)+f_{2}(s+2r,r)=\dfrac{1}{s+2r-1}.\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                          <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                            <span class="ltx_tag ltx_tag_equation">8</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div id="S2.p6" class="ltx_para">
+                      <p class="ltx_p">Both of them satisfy the conditions of Lemma 1 with <span class="math inline" id="S2.p6.m1">\(a=2r\)</span>, <span class="math inline" id="S2.p6.m2">\(g(s)=\dfrac{1}{s+1}\)</span> and <span class="math inline" id="S2.p6.m3">\(g(s)=\dfrac{1}{s+2r-1}\)</span>, respectively. So, applying Lemma 1, we obtain, that the solution <span class="math inline" id="S2.p6.m4">\(f_{1}(s,r)\)</span> of equation (7) which satisfies <span class="math inline" id="S2.p6.m5">\(\lim\limits_{s\rightarrow\infty}f_{1}(s,r)=0\)</span> is unique. The solution <span class="math inline" id="S2.p6.m6">\(f_{2}(s,r)\)</span> of equation (8) which satisfies <span class="math inline" id="S2.p6.m7">\(\lim\limits_{s\rightarrow\infty}f_{2}(s,r)=0\)</span> is also unique. Since their sum <span class="math inline" id="S2.p6.m8">\(f_{1}(s,r)+f_{2}(s,r)\)</span> satisfies equation (5), we have from Lemma 2, that</p>
+                      <table id="S2.Ex33" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="S2.Ex33.m1">\[\dfrac{\partial}{\partial s}(\ln y)(s,r)=f_{1}(s,r)+f_{2}(s,r),\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">where <span class="math inline" id="S2.p6.m9">\(f_{1}(s,r)\)</span> and <span class="math inline" id="S2.p6.m10">\(f_{2}(s,r)\)</span> are the solutions of (7) and (8), respectively, vanishing as <span class="math inline" id="S2.p6.m11">\(s\rightarrow+\infty\)</span>.</p>
+                    </div>
+                    <div id="S2.Thmlemma3" class="ltx_theorem ltx_theorem_lemma">
+                      <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                        <span class="ltx_tag ltx_tag_theorem">Lemma 2.3</span>
+                      </h6>
+                      <div id="S2.Thmlemma3.p1" class="ltx_para">
+                        <p class="ltx_p">
+                          <span class="ltx_text ltx_font_italic">The functional equation</span>
+                        </p>
+                        <table id="S2.Ex34" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S2.Ex34.m1">\[f(s,r)+f(s+2r,r)=-\dfrac{1}{(s+1)^{2}}-\dfrac{1}{(s+2r-1)^{2}}\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                            <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                              <span class="ltx_tag ltx_tag_equation">9</span>
+                            </td>
+                          </tr>
+                        </table>
+                        <p class="ltx_p">
+                          <span class="ltx_text ltx_font_italic">has a unique solution, satisfying <span class="math inline" id="S2.Thmlemma3.p1.m1">\(\lim\limits_{s\to\infty}f(s,r)=0\)</span>, which is</span>
+                        </p>
+                        <table id="S2.Ex35" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S2.Ex35.m1">\[f(s,r)=\dfrac{\partial^{2}}{\partial^{2}s}(\ln y)(s,r).\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div id="S2.p7" class="ltx_para">
+                      <p class="ltx_p">
+                        <span class="ltx_text ltx_font_bold">Proof</span>. Differentiate equation (6) once again by <span class="math inline" id="S2.p7.m1">\(s\)</span>:</p>
+                        <table id="S2.Ex36" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S2.Ex36.m1">\[\dfrac{\partial}{\partial s}\left(\dfrac{\frac{\partial}{\partial s}y(s,r)}{y(%
+s,r)}\right)+\dfrac{\partial}{\partial s}\left(\dfrac{\frac{\partial}{\partial
+s%
+}y(s+2r,r)}{y(s+2r,r)}\right)=-\dfrac{1}{(s+1)^{2}}-\dfrac{1}{(s+2r-1)^{2}}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                        <p class="ltx_p">Applying Lemma 1 with <span class="math inline" id="S2.p7.m2">\(a=2r\)</span> and <span class="math inline" id="S2.p7.m3">\(g(s)=-\dfrac{1}{(s+1)^{2}}-\dfrac{1}{(s+2r-1)^{2}}\)</span>, we complete the proof. <span class="math inline" id="S2.p7.m4">\(\square\)</span>
+                      </p>
+                    </div>
+                    <div id="S2.p8" class="ltx_para">
+                      <p class="ltx_p">Repeating the above reasoning, we obtain that</p>
+                      <table id="S2.Ex37" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="S2.Ex37.m1">\[-\dfrac{\partial^{2}}{\partial^{2}s}(\ln y)(s,r)=h_{1}(s,r)+h_{2}(s,r),\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                          <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                            <span class="ltx_tag ltx_tag_equation">10</span>
+                          </td>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">where <span class="math inline" id="S2.p8.m1">\(h_{1}(s)\)</span> is the unique solution of the equation</p>
+                      <table id="S2.Ex38" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="S2.Ex38.m1">\[h_{1}(s,r)+h_{1}(s+2r,r)=\dfrac{1}{(s+1)^{2}},\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                          <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                            <span class="ltx_tag ltx_tag_equation">11</span>
+                          </td>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">satisfying <span class="math inline" id="S2.p8.m2">\(\lim\limits_{s\to\infty}h_{1}(s,r)=0\)</span> and <span class="math inline" id="S2.p8.m3">\(h_{2}(s)\)</span> is the unique solution of the equation</p>
+                      <table id="S2.Ex39" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="S2.Ex39.m1">\[h_{2}(s,r)+h_{2}(s+2r,r)=\dfrac{1}{(s+2r-1)^{2}},\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                          <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                            <span class="ltx_tag ltx_tag_equation">12</span>
+                          </td>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">satisfying <span class="math inline" id="S2.p8.m4">\(\lim\limits_{s\to\infty}h_{2}(s,r)=0\)</span>.</p>
+                    </div>
+                  </section>
+                  <section id="S3" class="ltx_section">
+                    <h2 class="ltx_title ltx_title_section">
+                      <span class="ltx_tag ltx_tag_section">3 </span>Exact integral representation for certain type continued fractions</h2>
+                      <div id="S3.p1" class="ltx_para">
+                        <p class="ltx_p">
+                          To begin, we formulate the following result by Euler (see <cite class="ltx_cite">[]</cite> and 
+                          <cite class="ltx_cite">[]</cite>, p. 191, Theorem 4.24).</p>
+                        </div>
+                        <div id="S3.Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+                          <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                            <span class="ltx_tag ltx_tag_theorem">Theorem 3.1</span>
+                          </h6>
+                          <div id="S3.Thmtheorem1.p1" class="ltx_para">
+                            <p class="ltx_p">
+                              <span class="ltx_text ltx_font_italic">For <span class="math inline" id="S3.Thmtheorem1.p1.m1">\(s>0\)</span>
+                            </span>
+                          </p>
+                          <table id="S3.Ex40" class="ltx_equation">
+                            <tr class="ltx_equation ltx_align_baseline">
+                              <td class="ltx_eqn_center_padleft"/>
+                              <td class="ltx_align_center">
+                                <span class="math display" id="S3.Ex40.m1">\[\dfrac{1}{s+\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac{n^{2}}%
+{s}\right)}=2\int_{0}^{1}\dfrac{x^{s}dx}{1+x^{2}}.\]</span>
+                              </td>
+                              <td class="ltx_eqn_center_padright"/>
+                              <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                <span class="ltx_tag ltx_tag_equation">13</span>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div id="S3.Thmcorollary1" class="ltx_theorem ltx_theorem_corollary">
+                        <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                          <span class="ltx_tag ltx_tag_theorem">Corollary 3.1</span>
+                        </h6>
+                        <div id="S3.Thmcorollary1.p1" class="ltx_para">
+                          <p class="ltx_p">
+                            <span class="ltx_text ltx_font_italic">For <span class="math inline" id="S3.Thmcorollary1.p1.m1">\(s>0\)</span>
+                          </span>
+                        </p>
+                        <table id="S3.Ex41" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S3.Ex41.m1">\[\dfrac{1}{s+\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac{n^{2}}%
+{s}\right)}=\int_{0}^{+\infty}\dfrac{e^{-sx}dx}{\cosh x}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                            <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                              <span class="ltx_tag ltx_tag_equation">14</span>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div id="S3.p2" class="ltx_para">
+                      <p class="ltx_p">Let us formulate and prove the following lemma.</p>
+                    </div>
+                    <div id="S3.Thmlemma1" class="ltx_theorem ltx_theorem_lemma">
+                      <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                        <span class="ltx_tag ltx_tag_theorem">Lemma 3.1</span>
+                      </h6>
+                      <div id="S3.Thmlemma1.p1" class="ltx_para">
+                        <p class="ltx_p">
+                          <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S3.Thmlemma1.p1.m1">\(\varphi(s,r)\)</span> be an arbitrary real-valued function of <span class="math inline" id="S3.Thmlemma1.p1.m2">\(s\)</span> and <span class="math inline" id="S3.Thmlemma1.p1.m3">\(r\)</span>. Then for <span class="math inline" id="S3.Thmlemma1.p1.m4">\(r>0\)</span>, <span class="math inline" id="S3.Thmlemma1.p1.m5">\(\varphi(s,r)>0\)</span>
+                          <span class="ltx_note ltx_role_footnote">
+                            <sup class="ltx_note_mark">1</sup>
+                            <span class="ltx_note_outer">
+                              <span class="ltx_note_content">
+                                <sup class="ltx_note_mark">1</sup>Actually we have the condition <span class="math inline" id="S3.Thmlemma1.p1.m6">\(\dfrac{\varphi(s,r)}{r}>0\)</span> but since in the conditions of Theorem 3 <span class="math inline" id="S3.Thmlemma1.p1.m7">\(r>\dfrac{1}{2}\)</span> we restrict ourselves to the case <span class="math inline" id="S3.Thmlemma1.p1.m8">\(r>0\)</span>.</span>
+                              </span>
+                            </span>
+                          </span>
+                        </p>
+                        <table id="S3.Ex42" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S3.Ex42.m1">\[\dfrac{1}{2\varphi(s,r)+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left%
+(\frac{n^{2}r^{2}}{\varphi(s,r)}\right)}=\frac{1}{r}\int_{0}^{1}\dfrac{x^{%
+\frac{\varphi(r,s)}{r}}dx}{1+x^{2}}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                            <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                              <span class="ltx_tag ltx_tag_equation">15</span>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div id="S3.p3" class="ltx_para">
+                      <p class="ltx_p">
+                        <span class="ltx_text ltx_font_bold">Proof</span>.
+Examine equality (13). Using the substitution <span class="math inline" id="S3.p3.m1">\(s:=\dfrac{\varphi(s,r)}{r}\)</span>, where <span class="math inline" id="S3.p3.m2">\(\varphi(s,r)\)</span> is an arbitrary real-valued function of <span class="math inline" id="S3.p3.m3">\(s\)</span> and <span class="math inline" id="S3.p3.m4">\(r\)</span>, we obtain the equality, which is correct for all <span class="math inline" id="S3.p3.m5">\(s,\ r\)</span> satisfying <span class="math inline" id="S3.p3.m6">\(\varphi(s,r)>0\)</span>, <span class="math inline" id="S3.p3.m7">\(r>0\)</span>.</p>
+                      </div>
+                      <div id="S3.p4" class="ltx_para">
+                        <table id="S3.Ex43" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S3.Ex43.m1">\[\dfrac{1}{\frac{\varphi(s,r)}{r}+\operatornamewithlimits{K}\limits_{n=1}^{%
+\infty}\left(\frac{n^{2}}{\frac{\varphi(s,r)}{r}}\right)}=2\int_{0}^{1}\dfrac{%
+x^{\frac{\varphi(s,r)}{r}}dx}{1+x^{2}}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                      </div>
+                      <div id="S3.p5" class="ltx_para">
+                        <table id="S3.Ex44" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S3.Ex44.m1">\[\dfrac{1}{2\varphi(s,r)+2r\operatornamewithlimits{K}\limits_{n=1}^{\infty}%
+\left(\frac{n^{2}}{\frac{\varphi(s,r)}{r}}\right)}=\dfrac{1}{r}\int_{0}^{1}%
+\dfrac{x^{\frac{\varphi(s,r)}{r}}dx}{1+x^{2}}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                      </div>
+                      <div id="S3.p6" class="ltx_para">
+                        <p class="ltx_p">Let us apply the equivalence transform with the parameters <span class="math inline" id="S3.p6.m1">\(r_{0}=1\)</span>, <span class="math inline" id="S3.p6.m2">\(r_{n}=r\)</span>, <span class="math inline" id="S3.p6.m3">\(n=1,2,\ldots\)</span> to the continued fraction on the left-hand side. This results the formula:</p>
+                      </div>
+                      <div id="S3.p7" class="ltx_para">
+                        <table id="S3.Ex45" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S3.Ex45.m1">\[\dfrac{1}{2\varphi(s,r)+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left%
+(\frac{n^{2}r^{2}}{\varphi(s,r)}\right)}=\dfrac{1}{r}\int_{0}^{1}\dfrac{x^{%
+\frac{\varphi(s,r)}{r}}dx}{1+x^{2}}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                        <p class="ltx_p">
+                          <span class="math inline" id="S3.p7.m1">\(\square\)</span>
+                        </p>
+                      </div>
+                      <div id="S3.Thmcorollary2" class="ltx_theorem ltx_theorem_corollary">
+                        <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                          <span class="ltx_tag ltx_tag_theorem">Corollary 3.2</span>
+                        </h6>
+                        <div id="S3.Thmcorollary2.p1" class="ltx_para">
+                          <p class="ltx_p">
+                            <span class="ltx_text ltx_font_italic">For <span class="math inline" id="S3.Thmcorollary2.p1.m1">\(r>0\)</span>, <span class="math inline" id="S3.Thmcorollary2.p1.m2">\(\varphi(s,r)>0\)</span>
+                          </span>
+                        </p>
+                        <table id="S3.Ex46" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S3.Ex46.m1">\[\dfrac{1}{\varphi(s,r)+\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(%
+\frac{n^{2}r^{2}}{\varphi(s,r)}\right)}=\frac{1}{r}\int_{0}^{+\infty}\dfrac{e^%
+{-\frac{\varphi(r,s)}{r}x}dx}{\cosh x}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div id="S3.p8" class="ltx_para">
+                      <p class="ltx_p">
+                        <span class="ltx_text ltx_font_bold">Proof</span>.
+It is enough for the proof to use the substitution <span class="math inline" id="S3.p8.m1">\(x:=e^{-x}\)</span>. <span class="math inline" id="S3.p8.m2">\(\square\)</span>
+                      </p>
+                    </div>
+                    <div id="S3.p9" class="ltx_para">
+                      <p class="ltx_p">
+                        <span class="ltx_text ltx_font_bold">Example.</span>
+Let <span class="math inline" id="S3.p9.m1">\(\varphi(s,r)=s+\sin r\)</span>, <span class="math inline" id="S3.p9.m2">\(s=1\)</span>, <span class="math inline" id="S3.p9.m3">\(r=\dfrac{\pi}{2}\)</span>. Then</p>
+                        <table id="S3.Ex47" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S3.Ex47.m1">\[\dfrac{1}{2+\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac{n^{2}%
+\frac{\pi^{2}}{4}}{2}\right)}=\frac{2}{\pi}\int_{0}^{+\infty}\dfrac{e^{-\frac{%
+4}{\pi}x}dx}{\cosh x}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                        <p class="ltx_p">Using the equivalence transformation with the parameters <span class="math inline" id="S3.p9.m4">\(r_{0}=1\)</span>, <span class="math inline" id="S3.p9.m5">\(r_{n}=2\)</span>, <span class="math inline" id="S3.p9.m6">\(n=1,\ 2,\ \ldots\)</span>, we get</p>
+                        <table id="S3.Ex48" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S3.Ex48.m1">\[\dfrac{1}{4+\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac{n^{2}%
+\pi^{2}}{4}\right)}=\frac{1}{\pi}\int_{0}^{+\infty}\dfrac{e^{-\frac{4}{\pi}x}%
+dx}{\cosh x}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                      </div>
+                    </section>
+                    <section id="S4" class="ltx_section">
+                      <h2 class="ltx_title ltx_title_section">
+                        <span class="ltx_tag ltx_tag_section">4 </span>Functional equations for certain type continued fractions</h2>
+                        <div id="S4.p1" class="ltx_para">
+                          <p class="ltx_p">Now let us formulate and prove the following theorem.</p>
+                        </div>
+                        <div id="S4.Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+                          <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                            <span class="ltx_tag ltx_tag_theorem">Theorem 4.1</span>
+                          </h6>
+                          <div id="S4.Thmtheorem1.p1" class="ltx_para">
+                            <p class="ltx_p">
+                              <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S4.Thmtheorem1.p1.m1">\(\varphi(s,r)=s+\psi(r)\)</span>, where <span class="math inline" id="S4.Thmtheorem1.p1.m2">\(\psi(r)\)</span> is an arbitrary real-valued function of <span class="math inline" id="S4.Thmtheorem1.p1.m3">\(r\)</span>. Then for <span class="math inline" id="S4.Thmtheorem1.p1.m4">\(r>0\)</span>, <span class="math inline" id="S4.Thmtheorem1.p1.m5">\(s>-\psi(r)\)</span> the continued fraction of the form</span>
+                            </p>
+                            <table id="S4.Ex49" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S4.Ex49.m1">\[f(s,r)=\dfrac{1}{2\varphi(s,r)+2\operatornamewithlimits{K}\limits_{n=1}^{%
+\infty}\left(\frac{n^{2}r^{2}}{\varphi(s,r)}\right)}\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">
+                              <span class="ltx_text ltx_font_italic">is the unique solution of the functional equation</span>
+                            </p>
+                            <table id="S4.Ex50" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S4.Ex50.m1">\[f(s,r)+f(s+2r,r)=\dfrac{1}{\varphi(s,r)+r},\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                                <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                  <span class="ltx_tag ltx_tag_equation">16</span>
+                                </td>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">
+                              <span class="ltx_text ltx_font_italic">satisfying <span class="math inline" id="S4.Thmtheorem1.p1.m6">\(\lim\limits_{s\rightarrow\infty}f(s,r)=0\)</span>.</span>
+                            </p>
+                          </div>
+                        </div>
+                        <div id="S4.p2" class="ltx_para">
+                          <p class="ltx_p">
+                            <span class="ltx_text ltx_font_bold">Proof</span>.
+Examine the series expansion for the right-hand side of equation (15):</p>
+                            <table id="S4.Ex51" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S4.Ex51.m1">\[\frac{1}{r}\int_{0}^{1}\dfrac{x^{\frac{\varphi(s,r)}{r}}dx}{1+x^{2}}=\dfrac{1}%
+{r}\sum_{n=0}^{\infty}(-1)^{n}\int_{0}^{1}x^{2n+\frac{\varphi(s,r)}{r}}dx=%
+\dfrac{1}{r}\sum_{n=0}^{\infty}\dfrac{(-1)^{n}}{\frac{\varphi(s,r)}{r}+2n+1}=\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <table id="S4.Ex52" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S4.Ex52.m1">\[=\sum_{n=0}^{\infty}\dfrac{(-1)^{n}}{\varphi(s,r)+2rn+r}.\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="S4.p3" class="ltx_para">
+                            <p class="ltx_p">It follows from Lemma 1, that the unique solution of equation (16) satisfying <span class="math inline" id="S4.p3.m1">\(\lim\limits_{s\rightarrow\infty}f(s,r)=0\)</span> is given by the formula:</p>
+                            <table id="S4.Ex53" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S4.Ex53.m1">\[f(s,r)=\sum_{n=0}^{\infty}\dfrac{(-1)^{n}}{\varphi(s+2rn,r)+r}.\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">Since <span class="math inline" id="S4.p3.m2">\(\varphi(s,r)=s+\psi(r)\)</span>, we have</p>
+                            <table id="S4.Ex54" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S4.Ex54.m1">\[f(s,r)=\sum_{n=0}^{\infty}\dfrac{(-1)^{n}}{\varphi(s+2rn,r)+r}=\sum_{n=0}^{%
+\infty}\dfrac{(-1)^{n}}{\varphi(s,r)+2rn+r}=\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <table id="S4.Ex55" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S4.Ex55.m1">\[=\frac{1}{r}\int_{0}^{1}\dfrac{x^{\frac{\varphi(s,r)}{r}}dx}{1+x^{2}}=\dfrac{1%
+}{2\varphi(s,r)+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac{n%
+^{2}r^{2}}{\varphi(s,r)}\right)},\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">by Lemma 4.  <span class="math inline" id="S4.p3.m3">\(\square\)</span>
+                          </p>
+                        </div>
+                        <div id="S4.Thmcorollary1" class="ltx_theorem ltx_theorem_corollary">
+                          <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                            <span class="ltx_tag ltx_tag_theorem">Corollary 4.1</span>
+                          </h6>
+                          <div id="S4.Thmcorollary1.p1" class="ltx_para">
+                            <p class="ltx_p">
+                              <span class="ltx_text ltx_font_italic">For <span class="math inline" id="S4.Thmcorollary1.p1.m1">\(s>|r-1|\)</span>, <span class="math inline" id="S4.Thmcorollary1.p1.m2">\(r>0\)</span> functional equation (7) has a unique solution satisfying <span class="math inline" id="S4.Thmcorollary1.p1.m3">\(\lim\limits_{s\rightarrow 0}f_{1}(s,r)=0\)</span> which is</span>
+                            </p>
+                            <table id="S4.Ex56" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S4.Ex56.m1">\[f_{1}(s,r)=\dfrac{1}{2-2r+2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}%
+\left(\frac{n^{2}r^{2}}{1-r+s}\right)}.\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                                <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                  <span class="ltx_tag ltx_tag_equation">17</span>
+                                </td>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">
+                              <span class="ltx_text ltx_font_italic">Functional equation (8) also has a unique solution satisfying <span class="math inline" id="S4.Thmcorollary1.p1.m4">\(\lim\limits_{s\rightarrow 0}f_{2}(s,r)=0\)</span> which is</span>
+                            </p>
+                            <table id="S4.Ex57" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S4.Ex57.m1">\[f_{2}(s,r)=\dfrac{1}{2r-2+2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}%
+\left(\frac{n^{2}r^{2}}{r-1+s}\right)}.\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                                <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                  <span class="ltx_tag ltx_tag_equation">18</span>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                        <div id="S4.p4" class="ltx_para">
+                          <p class="ltx_p">
+                            <span class="ltx_text ltx_font_bold">Proof</span>.
+From the equality <span class="math inline" id="S4.p4.m1">\(\dfrac{1}{s+1}=\dfrac{1}{\varphi_{1}(s,r)+r}\)</span> we obtain <span class="math inline" id="S4.p4.m2">\(\varphi_{1}(s,r)=s+1-r\)</span>. Since <span class="math inline" id="S4.p4.m3">\(\varphi_{1}(s,r)\)</span> satisfies the conditions of Theorem 8, we obtain, that the continued fraction <span class="math inline" id="S4.p4.m4">\(f_{1}(s,r)\)</span> is the solution of (7).
+By analogy, from the equality <span class="math inline" id="S4.p4.m5">\(\dfrac{1}{s+2r-1}=\dfrac{1}{\varphi_{2}(s,r)+r}\)</span> we obtain <span class="math inline" id="S4.p4.m6">\(\varphi_{2}(s,r)=s+r-1\)</span>, which also satisfies the conditions of Theorem 8. Applying Theorem 8 again, we obtain that the continued fraction <span class="math inline" id="S4.p4.m7">\(f_{2}(s,r)\)</span> is the solution of (8). <span class="math inline" id="S4.p4.m8">\(\square\)</span>
+                          </p>
+                        </div>
+                      </section>
+                      <section id="S5" class="ltx_section">
+                        <h2 class="ltx_title ltx_title_section">
+                          <span class="ltx_tag ltx_tag_section">5 </span>The exponential formula for generalized Brouncker’s continued fraction</h2>
+                          <div id="S5.Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+                            <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                              <span class="ltx_tag ltx_tag_theorem">Theorem 5.1</span>
+                            </h6>
+                            <div id="S5.Thmtheorem1.p1" class="ltx_para">
+                              <p class="ltx_p">
+                                <span class="ltx_text ltx_font_italic">For <span class="math inline" id="S5.Thmtheorem1.p1.m1">\(s>|r-1|\)</span>, <span class="math inline" id="S5.Thmtheorem1.p1.m2">\(r>\dfrac{1}{2}\)</span>
+                              </span>
+                            </p>
+                            <table id="S5.Ex58" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex58.m1">\[y(s,r)=s+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{(2n-1)^{2}r^{2}%
+-(r-1)^{2}}{2s}\right)=\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <table id="S5.Ex59" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex59.m1">\[=8\pi r2^{1-\frac{1}{r}}\dfrac{\Gamma^{2}(\frac{1}{2r})}{\Gamma^{4}(\frac{1}{4%
+r})}\cot(\frac{\pi}{4r})\exp\left\{\int_{0}^{s}f_{1}(t,r)dt\right\}\exp\left\{%
+\int_{0}^{s}f_{2}(t,r)dt\right\},\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">
+                              <span class="ltx_text ltx_font_italic">where the continued fractions <span class="math inline" id="S5.Thmtheorem1.p1.m3">\(f_{1}(s,r)\)</span> and <span class="math inline" id="S5.Thmtheorem1.p1.m4">\(f_{2}(s,r)\)</span> are defined by equations (17) and (18), respectively.</span>
+                            </p>
+                          </div>
+                        </div>
+                        <div id="S5.p1" class="ltx_para">
+                          <p class="ltx_p">
+                            <span class="ltx_text ltx_font_bold">Proof</span>.
+According to Corollary 3, the continued fractions <span class="math inline" id="S5.p1.m1">\(f_{1}(s,r)\)</span> and <span class="math inline" id="S5.p1.m2">\(f_{2}(s,r)\)</span> satisfy equations (7) and (8), respectively. Hence applying Lemma 2 we obtain, that</p>
+                            <table id="S5.Ex60" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex60.m1">\[\dfrac{\partial}{\partial s}(\ln y)(s,r)=\dfrac{1}{2-2r+2s+2%
+\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac{n^{2}r^{2}}{1-r+s}%
+\right)}+\dfrac{1}{2r-2+2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}%
+\left(\frac{n^{2}r^{2}}{r-1+s}\right)}.\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">Integrating the obtained differential equation, we get</p>
+                            <table id="S5.Ex61" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex61.m1">\[\ln y(s,r)=\int_{0}^{s}(f_{1}(t,r)+f_{2}(t,r))dt+C(r)\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <table id="S5.Ex62" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex62.m1">\[y(s,r)=C(r)\exp\left\{\int_{0}^{s}(f_{1}(t,r)+f_{2}(t,r))dt\right\},\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">where <span class="math inline" id="S5.p1.m3">\(C(r)\)</span> is a function of <span class="math inline" id="S5.p1.m4">\(r\)</span>.</p>
+                          </div>
+                          <div id="S5.p2" class="ltx_para">
+                            <p class="ltx_p">It is easy to see, that <span class="math inline" id="S5.p2.m1">\(C(r)=y(0,r)\)</span>. Let us calculate <span class="math inline" id="S5.p2.m2">\(y(0,r)\)</span>, using Theorem 4.
+At first let us recall some well-known formulas for the Gamma function. These are the diplication formula</p>
+                            <table id="S5.Ex63" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex63.m1">\[\Gamma(z)\Gamma(z+\frac{1}{2})=2^{1-2z}\sqrt{\pi}\Gamma(2z),\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">and the Euler’s reflection formula</p>
+                            <table id="S5.Ex64" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex64.m1">\[\Gamma(1-z)\Gamma(z)=\dfrac{\pi}{\sin(\pi z)}.\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">Since by definition <span class="math inline" id="S5.p2.m3">\(\Gamma(z+1)=z\Gamma(z)\)</span>, we have <span class="math inline" id="S5.p2.m4">\(\Gamma(1-z)=-z\Gamma(-z)\)</span> and rewrite the Euler’s reflection formula in the following form</p>
+                            <table id="S5.Ex65" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex65.m1">\[\Gamma(z)\Gamma(-z)=-\dfrac{\pi}{z\sin(\pi z)}.\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                                <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                  <span class="ltx_tag ltx_tag_equation">19</span>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="S5.p3" class="ltx_para">
+                            <p class="ltx_p">Using simple calculations we obtain, that
+</p>
+                            <table id="S5.Ex66" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex66.m1">\[y(0,r)=4r\dfrac{\Gamma(\frac{2r+1}{4r})\Gamma(\frac{4r-1}{4r})}{\Gamma(\frac{1%
+}{4r})\Gamma(\frac{2r-1}{4r})}=4r\dfrac{\Gamma(\frac{1}{4r}+\frac{1}{2})\Gamma%
+(1-\frac{1}{4r})}{\Gamma(\frac{1}{4r})\Gamma(\frac{1}{2}-\frac{1}{4r})}=\ldots\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">Since</p>
+                            <table id="S5.Ex67" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex67.m1">\[\Gamma(\frac{1}{2}+\frac{1}{4r})\Gamma(\frac{1}{4r})=2^{1-\frac{1}{2r}}\sqrt{%
+\pi}\Gamma(\frac{1}{2r})\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">and</p>
+                            <table id="S5.Ex68" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex68.m1">\[\Gamma(\frac{1}{2}-\frac{1}{4r})\Gamma(-\frac{1}{4r})=2^{1+\frac{1}{2r}}\sqrt{%
+\pi}\Gamma(-\frac{1}{2r}),\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">we have</p>
+                            <table id="S5.Ex69" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex69.m1">\[\ldots=4r\dfrac{2^{1-\frac{1}{2r}}\sqrt{\pi}\Gamma(\frac{1}{2r})\Gamma(1-\frac%
+{1}{4r})\Gamma(-\frac{1}{4r})}{\Gamma^{2}(\frac{1}{4r})2^{1+\frac{1}{2r}}\sqrt%
+{\pi}\Gamma(-\frac{1}{2r})}=4r\dfrac{\Gamma(\frac{1}{2r})\Gamma(1-\frac{1}{4r}%
+)\Gamma(\frac{1}{4r})\Gamma(-\frac{1}{4r})}{\Gamma^{3}(\frac{1}{4r})2^{\frac{1%
+}{r}}\Gamma(-\frac{1}{2r})}=\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <table id="S5.Ex70" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex70.m1">\[=4r\dfrac{\Gamma(\frac{1}{2r})\pi\Gamma(-\frac{1}{4r})}{\Gamma^{3}(\frac{1}{4r%
+})2^{\frac{1}{r}}\Gamma(-\frac{1}{2r})\sin(\frac{\pi}{4r})}=\ldots\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">Using (19) we obtain</p>
+                            <table id="S5.Ex71" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex71.m1">\[\ldots=4r\dfrac{\Gamma(\frac{1}{2r})\pi\Gamma(-\frac{1}{4r})\Gamma(\frac{1}{4r%
+})}{\Gamma^{4}(\frac{1}{4r})2^{\frac{1}{r}}\Gamma(-\frac{1}{2r})\sin(\frac{\pi%
+}{4r})}=-4r\dfrac{\Gamma(\frac{1}{2r})\pi^{2}}{\Gamma^{4}(\frac{1}{4r})2^{%
+\frac{1}{r}}\Gamma(-\frac{1}{2r})\sin(\frac{\pi}{4r})\frac{1}{4r}\sin(\frac{%
+\pi}{4r})}=\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <table id="S5.Ex72" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex72.m1">\[=-16r^{2}\dfrac{\Gamma^{2}(\frac{1}{2r})\pi^{2}}{\Gamma^{4}(\frac{1}{4r})2^{%
+\frac{1}{r}}\Gamma(-\frac{1}{2r})\Gamma(\frac{1}{2r})\sin(\frac{\pi}{4r})\sin(%
+\frac{\pi}{4r})}=16r^{2}\dfrac{\Gamma^{2}(\frac{1}{2r})\pi^{2}\frac{1}{2r}\sin%
+(\frac{\pi}{2r})}{\Gamma^{4}(\frac{1}{4r})2^{\frac{1}{r}}\pi\sin(\frac{\pi}{4r%
+})\sin(\frac{\pi}{4r})}=\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <table id="S5.Ex73" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex73.m1">\[=8\pi r\dfrac{\Gamma^{2}(\frac{1}{2r})2\sin(\frac{\pi}{4r})\cos(\frac{\pi}{4r}%
+)}{\Gamma^{4}(\frac{1}{4r})2^{\frac{1}{r}}\sin(\frac{\pi}{4r})\sin(\frac{\pi}{%
+4r})}=8\pi r\dfrac{\Gamma^{2}(\frac{1}{2r})}{\Gamma^{4}(\frac{1}{4r})2^{\frac{%
+1}{r}-1}}\cot(\frac{\pi}{4r}).\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">
+                              <span class="math inline" id="S5.p3.m1">\(\square\)</span>
+                            </p>
+                          </div>
+                          <div id="S5.Thmcorollary1" class="ltx_theorem ltx_theorem_corollary">
+                            <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                              <span class="ltx_tag ltx_tag_theorem">Corollary 5.1</span>
+                            </h6>
+                            <div id="S5.Thmcorollary1.p1" class="ltx_para">
+                              <p class="ltx_p">
+                                <span class="ltx_text ltx_font_italic">For <span class="math inline" id="S5.Thmcorollary1.p1.m1">\(s>0\)</span>
+                              </span>
+                            </p>
+                            <table id="S5.Ex74" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex74.m1">\[s+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{(2n-1)^{2}}{2s}\right)%
+=\dfrac{8\pi^{2}}{\Gamma^{4}(\frac{1}{4})}\exp\left\{\int_{0}^{s}\dfrac{dt}{t+%
+\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac{n^{2}}{t}\right)}%
+\right\}.\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                        <div id="S5.p4" class="ltx_para">
+                          <p class="ltx_p">
+                            <span class="ltx_text ltx_font_bold">Proof</span>. Just put <span class="math inline" id="S5.p4.m1">\(r=1\)</span> and observe that</p>
+                            <table id="S5.Ex75" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex75.m1">\[\dfrac{1}{2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac{n^{2%
+}}{s}\right)}+\dfrac{1}{2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}%
+\left(\frac{n^{2}}{s}\right)}=\dfrac{2}{2s+2\operatornamewithlimits{K}\limits_%
+{n=1}^{\infty}\left(\frac{n^{2}}{s}\right)}=\dfrac{1}{s+%
+\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac{n^{2}}{s}\right)}.\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">
+                              <span class="math inline" id="S5.p4.m2">\(\square\)</span>
+                            </p>
+                          </div>
+                          <div id="S5.p5" class="ltx_para">
+                            <p class="ltx_p">
+                              <span class="ltx_text ltx_font_bold">Example.</span>
+Putting <span class="math inline" id="S5.p5.m1">\(r=2\)</span> into the statement of Theorem 9 and calculating <span class="math inline" id="S5.p5.m2">\(\cot(\dfrac{\pi}{8})=\dfrac{\sin(\dfrac{\pi}{4})}{1-\cos(\dfrac{\pi}{8})}=%
+\sqrt{2}+1\)</span>, we obtain for <span class="math inline" id="S5.p5.m3">\(s>1\)</span>
+                            </p>
+                            <table id="S5.Ex76" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex76.m1">\[s+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{4(2n-1)^{2}-1}{2s}%
+\right)=16\pi(2+\sqrt{2})\dfrac{\Gamma^{2}(\frac{1}{4})}{\Gamma^{4}(\frac{1}{8%
+})}\times\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <table id="S5.Ex77" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S5.Ex77.m1">\[\times\exp\left\{\int_{0}^{s}\dfrac{dt}{2t-2+2\operatornamewithlimits{K}%
+\limits_{n=1}^{\infty}\left(\frac{4n^{2}}{t-1}\right)}\right\}\exp\left\{\int_%
+{0}^{s}\dfrac{dt}{2t+2+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(%
+\frac{4n^{2}}{t+1}\right)}\right\}.\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                          </div>
+                        </section>
+                        <section id="S6" class="ltx_section">
+                          <h2 class="ltx_title ltx_title_section">
+                            <span class="ltx_tag ltx_tag_section">6 </span>Generalized Brouncker’s continued fraction and its asymptotic series</h2>
+                            <div id="S6.p1" class="ltx_para">
+                              <p class="ltx_p">
+                                Let us recall the following lemma (see <cite class="ltx_cite">[]</cite>, p. 614, also 
+                                <cite class="ltx_cite">[]</cite>, p. 150, Lemma 3.21).</p>
+                              </div>
+                              <div id="S6.Thmlemma1" class="ltx_theorem ltx_theorem_lemma">
+                                <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                  <span class="ltx_tag ltx_tag_theorem">Lemma 6.1</span> (Watson)</h6>
+                                  <div id="S6.Thmlemma1.p1" class="ltx_para">
+                                    <p class="ltx_p">
+                                      <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S6.Thmlemma1.p1.m1">\(f\)</span> be a function on <span class="math inline" id="S6.Thmlemma1.p1.m2">\((0,+\infty)\)</span>, such that <span class="math inline" id="S6.Thmlemma1.p1.m3">\(|f(t)|&lt;M\)</span> for <span class="math inline" id="S6.Thmlemma1.p1.m4">\(t>\epsilon\)</span> and <span class="math inline" id="S6.Thmlemma1.p1.m5">\(f(t)=\sum\limits_{k=0}^{\infty}c_{k}t^{k}\)</span>, <span class="math inline" id="S6.Thmlemma1.p1.m6">\(0&lt;t&lt;2\epsilon\)</span>. Then
+</span>
+                                    </p>
+                                    <table id="S6.Ex78" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S6.Ex78.m1">\[\int_{0}^{+\infty}f(t)e^{-st}dt\sim\sum_{k=0}^{\infty}\dfrac{k!c_{k}}{s^{k+1}}%
+,\qquad s\rightarrow+\infty\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">
+                                      <span class="ltx_text ltx_font_italic">is the asymptotic expansion for the Laplace transform of <span class="math inline" id="S6.Thmlemma1.p1.m7">\(f\)</span>.</span>
+                                    </p>
+                                  </div>
+                                </div>
+                                <div id="S6.p2" class="ltx_para">
+                                  <p class="ltx_p">Let us write the asymptotic expansions for both continued fractions (17) and (18).
+Applying Corollary 2, we get the following formulas for <span class="math inline" id="S6.p2.m1">\(s>|r-1|\)</span>, <span class="math inline" id="S6.p2.m2">\(r>0\)</span>:</p>
+                                  <table id="S6.Ex79" class="ltx_equation">
+                                    <tr class="ltx_equation ltx_align_baseline">
+                                      <td class="ltx_eqn_center_padleft"/>
+                                      <td class="ltx_align_center">
+                                        <span class="math display" id="S6.Ex79.m1">\[\dfrac{1}{2-2r+2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac%
+{n^{2}r^{2}}{1-r+s}\right)}=\frac{1}{2r}\int_{0}^{+\infty}\dfrac{e^{-x\frac{1-%
+r+s}{r}}dx}{\cosh x};\]</span>
+                                      </td>
+                                      <td class="ltx_eqn_center_padright"/>
+                                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                        <span class="ltx_tag ltx_tag_equation">20</span>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <table id="S6.Ex80" class="ltx_equation">
+                                    <tr class="ltx_equation ltx_align_baseline">
+                                      <td class="ltx_eqn_center_padleft"/>
+                                      <td class="ltx_align_center">
+                                        <span class="math display" id="S6.Ex80.m1">\[\dfrac{1}{2r-2+2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac%
+{n^{2}r^{2}}{r-1+s}\right)}=\frac{1}{2r}\int_{0}^{+\infty}\dfrac{e^{-x\frac{r-%
+1+s}{r}}dx}{\cosh x}.\]</span>
+                                      </td>
+                                      <td class="ltx_eqn_center_padright"/>
+                                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                        <span class="ltx_tag ltx_tag_equation">21</span>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </div>
+                                <div id="S6.p3" class="ltx_para">
+                                  <p class="ltx_p">Examine equation (20). Write the right-hand side of equation (20) in the following form:</p>
+                                  <table id="S6.Ex81" class="ltx_equation">
+                                    <tr class="ltx_equation ltx_align_baseline">
+                                      <td class="ltx_eqn_center_padleft"/>
+                                      <td class="ltx_align_center">
+                                        <span class="math display" id="S6.Ex81.m1">\[\frac{1}{2r}\int_{0}^{+\infty}\dfrac{e^{-x\frac{1-r+s}{r}}dx}{\cosh x}=\frac{1%
+}{2r}\int_{0}^{+\infty}e^{\frac{r-1}{r}x}\dfrac{1}{\cosh x}e^{-\frac{s}{r}x}dx.\]</span>
+                                      </td>
+                                      <td class="ltx_eqn_center_padright"/>
+                                      <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                        <span class="ltx_tag ltx_tag_equation">22</span>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <p class="ltx_p">
+                                    Repeating the reasoning from 
+                                    <cite class="ltx_cite">[]</cite>, p. 92, we obtain:</p>
+                                    <table id="S6.Ex82" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S6.Ex82.m1">\[\dfrac{1}{\cosh x}=\sum_{n=0}^{\infty}\dfrac{E_{n}}{n!}x^{n},\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">where <span class="math inline" id="S6.p3.m1">\(E_{n}\)</span> are the Euler’s numbers;</p>
+                                    <table id="S6.Ex83" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S6.Ex83.m1">\[e^{\frac{r-1}{r}x}=\sum_{n=0}^{\infty}\dfrac{(r-1)^{n}}{r^{n}n!}x^{n}.\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                  <div id="S6.p4" class="ltx_para">
+                                    <p class="ltx_p">Using the rules of series multiplication, we get:</p>
+                                    <table id="S6.Ex84" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S6.Ex84.m1">\[\dfrac{e^{\frac{r-1}{r}x}}{\cosh x}=(\sum_{n=0}^{\infty}\dfrac{(r-1)^{n}}{r^{n%
+}n!}x^{n})(\sum_{n=0}^{\infty}\dfrac{E_{n}}{n!}x^{n})=\sum_{n=0}^{\infty}\left%
+(\sum_{k=0}^{n}\dfrac{(r-1)^{k}}{r^{k}k!}\dfrac{E_{n-k}}{(n-k)!}\right)x^{n}.\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                  <div id="S6.p5" class="ltx_para">
+                                    <p class="ltx_p">Applying Watson’s lemma 5 to (22) with <span class="math inline" id="S6.p5.m1">\(f(x)=\dfrac{e^{\frac{r-1}{r}x}}{\cosh x}\)</span>, we obtain:</p>
+                                  </div>
+                                  <div id="S6.p6" class="ltx_para">
+                                    <table id="S6.Ex85" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S6.Ex85.m1">\[\frac{1}{2r}\int_{0}^{+\infty}\dfrac{e^{-x\frac{1-r+s}{r}}dx}{\cosh x}\sim%
+\frac{1}{2r}\sum_{n=0}^{\infty}n!\left(\sum_{k=0}^{n}\dfrac{(r-1)^{k}}{r^{k}k!%
+}\dfrac{E_{n-k}}{(n-k)!}\right)\dfrac{r^{n+1}}{s^{n+1}}\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">as <span class="math inline" id="S6.p6.m1">\(s\rightarrow\infty\)</span>.</p>
+                                  </div>
+                                  <div id="S6.p7" class="ltx_para">
+                                    <p class="ltx_p">Since <span class="math inline" id="S6.p7.m1">\(\dfrac{n!}{k!(n-k)!}=\binom{n}{k}\)</span>, we have</p>
+                                  </div>
+                                  <div id="S6.p8" class="ltx_para">
+                                    <table id="S6.Ex86" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S6.Ex86.m1">\[\dfrac{1}{2-2r+2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac%
+{n^{2}r^{2}}{1-r+s}\right)}\sim\frac{1}{2}\sum_{n=0}^{\infty}\dfrac{\sum%
+\limits_{k=0}^{n}\binom{n}{k}(r-1)^{k}r^{n-k}E_{n-k}}{s^{n+1}}\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                        <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                          <span class="ltx_tag ltx_tag_equation">23</span>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">as <span class="math inline" id="S6.p8.m1">\(s\rightarrow\infty\)</span>.
+</p>
+                                  </div>
+                                  <div id="S6.p9" class="ltx_para">
+                                    <p class="ltx_p">Analogically, we obtain the following asymptotic expansion for (21):</p>
+                                  </div>
+                                  <div id="S6.p10" class="ltx_para">
+                                    <table id="S6.Ex87" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S6.Ex87.m1">\[\dfrac{1}{2r-2+2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(\frac%
+{n^{2}r^{2}}{r-1+s}\right)}\sim\frac{1}{2}\sum_{n=0}^{\infty}\dfrac{\sum%
+\limits_{k=0}^{n}\binom{n}{k}(1-r)^{k}r^{n-k}E_{n-k}}{s^{n+1}}\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                        <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                          <span class="ltx_tag ltx_tag_equation">24</span>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">as <span class="math inline" id="S6.p10.m1">\(s\rightarrow\infty\)</span>.</p>
+                                  </div>
+                                  <div id="S6.Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+                                    <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                      <span class="ltx_tag ltx_tag_theorem">Theorem 6.1</span>
+                                    </h6>
+                                    <div id="S6.Thmtheorem1.p1" class="ltx_para">
+                                      <p class="ltx_p">
+                                        <span class="ltx_text ltx_font_italic">The following asymptotic relation holds as <span class="math inline" id="S6.Thmtheorem1.p1.m1">\(s\rightarrow+\infty\)</span>:</span>
+                                      </p>
+                                      <table id="S6.Ex88" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex88.m1">\[s+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{(2n-1)^{2}r^{2}-(r-1)^%
+{2}}{2s}\right)\sim\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <table id="S6.Ex89" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex89.m1">\[\sim s\exp\left\{-\sum_{n=1}^{\infty}\dfrac{\sum\limits_{k=0}^{n}\binom{2n}{2k%
+}(r-1)^{2k}r^{2(n-k)}E_{2(n-k)}}{2ns^{2n}}\right\}.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                          <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                            <span class="ltx_tag ltx_tag_equation">25</span>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                  </div>
+                                  <div id="S6.p11" class="ltx_para">
+                                    <p class="ltx_p">
+                                      <span class="ltx_text ltx_font_bold">Proof</span>.
+By Theorem 3, the left-hand side of (25) is divisible by <span class="math inline" id="S6.p11.m1">\((s+1)\)</span>. Theorem 9 implies, that the continued fraction <span class="math inline" id="S6.p11.m2">\(y(s,r)\)</span> can be written as</p>
+                                      <table id="S6.Ex90" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex90.m1">\[y(s,r)=(s+1)y(0,r)\exp\left\{\int_{0}^{+\infty}\gamma_{1}(t,r)dt\right\}\exp%
+\left\{-\int_{s}^{+\infty}\gamma_{1}(t,r)dt\right\}\times\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <table id="S6.Ex91" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex91.m1">\[\times\exp\left\{\int_{0}^{+\infty}\gamma_{2}(t,r)dt\right\}\exp\left\{-\int_{%
+s}^{+\infty}\gamma_{2}(t,r)dt\right\},\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">where</p>
+                                      <table id="S6.Ex92" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex92.m1">\[\gamma_{1}(t,r)=\dfrac{1}{2-2r+2t+2\operatornamewithlimits{K}\limits_{n=1}^{%
+\infty}\left(\frac{n^{2}r^{2}}{1-r+t}\right)}-\dfrac{1}{2(1+t)},\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <table id="S6.Ex93" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex93.m1">\[\gamma_{2}(t,r)=\dfrac{1}{2r-2+2t+2\operatornamewithlimits{K}\limits_{n=1}^{%
+\infty}\left(\frac{n^{2}r^{2}}{r-1+t}\right)}-\dfrac{1}{2(1+t)}.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">Using asymptotic expansions (23), (24) and the expansion</p>
+                                      <table id="S6.Ex94" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex94.m1">\[\dfrac{1}{(1+t)}=\dfrac{1}{t(1+\frac{1}{t})}\sim\dfrac{1}{t}\sum_{n=0}^{\infty%
+}(-1)^{n}\frac{1}{t^{n}}=\sum_{n=0}^{\infty}(-1)^{n}\frac{1}{t^{n+1}}\qquad t%
+\rightarrow+\infty\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">we obtain</p>
+                                      <table id="S6.Ex95" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex95.m1">\[\gamma_{1}(t,r)\sim\frac{1}{2}\sum_{n=0}^{\infty}\dfrac{\sum\limits_{k=0}^{n}%
+\binom{n}{k}(r-1)^{k}r^{n-k}E_{n-k}}{t^{n+1}}-\frac{1}{2}\sum_{n=0}^{\infty}(-%
+1)^{n}\frac{1}{t^{n+1}}=\ldots.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">Since the numerator of the null’s term in the first sum is equal to <span class="math inline" id="S6.p11.m3">\(E_{0}=1\)</span>,</p>
+                                      <table id="S6.Ex96" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex96.m1">\[\ldots=\frac{1}{2}\sum_{n=1}^{\infty}\dfrac{\sum\limits_{k=0}^{n}\binom{n}{k}(%
+r-1)^{k}r^{n-k}E_{n-k}-(-1)^{n}}{t^{n+1}}.\qquad t\rightarrow+\infty\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">Analogically,</p>
+                                      <table id="S6.Ex97" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex97.m1">\[\gamma_{2}(t,r)\sim\frac{1}{2}\sum_{n=1}^{\infty}\dfrac{\sum\limits_{k=0}^{n}%
+\binom{n}{k}(1-r)^{k}r^{n-k}E_{n-k}-(-1)^{n}}{t^{n+1}}.\qquad t\rightarrow+\infty\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S6.p12" class="ltx_para">
+                                      <p class="ltx_p">Integrating this over <span class="math inline" id="S6.p12.m1">\((s,\ +\infty)\)</span>, we obtain</p>
+                                      <table id="S6.Ex98" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex98.m1">\[\int_{s}^{+\infty}\gamma_{1}(t,r)dt\sim\frac{1}{2}\sum_{n=1}^{\infty}\dfrac{%
+\sum\limits_{k=0}^{n}\binom{n}{k}(r-1)^{k}r^{n-k}E_{n-k}-(-1)^{n}}{ns^{n}}.%
+\qquad t\rightarrow+\infty\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <table id="S6.Ex99" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex99.m1">\[\int_{s}^{+\infty}\gamma_{2}(t,r)dt\sim\frac{1}{2}\sum_{n=1}^{\infty}\dfrac{%
+\sum\limits_{k=0}^{n}\binom{n}{k}(1-r)^{k}r^{n-k}E_{n-k}-(-1)^{n}}{ns^{n}}.%
+\qquad t\rightarrow+\infty\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S6.p13" class="ltx_para">
+                                      <p class="ltx_p">Since <span class="math inline" id="S6.p13.m1">\(y(s,r)\sim s\)</span> as <span class="math inline" id="S6.p13.m2">\(s\rightarrow+\infty\)</span>, we conclude that</p>
+                                      <table id="S6.Ex100" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex100.m1">\[y(0,r)\exp\left\{\int_{0}^{+\infty}\gamma_{1}(t,r)dt\right\}\exp\left\{\int_{0%
+}^{+\infty}\gamma_{2}(t,r)dt\right\}=1\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">and</p>
+                                      <table id="S6.Ex101" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex101.m1">\[y(s,r)\sim(s+1)\exp\left\{-\frac{1}{2}\sum_{n=1}^{\infty}\dfrac{\sum\limits_{k%
+=0}^{n}\binom{n}{k}(r-1)^{k}r^{n-k}E_{n-k}-(-1)^{n}}{ns^{n}}\right\}\times\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <table id="S6.Ex102" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex102.m1">\[\times\exp\left\{-\frac{1}{2}\sum_{n=1}^{\infty}\dfrac{\sum\limits_{k=0}^{n}%
+\binom{n}{k}(1-r)^{k}r^{n-k}E_{n-k}-(-1)^{n}}{ns^{n}}\right\}.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S6.p14" class="ltx_para">
+                                      <p class="ltx_p">Using the equality <span class="math inline" id="S6.p14.m1">\(\sum\limits_{n=1}^{\infty}\dfrac{(-1)^{n}}{ns^{n}}=-\ln\left(\dfrac{s+1}{s}%
+\right),\)</span> as <span class="math inline" id="S6.p14.m2">\(s>1\)</span>, we obtain that</p>
+                                      <table id="S6.Ex103" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex103.m1">\[y(s,r)\sim s\exp\left\{-\frac{1}{2}\sum_{n=1}^{\infty}\dfrac{\sum\limits_{k=0}%
+^{n}\binom{n}{k}((r-1)^{k}+(1-r)^{k})r^{n-k}E_{n-k}}{ns^{n}}\right\}=\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <table id="S6.Ex104" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex104.m1">\[=\ [\mbox{ since}(1-r)^{k}=(-1)^{k}(r-1)^{k}]\ =\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <table id="S6.Ex105" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex105.m1">\[=s\exp\left\{-\sum_{n=1}^{\infty}\dfrac{\sum\limits_{k=0}^{[\frac{n}{2}]}%
+\binom{n}{2k}(r-1)^{2k}r^{n-2k}E_{n-2k}}{ns^{n}}\right\}.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">The proof is completed by observing that all the Euler’s numbers with odd parameters <span class="math inline" id="S6.p14.m3">\(E_{1}\)</span>, <span class="math inline" id="S6.p14.m4">\(E_{3}\)</span>, <span class="math inline" id="S6.p14.m5">\(E_{5}\)</span>, <span class="math inline" id="S6.p14.m6">\(\ldots\)</span> are equal to zero. <span class="math inline" id="S6.p14.m7">\(\square\)</span>
+                                    </p>
+                                  </div>
+                                  <div id="S6.p15" class="ltx_para">
+                                    <p class="ltx_p">
+                                      <span class="ltx_text ltx_font_bold">Example.</span>
+Putting <span class="math inline" id="S6.p15.m1">\(r=2\)</span> we obtain</p>
+                                      <table id="S6.Ex106" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex106.m1">\[s+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{4(2n-1)^{2}-1}{2s}%
+\right)\sim s\exp\left\{-\sum_{n=1}^{\infty}\dfrac{\sum\limits_{k=0}^{n}\binom%
+{2n}{2k}2^{2(n-k)}E_{2(n-k)}}{2ns^{2n}}\right\},\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">as <span class="math inline" id="S6.p15.m2">\(s\rightarrow+\infty\)</span>.
+Computations with the first few Euler’s numbers <span class="math inline" id="S6.p15.m3">\(E_{0}=1\)</span>, <span class="math inline" id="S6.p15.m4">\(E_{1}=0\)</span>, <span class="math inline" id="S6.p15.m5">\(E_{2}=-1\)</span>, <span class="math inline" id="S6.p15.m6">\(E_{3}=0\)</span>, <span class="math inline" id="S6.p15.m7">\(E_{4}=5\)</span>, <span class="math inline" id="S6.p15.m8">\(E_{5}=0\)</span>, <span class="math inline" id="S6.p15.m9">\(E_{6}=-61\)</span> shows that <span class="math inline" id="S6.p15.m10">\(\sum\limits_{k=0}^{1}\binom{2}{2k}2^{2(1-k)}E_{2(1-k)}=-3\)</span> for <span class="math inline" id="S6.p15.m11">\(n=1\)</span>, <span class="math inline" id="S6.p15.m12">\(\sum\limits_{k=0}^{2}\binom{4}{2k}2^{2(2-k)}E_{2(2-k)}=57\)</span> for <span class="math inline" id="S6.p15.m13">\(n=2\)</span> and <span class="math inline" id="S6.p15.m14">\(\sum\limits_{k=0}^{3}\binom{6}{2k}2^{2(3-k)}E_{2(3-k)}=-2763\)</span> for <span class="math inline" id="S6.p15.m15">\(n=3\)</span>.</p>
+                                    </div>
+                                    <div id="S6.p16" class="ltx_para">
+                                      <p class="ltx_p">So we have</p>
+                                      <table id="S6.Ex107" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S6.Ex107.m1">\[s+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{4(2n-1)^{2}-1}{2s}%
+\right)\sim s\exp\left\{\dfrac{3}{2s^{2}}-\dfrac{57}{4s^{4}}+\dfrac{2763}{6s^{%
+6}}+O\left(\dfrac{1}{s^{8}}\right)\right\}.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S6.p17" class="ltx_para">
+                                      <p class="ltx_p">Writing the first terms of the expansion of <span class="math inline" id="S6.p17.m1">\(e^{x}\)</span>
+                                    </p>
+                                    <table id="S6.Ex108" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S6.Ex108.m1">\[e^{x}\sim 1+x+\dfrac{x^{2}}{2}+\dfrac{x^{3}}{6}+O(x^{4})\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">and substituting <span class="math inline" id="S6.p17.m2">\(x=\dfrac{3}{2s^{2}}-\dfrac{57}{4s^{4}}+\dfrac{2763}{6s^{6}}+O\left(\dfrac{1}{s%
+^{8}}\right)\)</span> we obtain the first terms of the expansion:</p>
+                                    <table id="S6.Ex109" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S6.Ex109.m1">\[s+\operatornamewithlimits{K}_{n=1}^{\infty}\left(\dfrac{4(2n-1)^{2}-1}{2s}%
+\right)\sim\left(1+\dfrac{3}{2s^{2}}-\dfrac{105}{8s^{4}}+\dfrac{7035}{16s^{6}}%
++O\left(\dfrac{1}{s^{8}}\right)\right)=\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <table id="S6.Ex110" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S6.Ex110.m1">\[=s+\dfrac{3}{2s}-\dfrac{105}{8s^{3}}+\dfrac{7035}{16s^{5}}+O\left(\dfrac{1}{s^%
+{7}}\right).\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </section>
+                                <section id="S7" class="ltx_section">
+                                  <h2 class="ltx_title ltx_title_section">
+                                    <span class="ltx_tag ltx_tag_section">7 </span>Ramanujan’s formula and its generalization</h2>
+                                    <div id="S7.p1" class="ltx_para">
+                                      <p class="ltx_p">Our generalization of Ramanujan’s formula (4) requires some preliminary results. The first of them is the following theorem.</p>
+                                    </div>
+                                    <div id="S7.Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+                                      <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                        <span class="ltx_tag ltx_tag_theorem">Theorem 7.1</span>
+                                      </h6>
+                                      <div id="S7.Thmtheorem1.p1" class="ltx_para">
+                                        <p class="ltx_p">
+                                          <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S7.Thmtheorem1.p1.m1">\(\varphi(s,r)\)</span> be an arbitrary real-valued function of <span class="math inline" id="S7.Thmtheorem1.p1.m2">\(s\)</span> and <span class="math inline" id="S7.Thmtheorem1.p1.m3">\(r\)</span>. Then for <span class="math inline" id="S7.Thmtheorem1.p1.m4">\(r>0\)</span>, <span class="math inline" id="S7.Thmtheorem1.p1.m5">\(\varphi(s,r)>r\)</span>
+                                        </span>
+                                      </p>
+                                      <table id="S7.Ex111" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S7.Ex111.m1">\[\dfrac{1}{\varphi(s,r)-r^{2}+\operatornamewithlimits{K^{\prime}}\limits_{n=1}^%
+{\infty}\left(\frac{4n^{2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}\frac{4n^{2}}{\varphi%
+(s,r)-r^{2}}\right)}=\dfrac{1}{r^{2}}\int_{0}^{\infty}\dfrac{xe^{-x\frac{%
+\varphi(s,r)}{r}}}{\cosh x}dx.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                          <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                            <span class="ltx_tag ltx_tag_equation">26</span>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                  </div>
+                                  <div id="S7.p2" class="ltx_para">
+                                    <p class="ltx_p">
+                                      <span class="ltx_text ltx_font_bold">Proof</span>.
+Examine equality (4) with the substitution <span class="math inline" id="S7.p2.m1">\(s:=\dfrac{\varphi(s,r)}{r}\)</span>, where <span class="math inline" id="S7.p2.m2">\(\varphi(s,r)\)</span> is an arbitrary real-valued function of <span class="math inline" id="S7.p2.m3">\(s\)</span> and <span class="math inline" id="S7.p2.m4">\(r\)</span>. Then we obtain the following formula for <span class="math inline" id="S7.p2.m5">\(\varphi(s,r)>r\)</span>, <span class="math inline" id="S7.p2.m6">\(r>0\)</span>:</p>
+                                    </div>
+                                    <div id="S7.p3" class="ltx_para">
+                                      <table id="S7.Ex112" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S7.Ex112.m1">\[\dfrac{1}{\frac{\varphi^{2}(s,r)}{r^{2}}-1+\operatornamewithlimits{K^{\prime}}%
+\limits_{n=1}^{\infty}\left(\frac{4n^{2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}\frac{4%
+n^{2}}{\frac{\varphi^{2}(s,r)}{r^{2}}-1}\right)}=\int_{0}^{\infty}\dfrac{xe^{-%
+x\frac{\varphi(s,r)}{r}}}{\cosh x}dx\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S7.p4" class="ltx_para">
+                                      <table id="S7.Ex113" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S7.Ex113.m1">\[\dfrac{1}{\varphi^{2}(s,r)-r^{2}+r^{2}\operatornamewithlimits{K^{\prime}}%
+\limits_{n=1}^{\infty}\left(\frac{4n^{2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}\frac{4%
+n^{2}}{\frac{\varphi^{2}(s,r)}{r^{2}}-1}\right)}=\dfrac{1}{r^{2}}\int_{0}^{%
+\infty}\dfrac{xe^{-x\frac{\varphi(s,r)}{r}}}{\cosh x}dx.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S7.p5" class="ltx_para">
+                                      <p class="ltx_p">Apply the equivalence transform with the parameters <span class="math inline" id="S7.p5.m1">\(r_{0}=1\)</span>, <span class="math inline" id="S7.p5.m2">\(r_{n}=r^{2}\)</span>, <span class="math inline" id="S7.p5.m3">\(n=1,\ 2,\ \ldots\)</span> to the continued fraction on the left-hand side. This results the formula:</p>
+                                    </div>
+                                    <div id="S7.p6" class="ltx_para">
+                                      <table id="S7.Ex114" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S7.Ex114.m1">\[\dfrac{1}{\varphi^{2}(s,r)-r^{2}+\operatornamewithlimits{K^{\prime}}\limits_{n%
+=1}^{\infty}\left(\frac{4n^{2}r^{4}}{r^{2}}\genfrac{}{}{0.0pt}{0}{}{+}\frac{4n%
+^{2}r^{4}}{\varphi^{2}(s,r)-r^{2}}\right)}=\dfrac{1}{r^{2}}\int_{0}^{\infty}%
+\dfrac{xe^{-x\frac{\varphi(s,r)}{r}}}{\cosh x}dx.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S7.p7" class="ltx_para">
+                                      <p class="ltx_p">Using simple calculations:
+</p>
+                                      <table id="S7.Ex115" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S7.Ex115.m1">\[\dfrac{1}{\varphi^{2}(s,r)-r^{2}+\operatornamewithlimits{K^{\prime}}\limits_{n%
+=1}^{\infty}\left(\frac{4n^{2}r^{2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}\frac{4n^{2}%
+r^{2}}{\varphi^{2}(s,r)-r^{2}}\right)}=\dfrac{1}{r^{2}}\int_{0}^{\infty}\dfrac%
+{xe^{-x\frac{\varphi(s,r)}{r}}}{\cosh x}dx.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">
+                                        <span class="math inline" id="S7.p7.m1">\(\square\)</span>
+                                      </p>
+                                    </div>
+                                    <div id="S7.p8" class="ltx_para">
+                                      <p class="ltx_p">Let us prove the following lemma, which describes
+the derivative of the continued fraction</p>
+                                      <table id="S7.Ex116" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S7.Ex116.m1">\[f(s,r)=\dfrac{1}{\varphi(s,r)+\operatornamewithlimits{K}\limits_{n=1}^{\infty}%
+\left(\frac{n^{2}r^{2}}{\varphi(s,r)}\right)}.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S7.Thmlemma1" class="ltx_theorem ltx_theorem_lemma">
+                                      <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                        <span class="ltx_tag ltx_tag_theorem">Lemma 7.1</span>
+                                      </h6>
+                                      <div id="S7.Thmlemma1.p1" class="ltx_para">
+                                        <p class="ltx_p">
+                                          <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S7.Thmlemma1.p1.m1">\(\varphi(s,r)=s+\psi(r)\)</span>, where <span class="math inline" id="S7.Thmlemma1.p1.m2">\(\psi(r)\)</span> is an arbitrary real-valued function of <span class="math inline" id="S7.Thmlemma1.p1.m3">\(r\)</span>. Then for <span class="math inline" id="S7.Thmlemma1.p1.m4">\(r>0\)</span>, <span class="math inline" id="S7.Thmlemma1.p1.m5">\(s>r-\psi(r)\)</span>
+                                        </span>
+                                      </p>
+                                      <table id="S7.Ex117" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S7.Ex117.m1">\[\frac{\partial}{\partial s}f(s,r)=-\dfrac{1}{\varphi^{2}(s,r)-r^{2}+%
+\operatornamewithlimits{K^{\prime}}\limits_{n=1}^{\infty}\left(\frac{4n^{2}r^{%
+2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}\frac{4n^{2}r^{2}}{\varphi^{2}(s,r)-r^{2}}%
+\right)},\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">
+                                        <span class="ltx_text ltx_font_italic">where</span>
+                                      </p>
+                                      <table id="S7.Ex118" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S7.Ex118.m1">\[f(s,r)=\dfrac{1}{\varphi(s,r)+\operatornamewithlimits{K}\limits_{n=1}^{\infty}%
+\left(\frac{n^{2}r^{2}}{\varphi(s,r)}\right)}.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                  </div>
+                                  <div id="S7.p9" class="ltx_para">
+                                    <p class="ltx_p">
+                                      <span class="ltx_text ltx_font_bold">Proof</span>.
+Using Corollary 2, we obtain the equality</p>
+                                      <table id="S7.Ex119" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S7.Ex119.m1">\[f(s,r)=\dfrac{1}{\varphi(s,r)+\operatornamewithlimits{K}\limits_{n=1}^{\infty}%
+\left(\frac{n^{2}r^{2}}{\varphi(s,r)}\right)}=\frac{1}{r}\int_{0}^{+\infty}%
+\dfrac{e^{-x\frac{\varphi(r,s)}{r}}dx}{\cosh x}.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">Differentiating this equality by <span class="math inline" id="S7.p9.m1">\(s\)</span> and changing the sign, we obtain:</p>
+                                      <table id="S7.Ex120" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S7.Ex120.m1">\[-\frac{\partial}{\partial s}f(s,r)=\frac{1}{r^{2}}\int_{0}^{+\infty}\dfrac{xe^%
+{-\frac{\varphi(r,s)}{r}x}dx}{\cosh x},\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">which exactly coincide with the right-hand side of (26). <span class="math inline" id="S7.p9.m2">\(\square\)</span>
+                                    </p>
+                                  </div>
+                                  <div id="S7.Thmcorollary1" class="ltx_theorem ltx_theorem_corollary">
+                                    <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                      <span class="ltx_tag ltx_tag_theorem">Corollary 7.1</span>
+                                    </h6>
+                                    <div id="S7.Thmcorollary1.p1" class="ltx_para">
+                                      <p class="ltx_p">
+                                        <span class="ltx_text ltx_font_italic">For <span class="math inline" id="S7.Thmcorollary1.p1.m1">\(r>0\)</span>, <span class="math inline" id="S7.Thmcorollary1.p1.m2">\(s>\max(1,\ 2r-1)\)</span>
+                                      </span>
+                                    </p>
+                                    <table id="S7.Ex121" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S7.Ex121.m1">\[\frac{\partial}{\partial s}f_{1}(s,r)=-\dfrac{1}{2(1-2r+s)(1+s)+2%
+\operatornamewithlimits{K^{\prime}}\limits_{n=1}^{\infty}\left(\frac{4n^{2}r^{%
+2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}\frac{4n^{2}r^{2}}{(1-2r+s)(1+s)}\right)},\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">
+                                      <span class="ltx_text ltx_font_italic">where</span>
+                                    </p>
+                                    <table id="S7.Ex122" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S7.Ex122.m1">\[f_{1}(s,r)=\dfrac{1}{2-2r+2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}%
+\left(\frac{n^{2}r^{2}}{1-r+s}\right)}.\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <table id="S7.Ex123" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S7.Ex123.m1">\[\frac{\partial}{\partial s}f_{2}(s,r)=-\dfrac{1}{2(2r-1+s)(s-1)+2%
+\operatornamewithlimits{K^{\prime}}\limits_{n=1}^{\infty}\left(\frac{4n^{2}r^{%
+2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}\frac{4n^{2}r^{2}}{(2r-1+s)(s-1)}\right)},\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">
+                                      <span class="ltx_text ltx_font_italic">where</span>
+                                    </p>
+                                    <table id="S7.Ex124" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S7.Ex124.m1">\[f_{2}(s,r)=\dfrac{1}{2r-2+2s+2\operatornamewithlimits{K}\limits_{n=1}^{\infty}%
+\left(\frac{n^{2}r^{2}}{r-1+s}\right)}.\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </div>
+                                <div id="S7.p10" class="ltx_para">
+                                  <p class="ltx_p">
+                                    <span class="ltx_text ltx_font_bold">Example.</span> Put <span class="math inline" id="S7.p10.m1">\(\varphi(s,r)=s+\sin r\)</span>, <span class="math inline" id="S7.p10.m2">\(r=\dfrac{\pi}{2}\)</span>. Then for <span class="math inline" id="S7.p10.m3">\(s>\dfrac{\pi}{2}-1\)</span> we have</p>
+                                    <table id="S7.Ex125" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S7.Ex125.m1">\[f^{\prime}(s)=-\dfrac{1}{(s+1)^{2}-\frac{\pi^{2}}{4}+\operatornamewithlimits{K%
+^{\prime}}\limits_{n=1}^{\infty}\left(\frac{n^{2}\pi^{2}}{1}\genfrac{}{}{0.0pt%
+}{0}{}{+}\frac{n^{2}\pi^{2}}{(s+1)^{2}-\frac{\pi^{2}}{4}}\right)},\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">where</p>
+                                    <table id="S7.Ex126" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S7.Ex126.m1">\[f(s)=\dfrac{2}{2s+2+\operatornamewithlimits{K}\limits_{n=1}^{\infty}\left(%
+\frac{n^{2}\pi^{2}}{2(s+1)}\right)}.\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                  <div id="S7.Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+                                    <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                      <span class="ltx_tag ltx_tag_theorem">Theorem 7.2</span>
+                                    </h6>
+                                    <div id="S7.Thmtheorem2.p1" class="ltx_para">
+                                      <p class="ltx_p">
+                                        <span class="ltx_text ltx_font_italic">For <span class="math inline" id="S7.Thmtheorem2.p1.m1">\(s>\max(1,\ 2r-1)\)</span>, <span class="math inline" id="S7.Thmtheorem2.p1.m2">\(r>\dfrac{1}{2}\)</span>
+                                      </span>
+                                    </p>
+                                    <table id="S7.Ex127" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S7.Ex127.m1">\[\dfrac{\partial^{2}}{\partial s^{2}}(\ln y)(s,r)=-\dfrac{1}{2r^{2}}\int_{0}^{%
+\infty}\dfrac{x(e^{-\frac{1-r+s}{r}x}+e^{-\frac{r-1+s}{r}x})}{\cosh x}dx=-h_{1%
+}(s,r)-h_{2}(s,r),\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">
+                                      <span class="ltx_text ltx_font_italic">where
+</span>
+                                    </p>
+                                    <table id="S7.Ex128" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S7.Ex128.m1">\[h_{1}(s,r)=\dfrac{1}{2(1-2r+s)(1+s)+2\operatornamewithlimits{K^{\prime}}%
+\limits_{n=1}^{\infty}\left(\frac{4n^{2}r^{2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}%
+\frac{4n^{2}r^{2}}{(1-2r+s)(1+s)}\right)},\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <table id="S7.Ex129" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S7.Ex129.m1">\[h_{2}(s,r)=\dfrac{1}{2(2r-1+s)(s-1)+2\operatornamewithlimits{K^{\prime}}%
+\limits_{n=1}^{\infty}\left(\frac{4n^{2}r^{2}}{1}\genfrac{}{}{0.0pt}{0}{}{+}%
+\frac{4n^{2}r^{2}}{(2r-1+s)(s-1)}\right)}.\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </div>
+                                <div id="S7.p11" class="ltx_para">
+                                  <p class="ltx_p">
+                                    <span class="ltx_text ltx_font_bold">Proof</span>.
+The proof comes out from Equality 10 and Corollary 5. <span class="math inline" id="S7.p11.m1">\(\square\)</span>
+                                  </p>
+                                </div>
+                                <div id="S7.p12" class="ltx_para">
+                                  <p class="ltx_p">
+                                    <span class="ltx_text ltx_font_bold">Acknowledgements</span>. The author thanks Prof. S. Khrushchev for helpful suggestions and valuable comments.</p>
+                                  </div>
+                                </section>
+                              </article>
+                            </div>
+                            <footer class="ltx_page_footer">
+                              <div class="ltx_page_logo">Generated  on Thu Jan 19 18:36:47 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"/>
+                              </a>
+                            </div>
+                          </footer>
+                        </div>
+                      </body>
+                    </html>

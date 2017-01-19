@@ -1,0 +1,1219 @@
+<html prefix="dcterms: http://purl.org/dc/terms/">
+  <head>
+    <title>Infinite family of bases</title>
+    <!--Generated on Thu Jan 19 18:36:49 2017 by LaTeXML (version 0.8.1) http://dlmf.nist.gov/LaTeXML/.-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="LaTeXML.css" type="text/css"/>
+    <link rel="stylesheet" href="ltx-article.css" type="text/css"/>
+    <link rel="stylesheet" href="ltx-amsart.css" type="text/css"/>
+    <meta name="keywords" lang="en-us" content="Canonical number
+systems,  Radix representations,  Diophantine equations, 
+Nagell-Ljunggren equation"/>
+    <script type="text/x-sre-config">
+{"json": "https://cdn.mathjax.org/mathjax/contrib/a11y/mathmaps"}
+</script>
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: {autoNumber: "AMS"} },
+  MMLorHTML: {MSIE: "HTML"},
+  AssistiveMML: {disabled: true},
+  "fast-preview": {disabled: true}
+});
+MathJax.Ajax.config.path["SRE"] = "../mathjax";
+</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"> </script>
+  </head>
+  <body>
+    <div class="ltx_page_main">
+      <div class="ltx_page_content">
+        <article class="ltx_document ltx_authors_1line ltx_leqno">
+          <h1 class="ltx_title ltx_title_document">An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields</h1>
+          <div class="ltx_authors">
+            <span class="ltx_creator ltx_role_author">
+              <span class="ltx_personname">Manfred G. Madritsch
+</span>
+              <span class="ltx_author_notes">
+                <span>
+                  <span class="ltx_contact ltx_role_address">Manfred Madritsch
+<br class="ltx_break"/>1. Université de Lorraine, Institut Elie Cartan de Lorraine, UMR 7502, Vandoeuvre-lès-Nancy, F-54506, France;
+<br class="ltx_break"/>2. CNRS, Institut Elie Cartan de Lorraine, UMR 7502, Vandoeuvre-lès-Nancy, F-54506, France
+</span>
+                  <span class="ltx_contact ltx_role_email">
+                    <a href="mailto:manfred.madritsch@univ-lorraine.fr">manfred.madritsch@univ-lorraine.fr</a>
+                  </span>
+                </span>
+              </span>
+            </span>
+            <span class="ltx_author_before"> and </span>
+            <span class="ltx_creator ltx_role_author">
+              <span class="ltx_personname">Volker Ziegler
+</span>
+              <span class="ltx_author_notes">
+                <span>
+                  <span class="ltx_contact ltx_role_address">Volker Ziegler
+<br class="ltx_break"/>Johann Radon Institute for Computational and Applied Mathematics (RICAM)
+<br class="ltx_break"/>Austrian Academy of Sciences
+<br class="ltx_break"/>Altenbergerstr. 69
+<br class="ltx_break"/>A-4040 Linz, Austria
+</span>
+                  <span class="ltx_contact ltx_role_email">
+                    <a href="mailto:volker.ziegler@ricam.oeaw.ac.at">volker.ziegler@ricam.oeaw.ac.at</a>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </div>
+          <div class="ltx_abstract">
+            <h6 class="ltx_title ltx_title_abstract">Abstract.</h6>
+            <p class="ltx_p">Let <span class="math inline" id="m1">\(\zeta_{k}\)</span> be a <span class="math inline" id="m2">\(k\)</span>-th primitive root of unity, <span class="math inline" id="m3">\(m\geq\phi(k)+1\)</span> an
+integer and <span class="math inline" id="m4">\(\Phi_{k}(X)\in{\mathbb{Z}}[X]\)</span> the <span class="math inline" id="m5">\(k\)</span>-th cyclotomic polynomial.
+In this paper we show that the pair <span class="math inline" id="m6">\((-m+\zeta_{k},\mathcal{N})\)</span> is a
+canonical number system, with <span class="math inline" id="m7">\(\mathcal{N}=\{0,1,\dots,|\Phi_{k}(m)|\}\)</span>. Moreover we also discuss whether the
+two bases <span class="math inline" id="m8">\(-m+\zeta_{k}\)</span> and <span class="math inline" id="m9">\(-n+\zeta_{k}\)</span> are multiplicatively
+independent for positive integers <span class="math inline" id="m10">\(m\)</span> and <span class="math inline" id="m11">\(n\)</span> and <span class="math inline" id="m12">\(k\)</span> fixed.</p>
+          </div>
+          <div class="ltx_keywords">
+            <h6 class="ltx_title ltx_title_keywords">Key words and phrases:</h6>Canonical number
+systems, Radix representations, Diophantine equations,
+Nagell-Ljunggren equation
+</div>
+            <div class="ltx_classification">
+              <h6 class="ltx_title ltx_title_classification">2010 Mathematics Subject Classification: </h6>11A63,11D61,11D41
+</div>
+              <div class="ltx_acknowledgements">The second author was supported by the Austrian Science Fund (FWF) under the project P 24801-N26.
+</div>
+              <section id="S1" class="ltx_section">
+                <h2 class="ltx_title ltx_title_section">
+                  <span class="ltx_tag ltx_tag_section">1. </span>Introduction</h2>
+                  <div id="S1.p1" class="ltx_para">
+                    <p class="ltx_p">Let <span class="math inline" id="S1.p1.m1">\(q\geq 2\)</span> be a positive integer. Then the pair
+<span class="math inline" id="S1.p1.m2">\((q,\{0,1,\ldots,q-1\})\)</span> is a number system in the positive integers,
+<span class="ltx_text ltx_font_italic">i.e.</span> every integer <span class="math inline" id="S1.p1.m3">\(n\in{\mathbb{N}}\)</span> has a unique representation of
+the form</p>
+                    <table id="S1.Ex1" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex1.m1">\[n=\sum_{j\geq 0}a_{j}q^{j}\quad(a_{j}\in\{0,1,\ldots,q-1\}).\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="S1.p2" class="ltx_para">
+                    <p class="ltx_p">Taking a negative integer <span class="math inline" id="S1.p2.m1">\(q\leq-2\)</span> and <span class="math inline" id="S1.p2.m2">\(\{0,1,\ldots,\lvert q\rvert-1\}\)</span> as set of digits one gets a number system for all
+integers <span class="math inline" id="S1.p2.m3">\({\mathbb{Z}}\)</span>. This concept of a number system was further extended
+to the Gaussian integers by
+Knuth <cite class="ltx_cite">[]</cite>. He showed that the
+pairs <span class="math inline" id="S1.p2.m4">\((-1+i,\{0,1\})\)</span> and <span class="math inline" id="S1.p2.m5">\((-1-i,\{0,1\})\)</span> are number systems in the
+Gaussian integers, <span class="ltx_text ltx_font_italic">i.e.</span> every Gaussian integer <span class="math inline" id="S1.p2.m6">\(n\in{\mathbb{Z}}[i]\)</span>
+has a unique representation of the form</p>
+                    <table id="S1.Ex2" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex2.m1">\[n=\sum_{j\geq 0}a_{j}b^{j}\quad(a_{j}\in\{0,1\}),\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">where <span class="math inline" id="S1.p2.m7">\(b=-1+i\)</span> or <span class="math inline" id="S1.p2.m8">\(b=-1-i\)</span>. It was shown by Kátai and Szabó
+<cite class="ltx_cite">[]</cite> that all possible
+bases for the Gaussian integers are of the form <span class="math inline" id="S1.p2.m9">\(-m\pm i\)</span> with <span class="math inline" id="S1.p2.m10">\(m\)</span> a positive
+integer. These results were extended independently by Kátai and
+Kovács <cite class="ltx_cite">[]</cite> and
+Gilbert <cite class="ltx_cite">[]</cite>, who classified all quadratic
+extensions.</p>
+                  </div>
+                  <div id="S1.p3" class="ltx_para">
+                    <p class="ltx_p">A different point of view on the above systems is the following. Let
+<span class="math inline" id="S1.p3.m1">\(P=p_{d}X^{d}+p_{d-1}X^{d-1}+\cdots+p_{1}X+p_{0}\in{\mathbb{Z}}[X]\)</span> with <span class="math inline" id="S1.p3.m2">\(p_{d}=1\)</span> and
+<span class="math inline" id="S1.p3.m3">\(\mathcal{R}={\mathbb{Z}}[X]/P(X){\mathbb{Z}}[X]\)</span>. Then we call the pair <span class="math inline" id="S1.p3.m4">\((P,\mathcal{N})\)</span>
+with <span class="math inline" id="S1.p3.m5">\(\mathcal{N}=\{0,1,\ldots,\lvert p_{0}\rvert-1\}\)</span> a canonical
+number system if every element <span class="math inline" id="S1.p3.m6">\(\gamma\in\mathcal{R}\)</span> has a unique
+representation of the form</p>
+                    <table id="S1.Ex3" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex3.m1">\[\gamma=\sum_{j\geq 0}a_{j}X^{j}\quad(a_{j}\in\{0,1,\ldots,p_{0}\}).\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">If <span class="math inline" id="S1.p3.m7">\(P\)</span> is irreducible and <span class="math inline" id="S1.p3.m8">\(\beta\)</span> is one of its roots, then
+<span class="math inline" id="S1.p3.m9">\(\mathcal{R}\)</span> is isomorphic to <span class="math inline" id="S1.p3.m10">\({\mathbb{Z}}[\beta]\)</span>. In this case we simply
+write <span class="math inline" id="S1.p3.m11">\((\beta,\mathcal{N})\)</span> instead of <span class="math inline" id="S1.p3.m12">\((P,\mathcal{N})\)</span>. By setting
+<span class="math inline" id="S1.p3.m13">\(P=X+q\)</span> or <span class="math inline" id="S1.p3.m14">\(P=X^{2}+2mX+(m^{2}+1)\)</span> we obtain the canonical number systems
+in the integers and Gaussian integers from above, respectively.</p>
+                  </div>
+                  <div id="S1.p4" class="ltx_para">
+                    <p class="ltx_p">
+                      Kovács 
+                      <cite class="ltx_cite">[]</cite> proved that for
+any algebraic number field <span class="math inline" id="S1.p4.m1">\(K\)</span> and order <span class="math inline" id="S1.p4.m2">\(\mathcal{R}={\mathbb{Z}}[\alpha]\)</span> of
+<span class="math inline" id="S1.p4.m3">\(K\)</span> there exists <span class="math inline" id="S1.p4.m4">\(\beta\)</span> such that <span class="math inline" id="S1.p4.m5">\((\beta,\mathcal{N})\)</span> is a
+canonical number system for <span class="math inline" id="S1.p4.m6">\(\mathcal{R}\)</span>. Moreover he proved that if
+<span class="math inline" id="S1.p4.m7">\(1\leq p_{d-1}\leq\cdots\leq p_{1}\leq p_{0}\)</span>, <span class="math inline" id="S1.p4.m8">\(p_{0}\geq 2\)</span> and if <span class="math inline" id="S1.p4.m9">\(P\)</span> is
+irreducible, then <span class="math inline" id="S1.p4.m10">\((P,\mathcal{N})\)</span> is a canonical number system in
+<span class="math inline" id="S1.p4.m11">\(\mathcal{R}\)</span>. Pethő
+<cite class="ltx_cite">[]</cite> weakened the
+irreducibility condition by only assuming that no root of the
+polynomial is a root of unity.</p>
+                    </div>
+                    <div id="S1.p5" class="ltx_para">
+                      <p class="ltx_p">
+                        Kovács and Pethő 
+                        <cite class="ltx_cite">[]</cite>
+provided necessary and sufficient conditions on the pair
+<span class="math inline" id="S1.p5.m1">\((\beta,\mathcal{N})\)</span> to be a number system in <span class="math inline" id="S1.p5.m2">\({\mathbb{Z}}[\alpha]\)</span>. A decade
+later Akiyama
+and Pethő <cite class="ltx_cite">[]</cite>
+significantly reduced the number of cases one has to check under the
+additional assumption that</p>
+                        <table id="S1.Ex4" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="S1.Ex4.m1">\[\sum_{i=1}^{d}\lvert p_{i}\rvert&lt;p_{0}.\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                      </div>
+                      <div id="S1.p6" class="ltx_para">
+                        <p class="ltx_p">Let us denote by <span class="math inline" id="S1.p6.m1">\(\zeta_{k}\)</span> some primitive <span class="math inline" id="S1.p6.m2">\(k\)</span>-th root of unity. Since
+<span class="math inline" id="S1.p6.m3">\(+i\)</span> and <span class="math inline" id="S1.p6.m4">\(-i\)</span> are primitive fourth roots of unity, we can say that all
+the bases for the Gaussian integers are of the form <span class="math inline" id="S1.p6.m5">\(-m+\zeta_{4}\)</span>, with
+<span class="math inline" id="S1.p6.m6">\(m\geq 1\)</span>. Furthermore an easy computation shows that <span class="math inline" id="S1.p6.m7">\(-m+\zeta_{3}\)</span> are
+bases in <span class="math inline" id="S1.p6.m8">\({\mathbb{Z}}[\zeta_{3}]\)</span> for <span class="math inline" id="S1.p6.m9">\(m\geq 1\)</span>. Thus our first result answers the
+question, whether <span class="math inline" id="S1.p6.m10">\(-m+\zeta_{k}\)</span> is a basis in <span class="math inline" id="S1.p6.m11">\({\mathbb{Z}}[\zeta_{k}]\)</span>.</p>
+                      </div>
+                      <div id="S1.Thmthm1" class="ltx_theorem ltx_theorem_theorem">
+                        <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                          <span class="ltx_tag ltx_tag_theorem">Theorem 1.1</span>.</h6>
+                          <div id="S1.Thmthm1.p1" class="ltx_para">
+                            <p class="ltx_p">
+                              <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S1.Thmthm1.p1.m1">\(k>2\)</span> and <span class="math inline" id="S1.Thmthm1.p1.m2">\(m\)</span> be positive integers. If <span class="math inline" id="S1.Thmthm1.p1.m3">\(m\geq\phi(k)+1\)</span>, then
+<span class="math inline" id="S1.Thmthm1.p1.m4">\(\{-m+\zeta_{k},\mathcal{N}\}\)</span> is a canonical number system.</span>
+                            </p>
+                          </div>
+                        </div>
+                        <div id="S1.p7" class="ltx_para">
+                          <p class="ltx_p">Our second result considers, whether these bases are multiplicatively
+independent. We call two algebraic integers <span class="math inline" id="S1.p7.m1">\(\alpha\)</span> and <span class="math inline" id="S1.p7.m2">\(\beta\)</span>
+multiplicatively independent, if <span class="math inline" id="S1.p7.m3">\(\alpha^{p}=\beta^{q}\)</span> has only the
+solution <span class="math inline" id="S1.p7.m4">\(p=q=0\)</span> over the integers. Considering bases in the Gaussian
+integers Hansel and Safer <cite class="ltx_cite">[]</cite>
+proved that <span class="math inline" id="S1.p7.m5">\(-m+i\)</span> and <span class="math inline" id="S1.p7.m6">\(-n+i\)</span> are multiplicative independent for all
+<span class="math inline" id="S1.p7.m7">\(m>n>0\)</span>. Their motivation was a version of Cobham’s theorem
+<cite class="ltx_cite">[]</cite> for the Gaussian
+integers. Cobham’s theorem states that a set <span class="math inline" id="S1.p7.m8">\(E\subset{\mathbb{N}}\)</span> is <span class="math inline" id="S1.p7.m9">\(m\)</span>- and
+<span class="math inline" id="S1.p7.m10">\(n\)</span>-recognizable with <span class="math inline" id="S1.p7.m11">\(m\)</span> and <span class="math inline" id="S1.p7.m12">\(n\)</span> multiplicative independent integers
+if and only if the set <span class="math inline" id="S1.p7.m13">\(E\)</span> is a union of arithmetic progressions. This
+means that e.g. except for arithmetic progressions we are not able to
+deduce the base <span class="math inline" id="S1.p7.m14">\(3\)</span> expansion form the one in base <span class="math inline" id="S1.p7.m15">\(2\)</span>.</p>
+                        </div>
+                        <div id="S1.p8" class="ltx_para">
+                          <p class="ltx_p">In the present paper we want to generalize the result of Hansel and
+Safer <cite class="ltx_cite">[]</cite> on the multiplicative
+independence to bases of <span class="math inline" id="S1.p8.m1">\({\mathbb{Z}}[\zeta_{k}]\)</span> of the form <span class="math inline" id="S1.p8.m2">\(-m+\zeta_{k}\)</span> for
+<span class="math inline" id="S1.p8.m3">\(k\geq 3\)</span>.</p>
+                        </div>
+                        <div id="S1.Thmthm2" class="ltx_theorem ltx_theorem_theorem">
+                          <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                            <span class="ltx_tag ltx_tag_theorem">Theorem 1.2</span>.</h6>
+                            <div id="S1.Thmthm2.p1" class="ltx_para">
+                              <p class="ltx_p">
+                                <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S1.Thmthm2.p1.m1">\(k\geq 3\)</span> be a positive integer. Then the algebraic integers
+<span class="math inline" id="S1.Thmthm2.p1.m2">\(-m+\zeta_{k}\)</span> and <span class="math inline" id="S1.Thmthm2.p1.m3">\(-n+\zeta_{k}\)</span> are multiplicatively independent
+provided <span class="math inline" id="S1.Thmthm2.p1.m4">\(m>n>C(k)\)</span>, where <span class="math inline" id="S1.Thmthm2.p1.m5">\(C(k)\)</span> is an effective computable
+constant depending on <span class="math inline" id="S1.Thmthm2.p1.m6">\(k\)</span>.
+</span>
+                              </p>
+                            </div>
+                            <div id="S1.Thmthm2.p2" class="ltx_para">
+                              <p class="ltx_p">
+                                <span class="ltx_text ltx_font_italic">Moreover, if <span class="math inline" id="S1.Thmthm2.p2.m1">\(k\)</span> is a power of <span class="math inline" id="S1.Thmthm2.p2.m2">\(2,3,5,6,7,11,13\)</span>, <span class="math inline" id="S1.Thmthm2.p2.m3">\(17,19\)</span> or <span class="math inline" id="S1.Thmthm2.p2.m4">\(23\)</span>,
+then <span class="math inline" id="S1.Thmthm2.p2.m5">\(-m+\zeta_{k}\)</span> and <span class="math inline" id="S1.Thmthm2.p2.m6">\(-n+\zeta_{k}\)</span> are multiplicatively independent
+as long as <span class="math inline" id="S1.Thmthm2.p2.m7">\(m>n>0\)</span>.</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div id="S1.p9" class="ltx_para">
+                            <p class="ltx_p">In order to prove Theorem <a href="#S1.Thmthm2" title="Theorem 1.2. ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                              <span class="ltx_text ltx_ref_tag">1.2</span>
+                              </a> one has to show
+that the Diophantine equation</p>
+                              <table id="S1.E1" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                                    <span class="ltx_tag ltx_tag_equation">(1.1)</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="S1.E1.m1">\[(-m+\zeta_{k})^{p}=(-n+\zeta_{k})^{q}\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">has no solution <span class="math inline" id="S1.p9.m1">\((n,m,p,q)\)</span>, with <span class="math inline" id="S1.p9.m2">\(m>n>C(k)\)</span> and <span class="math inline" id="S1.p9.m3">\(p,q\)</span> are not both
+zero. Taking norms in (<a href="#S1.E1" title="(1.1) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                              <span class="ltx_text ltx_ref_tag">1.1</span>
+                            </a>) we obtain
+<span class="math inline" id="S1.p9.m4">\(\Phi_{k}(m)^{p}=\Phi_{k}(n)^{q}\)</span> and therefore the Diophantine equation
+(<a href="#S1.E1" title="(1.1) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                            <span class="ltx_text ltx_ref_tag">1.1</span>
+                            </a>) becomes</p>
+                            <table id="S1.E2" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                                  <span class="ltx_tag ltx_tag_equation">(1.2)</span>
+                                </td>
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S1.E2.m1">\[\Phi_{k}(m)^{p}=\eta^{q},\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">where <span class="math inline" id="S1.p9.m5">\(\Phi_{k}\)</span> is the <span class="math inline" id="S1.p9.m6">\(k\)</span>-th cyclotomic polynomial and
+<span class="math inline" id="S1.p9.m7">\(\eta=\Phi_{k}(n)\)</span>. In case that <span class="math inline" id="S1.p9.m8">\(p\)</span> and <span class="math inline" id="S1.p9.m9">\(q\)</span> have
+greatest common divisor <span class="math inline" id="S1.p9.m10">\(d>1\)</span> we take <span class="math inline" id="S1.p9.m11">\(d\)</span>-th roots and obtain equation
+(<a href="#S1.E2" title="(1.2) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                            <span class="ltx_text ltx_ref_tag">1.2</span>
+                            </a>) with <span class="math inline" id="S1.p9.m12">\(p\)</span> and <span class="math inline" id="S1.p9.m13">\(q\)</span> co-prime. Therefore we may assume
+that <span class="math inline" id="S1.p9.m14">\(p\)</span> and <span class="math inline" id="S1.p9.m15">\(q\)</span> are coprime and we deduce that
+<span class="math inline" id="S1.p9.m16">\(\eta\)</span> is a <span class="math inline" id="S1.p9.m17">\(p\)</span>-th power, i.e. we get an equation of the form
+<span class="math inline" id="S1.p9.m18">\(\Phi_{k}(m)=y^{q}\)</span> with <span class="math inline" id="S1.p9.m19">\(y=\eta^{1/p}\)</span>. Note that since we assume
+<span class="math inline" id="S1.p9.m20">\(m,n>C(k)\)</span> the case <span class="math inline" id="S1.p9.m21">\(\Phi_{k}(m)=-y^{q}\)</span> can be excluded. Indeed, we know
+that <span class="math inline" id="S1.p9.m22">\(\Phi_{k}(m)>0\)</span> for <span class="math inline" id="S1.p9.m23">\(m\)</span> sufficiently large. In any case we obtain a
+Diophantine equation of the form</p>
+                            <table id="S1.E3" class="ltx_equation">
+                              <tr class="ltx_equation ltx_align_baseline">
+                                <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                                  <span class="ltx_tag ltx_tag_equation">(1.3)</span>
+                                </td>
+                                <td class="ltx_eqn_center_padleft"/>
+                                <td class="ltx_align_center">
+                                  <span class="math display" id="S1.E3.m1">\[\Phi_{k}(m)=y^{q}.\]</span>
+                                </td>
+                                <td class="ltx_eqn_center_padright"/>
+                              </tr>
+                            </table>
+                            <p class="ltx_p">Equation (<a href="#S1.E3" title="(1.3) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                              <span class="ltx_text ltx_ref_tag">1.3</span>
+                              </a>) is closely related to the well-studied Nagell-Ljunggren equation</p>
+                              <table id="S1.E4" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                                    <span class="ltx_tag ltx_tag_equation">(1.4)</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="S1.E4.m1">\[\frac{x^{k}-1}{x-1}=y^{q}\qquad x,y>1,\;q\geq 2,\;k>2.\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">If <span class="math inline" id="S1.p9.m24">\(k\)</span> is a prime, then the Diophantine equations (<a href="#S1.E3" title="(1.3) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                <span class="ltx_text ltx_ref_tag">1.3</span>
+                              </a>) and (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                              <span class="ltx_text ltx_ref_tag">1.4</span>
+                            </a>) are identical and every solution to (<a href="#S1.E1" title="(1.1) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                            <span class="ltx_text ltx_ref_tag">1.1</span>
+                          </a>) yields
+a solution to (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                          <span class="ltx_text ltx_ref_tag">1.4</span>
+                          </a>). Therefore we conjecture:</p>
+                        </div>
+                        <div id="S1.Thmthm3" class="ltx_theorem ltx_theorem_conjecture">
+                          <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                            <span class="ltx_tag ltx_tag_theorem">Conjecture 1.3</span>.</h6>
+                            <div id="S1.Thmthm3.p1" class="ltx_para">
+                              <p class="ltx_p">
+                                <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S1.Thmthm3.p1.m1">\(k\)</span> be an odd prime. Then <span class="math inline" id="S1.Thmthm3.p1.m2">\(-m+\zeta_{k}\)</span> and <span class="math inline" id="S1.Thmthm3.p1.m3">\(-n+\zeta_{k}\)</span> are multiplicatively independent provided <span class="math inline" id="S1.Thmthm3.p1.m4">\(m>n>0\)</span>.</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div id="S1.p10" class="ltx_para">
+                            <p class="ltx_p">Since it is widely believed that the Nagell-Ljunggren equation (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                              <span class="ltx_text ltx_ref_tag">1.4</span>
+                              </a>) has only the three solutions</p>
+                              <table id="S1.Ex5" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="S1.Ex5.m1">\[\frac{3^{5}-1}{3-1}=11^{2},\qquad\frac{7^{4}-1}{7-1}=20^{2},\qquad\frac{18^{3}%
+-1}{18-1}=7^{3}\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">this conjecture seems plausible. Note that none of these solutions to (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                <span class="ltx_text ltx_ref_tag">1.4</span>
+                              </a>) implies a solution to (<a href="#S1.E1" title="(1.1) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                              <span class="ltx_text ltx_ref_tag">1.1</span>
+                              </a>). We guess that even
+more
+is true and believe that the following question has an affirmative answer.</p>
+                            </div>
+                            <div id="S1.Thmthm4" class="ltx_theorem ltx_theorem_question">
+                              <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                <span class="ltx_tag ltx_tag_theorem">Question 1.4</span>.</h6>
+                                <div id="S1.Thmthm4.p1" class="ltx_para">
+                                  <p class="ltx_p">
+                                    <span class="ltx_text ltx_font_italic">Given <span class="math inline" id="S1.Thmthm4.p1.m1">\(k>2\)</span> are <span class="math inline" id="S1.Thmthm4.p1.m2">\(-m+\zeta_{k}\)</span> and <span class="math inline" id="S1.Thmthm4.p1.m3">\(-n+\zeta_{k}\)</span> multiplicatively independent provided <span class="math inline" id="S1.Thmthm4.p1.m4">\(m>n>1\)</span>?
+</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div id="S1.p11" class="ltx_para">
+                                <p class="ltx_p">We excluded the case that <span class="math inline" id="S1.p11.m1">\(n=1\)</span> since for <span class="math inline" id="S1.p11.m2">\(k=6\)</span> we have <span class="math inline" id="S1.p11.m3">\(-1+\zeta_{6}=\zeta_{3}\)</span> and <span class="math inline" id="S1.p11.m4">\(\zeta_{3}\)</span> and <span class="math inline" id="S1.p11.m5">\(-m+\zeta_{6}\)</span> are always multiplicatively
+dependent.</p>
+                              </div>
+                            </section>
+                            <section id="S2" class="ltx_section">
+                              <h2 class="ltx_title ltx_title_section">
+                                <span class="ltx_tag ltx_tag_section">2. </span>Canonical number systems and the proof of Theorem <a href="#S1.Thmthm1" title="Theorem 1.1. ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                  <span class="ltx_text ltx_ref_tag">1.1</span>
+                                </a>
+                              </h2>
+                              <div id="S2.p1" class="ltx_para">
+                                <p class="ltx_p">The main tool in our proof is the following result due to Pethő
+<cite class="ltx_cite">[]</cite>.</p>
+                              </div>
+                              <div id="S2.Thmthm1" class="ltx_theorem ltx_theorem_lemma">
+                                <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                  <span class="ltx_tag ltx_tag_theorem">
+                                    Lemma 2.1</span> (Pethő 
+                                    <cite class="ltx_cite">[, Theorem 7.1]</cite>).</h6>
+                                    <div id="S2.Thmthm1.p1" class="ltx_para">
+                                      <p class="ltx_p">
+                                        <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S2.Thmthm1.p1.m1">\(P=\sum_{j=0}^{d}p_{j}X^{j}\in{\mathbb{Z}}[X]\)</span> with <span class="math inline" id="S2.Thmthm1.p1.m2">\(p_{d}=1\)</span>. If <span class="math inline" id="S2.Thmthm1.p1.m3">\(0&lt;p_{d-1}\leq p_{d-2}\leq\cdots\leq p_{0}\)</span>, <span class="math inline" id="S2.Thmthm1.p1.m4">\(p_{0}\geq 2\)</span> and no root of <span class="math inline" id="S2.Thmthm1.p1.m5">\(P\)</span> is a root
+of unity, then the pair <span class="math inline" id="S2.Thmthm1.p1.m6">\((P,\mathcal{N})\)</span> is a canonical number
+system.</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div id="S2.p2" class="ltx_para">
+                                    <p class="ltx_p">Since <span class="math inline" id="S2.p2.m1">\(\zeta_{k}\)</span> is a primitive <span class="math inline" id="S2.p2.m2">\(k\)</span>-th root of unity <span class="math inline" id="S2.p2.m3">\(-m+\zeta_{k}\)</span> is a
+root of <span class="math inline" id="S2.p2.m4">\(P(X)=\Phi_{k}(m+X)\)</span>. By Vieta’s formula we obtain</p>
+                                    <table id="S2.E1" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                                          <span class="ltx_tag ltx_tag_equation">(2.1)</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S2.E1.m1">\[p_{\phi(k)-d}=\tilde{p}_{d}=\sum_{a_{1}&lt;\cdots&lt;a_{d}\in({\mathbb{Z}}/k{\mathbb%
+{Z}})^{*}}(m-\zeta_{k}^{a_{1}})\cdots(m-\zeta_{k}^{a_{d}}).\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">Here we identify elements of <span class="math inline" id="S2.p2.m5">\({\mathbb{Z}}/k{\mathbb{Z}}\)</span> with their minimal
+representatives in <span class="math inline" id="S2.p2.m6">\({\mathbb{Z}}\)</span>, i.e. with the integers in the set
+<span class="math inline" id="S2.p2.m7">\(\{0,1,\dots,k-1\}\)</span> in the obvious way. In order to apply Lemma
+<a href="#S2.Thmthm1" title="Lemma 2.1 (Pethő [, Theorem 7.1]). ‣ 2. Canonical number systems and the proof of Theorem 1.1 ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                    <span class="ltx_text ltx_ref_tag">2.1</span>
+                                    </a> we have to prove that <span class="math inline" id="S2.p2.m8">\(\tilde{p}_{d}\leq\tilde{p}_{d+1}\)</span>. For a given ordered <span class="math inline" id="S2.p2.m9">\((d+1)\)</span>-tuple <span class="math inline" id="S2.p2.m10">\(a_{1}&lt;\cdots&lt;a_{d+1}\)</span> there
+are <span class="math inline" id="S2.p2.m11">\(d+1\)</span> possibilities to deduce an ordered <span class="math inline" id="S2.p2.m12">\(d\)</span>-tuple. Thus</p>
+                                    <table class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S2.p2.m13">\[(d+1)\sum_{a_{1}&lt;\cdots&lt;a_{d+1}\in({\mathbb{Z}}/k{\mathbb{Z}})^{*}}(m-\zeta_{k%
+}^{a_{1}})\cdots(m-\zeta_{k}^{a_{d+1}})\\
+=\sum_{a_{1}&lt;\cdots&lt;a_{d}\in({\mathbb{Z}}/k{\mathbb{Z}})^{*}}(m-\zeta_{k}^{a_{%
+1}})\cdots(m-\zeta_{k}^{a_{d}})\sum_{\substack{b\in({\mathbb{Z}}/k{\mathbb{Z}}%
+)^{*}\\
+b\neq a_{1},\ldots,a_{d}}}(m-\zeta_{k}^{b})\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                  <div id="S2.p3" class="ltx_para">
+                                    <p class="ltx_p">Therefore we get for <span class="math inline" id="S2.p3.m1">\(d&lt;\phi(k)\)</span> that</p>
+                                    <table id="Sx1.EGx1" class="ltx_equationgroup ltx_eqn_align">
+                                      <tr id="S2.Ex1" class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_td ltx_align_right">
+                                          <span class="math inline" id="S2.Ex1.m1">\(\displaystyle\tilde{p}_{d+1}=\)</span>
+                                        </td>
+                                        <td class="ltx_td ltx_align_left">
+                                          <span class="math inline" id="S2.Ex1.m2">\(\displaystyle\sum_{a_{1}&lt;\cdots&lt;a_{d+1}\in({\mathbb{Z}}/k{\mathbb{Z}})^{*}}(m-%
+\zeta_{k}^{a_{1}})\cdots(m-\zeta_{k}^{a_{d+1}})\)</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                      <tr id="S2.Ex2" class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_td ltx_align_right">
+                                          <span class="math inline" id="S2.Ex2.m1">\(\displaystyle=\)</span>
+                                        </td>
+                                        <td class="ltx_td ltx_align_left">
+                                          <span class="math inline" id="S2.Ex2.m2">\(\displaystyle\frac{1}{d+1}\sum_{a_{1}&lt;\cdots&lt;a_{d}\in({\mathbb{Z}}/k{\mathbb{Z%
+}})^{*}}(m-\zeta_{k}^{a_{1}})\cdots(m-\zeta_{k}^{a_{d}})\sum_{\substack{b\in({%
+\mathbb{Z}}/k{\mathbb{Z}})^{*}\\
+b\neq a_{1},\ldots,a_{d}}}(m-\zeta_{k}^{b})\)</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                      <tr id="S2.Ex3" class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_td ltx_align_right">
+                                          <span class="math inline" id="S2.Ex3.m1">\(\displaystyle=\)</span>
+                                        </td>
+                                        <td class="ltx_td ltx_align_left">
+                                          <span class="math inline" id="S2.Ex3.m2">\(\displaystyle\frac{m(\phi(k)-d)}{d+1}\sum_{a_{1}&lt;\cdots&lt;a_{d}\in({\mathbb{Z}}/%
+k{\mathbb{Z}})^{*}}(m-\zeta_{k}^{a_{1}})\cdots(m-\zeta_{k}^{a_{d}})\)</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                      <tr id="S2.Ex4" class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_td ltx_align_right"/>
+                                        <td class="ltx_td ltx_align_left">
+                                          <span class="math inline" id="S2.Ex4.m2">\(\displaystyle-\frac{1}{d+1}\sum_{a_{1}&lt;\cdots&lt;a_{d}\in({\mathbb{Z}}/k{\mathbb{%
+Z}})^{*}}(m-\zeta_{k}^{a_{1}})\cdots(m-\zeta_{k}^{a_{d}})\sum_{\substack{b\in(%
+{\mathbb{Z}}/k{\mathbb{Z}})^{*}\\
+b\neq a_{1},\ldots,a_{d}}}\zeta_{k}^{b}\)</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                      <tr id="S2.Ex5" class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_td ltx_align_right">
+                                          <span class="math inline" id="S2.Ex5.m1">\(\displaystyle\geq\)</span>
+                                        </td>
+                                        <td class="ltx_td ltx_align_left">
+                                          <span class="math inline" id="S2.Ex5.m2">\(\displaystyle\frac{\tilde{p}_{d}m(\phi(k)-d)}{d+1}\)</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                      <tr id="S2.Ex6" class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_td ltx_align_right"/>
+                                        <td class="ltx_td ltx_align_left">
+                                          <span class="math inline" id="S2.Ex6.m2">\(\displaystyle\quad-\frac{1}{d+1}\left|\sum_{a_{1}&lt;\cdots&lt;a_{d}\in({\mathbb{Z}}%
+/k{\mathbb{Z}})^{*}}(m-\zeta_{k}^{a_{1}})\cdots(m-\zeta_{k}^{a_{d}})\sum_{%
+\substack{b\in({\mathbb{Z}}/k{\mathbb{Z}})^{*}\\
+b\neq a_{1},\ldots,a_{d}}}\zeta_{k}^{b}\right|\)</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                      <tr id="S2.Ex7" class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_td ltx_align_right">
+                                          <span class="math inline" id="S2.Ex7.m1">\(\displaystyle\geq\)</span>
+                                        </td>
+                                        <td class="ltx_td ltx_align_left">
+                                          <span class="math inline" id="S2.Ex7.m2">\(\displaystyle\frac{\tilde{p}_{d}m(\phi(k)-d)}{d+1}-{\phi(k)\choose{d}}\frac{(m%
++1)^{d}(\phi(k)-d)}{d+1}.\)</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">Note that in the first four lines in the inequality above all the sums
+over complex terms yield indeed real numbers. Further the “<span class="math inline" id="S2.p3.m2">\(\geq\)</span>”
+signs are true due to the triangle inequality and trivial estimates of
+the form <span class="math inline" id="S2.p3.m3">\(m-1\leq|m-\zeta_{k}^{a}|\leq m+1\)</span>. Furthermore, by
+(<a href="#S2.E1" title="(2.1) ‣ 2. Canonical number systems and the proof of Theorem 1.1 ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                    <span class="ltx_text ltx_ref_tag">2.1</span>
+                                    </a>) we have</p>
+                                    <table id="S2.Ex8" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S2.Ex8.m1">\[(m+1)^{d}{\phi(k)\choose{d}}>\tilde{p}_{d}>(m-1)^{d}{\phi(k)\choose{d}}\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">and therefore</p>
+                                    <table id="S2.Ex9" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S2.Ex9.m1">\[\binom{\phi(k)}{d}\frac{(m+1)^{d}}{\tilde{p}_{d}}&lt;\left(\frac{m+1}{m-1}\right)%
+^{d}=\left(1+\frac{2}{m-1}\right)^{d}&lt;e^{2},\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">where we used that <span class="math inline" id="S2.p3.m4">\(m-1\geq\phi(k)>d\)</span> by our assumption. Altogether we
+obtain the inequality</p>
+                                    <table id="S2.Ex10" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S2.Ex10.m1">\[\tilde{p}_{d+1}\geq\frac{\tilde{p}_{d}(m-e^{2})(\phi(k)-d)}{d+1}.\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">Thus the coefficients are increasing if</p>
+                                    <table id="S2.E2" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                                          <span class="ltx_tag ltx_tag_equation">(2.2)</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S2.E2.m1">\[\frac{(m-e^{2})(\phi(k)-d)}{d+1}\geq 1.\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                  <div id="S2.p4" class="ltx_para">
+                                    <p class="ltx_p">We split our considerations into two cases whether <span class="math inline" id="S2.p4.m1">\(d\leq\phi(k)-2\)</span> or not.</p>
+                                    <ul id="I1" class="ltx_itemize">
+                                      <li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+                                        <span class="ltx_tag ltx_tag_itemize">•</span>
+                                        <div id="I1.i1.p1" class="ltx_para">
+                                          <p class="ltx_p">
+                                            <span class="ltx_text ltx_font_bold">Case 1: <span class="math inline" id="I1.i1.p1.m1">\(d\leq\phi(k)-2\)</span>.</span> Together with our assumption
+that <span class="math inline" id="I1.i1.p1.m2">\(m\geq\phi(k)+1\)</span> we get that the coefficients <span class="math inline" id="I1.i1.p1.m3">\(\tilde{p}_{d}\)</span> up
+to <span class="math inline" id="I1.i1.p1.m4">\(\tilde{p}_{\phi(k)-1}\)</span> are increasing
+if</p>
+                                            <table id="S2.Ex11" class="ltx_equation">
+                                              <tr class="ltx_equation ltx_align_baseline">
+                                                <td class="ltx_eqn_center_padleft"/>
+                                                <td class="ltx_align_center">
+                                                  <span class="math display" id="S2.Ex11.m1">\[\frac{2(\phi(k)+1-e^{2})}{\phi(k)-1}\geq 1.\]</span>
+                                                </td>
+                                                <td class="ltx_eqn_center_padright"/>
+                                              </tr>
+                                            </table>
+                                            <p class="ltx_p">Since <span class="math inline" id="I1.i1.p1.m5">\(\phi(k)\)</span> only
+takes positive values a simple calculation yields that this is the
+case for <span class="math inline" id="I1.i1.p1.m6">\(\phi(k)\geq 2e^{2}-3\approx 11.78\)</span>.</p>
+                                          </div>
+                                          <div id="I1.i1.p2" class="ltx_para">
+                                            <p class="ltx_p">On the contrary, since <span class="math inline" id="I1.i1.p2.m1">\(\phi(k)\)</span> only takes even values except the
+value <span class="math inline" id="I1.i1.p2.m2">\(1\)</span>, we may assume <span class="math inline" id="I1.i1.p2.m3">\(\phi(k)\leq 10\)</span>, which implies
+<span class="math inline" id="I1.i1.p2.m4">\(d\leq 8\)</span>. Plugging this into (<a href="#S2.E2" title="(2.2) ‣ 2. Canonical number systems and the proof of Theorem 1.1 ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                            <span class="ltx_text ltx_ref_tag">2.2</span>
+                                            </a>) yields that the
+coefficients are increasing provided <span class="math inline" id="I1.i1.p2.m5">\(m\geq e^{2}+\frac{9}{2}\approx 11.89\)</span>.</p>
+                                          </div>
+                                          <div id="I1.i1.p3" class="ltx_para">
+                                            <p class="ltx_p">Finally computing all polynomials <span class="math inline" id="I1.i1.p3.m1">\(\Phi_{k}(m+x)\)</span> with <span class="math inline" id="I1.i1.p3.m2">\(\phi(k)+1\leq m\leq 11\)</span> by aid of a computer algebra system we see that in any
+case the coefficients <span class="math inline" id="I1.i1.p3.m3">\(\tilde{p}_{d}\)</span> are increasing. In fact we only
+have to check 92 polynomials, which are certainly to many for
+writing them down.</p>
+                                          </div>
+                                        </li>
+                                        <li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+                                          <span class="ltx_tag ltx_tag_itemize">•</span>
+                                          <div id="I1.i2.p1" class="ltx_para">
+                                            <p class="ltx_p">
+                                              <span class="ltx_text ltx_font_bold">Case 2: <span class="math inline" id="I1.i2.p1.m1">\(d=\phi(k)-1\)</span>.</span> Thus we are left to show that
+<span class="math inline" id="I1.i2.p1.m2">\(p_{1}\geq p_{0}\)</span>, i.e.</p>
+                                              <table id="S2.Ex12" class="ltx_equation">
+                                                <tr class="ltx_equation ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_align_center">
+                                                    <span class="math display" id="S2.Ex12.m1">\[\prod_{a\in({\mathbb{Z}}/k{\mathbb{Z}})^{*}}(m-\zeta_{k}^{a})\geq\sum_{b\in({%
+\mathbb{Z}}/k{\mathbb{Z}})^{*}}\prod_{\substack{a\in({\mathbb{Z}}/k{\mathbb{Z}%
+})^{*}\\
+a\neq b}}(m-\zeta_{k}^{a}).\]</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                              </table>
+                                              <p class="ltx_p">Since</p>
+                                              <table id="S2.Ex13" class="ltx_equation">
+                                                <tr class="ltx_equation ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_align_center">
+                                                    <span class="math display" id="S2.Ex13.m1">\[1\geq\frac{\phi(k)}{m-1}=\sum_{b\in({\mathbb{Z}}/k{\mathbb{Z}})^{*}}\frac{1}{m%
+-1}\geq\sum_{b\in({\mathbb{Z}}/k{\mathbb{Z}})^{*}}\frac{1}{m-\zeta_{k}^{b}}\]</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                              </table>
+                                              <p class="ltx_p">provided that <span class="math inline" id="I1.i2.p1.m3">\(m\geq\phi(k)+1\)</span>, this case is settled too.</p>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div id="S2.p5" class="ltx_para">
+                                        <p class="ltx_p">The next requirement, in order to apply Lemma <a href="#S2.Thmthm1" title="Lemma 2.1 (Pethő [, Theorem 7.1]). ‣ 2. Canonical number systems and the proof of Theorem 1.1 ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                          <span class="ltx_text ltx_ref_tag">2.1</span>
+                                          </a>, is to
+show that no root of <span class="math inline" id="S2.p5.m1">\(\Phi_{k}(m+X)\)</span> is a root of unity. Since we assume
+<span class="math inline" id="S2.p5.m2">\(m\geq\phi(k)+1\geq 3\)</span>. So all roots of <span class="math inline" id="S2.p5.m3">\(\Phi_{k}(m+X)\)</span> have real part <span class="math inline" id="S2.p5.m4">\(\geq 2\)</span> and therefore cannot be roots of unity.</p>
+                                        </div>
+                                        <div id="S2.p6" class="ltx_para">
+                                          <p class="ltx_p">Finally we have to check that <span class="math inline" id="S2.p6.m1">\(p_{0}\geq 2\)</span>. But by
+(<a href="#S2.E1" title="(2.1) ‣ 2. Canonical number systems and the proof of Theorem 1.1 ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                          <span class="ltx_text ltx_ref_tag">2.1</span>
+                                          </a>) we have <span class="math inline" id="S2.p6.m2">\(p_{0}\geq(m-1)^{\phi(k)}\geq 2\)</span> provided <span class="math inline" id="S2.p6.m3">\(m\geq 3\)</span>, which we assume.</p>
+                                        </div>
+                                        <div id="S2.p7" class="ltx_para">
+                                          <p class="ltx_p">Therefore <span class="math inline" id="S2.p7.m1">\(\Phi_{k}(X+m)\)</span> satisfies all assumptions of Lemma
+<a href="#S2.Thmthm1" title="Lemma 2.1 (Pethő [, Theorem 7.1]). ‣ 2. Canonical number systems and the proof of Theorem 1.1 ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                          <span class="ltx_text ltx_ref_tag">2.1</span>
+                                        </a> and Theorem <a href="#S1.Thmthm1" title="Theorem 1.1. ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                        <span class="ltx_text ltx_ref_tag">1.1</span>
+                                        </a> is proved.</p>
+                                      </div>
+                                      <div id="Thmremark1" class="ltx_theorem ltx_theorem_remark">
+                                        <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+                                          <span class="ltx_tag ltx_tag_theorem">Remark 1</span>.</h6>
+                                          <div id="Thmremark1.p1" class="ltx_para">
+                                            <p class="ltx_p">In case that <span class="math inline" id="Thmremark1.p1.m1">\(m\leq\phi(k)-1\)</span> we have <span class="math inline" id="Thmremark1.p1.m2">\(p_{0}&lt;p_{1}\)</span> and an application of Lemma <a href="#S2.Thmthm1" title="Lemma 2.1 (Pethő [, Theorem 7.1]). ‣ 2. Canonical number systems and the proof of Theorem 1.1 ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                              <span class="ltx_text ltx_ref_tag">2.1</span>
+                                              </a> is no longer possible.
+Indeed, we have</p>
+                                              <table id="S2.Ex14" class="ltx_equation">
+                                                <tr class="ltx_equation ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_align_center">
+                                                    <span class="math display" id="S2.Ex14.m1">\[1\leq\frac{\phi(k)}{m+1}=\sum_{b\in({\mathbb{Z}}/k{\mathbb{Z}})^{*}}\frac{1}{m%
++1}&lt;\sum_{b\in({\mathbb{Z}}/k{\mathbb{Z}})^{*}}\frac{1}{m-\zeta_{k}^{b}}\]</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                              </table>
+                                              <p class="ltx_p">and by the same arguments as in Case 2 above we obtain <span class="math inline" id="Thmremark1.p1.m3">\(p_{0}&lt;p_{1}\)</span>. In case that <span class="math inline" id="Thmremark1.p1.m4">\(m=\phi(k)\)</span> both situations <span class="math inline" id="Thmremark1.p1.m5">\(p_{1}\leq p_{0}\)</span> and <span class="math inline" id="Thmremark1.p1.m6">\(p_{1}>p_{0}\)</span> occur. For
+instance, in case that <span class="math inline" id="Thmremark1.p1.m7">\(m=11\)</span> we have <span class="math inline" id="Thmremark1.p1.m8">\(p_{1}\leq p_{0}\)</span> but in case that <span class="math inline" id="Thmremark1.p1.m9">\(m=12\)</span> we have <span class="math inline" id="Thmremark1.p1.m10">\(p_{1}&lt;p_{0}\)</span>. Therefore in view of the method of proof Theorem <a href="#S1.Thmthm1" title="Theorem 1.1. ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                              <span class="ltx_text ltx_ref_tag">1.1</span>
+                                              </a>
+is best possible.</p>
+                                            </div>
+                                          </div>
+                                        </section>
+                                        <section id="S3" class="ltx_section">
+                                          <h2 class="ltx_title ltx_title_section">
+                                            <span class="ltx_tag ltx_tag_section">3. </span>Multiplicative independence</h2>
+                                            <div id="S3.p1" class="ltx_para">
+                                              <p class="ltx_p">Before we start with the proof of Theorem <a href="#S1.Thmthm1" title="Theorem 1.1. ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                                <span class="ltx_text ltx_ref_tag">1.1</span>
+                                              </a>, let us note that if <span class="math inline" id="S3.p1.m1">\(p\)</span> and <span class="math inline" id="S3.p1.m2">\(q\)</span> have a
+common factor <span class="math inline" id="S3.p1.m3">\(d\)</span> then by taking <span class="math inline" id="S3.p1.m4">\(d\)</span>-th roots on both sides of equation (<a href="#S1.E1" title="(1.1) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                              <span class="ltx_text ltx_ref_tag">1.1</span>
+                                              </a>) we obtain</p>
+                                              <table id="S3.E1" class="ltx_equation">
+                                                <tr class="ltx_equation ltx_align_baseline">
+                                                  <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                                                    <span class="ltx_tag ltx_tag_equation">(3.1)</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_align_center">
+                                                    <span class="math display" id="S3.E1.m1">\[\zeta_{k}^{j}(-m+\zeta_{k})^{p}=(-n+\zeta_{k})^{q},\]</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                              </table>
+                                              <p class="ltx_p">with <span class="math inline" id="S3.p1.m5">\(\gcd(p,q)=1\)</span> and <span class="math inline" id="S3.p1.m6">\(0\leq j&lt;k\)</span>.</p>
+                                            </div>
+                                            <div id="S3.p2" class="ltx_para">
+                                              <p class="ltx_p">We start with the proof of the first statement of Theorem
+<a href="#S1.Thmthm2" title="Theorem 1.2. ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                              <span class="ltx_text ltx_ref_tag">1.2</span>
+                                            </a>. In view of the discussion below Theorem <a href="#S1.Thmthm1" title="Theorem 1.1. ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                            <span class="ltx_text ltx_ref_tag">1.1</span>
+                                          </a> we consider the Diophantine
+equation
+</p>
+                                          <table id="S3.E2" class="ltx_equation">
+                                            <tr class="ltx_equation ltx_align_baseline">
+                                              <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                                                <span class="ltx_tag ltx_tag_equation">(3.2)</span>
+                                              </td>
+                                              <td class="ltx_eqn_center_padleft"/>
+                                              <td class="ltx_align_center">
+                                                <span class="math display" id="S3.E2.m1">\[f(x)=y^{q},\]</span>
+                                              </td>
+                                              <td class="ltx_eqn_center_padright"/>
+                                            </tr>
+                                          </table>
+                                          <p class="ltx_p">where <span class="math inline" id="S3.p2.m1">\(f\)</span> is a polynomial with rational coefficients and with at least
+two distinct roots. Obviously (<a href="#S1.E3" title="(1.3) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                          <span class="ltx_text ltx_ref_tag">1.3</span>
+                                        </a>) fulfills these
+requirements as soon as <span class="math inline" id="S3.p2.m2">\(k>2\)</span>. Due to Schinzel and Tijdeman
+<cite class="ltx_cite">
+                                        []</cite> (see also 
+                                        <cite class="ltx_cite">[, Theorem 10.2]</cite>) we
+know that for all solutions <span class="math inline" id="S3.p2.m3">\((x,y,q)\)</span> to (<a href="#S3.E2" title="(3.2) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                        <span class="ltx_text ltx_ref_tag">3.2</span>
+                                      </a>)
+with <span class="math inline" id="S3.p2.m4">\(|y|>1\)</span>, <span class="math inline" id="S3.p2.m5">\(q\)</span> is bounded by an effectively computable constant
+depending only on <span class="math inline" id="S3.p2.m6">\(f\)</span>. In view of Theorem <a href="#S1.Thmthm2" title="Theorem 1.2. ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                      <span class="ltx_text ltx_ref_tag">1.2</span>
+                                    </a> we
+see that all solutions coming from (<a href="#S1.E1" title="(1.1) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                    <span class="ltx_text ltx_ref_tag">1.1</span>
+                                  </a>) yield
+<span class="math inline" id="S3.p2.m7">\(y>1\)</span> provided <span class="math inline" id="S3.p2.m8">\(n\neq 0\)</span>. But it is also well known (see
+e.g. <cite class="ltx_cite">[, Theorem 6.1 and 6.2]</cite>) that for given <span class="math inline" id="S3.p2.m9">\(q\geq 2\)</span> all solutions <span class="math inline" id="S3.p2.m10">\((x,y)\)</span> to (<a href="#S3.E2" title="(3.2) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                  <span class="ltx_text ltx_ref_tag">3.2</span>
+                                </a>) satisfy
+<span class="math inline" id="S3.p2.m11">\(\max\{|x|,|y|\}&lt;C_{f,q}\)</span>, where <span class="math inline" id="S3.p2.m12">\(C_{f,q}\)</span> is an absolute, effectively
+computable constant depending on <span class="math inline" id="S3.p2.m13">\(f\)</span> and <span class="math inline" id="S3.p2.m14">\(q\)</span>. Thus we conclude that
+<span class="math inline" id="S3.p2.m15">\(q=1\)</span> in equation (<a href="#S3.E1" title="(3.1) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                <span class="ltx_text ltx_ref_tag">3.1</span>
+                              </a>) if <span class="math inline" id="S3.p2.m16">\(m,n>C(k)\)</span>, and <span class="math inline" id="S3.p2.m17">\(C(k)\)</span> is an
+effectively computable constant only depending on <span class="math inline" id="S3.p2.m18">\(k\)</span>. Exchanging the
+roles of <span class="math inline" id="S3.p2.m19">\(m\)</span> and <span class="math inline" id="S3.p2.m20">\(n\)</span> we deduce that <span class="math inline" id="S3.p2.m21">\(q=p=1\)</span> if <span class="math inline" id="S3.p2.m22">\(m,n>C(k)\)</span>. But this
+yields the equation <span class="math inline" id="S3.p2.m23">\(\zeta_{k}^{j}(-m+\zeta_{k})=(-n+\zeta_{k})\)</span> and taking
+norms on both sides gives <span class="math inline" id="S3.p2.m24">\(\Phi_{k}(m)=\Phi_{k}(n)\)</span>. Since <span class="math inline" id="S3.p2.m25">\(\Phi_{k}(m)\)</span> is
+strictly increasing for <span class="math inline" id="S3.p2.m26">\(m\)</span> large enough we deduce that <span class="math inline" id="S3.p2.m27">\(m=n\)</span> which we
+excluded. Therefore the proof of the first part of
+Theorem <a href="#S1.Thmthm2" title="Theorem 1.2. ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                              <span class="ltx_text ltx_ref_tag">1.2</span>
+                              </a> is complete.</p>
+                            </div>
+                            <div id="S3.p3" class="ltx_para">
+                              <p class="ltx_p">However, computing the constant <span class="math inline" id="S3.p3.m1">\(C(k)\)</span> using the methods cited above
+will yield very huge constants even for small values of <span class="math inline" id="S3.p3.m2">\(k\)</span>. Therefore
+we will use a more direct approach in the proof of the second part.</p>
+                            </div>
+                            <div id="S3.p4" class="ltx_para">
+                              <p class="ltx_p">We note that
+<span class="math inline" id="S3.p4.m1">\(\Phi_{n}(X)=\Phi_{n/q}(X^{n/q})\)</span> if <span class="math inline" id="S3.p4.m2">\(q^{2}|n\)</span>. In particular, if <span class="math inline" id="S3.p4.m3">\(n=q^{\ell}\)</span> we have</p>
+                              <table id="S3.E3" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                                    <span class="ltx_tag ltx_tag_equation">(3.3)</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="S3.E3.m1">\[\Phi_{q^{\ell}}(X)=\Phi_{q}\left(X^{q^{\ell-1}}\right).\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">Let us start with powers of <span class="math inline" id="S3.p4.m4">\(2\)</span>. In this case we have that
+<span class="math inline" id="S3.p4.m5">\(\Phi_{2^{\ell}}(X)=X^{2^{\ell-1}}+1\)</span>. Therefore the case that <span class="math inline" id="S3.p4.m6">\(k\)</span> is a
+power of <span class="math inline" id="S3.p4.m7">\(2\)</span> is deduced from the fact that the Diophantine equation</p>
+                              <table id="S3.Ex1" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="S3.Ex1.m1">\[X^{2}+1=Y^{q}\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">has no solution. This is a special case of Catalan’s equation
+<span class="math inline" id="S3.p4.m8">\(X^{p}-Y^{q}=1\)</span> which was completely solved by Mihǎilescu
+<cite class="ltx_cite">[]</cite>. Note that this special case was already proved
+by Chao <cite class="ltx_cite">[]</cite>.</p>
+                            </div>
+                            <div id="S3.p5" class="ltx_para">
+                              <p class="ltx_p">In the next step we consider the case that <span class="math inline" id="S3.p5.m1">\(k\)</span> is a power of <span class="math inline" id="S3.p5.m2">\(3\)</span> or <span class="math inline" id="S3.p5.m3">\(6\)</span>.</p>
+                            </div>
+                            <div id="S3.Thmthm1" class="ltx_theorem ltx_theorem_lemma">
+                              <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                <span class="ltx_tag ltx_tag_theorem">Lemma 3.1</span>.</h6>
+                                <div id="S3.Thmthm1.p1" class="ltx_para">
+                                  <p class="ltx_p">
+                                    <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="S3.Thmthm1.p1.m1">\(k\)</span> be a power of <span class="math inline" id="S3.Thmthm1.p1.m2">\(3\)</span> or <span class="math inline" id="S3.Thmthm1.p1.m3">\(6\)</span>. Then the two algebraic integers <span class="math inline" id="S3.Thmthm1.p1.m4">\(-m+\zeta_{k}\)</span> and
+<span class="math inline" id="S3.Thmthm1.p1.m5">\(-n+\zeta_{k}\)</span> are multiplicatively independent provided <span class="math inline" id="S3.Thmthm1.p1.m6">\(n\neq m\)</span> and <span class="math inline" id="S3.Thmthm1.p1.m7">\(n,m\not\in\{0,-1\}\)</span>.</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="ltx_proof">
+                                <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+                                <div id="S3.p6" class="ltx_para">
+                                  <p class="ltx_p">Let us consider equation (<a href="#S1.E3" title="(1.3) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                    <span class="ltx_text ltx_ref_tag">1.3</span>
+                                  </a>) and let <span class="math inline" id="S3.p6.m1">\(M=m^{k/3}\)</span> if
+<span class="math inline" id="S3.p6.m2">\(9|k\)</span>, <span class="math inline" id="S3.p6.m3">\(M=m^{k/6}\)</span> if <span class="math inline" id="S3.p6.m4">\(36|k\)</span> and <span class="math inline" id="S3.p6.m5">\(M=m\)</span> otherwise. Then equation
+(<a href="#S1.E3" title="(1.3) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                  <span class="ltx_text ltx_ref_tag">1.3</span>
+                                  </a>) turns into</p>
+                                  <table id="S3.Ex2" class="ltx_equation">
+                                    <tr class="ltx_equation ltx_align_baseline">
+                                      <td class="ltx_eqn_center_padleft"/>
+                                      <td class="ltx_align_center">
+                                        <span class="math display" id="S3.Ex2.m1">\[M^{2}\pm M+1=\left(\frac{2M\pm 1}{2}\right)^{2}+\frac{3}{4}=Y^{q},\]</span>
+                                      </td>
+                                      <td class="ltx_eqn_center_padright"/>
+                                    </tr>
+                                  </table>
+                                  <p class="ltx_p">where
+the “<span class="math inline" id="S3.p6.m6">\(+\)</span>” sign holds in case that <span class="math inline" id="S3.p6.m7">\(k\)</span> is a power of <span class="math inline" id="S3.p6.m8">\(3\)</span> and the
+“<span class="math inline" id="S3.p6.m9">\(-\)</span>” sign holds in case that <span class="math inline" id="S3.p6.m10">\(k\)</span> is a power of <span class="math inline" id="S3.p6.m11">\(6\)</span>. Multiplying
+this equation by <span class="math inline" id="S3.p6.m12">\(4\)</span> and putting <span class="math inline" id="S3.p6.m13">\(X=2M\pm 1\)</span> we get</p>
+                                  <table id="S3.Ex3" class="ltx_equation">
+                                    <tr class="ltx_equation ltx_align_baseline">
+                                      <td class="ltx_eqn_center_padleft"/>
+                                      <td class="ltx_align_center">
+                                        <span class="math display" id="S3.Ex3.m1">\[X^{2}+3=4Y^{q}.\]</span>
+                                      </td>
+                                      <td class="ltx_eqn_center_padright"/>
+                                    </tr>
+                                  </table>
+                                  <p class="ltx_p">
+                                    Due to Luca and Tengely 
+                                    <cite class="ltx_cite">[]</cite> we know
+that <span class="math inline" id="S3.p6.m14">\((X,Y,q)=(1,1,q)\)</span> and <span class="math inline" id="S3.p6.m15">\((37,7,3)\)</span> are the only solutions with
+<span class="math inline" id="S3.p6.m16">\(X,Y,q\geq 1\)</span>. The first solution yields <span class="math inline" id="S3.p6.m17">\(m\in\{0,-1\}\)</span> which we
+have excluded and the second solution yields <span class="math inline" id="S3.p6.m18">\(M=\pm 18\)</span> or <span class="math inline" id="S3.p6.m19">\(M=\pm 19\)</span>. Since both, <span class="math inline" id="S3.p6.m20">\(18\)</span> and <span class="math inline" id="S3.p6.m21">\(19\)</span>, are not perfect powers we conclude
+that <span class="math inline" id="S3.p6.m22">\(k=3\)</span> or <span class="math inline" id="S3.p6.m23">\(k=6\)</span>. We may recover <span class="math inline" id="S3.p6.m24">\(m\)</span> and <span class="math inline" id="S3.p6.m25">\(n\)</span> from the
+substitutions that led to equation (<a href="#S1.E3" title="(1.3) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                    <span class="ltx_text ltx_ref_tag">1.3</span>
+                                  </a>). Therefore we are
+left to check that in case that <span class="math inline" id="S3.p6.m26">\(k=3\)</span> equation
+(<a href="#S1.E1" title="(1.1) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                  <span class="ltx_text ltx_ref_tag">1.1</span>
+                                </a>) has no solution with <span class="math inline" id="S3.p6.m27">\(m=18,-19\)</span>,
+<span class="math inline" id="S3.p6.m28">\(n=2,-3\)</span>, <span class="math inline" id="S3.p6.m29">\(q=3\)</span> and <span class="math inline" id="S3.p6.m30">\(p=1\)</span> and in case that <span class="math inline" id="S3.p6.m31">\(k=6\)</span> equation
+(<a href="#S1.E1" title="(1.1) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                <span class="ltx_text ltx_ref_tag">1.1</span>
+                                </a>) has no solution with <span class="math inline" id="S3.p6.m32">\(m=-18,19\)</span>,
+<span class="math inline" id="S3.p6.m33">\(n=-2,3\)</span>, <span class="math inline" id="S3.p6.m34">\(q=3\)</span> and <span class="math inline" id="S3.p6.m35">\(p=1\)</span>. This is of course easily done e.g. by a
+computer.
+∎</p>
+                              </div>
+                            </div>
+                            <div id="S3.p7" class="ltx_para">
+                              <p class="ltx_p">We are left to the case that <span class="math inline" id="S3.p7.m1">\(k\)</span> is a power of <span class="math inline" id="S3.p7.m2">\(5,7,11,13,17,19\)</span> or
+<span class="math inline" id="S3.p7.m3">\(23\)</span>. Since every solution to (<a href="#S1.E1" title="(1.1) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                              <span class="ltx_text ltx_ref_tag">1.1</span>
+                            </a>) implies a
+solution to the Nagell-Ljunggren equation (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                            <span class="ltx_text ltx_ref_tag">1.4</span>
+                          </a>), the
+following results due to Bugeaud, Hanrot and Mignotte <cite class="ltx_cite">[, Theorem 1
+and 2]</cite> are essential in the proof of Theorem
+<a href="#S1.Thmthm1" title="Theorem 1.1. ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                          <span class="ltx_text ltx_ref_tag">1.1</span>
+                          </a>.</p>
+                        </div>
+                        <div id="S3.Thmthm2" class="ltx_theorem ltx_theorem_theorem">
+                          <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                            <span class="ltx_tag ltx_tag_theorem">Theorem 3.2</span>.</h6>
+                            <div id="S3.Thmthm2.p1" class="ltx_para">
+                              <p class="ltx_p">
+                                <span class="ltx_text ltx_font_italic">The Nagell-Ljunggren equation (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                  <span class="ltx_text ltx_ref_tag">1.4</span>
+                                  </a>) has except the three solutions <span class="math inline" id="S3.Thmthm2.p1.m1">\((x,y,k,q)=(3,11,5,2),(7,20,4,2),(18,7,3,3)\)</span> no further solution in case that</span>
+                                </p>
+                                <ul id="I2" class="ltx_itemize">
+                                  <li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+                                    <span class="ltx_tag ltx_tag_itemize">
+                                      <span class="ltx_text ltx_font_italic">•</span>
+                                    </span>
+                                    <div id="I2.i1.p1" class="ltx_para">
+                                      <p class="ltx_p">
+                                        <span class="math inline" id="I2.i1.p1.m1">\(k\)</span>
+                                        <span class="ltx_text ltx_font_italic"> is a multiple of </span>
+                                        <span class="math inline" id="I2.i1.p1.m2">\(5,7,11\)</span>
+                                        <span class="ltx_text ltx_font_italic"> or </span>
+                                        <span class="math inline" id="I2.i1.p1.m3">\(13\)</span>
+                                        <span class="ltx_text ltx_font_italic">, or</span>
+                                      </p>
+                                    </div>
+                                  </li>
+                                  <li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+                                    <span class="ltx_tag ltx_tag_itemize">
+                                      <span class="ltx_text ltx_font_italic">•</span>
+                                    </span>
+                                    <div id="I2.i2.p1" class="ltx_para">
+                                      <p class="ltx_p">
+                                        <span class="math inline" id="I2.i2.p1.m1">\(k\)</span>
+                                        <span class="ltx_text ltx_font_italic"> is a multiple of </span>
+                                        <span class="math inline" id="I2.i2.p1.m2">\(17,19\)</span>
+                                        <span class="ltx_text ltx_font_italic"> or </span>
+                                        <span class="math inline" id="I2.i2.p1.m3">\(23\)</span>
+                                        <span class="ltx_text ltx_font_italic"> and </span>
+                                        <span class="math inline" id="I2.i2.p1.m4">\(q\neq 17,19\)</span>
+                                        <span class="ltx_text ltx_font_italic"> or </span>
+                                        <span class="math inline" id="I2.i2.p1.m5">\(23\)</span>
+                                        <span class="ltx_text ltx_font_italic"> respectively.</span>
+                                      </p>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div id="S3.p8" class="ltx_para">
+                              <p class="ltx_p">Since the identity (<a href="#S3.E3" title="(3.3) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                <span class="ltx_text ltx_ref_tag">3.3</span>
+                                </a>), we get in case that <span class="math inline" id="S3.p8.m1">\(k=P^{\ell}\)</span> is a prime power</p>
+                                <table id="S3.Ex4" class="ltx_equation">
+                                  <tr class="ltx_equation ltx_align_baseline">
+                                    <td class="ltx_eqn_center_padleft"/>
+                                    <td class="ltx_align_center">
+                                      <span class="math display" id="S3.Ex4.m1">\[\Phi_{k}(X)=\frac{\left(X^{P^{\ell-1}}\right)^{P}-1}{\left(X^{P^{\ell-1}}%
+\right)-1}=\frac{x^{P}-1}{x-1}\]</span>
+                                    </td>
+                                    <td class="ltx_eqn_center_padright"/>
+                                  </tr>
+                                </table>
+                                <p class="ltx_p">with <span class="math inline" id="S3.p8.m2">\(x=X^{P^{\ell-1}}\)</span>. If we assume now that <span class="math inline" id="S3.p8.m3">\(P=5,7,11\)</span> or <span class="math inline" id="S3.p8.m4">\(13\)</span> the only possible
+solutions to (<a href="#S3.E1" title="(3.1) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                                <span class="ltx_text ltx_ref_tag">3.1</span>
+                              </a>) imply that <span class="math inline" id="S3.p8.m5">\(q=1\)</span>. Exchanging the role of
+<span class="math inline" id="S3.p8.m6">\(m\)</span> and <span class="math inline" id="S3.p8.m7">\(n\)</span> we also obtain <span class="math inline" id="S3.p8.m8">\(p=1\)</span> and equation (<a href="#S3.E1" title="(3.1) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                              <span class="ltx_text ltx_ref_tag">3.1</span>
+                              </a>)
+turns into</p>
+                              <table id="S3.Ex5" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="S3.Ex5.m1">\[\zeta_{k}^{j}(-m+\zeta_{k})=-n+\zeta_{k}.\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">Taking norms yields</p>
+                              <table id="S3.Ex6" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="S3.Ex6.m1">\[\frac{m^{k}-1}{m^{k/q}-1}=\frac{n^{k}-1}{n^{k/q}-1},\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">hence <span class="math inline" id="S3.p8.m9">\(m=n\)</span>, which we excluded. Therefore the we are left to the case that <span class="math inline" id="S3.p8.m10">\(k\)</span> is a power of <span class="math inline" id="S3.p8.m11">\(17,19\)</span> or <span class="math inline" id="S3.p8.m12">\(23\)</span>.</p>
+                            </div>
+                            <div id="S3.p9" class="ltx_para">
+                              <p class="ltx_p">Before we consider the remaining cases we want to remind the reader
+that an integral basis for <span class="math inline" id="S3.p9.m1">\({\mathbb{Z}}[\zeta_{k}]\)</span> is given by
+<span class="math inline" id="S3.p9.m2">\(\{1,\zeta_{k},\ldots,\zeta_{k}^{\phi(k)-1}\}\)</span> and therefore every
+algebraic integer <span class="math inline" id="S3.p9.m3">\(\alpha\in{\mathbb{Z}}[\zeta_{k}]\)</span> has a unique representation
+of the form</p>
+                              <table id="S3.E4" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_left">
+                                    <span class="ltx_tag ltx_tag_equation">(3.4)</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="S3.E4.m1">\[\alpha=\sum_{i=0}^{\phi(k)-1}a_{i}\zeta_{k}^{i},\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">with <span class="math inline" id="S3.p9.m4">\(a_{i}\in{\mathbb{Z}}\)</span> for <span class="math inline" id="S3.p9.m5">\(0\leq i&lt;\phi(k)\)</span>. In the following we will expand
+the left and right side of equation (<a href="#S3.E1" title="(3.1) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                              <span class="ltx_text ltx_ref_tag">3.1</span>
+                            </a>) in various
+cases and bring the result into the unique form (<a href="#S3.E4" title="(3.4) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                            <span class="ltx_text ltx_ref_tag">3.4</span>
+                          </a>). We will
+show below that on the left and right side of (<a href="#S3.E1" title="(3.1) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                          <span class="ltx_text ltx_ref_tag">3.1</span>
+                        </a>) the
+unique representations (<a href="#S3.E4" title="(3.4) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                        <span class="ltx_text ltx_ref_tag">3.4</span>
+                      </a>) do not match and conclude that
+no solution to (<a href="#S3.E1" title="(3.1) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                      <span class="ltx_text ltx_ref_tag">3.1</span>
+                    </a>) and hence no solution to
+(<a href="#S1.E1" title="(1.1) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                    <span class="ltx_text ltx_ref_tag">1.1</span>
+                    </a>) exists.</p>
+                  </div>
+                  <div id="S3.p10" class="ltx_para">
+                    <p class="ltx_p">Assume that (<a href="#S3.E1" title="(3.1) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                      <span class="ltx_text ltx_ref_tag">3.1</span>
+                    </a>) has a solution <span class="math inline" id="S3.p10.m1">\((m,n,p,q,j)\)</span>. In case that <span class="math inline" id="S3.p10.m2">\(k\)</span> is a power of <span class="math inline" id="S3.p10.m3">\(17,19\)</span> or <span class="math inline" id="S3.p10.m4">\(23\)</span> Theorem <a href="#S3.Thmthm2" title="Theorem 3.2. ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                    <span class="ltx_text ltx_ref_tag">3.2</span>
+                  </a> implies that the only
+prime divisors of <span class="math inline" id="S3.p10.m5">\(p\)</span> and <span class="math inline" id="S3.p10.m6">\(q\)</span> in equation (<a href="#S1.E1" title="(1.1) ‣ 1. Introduction ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                  <span class="ltx_text ltx_ref_tag">1.1</span>
+                </a>) are <span class="math inline" id="S3.p10.m7">\(17,19\)</span>
+or <span class="math inline" id="S3.p10.m8">\(23\)</span> respectively. Therefore we are left to equation (<a href="#S3.E1" title="(3.1) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                <span class="ltx_text ltx_ref_tag">3.1</span>
+                </a>), with <span class="math inline" id="S3.p10.m9">\(p=1\)</span> and <span class="math inline" id="S3.p10.m10">\(q=17,19\)</span> or <span class="math inline" id="S3.p10.m11">\(23\)</span>. Note that in case of <span class="math inline" id="S3.p10.m12">\(k=q\)</span> we have</p>
+                <table id="Sx1.EGx2" class="ltx_equationgroup ltx_eqn_align">
+                  <tr id="S3.Ex7" class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_td ltx_align_right">
+                      <span class="math inline" id="S3.Ex7.m1">\(\displaystyle(-n+\zeta_{k})^{k}=\)</span>
+                    </td>
+                    <td class="ltx_td ltx_align_left">
+                      <span class="math inline" id="S3.Ex7.m2">\(\displaystyle\sum_{i=0}^{k}(-n)^{k-i}{k\choose i}\zeta_{k}^{i}\)</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                  <tr id="S3.Ex8" class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_td ltx_align_right">
+                      <span class="math inline" id="S3.Ex8.m1">\(\displaystyle=\)</span>
+                    </td>
+                    <td class="ltx_td ltx_align_left">
+                      <span class="math inline" id="S3.Ex8.m2">\(\displaystyle\sum_{i=0}^{k-2}\left((-n)^{k-i}{k\choose i}+kn\right)\zeta_{k}^{%
+i}+1=\sum_{i=0}^{k-2}p_{k,i}(n)\zeta_{k}^{i}.\)</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+              </div>
+              <div id="S3.p11" class="ltx_para">
+                <p class="ltx_p">Let us assume that <span class="math inline" id="S3.p11.m1">\(0\leq j&lt;k-2\)</span>. Then with <span class="math inline" id="S3.p11.m2">\(p=1\)</span> and <span class="math inline" id="S3.p11.m3">\(k=q\)</span>, either the coefficients <span class="math inline" id="S3.p11.m4">\(p_{k,0}(n)\)</span> and
+<span class="math inline" id="S3.p11.m5">\(p_{k,1}(n)\)</span> have to
+vanish simultaneously or the coefficients <span class="math inline" id="S3.p11.m6">\(p_{k,3}(n)\)</span> and <span class="math inline" id="S3.p11.m7">\(p_{k,4}(n)\)</span> vanish simultaneously. Since</p>
+                <table id="S3.Ex9" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S3.Ex9.m1">\[\gcd(p_{17,0}(n),p_{17,1}(n))=\gcd(-n^{17}+17n+1,17n^{16}+17n)=1\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">as polynomials in <span class="math inline" id="S3.p11.m8">\(n\)</span>, the coefficients cannot vanish simultaneously. Similarly we obtain</p>
+                <table id="Sx1.EGx3" class="ltx_equationgroup ltx_eqn_gather">
+                  <tr id="S3.Ex10" class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math inline" id="S3.Ex10.m1">\(\displaystyle\gcd(p_{19,0}(n),p_{19,1}(n))=\gcd(p_{23,0}(n),p_{23,1}(n))=1\)</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                  <tr id="S3.Ex11" class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math inline" id="S3.Ex11.m1">\(\displaystyle\gcd(p_{17,3}(n),p_{17,4}(n))=17n,\quad\gcd(p_{19,3}(n),p_{19,4}(%
+n))=19n,\)</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                  <tr id="S3.Ex12" class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math inline" id="S3.Ex12.m1">\(\displaystyle\gcd(p_{23,3}(n),p_{23,4}(n))=23n,\)</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">where we consider the <span class="math inline" id="S3.p11.m9">\(\gcd\)</span> taken over the polynomial ring <span class="math inline" id="S3.p11.m10">\({\mathbb{Z}}[n]\)</span>. Therefore we deduce <span class="math inline" id="S3.p11.m11">\(n=0\)</span>, a solution which we excluded.</p>
+              </div>
+              <div id="S3.p12" class="ltx_para">
+                <p class="ltx_p">Now consider the case that <span class="math inline" id="S3.p12.m1">\(k=q\)</span> and <span class="math inline" id="S3.p12.m2">\(j=k-2\)</span>. In this case equation (<a href="#S3.E1" title="(3.1) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                  <span class="ltx_text ltx_ref_tag">3.1</span>
+                  </a>) turns into</p>
+                  <table id="S3.Ex13" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S3.Ex13.m1">\[-(m+1)-\zeta_{k}-\cdots-\zeta_{k}^{k-2}=(-n+\zeta_{k})^{k}=\sum_{i=0}^{k-2}p_{%
+k,i}(n)\zeta_{k}^{i}.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">Considering the coefficient of <span class="math inline" id="S3.p12.m3">\(\zeta_{k}\)</span> we have</p>
+                  <table id="S3.Ex14" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S3.Ex14.m1">\[-1=-kn(1+n^{k-2})\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">which cannot hold if <span class="math inline" id="S3.p12.m4">\(n>1\)</span>.
+Similarly for <span class="math inline" id="S3.p12.m5">\(k=j-1\)</span> we obtain</p>
+                  <table id="S3.Ex15" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S3.Ex15.m1">\[(m+1)+m\zeta_{k}+\cdots+m\zeta_{k}^{k-2}=(-n+\zeta_{k})^{k}=\sum_{i=0}^{k-2}p_%
+{k,i}(n)\zeta_{k}^{i}.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">And in particular the coefficients of <span class="math inline" id="S3.p12.m6">\(\zeta_{k}\)</span> and <span class="math inline" id="S3.p12.m7">\(\zeta_{k}^{2}\)</span> have to be equal, i.e.</p>
+                  <table id="S3.Ex16" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S3.Ex16.m1">\[-nk-kn^{k-1}=\frac{k(k-1)n^{2}}{2}-kn^{k-1},\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">or equivalently</p>
+                  <table id="S3.Ex17" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="S3.Ex17.m1">\[0=nk(nk-n+2).\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">The last equation can only hold if <span class="math inline" id="S3.p12.m8">\(n\)</span> or <span class="math inline" id="S3.p12.m9">\(k\)</span> is zero or <span class="math inline" id="S3.p12.m10">\(nk-n+2=0\)</span> which implies <span class="math inline" id="S3.p12.m11">\(k=0\)</span> and <span class="math inline" id="S3.p12.m12">\(n=2\)</span>. Since all these options are excluded this case cannot
+occur.</p>
+                </div>
+                <div id="S3.p13" class="ltx_para">
+                  <p class="ltx_p">Now let us consider the case that <span class="math inline" id="S3.p13.m1">\(k=q^{\ell}\)</span>, with <span class="math inline" id="S3.p13.m2">\(\ell>1\)</span>, and <span class="math inline" id="S3.p13.m3">\(q=17,19\)</span> or <span class="math inline" id="S3.p13.m4">\(23\)</span>. If <span class="math inline" id="S3.p13.m5">\(j&lt;\phi(k)-1\)</span> in (<a href="#S3.E1" title="(3.1) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                    <span class="ltx_text ltx_ref_tag">3.1</span>
+                    </a>) then all coefficients <span class="math inline" id="S3.p13.m6">\(\zeta_{k}^{i}\)</span>
+with <span class="math inline" id="S3.p13.m7">\(0\leq i&lt;\phi(k)\)</span> of <span class="math inline" id="S3.p13.m8">\(\zeta_{k}^{j}(-m+\zeta_{k})\)</span> vanish except exactly two. Indeed we have</p>
+                    <table id="S3.Ex18" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S3.Ex18.m1">\[\zeta_{k}^{j}(-m+\zeta_{k})=-m\zeta_{k}^{j}+\zeta_{k}^{j+1}.\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">On the right side of (<a href="#S3.E1" title="(3.1) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                      <span class="ltx_text ltx_ref_tag">3.1</span>
+                      </a>) all the coefficients of <span class="math inline" id="S3.p13.m9">\(\zeta_{k}^{i}\)</span> with <span class="math inline" id="S3.p13.m10">\(0\leq i\leq q\)</span> do not vanish, i.e. a contradiction.</p>
+                    </div>
+                    <div id="S3.p14" class="ltx_para">
+                      <p class="ltx_p">In case that <span class="math inline" id="S3.p14.m1">\(j=\phi(k)+r\)</span> for some <span class="math inline" id="S3.p14.m2">\(0\leq r&lt;k-\phi(k)-1=q^{\ell-1}-1\)</span> we have</p>
+                      <table class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="S3.p14.m3">\[(-m+\zeta_{k})\zeta_{k}^{j}=(-m+\zeta_{k})\left(-\zeta_{k}^{r}-\zeta_{k}^{r+q^%
+{\ell-1}}-\zeta_{k}^{r+2q^{\ell-1}}-\cdots-\zeta_{k}^{r+(q-2)q^{\ell-1}}\right%
+)\\
+=-m\zeta_{k}^{r}+\zeta_{k}^{r+1}-\cdots-m\zeta_{k}^{r+(q-2)q^{\ell-1}}+\zeta_{%
+k}^{r+1+(q-2)q^{\ell-1}}\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">i.e. there exist non vanishing coefficients of <span class="math inline" id="S3.p14.m4">\(\zeta_{k}^{i}\)</span> with <span class="math inline" id="S3.p14.m5">\(i>q\)</span>. But on the right side of (<a href="#S3.E1" title="(3.1) ‣ 3. Multiplicative independence ‣ An infinite family of multiplicatively independent bases of number systems in cyclotomic number fields" class="ltx_ref">
+                        <span class="ltx_text ltx_ref_tag">3.1</span>
+                        </a>) all coefficients of <span class="math inline" id="S3.p14.m6">\(\zeta_{k}^{i}\)</span>
+vanish for <span class="math inline" id="S3.p14.m7">\(i>q\)</span> and again no solution is possible.</p>
+                      </div>
+                      <div id="S3.p15" class="ltx_para">
+                        <p class="ltx_p">We are left to the two cases that <span class="math inline" id="S3.p15.m1">\(j=\phi(k)-1\)</span> and <span class="math inline" id="S3.p15.m2">\(j=k-1\)</span>. In both cases it is easy to see that <span class="math inline" id="S3.p15.m3">\(\zeta_{k}^{j}(-m+\zeta_{k})\)</span> has non vanishing coefficients of
+<span class="math inline" id="S3.p15.m4">\(\zeta_{k}^{i}\)</span> for <span class="math inline" id="S3.p15.m5">\(i>q\)</span> and we deduce again a contradiction.</p>
+                      </div>
+                    </section>
+                    <section id="Sx1" class="ltx_section">
+                      <h2 class="ltx_title ltx_title_section">Acknowledgment</h2>
+                      <div id="Sx1.p1" class="ltx_para">
+                        <p class="ltx_p">The authors want to thank Shigeki Akiyama (University of Tsukuba) for
+pointing them to the refinement of Pethő <cite class="ltx_cite">[, Theorem
+7.1]</cite>.</p>
+                      </div>
+                    </section>
+                    <div class="ltx_rdf" about="" property="dcterms:creator"/>
+                    <div class="ltx_rdf" about="" property="dcterms:subject"/>
+                    <div class="ltx_rdf" about="" property="dcterms:subject" content="Mathematics"/>
+                    <div class="ltx_rdf" about="" property="dcterms:title"/>
+                  </article>
+                </div>
+                <footer class="ltx_page_footer">
+                  <div class="ltx_page_logo">Generated  on Thu Jan 19 18:36:49 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"/>
+                  </a>
+                </div>
+              </footer>
+            </div>
+          </body>
+        </html>

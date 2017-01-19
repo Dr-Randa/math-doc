@@ -1,0 +1,1016 @@
+<html>
+  <head>
+    <title>On the Average of Triangular Numbers</title>
+    <!--Generated on Thu Jan 19 18:36:53 2017 by LaTeXML (version 0.8.1) http://dlmf.nist.gov/LaTeXML/.-->
+    <!--Document created on .-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="LaTeXML.css" type="text/css"/>
+    <link rel="stylesheet" href="ltx-article.css" type="text/css"/>
+    <script type="text/x-sre-config">
+{"json": "https://cdn.mathjax.org/mathjax/contrib/a11y/mathmaps"}
+</script>
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: {autoNumber: "AMS"} },
+  MMLorHTML: {MSIE: "HTML"},
+  AssistiveMML: {disabled: true},
+  "fast-preview": {disabled: true}
+});
+MathJax.Ajax.config.path["SRE"] = "../mathjax";
+</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"> </script>
+  </head>
+  <body>
+    <div class="ltx_page_main">
+      <div class="ltx_page_content">
+        <article class="ltx_document ltx_authors_1line">
+          <h1 class="ltx_title ltx_title_document">On the Average of Triangular Numbers</h1>
+          <div class="ltx_authors">
+            <span class="ltx_creator ltx_role_author">
+              <span class="ltx_personname">Mario Catalani
+<br class="ltx_break"/>Department of Economics, University of Torino
+<br class="ltx_break"/>Via Po 53, 10124 Torino, Italy
+<br class="ltx_break"/>mario.catalani@unito.it
+</span>
+            </span>
+          </div>
+          <div class="ltx_abstract">
+            <h6 class="ltx_title ltx_title_abstract">Abstract</h6>
+            <p class="ltx_p">The problem we are dealing with is the following: find two sequences
+<span class="math inline" id="m1">\(a_{n}\)</span> and <span class="math inline" id="m2">\(b_{n}\)</span>
+such that the average of the first <span class="math inline" id="m3">\(b_{n}\)</span> triangular numbers (starting with
+the triangular number 1) is still a triangular number, precisely
+the <span class="math inline" id="m4">\(a_{n}\)</span>-th triangular number. We get also some side
+results: for instance one of the sequence instrumental to finding
+the asked for sequences turns out to be a bisection of
+the sequence of the numerators
+of continued fraction convergents to <span class="math inline" id="m5">\(\sqrt{3}\)</span>.</p>
+          </div>
+          <div id="p1" class="ltx_para">
+            <br class="ltx_break"/>
+          </div>
+          <div id="p2" class="ltx_para">
+            <br class="ltx_break"/>
+          </div>
+          <div id="p3" class="ltx_para">
+            <p class="ltx_p">The present note has been suggested by a problem proposed in the ”Student
+Problems” section of <span class="ltx_text ltx_font_italic">
+            The Mathematical Gazette</span> (see 
+            <cite class="ltx_cite">[]</cite>).
+The problem we tackle is the following: find two sequences <span class="math inline" id="p3.m1">\(a_{n}\)</span> and <span class="math inline" id="p3.m2">\(b_{n}\)</span>
+such that the average of the first <span class="math inline" id="p3.m3">\(b_{n}\)</span> triangular numbers (starting with
+the triangular number 1) is still a triangular number, precisely
+the <span class="math inline" id="p3.m4">\(a_{n}\)</span>-th triangular number.</p>
+          </div>
+          <div id="p4" class="ltx_para">
+            <p class="ltx_p">If we want that the average of the first <span class="math inline" id="p4.m1">\(s\)</span> triangular number be a
+triangular number it has to hold</p>
+            <table id="S0.Ex1" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.Ex1.m1">\[{1\over s}\sum_{k=1}^{s}{k(k+1)\over 2}={r(r+1)\over 2},\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">for some positive integer <span class="math inline" id="p4.m2">\(r\)</span>. This becomes</p>
+            <table id="S0.Ex2" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.Ex2.m1">\[{(s+1)(2s+4)\over 12}={r(r+1)\over 2},\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">that is, clearing the
+fractions,</p>
+            <table id="S0.E1" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.E1.m1">\[s^{2}+3s+2=3r^{2}+3r.\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+                <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                  <span class="ltx_tag ltx_tag_equation">(1)</span>
+                </td>
+              </tr>
+            </table>
+            <p class="ltx_p">Solving for <span class="math inline" id="p4.m3">\(s\)</span> and considering that <span class="math inline" id="p4.m4">\(s\)</span> has to be a positive quantity
+we have the solution</p>
+            <table id="S0.Ex3" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.Ex3.m1">\[s={-3+\sqrt{1+12r+12r^{2}}\over 2}.\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">Now because <span class="math inline" id="p4.m5">\(s\)</span> has to be an integer we need <span class="math inline" id="p4.m6">\(r\)</span> such that <span class="math inline" id="p4.m7">\(1+12r+12r^{2}\)</span>
+is a perfect square; also <span class="math inline" id="p4.m8">\(\sqrt{1+12r+12r^{2}}-3\)</span> has to be even.</p>
+          </div>
+          <div id="p5" class="ltx_para">
+            <p class="ltx_p">Consider the nonhomogeneous recurrence
+<span class="math inline" id="p5.m1">\(w_{n}=w(k,\,r,\,s)\)</span> defined by</p>
+            <table id="S0.Ex4" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.Ex4.m1">\[w_{n}=4w_{n-1}-w_{n-2}+k,\quad w_{0}=r,\,w_{1}=s.\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">Let <span class="math inline" id="p5.m2">\(\alpha\)</span> and <span class="math inline" id="p5.m3">\(\beta\)</span> be the zeros of the polynomial <span class="math inline" id="p5.m4">\(x^{2}-4x+1\)</span>,
+that is <span class="math inline" id="p5.m5">\(\alpha=2+\sqrt{3},\,\beta=2-\sqrt{3}\)</span>. Note that <span class="math inline" id="p5.m6">\(\alpha+\beta=4,\,\alpha\beta=1,\,\alpha-\beta=2\sqrt{3},\,\alpha^{2}+\beta^{2}%
+=14\)</span>.</p>
+          </div>
+          <div id="p6" class="ltx_para">
+            <p class="ltx_p">It is useful to introduce the homogeneous sequence <span class="math inline" id="p6.m1">\(L_{n}=w(0,\,2,4)\)</span>
+given by</p>
+            <table id="S0.Ex5" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.Ex5.m1">\[L_{n}=4L_{n-1}-L_{n-2}.\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">This sequence is the analogous in this context of the Lucas numbers.
+The closed form of <span class="math inline" id="p6.m2">\(L_{n}\)</span> is</p>
+            <table id="S0.Ex6" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.Ex6.m1">\[L_{n}=\alpha^{n}+\beta^{n}.\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">The generating function of <span class="math inline" id="p6.m3">\(w_{n}\)</span> is given by</p>
+            <table id="S0.Ex7" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.Ex7.m1">\[g(x)={r+(s-5r)x+(k+4r-s)x^{2}\over(1-x)(1-4x+x^{2})},\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">from which we get the closed form
+</p>
+            <table id="S0.E2" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.E2.m1">\[w_{n}=-{k\over 2}+{s\alpha+(k+4r-s)\beta+k-2r\over 12}\alpha^{n}+{s\beta+(k+4r%
+-s)\alpha+k-2r\over 12}\beta^{n}.\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+                <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                  <span class="ltx_tag ltx_tag_equation">(2)</span>
+                </td>
+              </tr>
+            </table>
+            <p class="ltx_p">It may be useful to write the RHS in terms of the <span class="math inline" id="p6.m4">\(L_{n}\)</span> sequence</p>
+            <table id="S0.E3" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.E3.m1">\[w_{n}=-{k\over 2}+{4s+k-2r\over 12}L_{n}+{k+4r-2s\over 12}L_{n-1}.\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+                <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                  <span class="ltx_tag ltx_tag_equation">(3)</span>
+                </td>
+              </tr>
+            </table>
+            <p class="ltx_p">Now introduce the sequence <span class="math inline" id="p6.m5">\(a_{n}=w(1,\,0,\,1)\)</span>. <span class="math inline" id="p6.m6">\(a_{n}\)</span> is sequence A061278 in
+<cite class="ltx_cite">[]</cite>: the first values are <span class="math inline" id="p6.m7">\(0,\,1,\,5,\,20,\,76,\,285,\,\ldots\)</span>.
+Using
+Equation <a href="#S0.E3" title="(3) ‣ On the Average of Triangular Numbers" class="ltx_ref">
+            <span class="ltx_text ltx_ref_tag">3</span>
+            </a> we get</p>
+            <table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray">
+              <tr id="S0.Ex10" class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right">
+                  <span class="math inline" id="S0.Ex8.m1">\(\displaystyle a_{n}\)</span>
+                </td>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex8.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex8.m3">\(\displaystyle{5\over 12}L_{n}-{1\over 12}L_{n-1}-{1\over 2}\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex9.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex9.m3">\(\displaystyle{L_{n}+4L_{n}-L_{n-1}-6\over 12}\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex10.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex10.m3">\(\displaystyle{L_{n}+L_{n+1}-6\over 12}.\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">Note that</p>
+            <table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray">
+              <tr id="S0.Ex13" class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right">
+                  <span class="math inline" id="S0.Ex11.m1">\(\displaystyle L_{n}^{2}\)</span>
+                </td>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex11.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex11.m3">\(\displaystyle(\alpha^{n}+\beta^{n})^{2}\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex12.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex12.m3">\(\displaystyle\alpha^{2n}+\beta^{2n}+2\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex13.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex13.m3">\(\displaystyle L_{2n}+2,\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray">
+              <tr id="S0.Ex17" class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right">
+                  <span class="math inline" id="S0.Ex14.m1">\(\displaystyle L_{n}L_{n+1}\)</span>
+                </td>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex14.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex14.m3">\(\displaystyle(\alpha^{n}+\beta^{n})(\alpha^{n+1}+\beta^{n+1})\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex15.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex15.m3">\(\displaystyle\alpha^{2n+1}+\alpha^{n}\beta^{n+1}+\alpha^{n+1}\beta^{n}+\beta^{%
+2n+1}\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex16.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex16.m3">\(\displaystyle L_{2n+1}+\alpha+\beta\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex17.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex17.m3">\(\displaystyle L_{2n+1}+4.\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">Then</p>
+            <table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray">
+              <tr id="S0.Ex20" class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right">
+                  <span class="math inline" id="S0.Ex18.m1">\(\displaystyle 1+12a_{n}+12a_{n}^{2}\)</span>
+                </td>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex18.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex18.m3">\(\displaystyle{-12+L_{2n}+2L_{2n+1}+L_{2n+2}\over 12}\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex19.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex19.m3">\(\displaystyle{-12+6L_{2n+1}\over 12}\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex20.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex20.m3">\(\displaystyle-1+{L_{2n+1}\over 2},\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">where we used the recurrence defining <span class="math inline" id="p6.m8">\(L_{n}\)</span>. Now we are going to show
+that this expression is a perfect square. Write</p>
+            <table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_eqnarray">
+              <tr id="S0.Ex22" class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right">
+                  <span class="math inline" id="S0.Ex21.m1">\(\displaystyle-1+{L_{2n+1}\over 2}\)</span>
+                </td>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex21.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex21.m3">\(\displaystyle{1\over 2}\alpha^{2n+1}+{1\over 2}\beta^{2n+1}-1\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex22.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex22.m3">\(\displaystyle\left({1\over\sqrt{2}}\alpha^{n+{1\over 2}}-{1\over\sqrt{2}}\beta%
+^{n+{1\over 2}}\right)^{2}.\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">Hence it remains to prove that</p>
+            <table id="S0.Ex23" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.Ex23.m1">\[u_{n}={1\over\sqrt{2}}\alpha^{n+{1\over 2}}-{1\over\sqrt{2}}\beta^{n+{1\over 2}}\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">is a positive integer. This will be done by strong induction. First of all
+note that</p>
+            <table id="A0.EGx6" class="ltx_equationgroup ltx_eqn_eqnarray">
+              <tr id="S0.Ex25" class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right">
+                  <span class="math inline" id="S0.Ex24.m1">\(\displaystyle\left(\alpha^{1\over 2}-\beta^{1\over 2}\right)^{2}\)</span>
+                </td>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex24.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex24.m3">\(\displaystyle\alpha+\beta-2\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex25.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex25.m3">\(\displaystyle 2,\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">so that we will take <span class="math inline" id="p6.m9">\(\alpha^{1\over 2}-\beta^{1\over 2}=\sqrt{2}\)</span>. Then
+<span class="math inline" id="p6.m10">\(u_{0}=1\)</span>. Next assume that <span class="math inline" id="p6.m11">\(u_{n}\)</span> is a positive integer for <span class="math inline" id="p6.m12">\(n\leq n_{0}\)</span>. It
+follows that <span class="math inline" id="p6.m13">\(u_{n_{0}}(\alpha+\beta)=4u_{n_{0}}\)</span> is a positive integer. But</p>
+            <table id="A0.EGx7" class="ltx_equationgroup ltx_eqn_eqnarray">
+              <tr id="S0.Ex30" class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right">
+                  <span class="math inline" id="S0.Ex26.m1">\(\displaystyle u_{n_{0}}(\alpha+\beta)\)</span>
+                </td>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex26.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex26.m3">\(\displaystyle{1\over\sqrt{2}}\left(\alpha^{n_{0}+{1\over 2}}-\beta^{n_{0}+{1%
+\over 2}}\right)(\alpha+\beta)\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex27.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex27.m3">\(\displaystyle{1\over\sqrt{2}}\alpha^{n_{0}+1+{1\over 2}}+{1\over\sqrt{2}}%
+\alpha^{n_{0}+{1\over 2}}\beta-{1\over\sqrt{2}}\alpha\beta^{n_{0}+{1\over 2}}-%
+{1\over\sqrt{2}}\beta^{n_{0}+1+{1\over 2}}\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex28.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex28.m3">\(\displaystyle{1\over\sqrt{2}}\left(\alpha^{n_{0}+1+{1\over 2}}-\beta^{n_{0}+1+%
+{1\over 2}}\right)+{1\over\sqrt{2}}\left(\alpha^{n_{0}-{1\over 2}}-\beta^{n_{0%
+}-{1\over 2}}\right)\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex29.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex29.m3">\(\displaystyle{1\over\sqrt{2}}\left(\alpha^{n_{0}+1+{1\over 2}}-\beta^{n_{0}+1+%
+{1\over 2}}\right)+{1\over\sqrt{2}}\left(\alpha^{n_{0}-1+{1\over 2}}-\beta^{n_%
+{0}-1+{1\over 2}}\right)\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex30.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex30.m3">\(\displaystyle u_{n_{0}+1}+u_{n_{0}-1}.\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">Because by the induction hypothesis <span class="math inline" id="p6.m14">\(u_{n_{0}-1}\)</span> is a positive integer, it
+follows that <span class="math inline" id="p6.m15">\(u_{n_{0}+1}\)</span> is a positive integer. This ends the induction
+proof.</p>
+          </div>
+          <div id="p7" class="ltx_para">
+            <p class="ltx_p">As a side result we get that <span class="math inline" id="p7.m1">\(u_{n}\)</span> obeys the recurrence</p>
+            <table id="S0.Ex31" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.Ex31.m1">\[u_{n}=4u_{n-1}-u_{n-2},\quad u_{0}=1,\,u_{1}=5,\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">since <span class="math inline" id="p7.m2">\(\alpha^{3\over 2}-\beta^{3\over 2}=\sqrt{50}=5\sqrt{2}\)</span>. <span class="math inline" id="p7.m3">\(u_{n}\)</span> is
+sequence A001834 in <cite class="ltx_cite">[]</cite>.</p>
+          </div>
+          <div id="p8" class="ltx_para">
+            <p class="ltx_p">It remains to prove that <span class="math inline" id="p8.m1">\(u_{n}\)</span> is odd which is the same as to prove that
+<span class="math inline" id="p8.m2">\({L_{2n+1}\over 2}\)</span> is even, which means that <span class="math inline" id="p8.m3">\(L_{2n+1}\)</span> is a multiple of 4.
+Again this will be done by strong induction.
+For <span class="math inline" id="p8.m4">\(n=0\)</span> we have <span class="math inline" id="p8.m5">\(L_{1}=4\)</span>. Next assume that <span class="math inline" id="p8.m6">\(L_{2n+1}\)</span> is a multiple of 4
+for <span class="math inline" id="p8.m7">\(n\leq n_{0}\)</span>,
+that is <span class="math inline" id="p8.m8">\(L_{2n+1}=4c_{n}\)</span>, where <span class="math inline" id="p8.m9">\(c_{n}\)</span> is a positive integer.
+Then</p>
+            <table id="A0.EGx8" class="ltx_equationgroup ltx_eqn_eqnarray">
+              <tr id="S0.Ex36" class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right">
+                  <span class="math inline" id="S0.Ex32.m1">\(\displaystyle L_{2n_{0}+1}(\alpha^{2}+\beta^{2})\)</span>
+                </td>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex32.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex32.m3">\(\displaystyle 4c_{n_{0}}\cdot 14\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex33.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex33.m3">\(\displaystyle\alpha^{2n_{0}+3}+\alpha^{2n_{0}+1}\beta^{2}+\alpha^{2}\beta^{2n_%
+{0}+1}+\beta^{2n_{0}+3}\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex34.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex34.m3">\(\displaystyle\alpha^{2(n_{0}+1)+1}+\beta^{2(n_{0}+1)+1}+\alpha^{2(n_{0}-1)+1}+%
+\beta^{2(n_{0}-1)+1}\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex35.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex35.m3">\(\displaystyle L_{2(n_{0}+1)+1}+L_{2(n_{0}-1)+1}\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex36.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex36.m3">\(\displaystyle L_{2(n_{0}+1)+1}+4c_{n_{0}-1}.\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">Then</p>
+            <table id="S0.Ex37" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.Ex37.m1">\[L_{2(n_{0}+1)+1}=4c_{n_{0}}\cdot 14-4c_{n_{0}-1},\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">that is, a multiple of 4.</p>
+          </div>
+          <div id="p9" class="ltx_para">
+            <p class="ltx_p">It follows that</p>
+            <table id="S0.Ex38" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="S0.Ex38.m1">\[b_{n}={u_{n}-3\over 2}.\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">Hence</p>
+            <table id="A0.EGx9" class="ltx_equationgroup ltx_eqn_eqnarray">
+              <tr id="S0.Ex42" class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right">
+                  <span class="math inline" id="S0.Ex39.m1">\(\displaystyle 4b_{n-1}-b_{n-2}+3\)</span>
+                </td>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex39.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex39.m3">\(\displaystyle 2u_{n-1}-6-{1\over 2}u_{n-2}+{3\over 2}+3\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex40.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex40.m3">\(\displaystyle{4u_{n-1}-u_{n-2}-3\over 2}\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex41.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex41.m3">\(\displaystyle{u_{n}-3\over 2}\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+              <tr class="ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_td ltx_align_right"/>
+                <td class="ltx_td ltx_align_center">
+                  <span class="math inline" id="S0.Ex42.m2">\(\displaystyle=\)</span>
+                </td>
+                <td class="ltx_td ltx_align_left">
+                  <span class="math inline" id="S0.Ex42.m3">\(\displaystyle b_{n}.\)</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">The initial values are <span class="math inline" id="p9.m1">\(b_{0}=-1,\,b_{1}=1\)</span>.
+It follows that <span class="math inline" id="p9.m2">\(b_{n}=w(3,\,-1,\,1)\)</span>.
+The initial values are
+<span class="math inline" id="p9.m3">\(-1,\,1,\,8,\,34,\,131,\,493,\,\ldots\)</span>.</p>
+          </div>
+          <div id="p10" class="ltx_para">
+            <p class="ltx_p">If we solve Equation <a href="#S0.E1" title="(1) ‣ On the Average of Triangular Numbers" class="ltx_ref">
+              <span class="ltx_text ltx_ref_tag">1</span>
+              </a> for <span class="math inline" id="p10.m1">\(r\)</span>, being <span class="math inline" id="p10.m2">\(r\)</span> a positive
+quantity, we obtain</p>
+              <table id="S0.Ex43" class="ltx_equation">
+                <tr class="ltx_equation ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_align_center">
+                    <span class="math display" id="S0.Ex43.m1">\[r={\sqrt{3}\sqrt{11+12s^{2}+4s^{2}}-3\over 6}.\]</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+              <p class="ltx_p">If we define</p>
+              <table id="S0.Ex44" class="ltx_equation">
+                <tr class="ltx_equation ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_align_center">
+                    <span class="math display" id="S0.Ex44.m1">\[v_{n}^{2}=3(11+12b_{n}+4b_{n}^{2}),\]</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+              <p class="ltx_p">after insertion of the value of <span class="math inline" id="p10.m3">\(b_{n}\)</span> we get</p>
+              <table id="S0.Ex45" class="ltx_equation">
+                <tr class="ltx_equation ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_align_center">
+                    <span class="math display" id="S0.Ex45.m1">\[v_{n}^{2}=3(u_{n}^{2}+2),\]</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+              <p class="ltx_p">that is</p>
+              <table id="S0.Ex46" class="ltx_equation">
+                <tr class="ltx_equation ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_align_center">
+                    <span class="math display" id="S0.Ex46.m1">\[v_{n}^{2}={3\over 2}(L_{2n+1}+2).\]</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+              <p class="ltx_p">Essentially repeating the previous reasoning
+we find that <span class="math inline" id="p10.m4">\(v_{n}\)</span> is a positive integer <span class="math inline" id="p10.m5">\(\forall\,n\)</span> and we have
+the recurrence</p>
+              <table id="S0.Ex47" class="ltx_equation">
+                <tr class="ltx_equation ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_align_center">
+                    <span class="math display" id="S0.Ex47.m1">\[v_{n}=4v_{n-1}-v_{n-2},\quad v_{0}=3,\,v_{1}=9,\]</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+              <p class="ltx_p">that is <span class="math inline" id="p10.m6">\(v_{n}=w(0,\,3,\,9)\)</span>. Also we get the closed form</p>
+              <table id="S0.Ex48" class="ltx_equation">
+                <tr class="ltx_equation ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_align_center">
+                    <span class="math display" id="S0.Ex48.m1">\[v_{n}=\sqrt{{3\over 2}}\left(\alpha^{n+{1\over 2}}+\beta^{n+{1\over 2}}\right).\]</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+              <p class="ltx_p">Furthermore</p>
+              <table id="S0.Ex49" class="ltx_equation">
+                <tr class="ltx_equation ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_align_center">
+                    <span class="math display" id="S0.Ex49.m1">\[v_{n}\equiv 3\;\;(\mathop{{\rm mod}}6).\]</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+              <p class="ltx_p">This can be proved easily by strong induction, noting that <span class="math inline" id="p10.m7">\(v_{0}=3\)</span> and
+assuming that for all <span class="math inline" id="p10.m8">\(n\leq n_{0}\)</span> the former equation holds.
+Writing <span class="math inline" id="p10.m9">\(v_{n_{0}}=6k_{1}+3,\,v_{n_{0}-1}=6k_{2}+3\)</span> we have</p>
+              <table id="A0.EGx10" class="ltx_equationgroup ltx_eqn_eqnarray">
+                <tr id="S0.Ex52" class="ltx_equation ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_td ltx_align_right">
+                    <span class="math inline" id="S0.Ex50.m1">\(\displaystyle v_{n_{0}+1}\)</span>
+                  </td>
+                  <td class="ltx_td ltx_align_center">
+                    <span class="math inline" id="S0.Ex50.m2">\(\displaystyle=\)</span>
+                  </td>
+                  <td class="ltx_td ltx_align_left">
+                    <span class="math inline" id="S0.Ex50.m3">\(\displaystyle 4v_{n_{0}}-v_{n_{0}-1}\)</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+                <tr class="ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_td ltx_align_right"/>
+                  <td class="ltx_td ltx_align_center">
+                    <span class="math inline" id="S0.Ex51.m2">\(\displaystyle=\)</span>
+                  </td>
+                  <td class="ltx_td ltx_align_left">
+                    <span class="math inline" id="S0.Ex51.m3">\(\displaystyle 4(6k_{1}+3)-(6k_{2}+3)\)</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+                <tr class="ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_td ltx_align_right"/>
+                  <td class="ltx_td ltx_align_center">
+                    <span class="math inline" id="S0.Ex52.m2">\(\displaystyle=\)</span>
+                  </td>
+                  <td class="ltx_td ltx_align_left">
+                    <span class="math inline" id="S0.Ex52.m3">\(\displaystyle 6(4k_{1}-k_{2})+9,\)</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+              <p class="ltx_p">so that</p>
+              <table id="A0.EGx11" class="ltx_equationgroup ltx_eqn_eqnarray">
+                <tr id="S0.Ex54" class="ltx_equation ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_td ltx_align_right">
+                    <span class="math inline" id="S0.Ex53.m1">\(\displaystyle v_{n_{0}+1}-3\)</span>
+                  </td>
+                  <td class="ltx_td ltx_align_center">
+                    <span class="math inline" id="S0.Ex53.m2">\(\displaystyle=\)</span>
+                  </td>
+                  <td class="ltx_td ltx_align_left">
+                    <span class="math inline" id="S0.Ex53.m3">\(\displaystyle 6(4k_{1}-k_{2})+6\)</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+                <tr class="ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_td ltx_align_right"/>
+                  <td class="ltx_td ltx_align_center">
+                    <span class="math inline" id="S0.Ex54.m2">\(\displaystyle=\)</span>
+                  </td>
+                  <td class="ltx_td ltx_align_left">
+                    <span class="math inline" id="S0.Ex54.m3">\(\displaystyle 6(4k_{1}-k_{2}+1).\)</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+              <p class="ltx_p">And finally we have</p>
+              <table id="S0.Ex55" class="ltx_equation">
+                <tr class="ltx_equation ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_align_center">
+                    <span class="math display" id="S0.Ex55.m1">\[a_{n}={v_{n}-3\over 6}.\]</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+            </div>
+            <div id="p11" class="ltx_para">
+              <p class="ltx_p">It is interesting the fact that the sequence <span class="math inline" id="p11.m1">\(u_{n}\)</span> is a bisection of
+sequence A002531 in <cite class="ltx_cite">[]</cite> that gives the numerators of continued
+fraction convergents to <span class="math inline" id="p11.m2">\(\sqrt{3}\)</span>, a result that as far as we know is new.
+Denoting by <span class="math inline" id="p11.m3">\(z_{n}\)</span> the sequence of the convergents we are going to prove</p>
+              <table id="S0.Ex56" class="ltx_equation">
+                <tr class="ltx_equation ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_align_center">
+                    <span class="math display" id="S0.Ex56.m1">\[u_{n}=z_{2n+1}.\]</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+              <p class="ltx_p">
+                From the comments to A002531 in 
+                <cite class="ltx_cite">[]</cite> we have that</p>
+                <table id="S0.E4" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S0.E4.m1">\[z_{2n+1}=2z_{2n}+z_{2n-1},\quad z>0,\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                    <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                      <span class="ltx_tag ltx_tag_equation">(4)</span>
+                    </td>
+                  </tr>
+                </table>
+                <table id="S0.E5" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S0.E5.m1">\[z_{2n}={\alpha^{n}+\beta^{n}\over 2}.\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                    <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                      <span class="ltx_tag ltx_tag_equation">(5)</span>
+                    </td>
+                  </tr>
+                </table>
+                <p class="ltx_p">Now</p>
+                <table id="A0.EGx12" class="ltx_equationgroup ltx_eqn_eqnarray">
+                  <tr id="S0.Ex60" class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_td ltx_align_right">
+                      <span class="math inline" id="S0.Ex57.m1">\(\displaystyle u_{n}-u_{n-1}\)</span>
+                    </td>
+                    <td class="ltx_td ltx_align_center">
+                      <span class="math inline" id="S0.Ex57.m2">\(\displaystyle=\)</span>
+                    </td>
+                    <td class="ltx_td ltx_align_left">
+                      <span class="math inline" id="S0.Ex57.m3">\(\displaystyle{1\over\sqrt{2}}\left(\alpha^{n+{1\over 2}}-\beta^{n+{1\over 2}}%
+\right)-{1\over\sqrt{2}}\left(\alpha^{n-{1\over 2}}-\beta^{n-{1\over 2}}\right)\)</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                  <tr class="ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_td ltx_align_right"/>
+                    <td class="ltx_td ltx_align_center">
+                      <span class="math inline" id="S0.Ex58.m2">\(\displaystyle=\)</span>
+                    </td>
+                    <td class="ltx_td ltx_align_left">
+                      <span class="math inline" id="S0.Ex58.m3">\(\displaystyle{1\over\sqrt{2}}\left(\alpha^{n}(\alpha^{1\over 2}-\alpha^{-{1%
+\over 2}})+\beta^{n}(\beta^{-{1\over 2}}-\beta^{1\over 2})\right)\)</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                  <tr class="ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_td ltx_align_right"/>
+                    <td class="ltx_td ltx_align_center">
+                      <span class="math inline" id="S0.Ex59.m2">\(\displaystyle=\)</span>
+                    </td>
+                    <td class="ltx_td ltx_align_left">
+                      <span class="math inline" id="S0.Ex59.m3">\(\displaystyle{1\over\sqrt{2}}\left(\alpha^{n}(\alpha^{1\over 2}-\beta^{1\over 2%
+})+\beta^{n}(\alpha^{1\over 2}-\beta^{1\over 2})\right)\)</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                  <tr class="ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_td ltx_align_right"/>
+                    <td class="ltx_td ltx_align_center">
+                      <span class="math inline" id="S0.Ex60.m2">\(\displaystyle=\)</span>
+                    </td>
+                    <td class="ltx_td ltx_align_left">
+                      <span class="math inline" id="S0.Ex60.m3">\(\displaystyle{1\over\sqrt{2}}(\alpha^{n}+\beta^{n})\left(\alpha^{1\over 2}-%
+\beta^{1\over 2}\right).\)</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">Now from</p>
+                <table id="S0.Ex61" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S0.Ex61.m1">\[\left(\alpha^{1\over 2}+\beta^{1\over 2}\right)^{2}=\alpha+\beta+2=6\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">we get</p>
+                <table id="S0.Ex62" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S0.Ex62.m1">\[\alpha^{1\over 2}+\beta^{1\over 2}=\sqrt{6}.\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">Also from</p>
+                <table id="S0.Ex63" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S0.Ex63.m1">\[\left(\alpha^{1\over 2}+\beta^{1\over 2}\right)\left(\alpha^{1\over 2}-\beta^{%
+1\over 2}\right)=\alpha-\beta=2\sqrt{3}\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">we get</p>
+                <table id="S0.Ex64" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S0.Ex64.m1">\[\alpha^{1\over 2}-\beta^{1\over 2}=\sqrt{2},\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">so that</p>
+                <table id="S0.Ex65" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S0.Ex65.m1">\[u_{n}-u_{n-1}=L_{n}=2z_{2n}=z_{2n+1}-z_{2n-1}.\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">So we can write
+</p>
+                <table id="S0.Ex66" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S0.Ex66.m1">\[u_{n}-z_{2n+1}=u_{n-1}-z_{2n-1}.\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">Setting</p>
+                <table id="S0.Ex67" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S0.Ex67.m1">\[d_{n}=u_{n}-z_{2n+1}\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">we have the recurrence</p>
+                <table id="S0.Ex68" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S0.Ex68.m1">\[d_{n}=d_{n-1}\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">with <span class="math inline" id="p11.m4">\(d_{0}=u_{0}-z_{1}=1-1=0\)</span>. Hence <span class="math inline" id="p11.m5">\(d_{n}=0\)</span> and <span class="math inline" id="p11.m6">\(u_{n}=z_{2n+1}\)</span>.</p>
+              </div>
+              <div id="p12" class="ltx_para">
+                <p class="ltx_p">In a similar way we obtain</p>
+                <table id="S0.Ex69" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="S0.Ex69.m1">\[v_{n}-v_{n-1}=6F_{n},\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">where <span class="math inline" id="p12.m1">\(F_{n}=w(0,\,0,\,1)\)</span>, the analogous of the Fibonacci numbers for this
+type of recurrences. <span class="math inline" id="p12.m2">\(F_{n}\)</span> is
+sequence A001353 in <cite class="ltx_cite">[]</cite>.</p>
+              </div>
+            </article>
+          </div>
+          <footer class="ltx_page_footer">
+            <div class="ltx_page_logo">Generated  on Thu Jan 19 18:36:53 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"/>
+            </a>
+          </div>
+        </footer>
+      </div>
+    </body>
+  </html>

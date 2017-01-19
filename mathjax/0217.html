@@ -1,0 +1,1354 @@
+<html>
+  <head>
+    <title>Updating An Upper Bound Of Erik Westzynthius</title>
+    <!--Generated on Thu Jan 19 18:36:44 2017 by LaTeXML (version 0.8.1) http://dlmf.nist.gov/LaTeXML/.-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="LaTeXML.css" type="text/css"/>
+    <link rel="stylesheet" href="ltx-article.css" type="text/css"/>
+    <script type="text/x-sre-config">
+{"json": "https://cdn.mathjax.org/mathjax/contrib/a11y/mathmaps"}
+</script>
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: {autoNumber: "AMS"} },
+  MMLorHTML: {MSIE: "HTML"},
+  AssistiveMML: {disabled: true},
+  "fast-preview": {disabled: true}
+});
+MathJax.Ajax.config.path["SRE"] = "../mathjax";
+</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"> </script>
+  </head>
+  <body>
+    <div class="ltx_page_main">
+      <div class="ltx_page_content">
+        <article class="ltx_document ltx_authors_1line ltx_leqno">
+          <h1 class="ltx_title ltx_title_document">Updating An Upper Bound Of Erik Westzynthius</h1>
+          <div class="ltx_authors">
+            <span class="ltx_creator ltx_role_author">
+              <span class="ltx_personname">Gerhard R. Paseman
+</span>
+            </span>
+          </div>
+          <div class="ltx_abstract">
+            <h6 class="ltx_title ltx_title_abstract">Abstract</h6>
+            <p class="ltx_p">Inspired by a paper of Erik Westzynthius,
+we build on work of Harlan Stevens and Hans-Joachim
+Kanold. Let <span class="math inline" id="m1">\(k>2\)</span> be the number of distinct prime divisors
+of a positive integer <span class="math inline" id="m2">\(n\)</span>. In 1977, Stevens used Bonferroni
+inequalities to get an explicit upper bound on Jacobsthal’s
+function <span class="math inline" id="m3">\(g(n)\)</span>, which is related to the size of largest interval of
+consecutive integers none of which are coprime to <span class="math inline" id="m4">\(n\)</span>.
+Letting <span class="math inline" id="m5">\(u(k)\)</span> be the base <span class="math inline" id="m6">\(2\)</span>
+            <span class="math inline" id="m7">\(\log\)</span> of this bound, Stevens
+showed <span class="math inline" id="m8">\(u(k)\)</span> is <span class="math inline" id="m9">\(O((\log k)^{2})\)</span>, improving upon Kanold’s
+exponent <span class="math inline" id="m10">\(O(\sqrt{k})\)</span>. We use elementary methods similar to those of Stevens
+to get <span class="math inline" id="m11">\(u(k)\)</span> is <span class="math inline" id="m12">\(O(\log k(\log\log k))\)</span> in one form and
+<span class="math inline" id="m13">\(O({\sigma}^{-1}(n)\log k)\)</span> in another form. We also show how
+these bounds can be improved for small <span class="math inline" id="m14">\(k\)</span>.</p>
+          </div>
+          <section id="S1" class="ltx_section">
+            <h2 class="ltx_title ltx_title_section">
+              <span class="ltx_tag ltx_tag_section">1 </span>Overview</h2>
+              <div id="S1.p1" class="ltx_para">
+                <p class="ltx_p">
+                  Erik Westzynthius provided a ground-breaking result in 
+                  <cite class="ltx_cite">[]</cite> on
+prime gaps, showing that for any constant <span class="math inline" id="S1.p1.m1">\(D>0\)</span> there were
+infinitely many primes <span class="math inline" id="S1.p1.m2">\(p_{n}\)</span> so that <span class="math inline" id="S1.p1.m3">\(p_{n+1}>p_{n}+D\log(p_{n})\)</span>.
+In the same paper, he also provided an upper bound for what was to
+be later called <span class="math inline" id="S1.p1.m4">\(g(P_{k})\)</span>. This quantity measures how many
+consecutive integers we can find having a ”small” <span class="math inline" id="S1.p1.m5">\((\leq p_{k})\)</span>
+prime factor.</p>
+                </div>
+                <div id="S1.p2" class="ltx_para">
+                  <p class="ltx_p">
+                    Ernst Jacobsthal in 
+                    <cite class="ltx_cite">[]</cite> defined and showed
+<span class="math inline" id="S1.p2.m1">\(g(n)\leq k2^{k}+2^{k}-k\)</span>, where <span class="math inline" id="S1.p2.m2">\(k\)</span> is the
+number of distinct prime factors of <span class="math inline" id="S1.p2.m3">\(n\)</span>. Improved explicit bounds
+were later given by Kanold <cite class="ltx_cite">[]</cite> (<span class="math inline" id="S1.p2.m4">\(2^{k}\)</span> for all <span class="math inline" id="S1.p2.m5">\(k\)</span> and <span class="math inline" id="S1.p2.m6">\(2^{\sqrt{k}}\)</span>
+for <span class="math inline" id="S1.p2.m7">\(k\geq e^{50}\)</span>)
+and Stevens <cite class="ltx_cite">[]</cite>
+                    <span class="math inline" id="S1.p2.m8">\((2k^{2+2e\log k})\)</span>, and some additional
+but less explicit results given by Paul Erdős, Henryk Iwaniec, and others.
+</p>
+                  </div>
+                  <div id="S1.p3" class="ltx_para">
+                    <p class="ltx_p">We show several explicit bounds for <span class="math inline" id="S1.p3.m1">\(g(n)\)</span>, some depending on the
+quantities <span class="math inline" id="S1.p3.m2">\({\sigma}^{-1}(n)\)</span> and <span class="math inline" id="S1.p3.m3">\({\pi}^{-1}(n)\)</span>, including</p>
+                    <table id="S1.Ex1" class="ltx_equation">
+                      <tr class="ltx_equation ltx_align_baseline">
+                        <td class="ltx_eqn_center_padleft"/>
+                        <td class="ltx_align_center">
+                          <span class="math display" id="S1.Ex1.m1">\[g(n)&lt;\frac{\sum_{i=1}^{s}{k\choose i}}{{\pi}^{-1}(n)-({\sigma}^{-1}(n))^{s+1}/%
+(s+1)!},\]</span>
+                        </td>
+                        <td class="ltx_eqn_center_padright"/>
+                      </tr>
+                    </table>
+                    <p class="ltx_p">with <span class="math inline" id="S1.p3.m4">\(s\)</span> an odd integer bounded by <span class="math inline" id="S1.p3.m5">\((1\)</span> plus a constant times <span class="math inline" id="S1.p3.m6">\({\sigma}^{-1}(n))\)</span>,
+which gives <span class="math inline" id="S1.p3.m7">\(g(n)&lt;k^{B+C\log\log k}\)</span> for <span class="math inline" id="S1.p3.m8">\(k>2\)</span> with explicit
+constants <span class="math inline" id="S1.p3.m9">\(B\)</span> and <span class="math inline" id="S1.p3.m10">\(C\)</span>, both <span class="math inline" id="S1.p3.m11">\(&lt;3.9\)</span>.</p>
+                  </div>
+                  <div id="S1.p4" class="ltx_para">
+                    <p class="ltx_p">We define <span class="math inline" id="S1.p4.m1">\({\sigma}^{-1}(n)\)</span> and <span class="math inline" id="S1.p4.m2">\({\pi}^{-1}(n)\)</span> in the next section, and also list
+some results which apply when <span class="math inline" id="S1.p4.m3">\({\sigma}^{-1}(n)\)</span> is small <span class="math inline" id="S1.p4.m4">\((&lt;1+1/2q_{1})\)</span>.
+The following section recalls work of Jacobsthal and
+Westzynthius, and shows how Stevens’s bound can be tightened with
+a little effort.</p>
+                  </div>
+                  <div id="S1.p5" class="ltx_para">
+                    <p class="ltx_p">With elementary means, we also show the bound above that uses <span class="math inline" id="S1.p5.m1">\({\sigma}^{-1}(n)\)</span> and
+<span class="math inline" id="S1.p5.m2">\({\pi}^{-1}(n)\)</span>, and follow that section with some supplementary results as
+well as suggestions for further research. The remainder of this
+article contains some history, a recommended reading list, and an
+Appendix as well as acknowledgments and a list of citations.</p>
+                  </div>
+                </section>
+                <section id="S2" class="ltx_section">
+                  <h2 class="ltx_title ltx_title_section">
+                    <span class="ltx_tag ltx_tag_section">2 </span>Definitions and simple bounds</h2>
+                    <div id="S2.p1" class="ltx_para">
+                      <p class="ltx_p">We use <span class="math inline" id="S2.p1.m1">\(\omega(n)\)</span> for the number of distinct (positive)
+prime factors of the positive integer <span class="math inline" id="S2.p1.m2">\(n\)</span>, and declare
+<span class="math inline" id="S2.p1.m3">\(k=\omega(n)\)</span>. We also require <span class="math inline" id="S2.p1.m4">\(k>0\)</span>, so <span class="math inline" id="S2.p1.m5">\(n>1\)</span>.
+We list the prime factors <span class="math inline" id="S2.p1.m6">\(q_{i}\)</span> of <span class="math inline" id="S2.p1.m7">\(n\)</span> in increasing order:
+<span class="math inline" id="S2.p1.m8">\(q_{1}&lt;q_{2}&lt;\ldots&lt;q_{k}\)</span>.
+We recall the <span class="math inline" id="S2.p1.m9">\(k\)</span>th primorial <span class="math inline" id="S2.p1.m10">\(P_{k}\)</span> as <span class="math inline" id="S2.p1.m11">\(P_{k}=\prod_{1\leq i}^{k}p_{i}.\)</span>
+                    </p>
+                  </div>
+                  <div id="S2.p2" class="ltx_para">
+                    <p class="ltx_p">
+                      <span class="ltx_text ltx_font_bold">Definition</span>: We define (here <span class="math inline" id="S2.p2.m1">\({}^{-1}\)</span> is
+part of a label, <span class="ltx_text ltx_font_bold">not</span> an exponent)</p>
+                      <table id="S2.Ex2" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="S2.Ex2.m1">\[{\sigma}^{-1}(n)=\sum_{1\leq i}^{k}1/q_{i}\textrm{ , and }{\pi}^{-1}(n)=\prod_%
+{1\leq i}^{k}(1-1/q_{i}).\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">Note that <span class="math inline" id="S2.p2.m2">\(n{\pi}^{-1}(n)=\phi(n)\)</span>, Euler’s function for counting
+positive integers coprime to and less than <span class="math inline" id="S2.p2.m3">\(n\)</span>.</p>
+                    </div>
+                    <div id="S2.p3" class="ltx_para">
+                      <p class="ltx_p">
+                        <span class="ltx_text ltx_font_bold">Definition</span>: After Jacobsthal, for <span class="math inline" id="S2.p3.m1">\(n>0\)</span>
+define <span class="math inline" id="S2.p3.m2">\(g(n)\)</span> to be the smallest positive integer
+<span class="math inline" id="S2.p3.m3">\(m\)</span> such that for any integer <span class="math inline" id="S2.p3.m4">\(a\)</span>, the set of <span class="math inline" id="S2.p3.m5">\(m\)</span> consecutive
+integers <span class="math inline" id="S2.p3.m6">\(\{a+1,\ldots,a+m\}\)</span> has an integer <span class="math inline" id="S2.p3.m7">\(a+j\)</span>, where
+<span class="math inline" id="S2.p3.m8">\(1\leq j\leq m\)</span>, such that <span class="math inline" id="S2.p3.m9">\(\gcd(a+j,n)=1\)</span>. If <span class="math inline" id="S2.p3.m10">\(n>1\)</span>,
+define <span class="math inline" id="S2.p3.m11">\(L(n)\)</span> as the largest integer <span class="math inline" id="S2.p3.m12">\(l\)</span> so that there is an
+interval of <span class="math inline" id="S2.p3.m13">\(l\)</span> consecutive integers <span class="math inline" id="S2.p3.m14">\(\{b+1,\ldots,b+l\}\)</span> such
+that each <span class="math inline" id="S2.p3.m15">\(b+j\)</span> satisfies <span class="math inline" id="S2.p3.m16">\(\gcd(b+j,n)>1\)</span>.</p>
+                      </div>
+                      <div id="S2.p4" class="ltx_para">
+                        <p class="ltx_p">It is straightforward to show <span class="math inline" id="S2.p4.m1">\(g(n)=L(n)+1\)</span> for all
+<span class="math inline" id="S2.p4.m2">\(n>1\)</span>. Also <span class="math inline" id="S2.p4.m3">\(g(n)=\max_{i}(c_{i+1}-c_{i})\)</span> where
+the <span class="math inline" id="S2.p4.m4">\(c_{i}\)</span> denote all integers coprime to (<span class="ltx_text ltx_font_bold">totatives</span> of)
+<span class="math inline" id="S2.p4.m5">\(n\)</span> in increasing
+order. Consequently, <span class="math inline" id="S2.p4.m6">\(g(n)\)</span> depends only on the set
+of distinct prime factors of <span class="math inline" id="S2.p4.m7">\(n\)</span>; we will use <span class="math inline" id="S2.p4.m8">\(n\)</span>
+squarefree at times in this article.</p>
+                      </div>
+                      <div id="S2.p5" class="ltx_para">
+                        <p class="ltx_p">One has <span class="math inline" id="S2.p5.m1">\(g(p_{i})=2\)</span>, and <span class="math inline" id="S2.p5.m2">\(g(n)&lt;n\)</span> for <span class="math inline" id="S2.p5.m3">\(n>2\)</span>. If <span class="math inline" id="S2.p5.m4">\(n\)</span>
+has ”large” prime factors (<span class="math inline" id="S2.p5.m5">\(q_{i}>k\)</span> for all <span class="math inline" id="S2.p5.m6">\(i\)</span>), then
+<span class="math inline" id="S2.p5.m7">\(g(n)=L(n)+1\)</span> is ”small”. Specifically,</p>
+                      </div>
+                      <div id="S2.p6" class="ltx_para">
+                        <p class="ltx_p">
+                          <span class="ltx_text ltx_font_bold">Proposition</span>(Jacobsthal): If <span class="math inline" id="S2.p6.m1">\(q_{1}>k\)</span>, then <span class="math inline" id="S2.p6.m2">\(L(n)=k\)</span>.</p>
+                        </div>
+                        <div id="S2.p7" class="ltx_para">
+                          <p class="ltx_p">Proof Sketch: Any integer interval of length <span class="math inline" id="S2.p7.m1">\(k+1\)</span> has at
+most one multiple of <span class="math inline" id="S2.p7.m2">\(q_{i}\)</span>, giving at most <span class="math inline" id="S2.p7.m3">\(k\)</span> integers in
+that interval having a prime factor in common with <span class="math inline" id="S2.p7.m4">\(n\)</span>.
+So at least one integer in that interval is not a
+multiple of any <span class="math inline" id="S2.p7.m5">\(q_{i}\)</span>. So <span class="math inline" id="S2.p7.m6">\(L(n)&lt;k+1\)</span>.</p>
+                        </div>
+                        <div id="S2.p8" class="ltx_para">
+                          <p class="ltx_p">Conversely, for any permutation <span class="math inline" id="S2.p8.m1">\(\tau\)</span> of the <span class="math inline" id="S2.p8.m2">\(k\)</span> indices,
+the Chinese Remainder Theorem gives an integer <span class="math inline" id="S2.p8.m3">\(b_{\tau}\)</span>
+such that <span class="math inline" id="S2.p8.m4">\(b_{\tau}+\tau(i)=0\bmod{q_{i}}\)</span> for
+<span class="math inline" id="S2.p8.m5">\(1\leq i\leq k\)</span>, so <span class="math inline" id="S2.p8.m6">\(L(n)\geq k\)</span>. <span class="ltx_text ltx_font_bold">End</span> of Proof Sketch.</p>
+                        </div>
+                        <div id="S2.p9" class="ltx_para">
+                          <p class="ltx_p">We could have chosen <span class="math inline" id="S2.p9.m1">\(\tau\)</span> to be the identity permutation, but
+we want to point out that this proof gives <span class="math inline" id="S2.p9.m2">\(k!\)</span> many intervals
+in <span class="math inline" id="S2.p9.m3">\((0,n)\)</span> which achieve the <span class="math inline" id="S2.p9.m4">\(L(n)\)</span> bound for this kind of <span class="math inline" id="S2.p9.m5">\(n\)</span>.
+This proof also shows <span class="math inline" id="S2.p9.m6">\(g(n)>k\)</span> for any <span class="math inline" id="S2.p9.m7">\(n>1\)</span>.</p>
+                        </div>
+                        <div id="S2.p10" class="ltx_para">
+                          <p class="ltx_p">The next bound is inspired by Kanold’s 1967 paper. We would like to
+know if it appears explicitly in the literature.</p>
+                        </div>
+                        <div id="S2.p11" class="ltx_para">
+                          <p class="ltx_p">
+                            <span class="ltx_text ltx_font_bold">Proposition</span>(Kanold-<span class="ltx_text ltx_font_bold">P</span>.): Let <span class="math inline" id="S2.p11.m1">\(0&lt;r&lt;1\)</span> be a real number
+and <span class="math inline" id="S2.p11.m2">\(n\)</span> such that <span class="math inline" id="S2.p11.m3">\(r+{\sigma}^{-1}(n)&lt;1\)</span>. Then
+<span class="math inline" id="S2.p11.m4">\(L(n)&lt;k/r\)</span>, and <span class="math inline" id="S2.p11.m5">\(g(n)\leq\lceil k/r\rceil\)</span>.</p>
+                          </div>
+                          <div id="S2.p12" class="ltx_para">
+                            <p class="ltx_p">Proof Sketch: For an interval containing <span class="math inline" id="S2.p12.m1">\(L\)</span> consecutive
+integers, at most <span class="math inline" id="S2.p12.m2">\(\lceil L/q_{i}\rceil\leq 1+(L-1)/q_{i}\)</span> of
+them are multiples of <span class="math inline" id="S2.p12.m3">\(q_{i}\)</span>. Since <span class="math inline" id="S2.p12.m4">\({\sigma}^{-1}(n)&lt;1-r\)</span>,
+the count of numbers not coprime to <span class="math inline" id="S2.p12.m5">\(n\)</span> is at most
+<span class="math inline" id="S2.p12.m6">\((L-1){\sigma}^{-1}(n)+k&lt;(L-1)(1-r)+k\)</span>. Now whenever <span class="math inline" id="S2.p12.m7">\(L\geq k/r\)</span>,
+<span class="math inline" id="S2.p12.m8">\((L-1)(1-r)+k\leq L-1+r\)</span>, so this count is less than <span class="math inline" id="S2.p12.m9">\(L\)</span>.
+One gets <span class="math inline" id="S2.p12.m10">\(g(n)\leq\lceil k/r\rceil\)</span>,
+giving <span class="math inline" id="S2.p12.m11">\(L(n)&lt;k/r\)</span>. <span class="ltx_text ltx_font_bold">End</span> of Proof Sketch.</p>
+                          </div>
+                          <div id="S2.p13" class="ltx_para">
+                            <p class="ltx_p">This gives a weaker bound than Jacobsthal’s proposition, but
+it applies to more cases, even when <span class="math inline" id="S2.p13.m1">\(q_{1}\)</span> is about <span class="math inline" id="S2.p13.m2">\(2\sqrt{k}\)</span>
+and <span class="math inline" id="S2.p13.m3">\(r>1/q_{1}\)</span>. It suggests the following</p>
+                          </div>
+                          <div id="S2.p14" class="ltx_para">
+                            <p class="ltx_p">
+                              <span class="ltx_text ltx_font_bold">Variation</span>: Let <span class="math inline" id="S2.p14.m1">\(k>1\)</span> and <span class="math inline" id="S2.p14.m2">\({\sigma}^{-1}(n)&lt;1+\frac{1}{2q_{1}}\)</span>. Then</p>
+                              <table id="S2.Ex3" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="S2.Ex3.m1">\[L(n)&lt;\frac{q_{1}}{q_{1}-1}(2k-1-{\sigma}^{-1}(n))2q_{1}\textrm{, so }g(n)&lt;4kq_%
+{1}\frac{q_{1}}{q_{1}-1}.\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                </tr>
+                              </table>
+                            </div>
+                            <div id="S2.p15" class="ltx_para">
+                              <p class="ltx_p">Proof Sketch: The estimate above for multiples of <span class="math inline" id="S2.p15.m1">\(q_{i}\)</span>,
+<span class="math inline" id="S2.p15.m2">\(1&lt;i\leq k\)</span>, among the <span class="math inline" id="S2.p15.m3">\(L\)</span> numbers is refined by subtracting that
+portion which are also multiples of <span class="math inline" id="S2.p15.m4">\(q_{1}\)</span>; we
+underestimate it by
+<span class="math inline" id="S2.p15.m5">\(L/q_{i}q_{1}-1&lt;\lfloor\lceil L/q_{i}\rceil/q_{1}\rfloor\)</span>.
+Thus <span class="math inline" id="S2.p15.m6">\((L-1){\sigma}^{-1}(n)+k-\sum_{1&lt;i}^{k}(-1+L/(q_{i}q_{1}))\)</span> is the
+refined
+upper bound for the non-totative count. Rewriting, we look for <span class="math inline" id="S2.p15.m7">\(L\)</span> so that</p>
+                              <table id="S2.Ex4" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="S2.Ex4.m1">\[L[{\sigma}^{-1}(n)(1-1/q_{1})+1/(q_{1})^{2}]+2k-1-{\sigma}^{-1}(n)&lt;L,\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">which holds if and only if</p>
+                              <table id="S2.Ex5" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="S2.Ex5.m1">\[L(1-1/q_{1})(1+1/q_{1}-{\sigma}^{-1}(n))>(2k-1-{\sigma}^{-1}(n)).\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">The assumption <span class="math inline" id="S2.p15.m8">\((1+1/q_{1}-{\sigma}^{-1}(n))>1/2q_{1}\)</span> yields that
+if <span class="math inline" id="S2.p15.m9">\(L/2q_{1}>(2k-1-{\sigma}^{-1}(n))(q_{1}/(q_{1}-1))\)</span>, then
+<span class="math inline" id="S2.p15.m10">\(L\)</span> is greater than our overcount; as above, we get
+<span class="math inline" id="S2.p15.m11">\(L(n)&lt;2q_{1}(2k-1-{\sigma}^{-1}(n))(q_{1}/(q_{1}-1))\)</span>
+and the weaker <span class="math inline" id="S2.p15.m12">\(g(n)&lt;4kq_{1}(q_{1}/(q_{1}-1))\)</span>. <span class="ltx_text ltx_font_bold">End</span> of Proof Sketch.</p>
+                            </div>
+                            <div id="S2.p16" class="ltx_para">
+                              <p class="ltx_p">We now present one bound of general character, and one which asymptotically
+improves upon Kanold’s smaller bound. We use the</p>
+                            </div>
+                            <div id="S2.p17" class="ltx_para">
+                              <p class="ltx_p">
+                                <span class="ltx_text ltx_font_bold">Fact</span>: Let <span class="math inline" id="S2.p17.m1">\(b,d\)</span> and <span class="math inline" id="S2.p17.m2">\(f\)</span> be integers with <span class="math inline" id="S2.p17.m3">\(\gcd(f,d)=1\)</span>.
+There is an integer <span class="math inline" id="S2.p17.m4">\(z\)</span> so that for all integers
+<span class="math inline" id="S2.p17.m5">\(t,\gcd(b+tf,d)=\gcd(zb+t,d)\)</span>.</p>
+                              </div>
+                              <div id="S2.p18" class="ltx_para">
+                                <p class="ltx_p">Pick <span class="math inline" id="S2.p18.m1">\(z\)</span> so that <span class="math inline" id="S2.p18.m2">\(zf=1\bmod{d}\)</span>. <span class="math inline" id="S2.p18.m3">\(\gcd(b+tf,d)=\gcd(z(b+tf),d)=\gcd(zb+t,d)\)</span>,
+giving the Fact above and the application below that coprimality
+in sequences of consecutive integers behaves the same way in
+certain arithmetic progressions.</p>
+                              </div>
+                              <div id="S2.p19" class="ltx_para">
+                                <p class="ltx_p">Assume <span class="math inline" id="S2.p19.m1">\(k>2,n\)</span> squarefree and <span class="math inline" id="S2.p19.m2">\(d\mid n\)</span> with
+<span class="math inline" id="S2.p19.m3">\(d\)</span> neither <span class="math inline" id="S2.p19.m4">\(1\)</span> nor <span class="math inline" id="S2.p19.m5">\(n\)</span>. Set <span class="math inline" id="S2.p19.m6">\(f=n/d\)</span>. <span class="math inline" id="S2.p19.m7">\(1+tf\)</span> is coprime to <span class="math inline" id="S2.p19.m8">\(f\)</span>, and
+the Fact above shows that <span class="math inline" id="S2.p19.m9">\(1+tf\)</span> always has at least one
+out of <span class="math inline" id="S2.p19.m10">\(g(d)\)</span> consecutive members coprime to <span class="math inline" id="S2.p19.m11">\(d\)</span>. Any interval of <span class="math inline" id="S2.p19.m12">\((g(d)f)\)</span>-many
+integers thus has one coprime to <span class="math inline" id="S2.p19.m13">\(n\)</span> of the form <span class="math inline" id="S2.p19.m14">\(1+tf\)</span>.
+Considering <span class="math inline" id="S2.p19.m15">\(c+tf\)</span> for all totatives <span class="math inline" id="S2.p19.m16">\(c\)</span> of <span class="math inline" id="S2.p19.m17">\(f\)</span>, we get the</p>
+                              </div>
+                              <div id="S2.p20" class="ltx_para">
+                                <p class="ltx_p">
+                                  <span class="ltx_text ltx_font_bold">Observation</span>: <span class="math inline" id="S2.p20.m1">\(g(fd)\leq g(d)f-f+g(f).\)</span>
+                                </p>
+                              </div>
+                              <div id="S2.p21" class="ltx_para">
+                                <p class="ltx_p">Proof Sketch: When <span class="math inline" id="S2.p21.m1">\(c\neq 1\)</span>,
+there is at least one number of the form <span class="math inline" id="S2.p21.m2">\(c+tf\)</span> coprime to
+<span class="math inline" id="S2.p21.m3">\(n=fd\)</span> in the interval <span class="math inline" id="S2.p21.m4">\((1+a,1+a+g(d)f)\)</span>, where <span class="math inline" id="S2.p21.m5">\(a=t_{0}f\)</span> and we
+assume that if <span class="math inline" id="S2.p21.m6">\(1+tf\)</span> is coprime to <span class="math inline" id="S2.p21.m7">\(n\)</span>, then it is outside this interval.
+There are at least <span class="math inline" id="S2.p21.m8">\((\phi(f)-1)\)</span>-many of these numbers; try placing them
+inside the interval leaving a large gap. If you can get a gap
+of at least <span class="math inline" id="S2.p21.m9">\(g(d)f-f\)</span>, then the numbers must be
+in the subintervals <span class="math inline" id="S2.p21.m10">\((1+a,1+a+f)\)</span> and
+<span class="math inline" id="S2.p21.m11">\((1+a+(g(d)-1)f,1+a+g(d)f)\)</span>. If the largest in the first
+interval is <span class="math inline" id="S2.p21.m12">\(c+a\)</span>, then the smallest in the second interval is
+at most <span class="math inline" id="S2.p21.m13">\(c^{\prime}+a+(g(d)-1)f\)</span>, where <span class="math inline" id="S2.p21.m14">\(c^{\prime}\)</span> is the next largest totative
+to <span class="math inline" id="S2.p21.m15">\(f\)</span> after <span class="math inline" id="S2.p21.m16">\(c\)</span>. But <span class="math inline" id="S2.p21.m17">\(c^{\prime}-c\leq g(f)\)</span>, giving the bound.
+<span class="ltx_text ltx_font_bold">End</span> of Proof Sketch.</p>
+                              </div>
+                              <div id="S2.p22" class="ltx_para">
+                                <p class="ltx_p">We use weaker forms of the Observation and Variation to improve on
+Kanold’s smaller bound.</p>
+                              </div>
+                              <div id="S2.p23" class="ltx_para">
+                                <p class="ltx_p">Let <span class="math inline" id="S2.p23.m1">\(n\)</span> be squarefree. Consider the tail of <span class="math inline" id="S2.p23.m2">\({\sigma}^{-1}(n)\)</span>,
+that is, find <span class="math inline" id="S2.p23.m3">\(q_{l}\)</span> smallest such that
+<span class="math inline" id="S2.p23.m4">\(\sum_{l\leq i}^{k}1/q_{i}&lt;1+1/2q_{l}\)</span>. Let
+<span class="math inline" id="S2.p23.m5">\(d=\prod_{l\leq i}^{k}q_{i}\)</span>. From the Variation we have
+<span class="math inline" id="S2.p23.m6">\(g(d)&lt;4(k-l+1)({q_{l}}^{2}/(q_{l}-1))\)</span>. However, when <span class="math inline" id="S2.p23.m7">\(k\)</span> is large,
+<span class="math inline" id="S2.p23.m8">\(q_{l}\)</span> is small enough that <span class="math inline" id="S2.p23.m9">\(n/d\)</span> is smaller
+than <span class="math inline" id="S2.p23.m10">\(2^{\sqrt{k}}\)</span>.</p>
+                              </div>
+                              <div id="S2.p24" class="ltx_para">
+                                <p class="ltx_p">
+                                  <span class="ltx_text ltx_font_bold">Improvement</span>: For <span class="math inline" id="S2.p24.m1">\(k\)</span> sufficiently large,
+<span class="math inline" id="S2.p24.m2">\(n/d&lt;2^{\frac{3}{2}k^{0.45}}\)</span>, giving
+<span class="math inline" id="S2.p24.m3">\(g(n)&lt;2^{3k^{0.45}/2}\frac{4(k-l+1){q_{l}}^{2}}{q_{l}-1}\)</span>.
+As <span class="math inline" id="S2.p24.m4">\(k\)</span> gets large, <span class="math inline" id="S2.p24.m5">\(\log g(n)&lt;k^{(\epsilon+1/e)}\)</span>
+eventually for any fixed <span class="math inline" id="S2.p24.m6">\(\epsilon>0\)</span>.</p>
+                                </div>
+                                <div id="S2.p25" class="ltx_para">
+                                  <p class="ltx_p">Proof Idea: Let <span class="math inline" id="S2.p25.m1">\(m\)</span> satisfy <span class="math inline" id="S2.p25.m2">\(p_{m}=q_{l-1}\)</span>. We defer to the Appendix showing
+that <span class="math inline" id="S2.p25.m3">\(p_{m}&lt;k^{0.45}\)</span> when <span class="math inline" id="S2.p25.m4">\(k\geq e^{9.5}\)</span>.
+As <span class="math inline" id="S2.p25.m5">\(n/d\leq P_{m}\)</span>, and for an explicit
+positive <span class="math inline" id="S2.p25.m6">\(c&lt;0.02\)</span>, <span class="math inline" id="S2.p25.m7">\(P_{m}&lt;e^{p_{m}(1+c)}&lt;2^{3p_{m}/2}\)</span>;
+the Observation implies the weaker form
+<span class="math inline" id="S2.p25.m8">\(g(n)&lt;(n/d)g(d)&lt;2^{3k^{0.45}/2}g(d)\)</span>.</p>
+                                </div>
+                                <div id="S2.p26" class="ltx_para">
+                                  <p class="ltx_p">About <span class="math inline" id="S2.p26.m1">\(\log g(n)\)</span>, we use that
+<span class="math inline" id="S2.p26.m2">\(\sum_{l\leq j}^{k}1/q_{j}\leq\sum_{1\leq i}^{k-l+1}1/p_{m+i}\)</span>, and
+then truncate to the first <span class="math inline" id="S2.p26.m3">\(u\leq k-l+1\)</span> terms while still having
+<span class="math inline" id="S2.p26.m4">\(\sum_{1\leq i}^{u}1/p_{m+i}>1-1/2p_{m}\)</span>. We use an
+approximation of Mertens for this last sum to get
+<span class="math inline" id="S2.p26.m5">\(\log(\log(p_{m+u})/\log p_{m})>1-O(1/\log p_{m})\)</span>. Picking
+a convenient positive <span class="math inline" id="S2.p26.m6">\(\epsilon_{1}\)</span> and <span class="math inline" id="S2.p26.m7">\(\epsilon\)</span>, as
+<span class="math inline" id="S2.p26.m8">\(m\)</span> goes large, <span class="math inline" id="S2.p26.m9">\(p_{m+u}>p_{m}^{e-\epsilon_{1}}\)</span> eventually,
+and <span class="math inline" id="S2.p26.m10">\(\log\)</span> of the bound is majorized by <span class="math inline" id="S2.p26.m11">\(p_{m}(1+c^{\prime})\)</span> for some
+positive small <span class="math inline" id="S2.p26.m12">\(c^{\prime}\)</span>
+and is eventually dominated by <span class="math inline" id="S2.p26.m13">\(k^{1/e+\epsilon}\)</span>.
+The Appendix provides more detail.
+<span class="ltx_text ltx_font_bold">End</span> of Proof Idea.</p>
+                                </div>
+                                <div id="S2.p27" class="ltx_para">
+                                  <p class="ltx_p">We take credit for this form of presentation, but are
+influenced by Kanold’s paper; his proof for <span class="math inline" id="S2.p27.m1">\(2^{\sqrt{k}}\)</span>
+has many of the ideas above, and we wonder if perhaps
+he did discover it.</p>
+                                </div>
+                                <div id="S2.p28" class="ltx_para">
+                                  <p class="ltx_p">We end this section with lower bounds:
+Westzynthius shows an easily demonstrated lower bound
+<span class="math inline" id="S2.p28.m1">\(2p_{k-1}\leq g(P_{k})\)</span> for <span class="math inline" id="S2.p28.m2">\(k>1\)</span>, and then shows a better
+lower bound (for <span class="math inline" id="S2.p28.m3">\(k\)</span> sufficiently large after choosing <span class="math inline" id="S2.p28.m4">\(\epsilon>0\)</span>) of
+<span class="math inline" id="S2.p28.m5">\(e^{\gamma}(1-\epsilon)p_{k}\frac{\log\log p_{k}}{\log\log\log p_{k}}\)</span>.</p>
+                                </div>
+                              </section>
+                              <section id="S3" class="ltx_section">
+                                <h2 class="ltx_title ltx_title_section">
+                                  <span class="ltx_tag ltx_tag_section">3 </span>Improving estimates of Stevens</h2>
+                                  <div id="S3.p1" class="ltx_para">
+                                    <p class="ltx_p">Both Westzynthius and Jacobsthal use a simple sieve argument to
+establish an upper bound on <span class="math inline" id="S3.p1.m1">\(g(n)\)</span>, using <span class="math inline" id="S3.p1.m2">\(n\)</span> squarefree.
+Since Stevens uses part of
+this, we show the argument here.</p>
+                                  </div>
+                                  <div id="S3.p2" class="ltx_para">
+                                    <p class="ltx_p">Recap: We use inclusion-exclusion to count integers in the open interval
+<span class="math inline" id="S3.p2.m1">\(L=(a,a+x)\)</span> that are coprime to squarefree <span class="math inline" id="S3.p2.m2">\(n\)</span>,
+for real numbers <span class="math inline" id="S3.p2.m3">\(a\)</span> and
+<span class="math inline" id="S3.p2.m4">\(x>0\)</span>. <span class="math inline" id="S3.p2.m5">\(I_{0}\)</span> counts the totatives of <span class="math inline" id="S3.p2.m6">\(n\)</span> in <span class="math inline" id="S3.p2.m7">\(L\)</span>,
+and for <span class="math inline" id="S3.p2.m8">\(t>0\)</span> and <span class="math inline" id="S3.p2.m9">\(t\mid n,\)</span>
+                                    <span class="math inline" id="S3.p2.m10">\(I_{t}\)</span>
+counts multiples of <span class="math inline" id="S3.p2.m11">\(t\)</span> in <span class="math inline" id="S3.p2.m12">\(L\)</span>.
+Then <span class="math inline" id="S3.p2.m13">\(I_{0}=\sum_{t\mid n}(-1)^{\omega(t)}I_{t}.\)</span>
+As in the previous section we replace the count
+<span class="math inline" id="S3.p2.m14">\(I_{t}\)</span>, this time by <span class="math inline" id="S3.p2.m15">\(x/t+E(t)\)</span>. <span class="math inline" id="S3.p2.m16">\(E(t)\)</span> is an error term which depends
+on both <span class="math inline" id="S3.p2.m17">\(t\)</span> and <span class="math inline" id="S3.p2.m18">\(a\)</span> actually, but always <span class="math inline" id="S3.p2.m19">\(|E(t)|\leq 1,\)</span>
+and will be removed below.</p>
+                                    <table id="S3.Ex6" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S3.Ex6.m1">\[I_{0}=\sum_{t\mid n}(x/t+E(t))(-1)^{\omega(t)}\geq x\sum_{t\mid n}(-1)^{\omega%
+(t)}/t-\sum_{t\mid n}1.\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">Now rewrite the sum of <span class="math inline" id="S3.p2.m20">\((-1)^{\omega(t)}/t\)</span> as a product
+<span class="math inline" id="S3.p2.m21">\(\prod(1-1/q_{i})\)</span>, and note the second sum is <span class="math inline" id="S3.p2.m22">\(2^{k}\)</span>. We get</p>
+                                    <table id="S3.Ex7" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S3.Ex7.m1">\[I_{0}\geq x{\pi}^{-1}(n)-2^{k}.\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                  <div id="S3.p3" class="ltx_para">
+                                    <p class="ltx_p">Now this relation above is essentially independent of <span class="math inline" id="S3.p3.m1">\(a\)</span>. If
+we pick <span class="math inline" id="S3.p3.m2">\(x\)</span> large enough, then <span class="math inline" id="S3.p3.m3">\(I_{0}>0\)</span> and <span class="math inline" id="S3.p3.m4">\(g(n)\)</span>
+will be at most <span class="math inline" id="S3.p3.m5">\(x\)</span>. So choose <span class="math inline" id="S3.p3.m6">\(x=2^{k}/{\pi}^{-1}(n)+\epsilon\)</span>.
+<span class="ltx_text ltx_font_bold">End</span> of Recap.</p>
+                                  </div>
+                                  <div id="S3.p4" class="ltx_para">
+                                    <p class="ltx_p">The above shows <span class="math inline" id="S3.p4.m1">\(g(n)\leq 2^{k}/{\pi}^{-1}(n)\)</span>. One would like to improve
+on this since Kanold has an asymptotically better result.</p>
+                                  </div>
+                                  <div id="S3.p5" class="ltx_para">
+                                    <p class="ltx_p">In our view Stevens has two main ideas in his 1977 paper.
+The first is to observe that the
+sum produced from inclusion-exclusion can be truncated
+a la Bonferroni to a smaller sum to give fewer terms to
+approximate. The second is that the denominator <span class="math inline" id="S3.p5.m1">\(T_{s}\)</span> can
+be written as <span class="math inline" id="S3.p5.m2">\({\pi}^{-1}(n)-T_{s}^{\prime}\)</span>, and that <span class="math inline" id="S3.p5.m3">\(T_{s}^{\prime}\)</span> can be easier to handle.
+We adapt his proof slightly, and then we tighten
+up the estimates he uses to improve the exponent.</p>
+                                  </div>
+                                  <div id="S3.p6" class="ltx_para">
+                                    <p class="ltx_p">Adaptation: We use <span class="math inline" id="S3.p6.m1">\(x,I_{0},t,\)</span> and <span class="math inline" id="S3.p6.m2">\(I_{t}\)</span> where Stevens used <span class="math inline" id="S3.p6.m3">\(Q,L,B\)</span> and <span class="math inline" id="S3.p6.m4">\(N(\ldots).\)</span>
+We use integral <span class="math inline" id="S3.p6.m5">\(x\)</span>, following Stevens. We assume <span class="math inline" id="S3.p6.m6">\(k>4\)</span>
+to make sure some of his estimates apply. He reorganizes
+the sum by the number of factors in <span class="math inline" id="S3.p6.m7">\(t\)</span> and uses a result of Landau
+for the first idea. His display (3) in our notation says: for any
+odd value of <span class="math inline" id="S3.p6.m8">\(s\)</span>,</p>
+                                    <table id="S3.Ex8" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S3.Ex8.m1">\[I_{0}\geq\sum_{0\leq i}^{s}(-1)^{i}\sum_{t\mid n,\omega(t)=i}I_{t}.\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                  <div id="S3.p7" class="ltx_para">
+                                    <p class="ltx_p">Using the estimate <span class="math inline" id="S3.p7.m1">\(|I_{t}-x/t|\leq 1\)</span> (except for <span class="math inline" id="S3.p7.m2">\(t=1\)</span>
+when <span class="math inline" id="S3.p7.m3">\(I_{1}=x\)</span>), we write what Stevens has in his (4) and (5) as</p>
+                                    <table id="S3.Ex9" class="ltx_equation">
+                                      <tr class="ltx_equation ltx_align_baseline">
+                                        <td class="ltx_eqn_center_padleft"/>
+                                        <td class="ltx_align_center">
+                                          <span class="math display" id="S3.Ex9.m1">\[I_{0}\geq x\sum_{0\leq i}^{s}(-1)^{s}\sum_{t\mid n,\omega(t)=i}\frac{1}{t}-%
+\sum_{1\leq i}^{s}{k\choose i}=_{\textrm{\small{ def }}}xT_{s}-SB.\]</span>
+                                        </td>
+                                        <td class="ltx_eqn_center_padright"/>
+                                      </tr>
+                                    </table>
+                                    <p class="ltx_p">(We’ve written <span class="math inline" id="S3.p7.m4">\(SB\)</span> for <span class="math inline" id="S3.p7.m5">\(\sum_{1\leq i}^{s}{k\choose i}\)</span>, and <span class="math inline" id="S3.p7.m6">\(T_{s}\)</span> for <span class="math inline" id="S3.p7.m7">\(\sum_{0\leq i}^{s}(-1)^{s}\sum_{t\mid n,\omega(t)=i}\frac{1}{t}\)</span>.) Defining <span class="math inline" id="S3.p7.m8">\(T_{s}^{\prime}\)</span> by
+the relation <span class="math inline" id="S3.p7.m9">\({\pi}^{-1}(n)-T_{s}^{\prime}=T_{s}\)</span>, Stevens notes (using an approximation
+of <span class="math inline" id="S3.p7.m10">\(k^{s}\)</span> for <span class="math inline" id="S3.p7.m11">\(SB\)</span> instead of <span class="math inline" id="S3.p7.m12">\(SB\)</span> directly) that if <span class="math inline" id="S3.p7.m13">\(s\)</span> is chosen so that
+<span class="math inline" id="S3.p7.m14">\({\pi}^{-1}(n)>T_{s}^{\prime}\)</span> (so that <span class="math inline" id="S3.p7.m15">\(T_{s}>0\)</span>), and if <span class="math inline" id="S3.p7.m16">\(x>SB/({\pi}^{-1}(n)-T_{s}^{\prime})\)</span>,
+then <span class="math inline" id="S3.p7.m17">\(I_{0}>0\)</span> and so <span class="math inline" id="S3.p7.m18">\(g(n)\leq x\)</span>. He and we now look for a
+suitable <span class="math inline" id="S3.p7.m19">\(s\)</span>.</p>
+                                  </div>
+                                  <div id="S3.p8" class="ltx_para">
+                                    <p class="ltx_p">
+                                      <span class="math inline" id="S3.p8.m1">\(T_{s}^{\prime}\)</span> can be written as a sum over <span class="math inline" id="S3.p8.m2">\(i\)</span> of sums of terms
+<span class="math inline" id="S3.p8.m3">\(t\)</span> with <span class="math inline" id="S3.p8.m4">\(\omega(t)=i\)</span>, just like <span class="math inline" id="S3.p8.m5">\(T_{s}\)</span>, but with <span class="math inline" id="S3.p8.m6">\(s&lt;i\leq k\)</span>.
+Before doing this, Stevens observes: for <span class="math inline" id="S3.p8.m7">\(k>2\)</span>
+(we insert <span class="math inline" id="S3.p8.m8">\(h(k)\)</span>, a putative upper bound for <span class="math inline" id="S3.p8.m9">\({\sigma}^{-1}(n)\)</span>)</p>
+                                      <table id="S3.Ex10" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S3.Ex10.m1">\[r!\sum_{t\mid n,\omega(t)=r}1/t&lt;({\sigma}^{-1}(n))^{r}&lt;h(k)^{r}.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">Stevens uses <span class="math inline" id="S3.p8.m10">\(\log k\)</span> for <span class="math inline" id="S3.p8.m11">\(h(k)\)</span>; later we will use <span class="math inline" id="S3.p8.m12">\(\log\log p_{k}+1/2\)</span>. Then</p>
+                                      <table id="S3.Ex11" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S3.Ex11.m1">\[T_{s}^{\prime}=\sum_{s&lt;r}^{k}(-1)^{r}\sum_{t\mid n,\omega(t)=r}1/t&lt;\sum_{s&lt;r}^%
+{k}{\sigma}^{-1}(n)^{r}/r!&lt;\sum_{s&lt;r}^{\infty}h(k)^{r}/r!\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">which follows by dropping the <span class="math inline" id="S3.p8.m13">\((-1)^{r}\)</span> and by extending the sum past <span class="math inline" id="S3.p8.m14">\(r=k\)</span>.
+Taylor’s theorem with remainder on <span class="math inline" id="S3.p8.m15">\(e^{h(k)}\)</span> then yields</p>
+                                      <table id="S3.Ex12" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S3.Ex12.m1">\[T_{s}^{\prime}&lt;\sum_{s&lt;r}^{\infty}h(k)^{r}/r!\leq e^{h(k)}h(k)^{s+1}/(s+1)!.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S3.p9" class="ltx_para">
+                                      <p class="ltx_p">Stevens bounds things further by asking
+<span class="math inline" id="S3.p9.m1">\(s+1\geq 2eh(k)\)</span> and using <span class="math inline" id="S3.p9.m2">\((s+1)!>((s+1)/e)^{s+1}\)</span>. Then</p>
+                                      <table id="S3.Ex13" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S3.Ex13.m1">\[T_{s}^{\prime}&lt;e^{h(k)}h(k)^{s+1}/(s+1)!&lt;e^{h(k)}(eh(k)/s+1)^{s+1}\leq e^{h(k)%
+}/2^{s+1}.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S3.p10" class="ltx_para">
+                                      <p class="ltx_p">He also under-estimates <span class="math inline" id="S3.p10.m1">\({\pi}^{-1}(n)\)</span> by <span class="math inline" id="S3.p10.m2">\(1/k\)</span> for <span class="math inline" id="S3.p10.m3">\(k>4\)</span>,
+where we will use <span class="math inline" id="S3.p10.m4">\(\beta/\log k\)</span>. He then has</p>
+                                      <table id="S3.Ex14" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S3.Ex14.m1">\[{\pi}^{-1}(n)-T_{s}^{\prime}>1/k-k/2^{s+1}>1/k-k^{1-2e\log 2}>0,\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">since <span class="math inline" id="S3.p10.m5">\(s+1\)</span> is an even integer greater than <span class="math inline" id="S3.p10.m6">\(2e\log k\)</span>.
+So <span class="math inline" id="S3.p10.m7">\(I_{0}>0\)</span> (and thus <span class="math inline" id="S3.p10.m8">\(g(n)\leq x\)</span>) if <span class="math inline" id="S3.p10.m9">\(s\)</span> is an odd
+integer greater than <span class="math inline" id="S3.p10.m10">\(2e\log k-1\)</span> and
+<span class="math inline" id="S3.p10.m11">\(x>2k^{s+1}>k^{s}/(1/k-k/2^{s+1})>SB/({\pi}^{-1}(n)-T_{s}^{\prime})\)</span>.
+Stevens replaces <span class="math inline" id="S3.p10.m12">\(s+1\)</span> with <span class="math inline" id="S3.p10.m13">\(2e\log k+2\)</span>
+to ensure the bound holds for all <span class="math inline" id="S3.p10.m14">\(k\)</span>. <span class="ltx_text ltx_font_bold">End</span> of Adaptation.</p>
+                                    </div>
+                                    <div id="S3.p11" class="ltx_para">
+                                      <p class="ltx_p">We repeat the above, using <span class="math inline" id="S3.p11.m1">\(\log\log p_{k}+1/2\)</span> for <span class="math inline" id="S3.p11.m2">\(h(k)\)</span>
+and <span class="math inline" id="S3.p11.m3">\(\beta/\log p_{k}\)</span> for <span class="math inline" id="S3.p11.m4">\({\pi}^{-1}(n)\)</span>. (The Appendix discusses the validity of
+these choices.)
+Again asking for odd <span class="math inline" id="S3.p11.m5">\(s\)</span> with
+<span class="math inline" id="S3.p11.m6">\(s+1\geq 2eh(k),\)</span> then <span class="math inline" id="S3.p11.m7">\(T_{s}^{\prime}\leq e^{h(k)}/2^{s+1}\)</span>, and
+</p>
+                                      <table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray">
+                                        <tr id="S3.Ex18" class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_td ltx_align_right">
+                                            <span class="math inline" id="S3.Ex15.m1">\(\displaystyle{\pi}^{-1}(n)-T_{s}^{\prime}\)</span>
+                                          </td>
+                                          <td class="ltx_td ltx_align_center">
+                                            <span class="math inline" id="S3.Ex15.m2">\(\displaystyle>\)</span>
+                                          </td>
+                                          <td class="ltx_td ltx_align_left">
+                                            <span class="math inline" id="S3.Ex15.m3">\(\displaystyle\beta/\log p_{k}-(\log p_{k})e^{1/2}/2^{s+1}\)</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                        <tr class="ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_td ltx_align_right"/>
+                                          <td class="ltx_td ltx_align_center">
+                                            <span class="math inline" id="S3.Ex16.m2">\(\displaystyle>\)</span>
+                                          </td>
+                                          <td class="ltx_td ltx_align_left">
+                                            <span class="math inline" id="S3.Ex16.m3">\(\displaystyle\beta/\log p_{k}-(\log p_{k})e^{1/2}/2^{2e(\log\log p_{k}+1/2)}\)</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                        <tr class="ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_td ltx_align_right"/>
+                                          <td class="ltx_td ltx_align_center">
+                                            <span class="math inline" id="S3.Ex17.m2">\(\displaystyle=\)</span>
+                                          </td>
+                                          <td class="ltx_td ltx_align_left">
+                                            <span class="math inline" id="S3.Ex17.m3">\(\displaystyle\beta/\log p_{k}-(\log p_{k})(e/2^{2e})^{1/2}/(\log p_{k})^{2e%
+\log 2}\)</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                        <tr class="ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_td ltx_align_right"/>
+                                          <td class="ltx_td ltx_align_center">
+                                            <span class="math inline" id="S3.Ex18.m2">\(\displaystyle>\)</span>
+                                          </td>
+                                          <td class="ltx_td ltx_align_left">
+                                            <span class="math inline" id="S3.Ex18.m3">\(\displaystyle(1/\log p_{k})[\beta-(\log p_{k})^{2(1-e\log 2)}/3]>0.\)</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">In the last line, we use that <span class="math inline" id="S3.p11.m8">\((e/2^{2e})^{1/2}&lt;1/3\)</span>,
+that we can pick <span class="math inline" id="S3.p11.m9">\(1/1.78>\beta>1/3\)</span>, that <span class="math inline" id="S3.p11.m10">\(\log p_{k}>2\)</span> because <span class="math inline" id="S3.p11.m11">\(k>4\)</span>,
+and that <span class="math inline" id="S3.p11.m12">\(e\log 2>1\)</span>.</p>
+                                    </div>
+                                    <div id="S3.p12" class="ltx_para">
+                                      <p class="ltx_p">It should be clear that <span class="math inline" id="S3.p12.m1">\({\pi}^{-1}(n)-T_{s}^{\prime}>1/4\log p_{k}\)</span> by choosing <span class="math inline" id="S3.p12.m2">\(\beta>1/3\)</span>
+and whenever <span class="math inline" id="S3.p12.m3">\((\log p_{k})^{2e\log 2-2}>4\)</span> which holds for <span class="math inline" id="S3.p12.m4">\(k>4\)</span>. Using such an estimate
+we have whenever <span class="math inline" id="S3.p12.m5">\(s+1\)</span> is even and <span class="math inline" id="S3.p12.m6">\(\geq 2e(\log\log p_{k}+1/2)\)</span>, <span class="math inline" id="S3.p12.m7">\({\pi}^{-1}(n)-T_{s}^{\prime}>1/4\log p_{k}\)</span> leading to</p>
+                                      <table id="S3.Ex19" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S3.Ex19.m1">\[\textbf{Theorem: }g(n)\leq(4\log p_{k})\sum_{1\leq i\leq s}{k\choose i}&lt;(4\log
+p%
+_{k})k^{1+2e(1/2+\log\log p_{k})}.\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S3.p13" class="ltx_para">
+                                      <p class="ltx_p">We could tweak the choice of <span class="math inline" id="S3.p13.m1">\(s\)</span> slightly to get a smaller exponent, as well as use a better
+approximation for the sum of binomial coefficients. In the next section, we will find a
+bound which depends directly on <span class="math inline" id="S3.p13.m2">\({\sigma}^{-1}(n)\)</span> which not only does both, but gives a tighter bound
+in general.</p>
+                                    </div>
+                                  </section>
+                                  <section id="S4" class="ltx_section">
+                                    <h2 class="ltx_title ltx_title_section">
+                                      <span class="ltx_tag ltx_tag_section">4 </span>
+                                      <span class="math inline" id="S4.m1">\({\sigma}^{-1}(n)\)</span> and <span class="math inline" id="S4.m2">\({\pi}^{-1}(n)\)</span>
+                                    </h2>
+                                    <div id="S4.p1" class="ltx_para">
+                                      <p class="ltx_p">We modify Stevens’s argument with a better upper bound
+for the numerator and express <span class="math inline" id="S4.p1.m1">\(T_{s}^{\prime}\)</span> as an alternating
+and eventually decreasing sum, allowing us a smaller <span class="math inline" id="S4.p1.m2">\(s\)</span>.</p>
+                                    </div>
+                                    <div id="S4.p2" class="ltx_para">
+                                      <p class="ltx_p">Note that <span class="math inline" id="S4.p2.m1">\(T_{s}^{\prime}\)</span> is an alternating sum and that one has</p>
+                                      <table id="S4.Ex20" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S4.Ex20.m1">\[{\sigma}^{-1}(n)\sum_{t\mid n,\omega(t)=j}1/t>(j+1)\sum_{t\mid n,\omega(t)=j+1%
+}1/t,\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                      <p class="ltx_p">so that when <span class="math inline" id="S4.p2.m2">\(s>{\sigma}^{-1}(n)\)</span>, one can bound <span class="math inline" id="S4.p2.m3">\(T_{s}^{\prime}\)</span> by <span class="math inline" id="S4.p2.m4">\({\sigma}^{-1}(n)^{s+1}/(s+1)!.\)</span> Now instead
+of Taylor’s theorem and <span class="math inline" id="S4.p2.m5">\(h(k)\)</span>, we use (see Appendix)
+<span class="math inline" id="S4.p2.m6">\(e&lt;(1/{\pi}^{-1}(n))^{1/{\sigma}^{-1}(n)}\leq 4\)</span> to show any real number <span class="math inline" id="S4.p2.m7">\(r\geq 4{\sigma}^{-1}(n)\)</span> gives
+<span class="math inline" id="S4.p2.m8">\({\pi}^{-1}(n)-T_{\lceil r\rceil-1}^{\prime}>{\pi}^{-1}(n)-{\sigma}^{-1}(n)^{%
+\lceil r\rceil}/(\lceil r\rceil)!>0\)</span>:</p>
+                                      <table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray">
+                                        <tr id="S4.Ex23" class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_td ltx_align_right"/>
+                                          <td class="ltx_td ltx_align_center"/>
+                                          <td class="ltx_td ltx_align_left">
+                                            <span class="math inline" id="S4.Ex21.m3">\(\displaystyle e&lt;4^{3/4},\textrm{ so }e(1/{\pi}^{-1}(n))^{1/4{\sigma}^{-1}(n)}&lt;%
+e4^{1/4}&lt;4\)</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                        <tr class="ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_td ltx_align_right"/>
+                                          <td class="ltx_td ltx_align_center">
+                                            <span class="ltx_text ltx_markedasmath">so</span>
+                                          </td>
+                                          <td class="ltx_td ltx_align_left">
+                                            <span class="math inline" id="S4.Ex22.m3">\(\displaystyle{\sigma}^{-1}(n)&lt;{\pi}^{-1}(n)^{1/4{\sigma}^{-1}(n)}4{\sigma}^{-1%
+}(n)/e\leq{\pi}^{-1}(n)^{1/r}(r/e)\)</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                        <tr class="ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_td ltx_align_right"/>
+                                          <td class="ltx_td ltx_align_center">
+                                            <span class="ltx_text ltx_markedasmath">so</span>
+                                          </td>
+                                          <td class="ltx_td ltx_align_left">
+                                            <span class="math inline" id="S4.Ex23.m3">\(\displaystyle{\sigma}^{-1}(n)^{\lceil r\rceil}&lt;{\pi}^{-1}(n)(\lceil r\rceil/e)%
+^{\lceil r\rceil}&lt;{\pi}^{-1}(n)(\lceil r\rceil)!.\)</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S4.p3" class="ltx_para">
+                                      <p class="ltx_p">We now claim</p>
+                                    </div>
+                                    <div id="S4.p4" class="ltx_para">
+                                      <p class="ltx_p">
+                                        <span class="ltx_text ltx_font_bold">Theorem:</span> Let <span class="math inline" id="S4.p4.m1">\(s\)</span> be the smallest odd integer with <span class="math inline" id="S4.p4.m2">\(s+1\geq 4{\sigma}^{-1}(n).\)</span> For <span class="math inline" id="S4.p4.m3">\(k>2,\)</span>
+                                      </p>
+                                      <table id="S4.Ex24" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S4.Ex24.m1">\[\frac{\sum_{1\leq i\leq s}{k\choose i}}{{\pi}^{-1}(n)-{\sigma}^{-1}(n)^{s+1}/(%
+s+1)!}>g(n).\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S4.p5" class="ltx_para">
+                                      <p class="ltx_p">We collapse the summands in the numerator slightly, increasing the total by 1, and
+as <span class="math inline" id="S4.p5.m1">\((s+1)!>\sqrt{2\pi(s+1)}((s+1)/e)^{s+1}\)</span>, one sees the denominator
+is larger than <span class="math inline" id="S4.p5.m2">\((\sqrt{2\pi(s+1)}-1){\sigma}^{-1}(n)^{s+1}/(s+1)!\)</span>, so we can write
+a weaker upper bound as a <span class="ltx_text ltx_font_bold">corollary</span>:</p>
+                                      <table id="S4.Ex25" class="ltx_equation">
+                                        <tr class="ltx_equation ltx_align_baseline">
+                                          <td class="ltx_eqn_center_padleft"/>
+                                          <td class="ltx_align_center">
+                                            <span class="math display" id="S4.Ex25.m1">\[\frac{(s+1)!\sum_{0\leq 2j&lt;s}{k+1\choose s-2j}}{(\sqrt{2\pi(s+1)}-1){\sigma}^{%
+-1}(n)^{s+1}}>g(n).\]</span>
+                                          </td>
+                                          <td class="ltx_eqn_center_padright"/>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div id="S4.p6" class="ltx_para">
+                                      <p class="ltx_p">This may seem intimidating, but when we take into account that for <span class="math inline" id="S4.p6.m1">\(k>6\)</span>, <span class="math inline" id="S4.p6.m2">\({\sigma}^{-1}(n)\)</span> is at most
+<span class="math inline" id="S4.p6.m3">\(1/2+\log\log k(1+\log 2/\log k)\)</span>
+it is then seen that the dominant term in the sum is <span class="math inline" id="S4.p6.m4">\({k+1\choose s}\)</span> and the
+expression is <span class="math inline" id="S4.p6.m5">\(O(((k+1)/{\sigma}^{-1}(n))^{3+4\log\log k+\epsilon})\)</span> when <span class="math inline" id="S4.p6.m6">\({\sigma}^{-1}(n)\geq 1\)</span>.
+(The portion that is <span class="math inline" id="S4.p6.m7">\(\frac{s+1}{(\sqrt{2\pi(s+1)}-1){\sigma}^{-1}(n)}\)</span> is less than <span class="math inline" id="S4.p6.m8">\(1\)</span> for
+large enough <span class="math inline" id="S4.p6.m9">\({\sigma}^{-1}(n)\)</span>; for <span class="math inline" id="S4.p6.m10">\({\sigma}^{-1}(n)\)</span> near or smaller than <span class="math inline" id="S4.p6.m11">\(1\)</span> we have the more elementary
+bounds.)</p>
+                                    </div>
+                                    <div id="S4.p7" class="ltx_para">
+                                      <p class="ltx_p">This argument only needs <span class="math inline" id="S4.p7.m1">\(K\)</span> such that <span class="math inline" id="S4.p7.m2">\((s+1)>K{\sigma}^{-1}(n)\)</span> and also that
+<span class="math inline" id="S4.p7.m3">\(e/K&lt;{\pi}^{-1}(n)^{1/K{\sigma}^{-1}(n)}\)</span>. This holds for <span class="math inline" id="S4.p7.m4">\(K>3.89\)</span>, and when
+<span class="math inline" id="S4.p7.m5">\({\sigma}^{-1}(n)>1\)</span>, one can lower <span class="math inline" id="S4.p7.m6">\(K\)</span> from 4 to <span class="math inline" id="S4.p7.m7">\(3.81\)</span>. However, even for large values of <span class="math inline" id="S4.p7.m8">\({\sigma}^{-1}(n)\)</span>,
+the argument still expects <span class="math inline" id="S4.p7.m9">\((K/e)^{K}>e\)</span>, which means <span class="math inline" id="S4.p7.m10">\(K\)</span> can’t be shown
+smaller than <span class="math inline" id="S4.p7.m11">\(3.59\)</span> with this method.</p>
+                                    </div>
+                                    <div id="S4.p8" class="ltx_para">
+                                      <p class="ltx_p">As a rough comparison, Jacobsthal’s bound is larger than Kanold’s bound for all <span class="math inline" id="S4.p8.m1">\(k\)</span>.
+Stevens’s bound is smaller than <span class="math inline" id="S4.p8.m2">\(2^{k}\)</span> for <span class="math inline" id="S4.p8.m3">\(k>300\)</span>, and is smaller than Kanold’s better
+bound for <span class="math inline" id="S4.p8.m4">\(k>5000000\)</span> . Our Improvement is smaller than Kanold’s for <span class="math inline" id="S4.p8.m5">\(k>e^{11}\)</span>,
+and the exponent <span class="math inline" id="S4.p8.m6">\(s\leq 1+4{\sigma}^{-1}(n)\)</span> above is smaller than that of Stevens for <span class="math inline" id="S4.p8.m7">\(k>2\)</span>.</p>
+                                    </div>
+                                  </section>
+                                  <section id="S5" class="ltx_section">
+                                    <h2 class="ltx_title ltx_title_section">
+                                      <span class="ltx_tag ltx_tag_section">5 </span>Some History</h2>
+                                      <div id="S5.p1" class="ltx_para">
+                                        <p class="ltx_p">The recap is our interpretation of Westzynthius’s upper bound argument published in 1931,
+generalized to arbitrary <span class="math inline" id="S5.p1.m1">\(n\)</span> with <span class="math inline" id="S5.p1.m2">\(\omega(n)=k\)</span> instead of <span class="math inline" id="S5.p1.m3">\(P_{k}\)</span>, which
+Westzynthius did not publish as far as we know. In a footnote
+Westzynthius did hint at sieving with just odd numbers,
+and we considered extending that argument with thinner sets. This led us to asking the
+question <cite class="ltx_cite">[]</cite> on MathOverflow in 2010.</p>
+                                      </div>
+                                      <div id="S5.p2" class="ltx_para">
+                                        <p class="ltx_p">Correspondence on MathOverflow led us eventually to Thomas Hagedorn’s paper
+<cite class="ltx_cite">[]</cite> and Jacobsthal’s function.
+Jacobsthal in <cite class="ltx_cite">[]</cite> uses a slightly different argument, and (with the
+notation of this article) instead of
+using <span class="math inline" id="S5.p2.m1">\(2^{k}/{\pi}^{-1}(n)\)</span> he bounds <span class="math inline" id="S5.p2.m2">\({\pi}^{-1}(n)\)</span> by <span class="math inline" id="S5.p2.m3">\(1/(k+1)\)</span> and gives a bound of <span class="math inline" id="S5.p2.m4">\((k+1)(2^{k}-1)\)</span> on <span class="math inline" id="S5.p2.m5">\(L(n)\)</span>.
+Hagedorn’s paper quoted the bounds of Kanold and Stevens, and after studying those papers we
+adapted Stevens’s argument and posted the results on MathOverflow in 2011, as well as producing a
+private manuscript with small circulation.</p>
+                                      </div>
+                                      <div id="S5.p3" class="ltx_para">
+                                        <p class="ltx_p">Since then we have
+accumulated and posted other accessible results, and arranged some of them for this article.
+The Observation represents a small improvement on Kanold’s result which involves
+<span class="math inline" id="S5.p3.m1">\(g(fd)\leq g(d)f+1-\phi(f)\)</span>
+instead of <span class="math inline" id="S5.p3.m2">\(g(fd)\leq g(d)f+g(f)-f\)</span>; the two are the same for <span class="math inline" id="S5.p3.m3">\(f\)</span> prime.
+The Improvement is intended to
+show not just improved asymptotic results but also that Kanold’s bound holds for
+<span class="math inline" id="S5.p3.m4">\(k\)</span> smaller than <span class="math inline" id="S5.p3.m5">\(e^{50}\)</span>. Indeed the name is earned once <span class="math inline" id="S5.p3.m6">\(k\geq e^{11}\)</span>.
+We admit the work is in showing the bounds hold for small <span class="math inline" id="S5.p3.m7">\(k\)</span>, which makes the Improvement not as
+elementary or accessible as we hope.</p>
+                                      </div>
+                                      <div id="S5.p4" class="ltx_para">
+                                        <p class="ltx_p">Hagedorn also mentions work of Erdős, Iwaniec, and others. Erdős shows
+for any given positive real <span class="math inline" id="S5.p4.m1">\(\epsilon\)</span> that <span class="math inline" id="S5.p4.m2">\(|1-g(n){\pi}^{-1}(n)/k|>\epsilon\)</span> only for
+<span class="math inline" id="S5.p4.m3">\(n\)</span> in a set of zero density. Erdős also comments that Brun’s method can yield
+a constant <span class="math inline" id="S5.p4.m4">\(c\)</span> such that <span class="math inline" id="S5.p4.m5">\(g(n)\)</span> is <span class="math inline" id="S5.p4.m6">\(O(k^{c})\)</span>, but we have not found a version of this that is
+both explicit and accessible. Iwaniec shows the existence of a constant <span class="math inline" id="S5.p4.m7">\(C\)</span> independent of <span class="math inline" id="S5.p4.m8">\(n\)</span>
+such that there are at least <span class="math inline" id="S5.p4.m9">\(k^{2}\)</span> many totatives of <span class="math inline" id="S5.p4.m10">\(n\)</span> in an interval of size <span class="math inline" id="S5.p4.m11">\(C(k^{2}\log k)/{\pi}^{-1}(n)\)</span>,
+which implies
+<span class="math inline" id="S5.p4.m12">\(g(n)\)</span> is <span class="math inline" id="S5.p4.m13">\(O((k\log k)^{2})\)</span>; again we do not know what <span class="math inline" id="S5.p4.m14">\(C\)</span> is.</p>
+                                      </div>
+                                    </section>
+                                    <section id="S6" class="ltx_section">
+                                      <h2 class="ltx_title ltx_title_section">
+                                        <span class="ltx_tag ltx_tag_section">6 </span>Further research and reading</h2>
+                                        <div id="S6.p1" class="ltx_para">
+                                          <p class="ltx_p">We intended this article to give simpler, more accessible, and more explicit proofs of upper
+bounds on Jacobsthal’s function. We are optimistic about improving upon the
+results of Erdős and Iwaniec. In particular, we think there is more to the Observation:
+we hope to achieve a subquadratic in <span class="math inline" id="S6.p1.m1">\(k\)</span> upper bound using this direction by noting how large
+intervals of numbers with factor common to <span class="math inline" id="S6.p1.m2">\(n\)</span> are distributed in <span class="math inline" id="S6.p1.m3">\((0,2n)\)</span>. At present,
+the difference in (base 2) exponents between <span class="math inline" id="S6.p1.m4">\(O(\log k\log\log k)\)</span> and <span class="math inline" id="S6.p1.m5">\(O(\log k)\)</span> is substantial.</p>
+                                        </div>
+                                        <div id="S6.p2" class="ltx_para">
+                                          <p class="ltx_p">Except for the bound depending on <span class="math inline" id="S6.p2.m1">\({\sigma}^{-1}(n)\)</span>, all of these bounds are also bounds on
+Jacobsthal’s <span class="math inline" id="S6.p2.m2">\(C(k)\)</span>, given by <span class="math inline" id="S6.p2.m3">\(C(k)=\textrm{max}_{k=\omega(n)}L(n)\)</span>. It was shown recently
+<cite class="ltx_cite">[]</cite> that
+the conjecture <span class="math inline" id="S6.p2.m4">\(C(k)+1=g(P_{k})\)</span> holds for <span class="math inline" id="S6.p2.m5">\(1\leq k\leq 23\)</span> and fails at <span class="math inline" id="S6.p2.m6">\(k=24\)</span>.</p>
+                                        </div>
+                                        <div id="S6.p3" class="ltx_para">
+                                          <p class="ltx_p">Note that the bound involving <span class="math inline" id="S6.p3.m1">\({\sigma}^{-1}(n)\)</span> can represent a substantial improvement even
+if <span class="math inline" id="S6.p3.m2">\(n\)</span> cannot be factored; for those <span class="math inline" id="S6.p3.m3">\(n\)</span> which do not have small factors, <span class="math inline" id="S6.p3.m4">\({\sigma}^{-1}(n)\)</span>
+can be substantially smaller as can <span class="math inline" id="S6.p3.m5">\(k\)</span>, even for numbers near <span class="math inline" id="S6.p3.m6">\(10^{10^{100}}\)</span>. Of course,
+when <span class="math inline" id="S6.p3.m7">\(k\)</span> or a partial factorization of <span class="math inline" id="S6.p3.m8">\(n\)</span> are better known, better bounds on <span class="math inline" id="S6.p3.m9">\(g(n)\)</span>
+become available.</p>
+                                        </div>
+                                        <div id="S6.p4" class="ltx_para">
+                                          <p class="ltx_p">We are interested in tweaking the Variation to handle more squarefree <span class="math inline" id="S6.p4.m1">\(n\)</span>
+by sieving out small prime factors. Our beginning efforts have not yielded
+much improvement on bounds obtained by the Observation. It seems better
+estimates on the number of totatives in an interval of arbitrary length are
+needed to carry out an argument like that in the Variation.</p>
+                                        </div>
+                                        <div id="S6.p5" class="ltx_para">
+                                          <p class="ltx_p">Some questions of interest:</p>
+                                        </div>
+                                        <div id="S6.p6" class="ltx_para">
+                                          <p class="ltx_p">1) Pick a small odd prime <span class="math inline" id="S6.p6.m1">\(p\)</span> and odd <span class="math inline" id="S6.p6.m2">\(n\)</span> with <span class="math inline" id="S6.p6.m3">\(q_{1}>p\)</span>. We know <span class="math inline" id="S6.p6.m4">\(g(pn)/g(n)&lt;p\)</span>: can we
+get anything sharper? In particular, what are those integers <span class="math inline" id="S6.p6.m5">\(n\)</span> such that
+<span class="math inline" id="S6.p6.m6">\(g(3n)>2g(n)?\)</span> Such that <span class="math inline" id="S6.p6.m7">\(g(5n)>2g(n)?\)</span>
+                                        </p>
+                                      </div>
+                                      <div id="S6.p7" class="ltx_para">
+                                        <p class="ltx_p">2) Let <span class="math inline" id="S6.p7.m1">\(a(n)\)</span> be the smallest positive integer such that <span class="math inline" id="S6.p7.m2">\(\gcd(n,a(n)+i)>1\)</span> for
+<span class="math inline" id="S6.p7.m3">\(0&lt;i&lt;g(n)\)</span>. One can show <span class="math inline" id="S6.p7.m4">\(a(n)&lt;n/2\)</span>; how much can this be improved? If <span class="math inline" id="S6.p7.m5">\(b(n)\)</span>
+is the number of such longest intervals of nontotatives of <span class="math inline" id="S6.p7.m6">\(n\)</span> in <span class="math inline" id="S6.p7.m7">\((1,n)\)</span>, can we hope
+for <span class="math inline" id="S6.p7.m8">\(a(n)b(n)&lt;n\)</span>?</p>
+                                      </div>
+                                      <div id="S6.p8" class="ltx_para">
+                                        <p class="ltx_p">3) How close are two such intervals? If one hopes for a subquadratic (in <span class="math inline" id="S6.p8.m1">\(k\)</span>) bound on
+<span class="math inline" id="S6.p8.m2">\(g(n)\)</span>, this will be an important bit of information. Even in the case <span class="math inline" id="S6.p8.m3">\(q_{1}>k\)</span>,
+it should be related to how primes are distributed, which suggests that some interesting
+perspective is needed.</p>
+                                      </div>
+                                      <div id="S6.p9" class="ltx_para">
+                                        <p class="ltx_p">4) Not much asymptotic improvement should be expected from these arguments in the case
+that <span class="math inline" id="S6.p9.m1">\({\sigma}^{-1}(n)\)</span> is large, say <span class="math inline" id="S6.p9.m2">\({\sigma}^{-1}(n)>2\)</span>. However, that is where the difficult cases
+are, and the quantity <span class="math inline" id="S6.p9.m3">\(\cal{T}\)</span>
+                                        <span class="math inline" id="S6.p9.m4">\(=(1/{\pi}^{-1}(n))^{1/{\sigma}^{-1}(n)}\)</span> is expected to decrease as <span class="math inline" id="S6.p9.m5">\({\sigma}^{-1}(n)\)</span> increases.
+How does <span class="math inline" id="S6.p9.m6">\(\cal{T}\)</span> behave with <span class="math inline" id="S6.p9.m7">\({\sigma}^{-1}(n)\)</span>, and can one use this in
+bounding <span class="math inline" id="S6.p9.m8">\(g(n)\)</span>?</p>
+                                      </div>
+                                      <div id="S6.p10" class="ltx_para">
+                                        <p class="ltx_p">5) Even the simple estimates with small <span class="math inline" id="S6.p10.m1">\({\sigma}^{-1}(n)\)</span> have some slop, primarily in overestimating
+multiples of <span class="math inline" id="S6.p10.m2">\(q_{i}\)</span> with
+<span class="math inline" id="S6.p10.m3">\(L/q_{i}\)</span>. Often this results in an estimate about twice as large as needed. Can something
+be said about this ”noise” vector <span class="math inline" id="S6.p10.m4">\(L/q_{i}-I_{q_{i}}\)</span> and what approaches avoid the error
+introduced by this?</p>
+                                      </div>
+                                      <div id="S6.p11" class="ltx_para">
+                                        <p class="ltx_p">We recommend the bibliography and also the following reading list,
+which provides additional information related to Jacobsthal’s function and
+applications.</p>
+                                      </div>
+                                      <div id="S6.p12" class="ltx_para">
+                                        <p class="ltx_p">Ernst Jacobsthal, Über Sequenzen ganzer Zahlen, von denen keine zu <span class="math inline" id="S6.p12.m1">\(n\)</span> teilerfremd ist. I-III.
+<span class="ltx_text ltx_font_italic">Det Kongelige Norske Videnskabers Selskabs Forhandlinger</span> Bd 33 1960, Nr. 24,
+Trondheim I Kommisjon Hos F. Bruns Bokhandel 1961, pp. 117-124,125-131,132-139.
+(Also see IV and V published in a later edition.)</p>
+                                      </div>
+                                      <div id="S6.p13" class="ltx_para">
+                                        <p class="ltx_p">Hans-Joachim Kanold, Neuere Untersuchungen über die Jacobsthal- Funktion <span class="math inline" id="S6.p13.m1">\(g(n)\)</span>.
+<span class="ltx_text ltx_font_italic">Monatshefte Math.</span> 84, 1977, pp. 109-124.</p>
+                                      </div>
+                                      <div id="S6.p14" class="ltx_para">
+                                        <p class="ltx_p">Paul Erdős, On the integers relatively prime to <span class="math inline" id="S6.p14.m1">\(n\)</span>
+and on a number-theoretic function considered by Jacobsthal.
+<span class="ltx_text ltx_font_italic">Math. Scand.</span> 11 (1962) pp. 163-170.</p>
+                                      </div>
+                                      <div id="S6.p15" class="ltx_para">
+                                        <p class="ltx_p">R.C. Vaughan, On the order of magnitude of Jacobsthal’s function.
+<span class="ltx_text ltx_font_italic">Proc. Edinburgh Math. Soc.</span> 20 (1976-77) pp. 329-331.</p>
+                                      </div>
+                                      <div id="S6.p16" class="ltx_para">
+                                        <p class="ltx_p">Henryk Iwaniec, On the problem Of Jacobsthal.
+<span class="ltx_text ltx_font_italic">Demonstratio Mathematica</span> v XI no. 1 1978 pp.225-231.</p>
+                                      </div>
+                                      <div id="S6.p17" class="ltx_para">
+                                        <p class="ltx_p">MathOverflow Questions (Number refers to URL, so 37679
+expands to http://mathoverflow.net/questions/37679) 
+<br class="ltx_break"/>88323 Analogues of Jacobsthal’s Function. 
+<br class="ltx_break"/>56099 Lower bound of the number of relatively primes (each other)
+in an interval. 
+<br class="ltx_break"/>68351 Least Prime Factor in a sequence of 2n consecutive integers.</p>
+                                      </div>
+                                      <div id="S6.p18" class="ltx_para">
+                                        <p class="ltx_p">Shallit, J., State Complexity and Jacobsthal’s Function.
+<span class="ltx_text ltx_font_italic">CIAA ’00 Revised Papers from the 5th International Conference on
+Implementation and Application of Automata</span> 2000, pp. 272-278</p>
+                                      </div>
+                                      <div id="S6.p19" class="ltx_para">
+                                        <p class="ltx_p">Schlage-Puchta, J.C., On Triangular Billiards. 
+<br class="ltx_break"/>http://arxiv.org/abs/1105.1629</p>
+                                      </div>
+                                    </section>
+                                    <section id="S7" class="ltx_section">
+                                      <h2 class="ltx_title ltx_title_section">
+                                        <span class="ltx_tag ltx_tag_section">7 </span>Acknowledgments</h2>
+                                        <div id="S7.p1" class="ltx_para">
+                                          <p class="ltx_p">We acknowledge Will Jagy, Aaron Meyerowitz, and Thomas Hagedorn for their support and
+assistance. We appreciate the stimulating environment provided by the MathOverflow forum
+and its community, and are thankful for its providing a repository of these results.
+We especially appreciate Will and Aaron for their MathOverflow contributions, and are
+also grateful for discussions with
+users Larry Freeman (who asked a version of question 2) above) and asterios gantzounis.</p>
+                                        </div>
+                                      </section>
+                                      <section id="S8" class="ltx_section">
+                                        <h2 class="ltx_title ltx_title_section">
+                                          <span class="ltx_tag ltx_tag_section">8 </span>Appendix</h2>
+                                          <div id="S8.p1" class="ltx_para">
+                                            <p class="ltx_p">We resolve some details on assertions made in earlier sections: that
+<span class="math inline" id="S8.p1.m1">\((1/{\pi}^{-1}(n))^{1/{\sigma}^{-1}(n)}\in(e,4]\)</span>, on bounding
+<span class="math inline" id="S8.p1.m2">\({\sigma}^{-1}(n)\)</span> from above by <span class="math inline" id="S8.p1.m3">\(1/2+\log\log p_{k}\)</span> and <span class="math inline" id="S8.p1.m4">\({\pi}^{-1}(n)\)</span> from below by
+<span class="math inline" id="S8.p1.m5">\(1/3\log p_{k}\)</span>, and on showing the Improvement holds for <span class="math inline" id="S8.p1.m6">\(k>e^{9.5}\)</span>.</p>
+                                          </div>
+                                          <div id="S8.p2" class="ltx_para">
+                                            <p class="ltx_p">In getting a bound depending on <span class="math inline" id="S8.p2.m1">\({\sigma}^{-1}(n)\)</span>, we used the assumption that
+<span class="math inline" id="S8.p2.m2">\(e&lt;(1/{\pi}^{-1}(n))^{1/{\sigma}^{-1}(n)}\leq 4\)</span> for <span class="math inline" id="S8.p2.m3">\(n>1\)</span>. We proved this
+along with related results in a private manuscript <cite class="ltx_cite">[]</cite>. The
+proof was based on observing that
+<span class="math inline" id="S8.p2.m4">\((-\log{\pi}^{-1}(n))/{\sigma}^{-1}(n)\)</span> was a mediant sum of values of the form <span class="math inline" id="S8.p2.m5">\(p_{i}\log(p_{i}/(p_{i}-1))\)</span>
+(<span class="math inline" id="S8.p2.m6">\(\frac{a}{b}\)</span> and
+<span class="math inline" id="S8.p2.m7">\(\frac{c}{d}\)</span> give a mediant of <span class="math inline" id="S8.p2.m8">\(\frac{a+c}{b+d}\)</span>), so that
+<span class="math inline" id="S8.p2.m9">\((q_{k}/(q_{k}-1))^{q_{k}}&lt;(1/{\pi}^{-1}(n))^{1/{\sigma}^{-1}(n)}&lt;(q_{1}/(q_{1}%
+-1))^{q_{1}}\)</span>.
+Also, if <span class="math inline" id="S8.p2.m10">\({\sigma}^{-1}(n)\geq 1\)</span>, then
+<span class="math inline" id="S8.p2.m11">\((1/{\pi}^{-1}(n))^{1/{\sigma}^{-1}(n)}&lt;3.6\)</span>, so one can improve the constant <span class="math inline" id="S8.p2.m12">\(C\)</span> in
+<span class="math inline" id="S8.p2.m13">\(g(n)\leq Ak^{B+C\log\log k}\)</span> to a value less than <span class="math inline" id="S8.p2.m14">\(3.81\)</span>. If we did not care
+about the advantage given by using <span class="math inline" id="S8.p2.m15">\({\sigma}^{-1}(n)\)</span>, we could use a general bound of
+<span class="math inline" id="S8.p2.m16">\(g(n)&lt;k^{3+3.81\log\log k}\)</span> for <span class="math inline" id="S8.p2.m17">\(k>2\)</span>, which can be verified by hand for small
+values of <span class="math inline" id="S8.p2.m18">\(k\)</span> and which would be weaker (and thus valid) than the Variation when <span class="math inline" id="S8.p2.m19">\({\sigma}^{-1}(n)\leq 1\)</span>.</p>
+                                          </div>
+                                          <div id="S8.p3" class="ltx_para">
+                                            <p class="ltx_p">Letting <span class="math inline" id="S8.p3.m1">\(n=P_{k}\)</span>, Mertens determines <span class="math inline" id="S8.p3.m2">\({\sigma}^{-1}(n)\)</span> and <span class="math inline" id="S8.p3.m3">\({\pi}^{-1}(n)\)</span> with error by
+<span class="math inline" id="S8.p3.m4">\({\sigma}^{-1}(n)=\log\log p_{k}+B+E_{1}(k)\)</span> and
+<span class="math inline" id="S8.p3.m5">\({\pi}^{-1}(n)=e^{-(\gamma+\delta(k))}/\log p_{k}\)</span> where
+<span class="math inline" id="S8.p3.m6">\(B\)</span> is a constant with value near <span class="math inline" id="S8.p3.m7">\(0.2615\)</span> and
+<span class="math inline" id="S8.p3.m8">\(E_{1}(k)\)</span> and <span class="math inline" id="S8.p3.m9">\(\delta(k)\)</span> are error terms in <span class="math inline" id="S8.p3.m10">\(O(1/\log p_{k})\)</span>. In using Stevens’s argument
+with tighter bounds, we used <span class="math inline" id="S8.p3.m11">\(1/2+\log\log p_{k}\)</span> as an upper bound for <span class="math inline" id="S8.p3.m12">\({\sigma}^{-1}(n)\)</span>; calculations
+show that <span class="math inline" id="S8.p3.m13">\({\sigma}^{-1}(n)&lt;0.41+\log\log p_{k}\)</span> for <span class="math inline" id="S8.p3.m14">\(7&lt;p_{k}&lt;10^{8}\)</span>, and Mertens estimates
+of the error (or tighter estimates given by Rosser and Schoenfeld) show this holds for <span class="math inline" id="S8.p3.m15">\(k>4\)</span>.
+If we were concerned only with <span class="math inline" id="S8.p3.m16">\(k>50\)</span>, we could replace <span class="math inline" id="S8.p3.m17">\(0.41\)</span> by <span class="math inline" id="S8.p3.m18">\(0.28\)</span>, closer to the
+value of <span class="math inline" id="S8.p3.m19">\(B\)</span>. We could also use <span class="math inline" id="S8.p3.m20">\(3/4+\log\log k\)</span> as an upper bound for <span class="math inline" id="S8.p3.m21">\(k>10\)</span>, and
+replace <span class="math inline" id="S8.p3.m22">\(3/4\)</span> by smaller numbers for <span class="math inline" id="S8.p3.m23">\(k\)</span> sufficiently large.</p>
+                                          </div>
+                                          <div id="S8.p4" class="ltx_para">
+                                            <p class="ltx_p">Similarly <span class="math inline" id="S8.p4.m1">\({\pi}^{-1}(n)\log(p_{k})\)</span> approaches <span class="math inline" id="S8.p4.m2">\(e^{-\gamma}\)</span> which is near <span class="math inline" id="S8.p4.m3">\(0.5615\)</span>; computing
+small examples shows <span class="math inline" id="S8.p4.m4">\({\pi}^{-1}(n)>1/3\log p_{k}\)</span> for <span class="math inline" id="S8.p4.m5">\(1&lt;p_{k}&lt;10^{8}\)</span>; theory then gives the
+weak inequality for all <span class="math inline" id="S8.p4.m6">\(k\)</span>. We could use <span class="math inline" id="S8.p4.m7">\(1/2\log p_{k}\)</span> for <span class="math inline" id="S8.p4.m8">\(k>8\)</span> if we needed to improve the
+multiplicative constant <span class="math inline" id="S8.p4.m9">\(4\)</span>; instead we chose to develop the estimate depending on <span class="math inline" id="S8.p4.m10">\({\sigma}^{-1}(n)\)</span>
+in the section following Stevens’s argument.
+</p>
+                                          </div>
+                                          <div id="S8.p5" class="ltx_para">
+                                            <p class="ltx_p">The rest of this Appendix contains the verification of the claim
+that the choice of <span class="math inline" id="S8.p5.m1">\(q_{l}\)</span> for <span class="math inline" id="S8.p5.m2">\(n\)</span> with <span class="math inline" id="S8.p5.m3">\(k>e^{9.5}\)</span> satisfies <span class="math inline" id="S8.p5.m4">\(q_{l}&lt;k^{0.45}\)</span>, and
+remarks expanding on the proof idea of the Improvement.</p>
+                                          </div>
+                                          <div id="S8.p6" class="ltx_para">
+                                            <p class="ltx_p">We first work with sums of the form <span class="math inline" id="S8.p6.m1">\(\sum_{1\leq j\leq u}1/p_{m+j}\)</span>
+which are within <span class="math inline" id="S8.p6.m2">\(1/2p_{m}\)</span> to 1,
+as they represent an extremal form with respect to the estimate.
+<span class="math inline" id="S8.p6.m3">\(\sum_{4\leq j\leq 29}1/p_{i}&lt;.9\)</span>, so when <span class="math inline" id="S8.p6.m4">\(p_{m}=5\)</span> we already have <span class="math inline" id="S8.p6.m5">\(u>p_{m}^{2}\)</span> if we want
+a sum close enough to 1. As one increases <span class="math inline" id="S8.p6.m6">\(m\)</span> by 1, one
+has to remove <span class="math inline" id="S8.p6.m7">\(1/p_{m+1}\)</span> and ”replace” it by more than <span class="math inline" id="S8.p6.m8">\(2p_{m}\)</span> terms of size smaller than
+<span class="math inline" id="S8.p6.m9">\(1/4p_{m}^{2}\)</span>, so we already have <span class="math inline" id="S8.p6.m10">\(m/u&lt;1/m\log m\)</span> for such sums.</p>
+                                          </div>
+                                          <div id="S8.p7" class="ltx_para">
+                                            <p class="ltx_p">As <span class="math inline" id="S8.p7.m1">\(m\)</span> grows, <span class="math inline" id="S8.p7.m2">\(\log p_{m+u}\)</span> tends to <span class="math inline" id="S8.p7.m3">\(e\log p_{m}\)</span> and
+<span class="math inline" id="S8.p7.m4">\((m+u)\log(m+u)\)</span> approaches <span class="math inline" id="S8.p7.m5">\(p_{m}^{e}\)</span>, and thus <span class="math inline" id="S8.p7.m6">\(u/p_{m}^{e}\)</span> approaches 1, yielding the
+asymptotic (in <span class="math inline" id="S8.p7.m7">\(k\)</span>) result of <span class="math inline" id="S8.p7.m8">\(\log(g(n))&lt;k^{1/e+\epsilon}\)</span>. Because of oscillations
+around zero of the quantity <span class="math inline" id="S8.p7.m9">\((\sum_{1\leq j\leq u}1/p_{j}-B-\log\log p_{u})\)</span>, a proof
+of <span class="math inline" id="S8.p7.m10">\(q_{l-1}\leq p_{m}&lt;k^{0.45}\)</span> seems more challenging; we will use results of
+Rosser and Schoenfeld <cite class="ltx_cite">[]</cite> to show this bound for special sums of the above form for <span class="math inline" id="S8.p7.m11">\(m\geq 184\)</span>,
+then show how computations bring <span class="math inline" id="S8.p7.m12">\(m\)</span> down to <span class="math inline" id="S8.p7.m13">\(20\)</span>, and then show how this implies the
+general result when <span class="math inline" id="S8.p7.m14">\(k>e^{9.5}\)</span>.</p>
+                                          </div>
+                                          <div id="S8.p8" class="ltx_para">
+                                            <p class="ltx_p">We start with getting <span class="math inline" id="S8.p8.m1">\(\log p_{m+u}\)</span> in terms close to <span class="math inline" id="S8.p8.m2">\(\log u\)</span>.</p>
+                                          </div>
+                                          <div id="S8.p9" class="ltx_para">
+                                            <p class="ltx_p">
+                                              <span class="ltx_text ltx_font_bold">Lemma</span>: <span class="math inline" id="S8.p9.m1">\(\log p_{m+u}&lt;\log u+(\log\log u+\frac{m}{u})(1+\frac{1}{\log u})+\frac{m}{u(%
+\log u)^{2}}\)</span> when
+<span class="math inline" id="S8.p9.m2">\(u>m\)</span>.</p>
+                                            </div>
+                                            <div id="S8.p10" class="ltx_para">
+                                              <p class="ltx_p">Sketch of Proof:
+Theorem 6 of <cite class="ltx_cite">[]</cite> yields for <span class="math inline" id="S8.p10.m1">\(k>5\)</span> that
+<span class="math inline" id="S8.p10.m2">\(\log p_{k}&lt;\log k+\log(\log k+\log\log k)\)</span>.
+We start with the more complicated subterm:
+<span class="math inline" id="S8.p10.m3">\(\log(\log(m+u)+\log\log(m+u))=\log\log u+LL\)</span>, where
+<span class="math inline" id="S8.p10.m4">\(LL=\log(\log(m+u)/\log u+\log\log(m+u)/\log u)\)</span>.</p>
+                                              <table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray">
+                                                <tr id="S8.Ex31" class="ltx_equation ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_td ltx_align_right">
+                                                    <span class="math inline" id="S8.Ex26.m1">\(\displaystyle LL\)</span>
+                                                  </td>
+                                                  <td class="ltx_td ltx_align_center">
+                                                    <span class="math inline" id="S8.Ex26.m2">\(\displaystyle=\)</span>
+                                                  </td>
+                                                  <td class="ltx_td ltx_align_left">
+                                                    <span class="math inline" id="S8.Ex26.m3">\(\displaystyle\log(1+[\log(1+m/u)+\log\log(m+u)]/\log u)\)</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                                <tr class="ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_td ltx_align_right"/>
+                                                  <td class="ltx_td ltx_align_center">
+                                                    <span class="math inline" id="S8.Ex27.m2">\(\displaystyle&lt;\)</span>
+                                                  </td>
+                                                  <td class="ltx_td ltx_align_left">
+                                                    <span class="math inline" id="S8.Ex27.m3">\(\displaystyle[m/u+\log\log(m+u)]/\log u\)</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                                <tr class="ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_td ltx_align_right"/>
+                                                  <td class="ltx_td ltx_align_center">
+                                                    <span class="math inline" id="S8.Ex28.m2">\(\displaystyle=\)</span>
+                                                  </td>
+                                                  <td class="ltx_td ltx_align_left">
+                                                    <span class="math inline" id="S8.Ex28.m3">\(\displaystyle[m/u+\log(\log(u)+\log(1+m/u))]/\log u\)</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                                <tr class="ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_td ltx_align_right"/>
+                                                  <td class="ltx_td ltx_align_center">
+                                                    <span class="math inline" id="S8.Ex29.m2">\(\displaystyle=\)</span>
+                                                  </td>
+                                                  <td class="ltx_td ltx_align_left">
+                                                    <span class="math inline" id="S8.Ex29.m3">\(\displaystyle[m/u+\log\log u+\log(1+\log(1+m/u)/\log u)]/\log u\)</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                                <tr class="ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_td ltx_align_right"/>
+                                                  <td class="ltx_td ltx_align_center">
+                                                    <span class="math inline" id="S8.Ex30.m2">\(\displaystyle&lt;\)</span>
+                                                  </td>
+                                                  <td class="ltx_td ltx_align_left">
+                                                    <span class="math inline" id="S8.Ex30.m3">\(\displaystyle[m/u+\log\log u+m/u\log u]/\log u\)</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                                <tr class="ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_td ltx_align_right"/>
+                                                  <td class="ltx_td ltx_align_center">
+                                                    <span class="math inline" id="S8.Ex31.m2">\(\displaystyle=\)</span>
+                                                  </td>
+                                                  <td class="ltx_td ltx_align_left">
+                                                    <span class="math inline" id="S8.Ex31.m3">\(\displaystyle(m/u+\log\log u)/\log u+m/u(\log u)^{2}\)</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                              </table>
+                                            </div>
+                                            <div id="S8.p11" class="ltx_para">
+                                              <p class="ltx_p">Now we use Theorem 6 to get</p>
+                                              <table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray">
+                                                <tr id="S8.Ex34" class="ltx_equation ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_td ltx_align_right">
+                                                    <span class="math inline" id="S8.Ex32.m1">\(\displaystyle\log p_{m+u}\)</span>
+                                                  </td>
+                                                  <td class="ltx_td ltx_align_center">
+                                                    <span class="math inline" id="S8.Ex32.m2">\(\displaystyle&lt;\)</span>
+                                                  </td>
+                                                  <td class="ltx_td ltx_align_left">
+                                                    <span class="math inline" id="S8.Ex32.m3">\(\displaystyle\log(m+u)+\log(\log(m+u)+\log\log(m+u))\)</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                                <tr class="ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_td ltx_align_right"/>
+                                                  <td class="ltx_td ltx_align_center">
+                                                    <span class="math inline" id="S8.Ex33.m2">\(\displaystyle&lt;\)</span>
+                                                  </td>
+                                                  <td class="ltx_td ltx_align_left">
+                                                    <span class="math inline" id="S8.Ex33.m3">\(\displaystyle\log u+m/u+\log\log u+LL\)</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                                <tr class="ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_td ltx_align_right"/>
+                                                  <td class="ltx_td ltx_align_center">
+                                                    <span class="math inline" id="S8.Ex34.m2">\(\displaystyle&lt;\)</span>
+                                                  </td>
+                                                  <td class="ltx_td ltx_align_left">
+                                                    <span class="math inline" id="S8.Ex34.m3">\(\displaystyle\log u+(m/u+\log\log u)(1+1/\log u)+m/u(\log u)^{2}.\)</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                              </table>
+                                              <p class="ltx_p">
+                                                <span class="ltx_text ltx_font_bold">End</span> of Sketch.</p>
+                                              </div>
+                                              <div id="S8.p12" class="ltx_para">
+                                                <p class="ltx_p">Next, we want to get a good lower bound on <span class="math inline" id="S8.p12.m1">\(\log(\log p_{m+u}/\log p_{m})\)</span> when we have
+our special sum close enough to 1.</p>
+                                              </div>
+                                              <div id="S8.p13" class="ltx_para">
+                                                <p class="ltx_p">
+                                                  <span class="ltx_text ltx_font_bold">Lemma</span>: Suppose <span class="math inline" id="S8.p13.m1">\(\sum_{1\leq j\leq u}1/p_{m+j}>1-1/2p_{m}\)</span> and
+<span class="math inline" id="S8.p13.m2">\(p_{m+u}>286\)</span>.
+Then <span class="math inline" id="S8.p13.m3">\(\log(\log p_{m+u}/\log p_{m})>1-1/2p_{m}-.00148-1/2(\log p_{m+u})^{2}\)</span> .</p>
+                                                </div>
+                                                <div id="S8.p14" class="ltx_para">
+                                                  <p class="ltx_p">
+                                                    Sketch of Proof: From 
+                                                    <cite class="ltx_cite">[]</cite> Theorem 5 we derive (where
+<span class="math inline" id="S8.p14.m1">\(p\leq x\)</span> means the primes greater than 1 and at most <span class="math inline" id="S8.p14.m2">\(x\)</span>)</p>
+                                                    <table id="S8.Ex35" class="ltx_equation">
+                                                      <tr class="ltx_equation ltx_align_baseline">
+                                                        <td class="ltx_eqn_center_padleft"/>
+                                                        <td class="ltx_align_center">
+                                                          <span class="math display" id="S8.Ex35.m1">\[\mid\sum_{p\leq x}1/p-\log\log x-B\mid\leq 1/2(\log x)^{2}\textrm{ for all }x%
+\geq 286\]</span>
+                                                        </td>
+                                                        <td class="ltx_eqn_center_padright"/>
+                                                      </tr>
+                                                    </table>
+                                                    <p class="ltx_p">
+                                                      and from 
+                                                      <cite class="ltx_cite">[]</cite> Theorem 20 we have</p>
+                                                      <table id="S8.Ex36" class="ltx_equation">
+                                                        <tr class="ltx_equation ltx_align_baseline">
+                                                          <td class="ltx_eqn_center_padleft"/>
+                                                          <td class="ltx_align_center">
+                                                            <span class="math display" id="S8.Ex36.m1">\[\sum_{p\leq x}1/p-\log\log x-B>0\textrm{ for }2\leq x\leq 10^{8}.\]</span>
+                                                          </td>
+                                                          <td class="ltx_eqn_center_padright"/>
+                                                        </tr>
+                                                      </table>
+                                                      <p class="ltx_p">Combining the results over the two ranges gives</p>
+                                                      <table id="S8.Ex37" class="ltx_equation">
+                                                        <tr class="ltx_equation ltx_align_baseline">
+                                                          <td class="ltx_eqn_center_padleft"/>
+                                                          <td class="ltx_align_center">
+                                                            <span class="math display" id="S8.Ex37.m1">\[-\log\log p_{m}-B+1/2(\log(10^{8}))^{2}>=-\sum_{p\leq p_{m}}1/p\textrm{ for %
+all }m>0\]</span>
+                                                          </td>
+                                                          <td class="ltx_eqn_center_padright"/>
+                                                        </tr>
+                                                      </table>
+                                                      <p class="ltx_p">leading to our estimate:</p>
+                                                      <table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_eqnarray">
+                                                        <tr id="S8.Ex40" class="ltx_equation ltx_align_baseline">
+                                                          <td class="ltx_eqn_center_padleft"/>
+                                                          <td class="ltx_td ltx_align_right">
+                                                            <span class="math inline" id="S8.Ex38.m1">\(\displaystyle\sum_{p_{m}&lt;p\leq p_{m+u}}1/p\)</span>
+                                                          </td>
+                                                          <td class="ltx_td ltx_align_center">
+                                                            <span class="math inline" id="S8.Ex38.m2">\(\displaystyle\leq\)</span>
+                                                          </td>
+                                                          <td class="ltx_td ltx_align_left">
+                                                            <span class="math inline" id="S8.Ex38.m3">\(\displaystyle\log\log p_{m+u}+\frac{1}{2(\log p_{m+u})^{2}}+B\)</span>
+                                                          </td>
+                                                          <td class="ltx_eqn_center_padright"/>
+                                                        </tr>
+                                                        <tr class="ltx_align_baseline">
+                                                          <td class="ltx_eqn_center_padleft"/>
+                                                          <td class="ltx_td ltx_align_right"/>
+                                                          <td class="ltx_td ltx_align_center"/>
+                                                          <td class="ltx_td ltx_align_left">
+                                                            <span class="math inline" id="S8.Ex39.m3">\(\displaystyle-\log\log p_{m}-B+1/(2(\log 10^{8})^{2})\)</span>
+                                                          </td>
+                                                          <td class="ltx_eqn_center_padright"/>
+                                                        </tr>
+                                                        <tr class="ltx_align_baseline">
+                                                          <td class="ltx_eqn_center_padleft"/>
+                                                          <td class="ltx_td ltx_align_right"/>
+                                                          <td class="ltx_td ltx_align_center">
+                                                            <span class="math inline" id="S8.Ex40.m2">\(\displaystyle\leq\)</span>
+                                                          </td>
+                                                          <td class="ltx_td ltx_align_left">
+                                                            <span class="math inline" id="S8.Ex40.m3">\(\displaystyle\log(\log p_{m+u}/\log p_{m})+\frac{1}{2(\log p_{m+u})^{2}}+.00148\)</span>
+                                                          </td>
+                                                          <td class="ltx_eqn_center_padright"/>
+                                                        </tr>
+                                                      </table>
+                                                      <p class="ltx_p">Subtracting the last two terms from <span class="math inline" id="S8.p14.m3">\(1-1/2p_{m}\)</span> leads to the conclusion.
+<span class="ltx_text ltx_font_bold">End</span> of Sketch.</p>
+                                                    </div>
+                                                    <div id="S8.p15" class="ltx_para">
+                                                      <p class="ltx_p">Now let us choose <span class="math inline" id="S8.p15.m1">\(p_{m}>e^{7}>1096\)</span> and so <span class="math inline" id="S8.p15.m2">\(m\geq 184\)</span> and <span class="math inline" id="S8.p15.m3">\(1/\log u&lt;1/15\)</span>.
+Then <span class="math inline" id="S8.p15.m4">\(\log(\log p_{m+u}/\log p_{m})>1-1/2192-.00148-1/2(15)^{2}>0.99\)</span>
+and <span class="math inline" id="S8.p15.m5">\(e^{0.99}>2.691\)</span>, thus <span class="math inline" id="S8.p15.m6">\(\log p_{m+u}>2.691\log p_{m}\)</span>.</p>
+                                                    </div>
+                                                    <div id="S8.p16" class="ltx_para">
+                                                      <p class="ltx_p">Toward a contradiction, assume that <span class="math inline" id="S8.p16.m1">\(x=\frac{20\log p_{m}}{9}>\log u\)</span>.
+Then the Lemma concerning <span class="math inline" id="S8.p16.m2">\(\log{p_{m+u}}\)</span> gives</p>
+                                                      <table id="A0.EGx6" class="ltx_equationgroup ltx_eqn_eqnarray">
+                                                        <tr id="S8.Ex44" class="ltx_equation ltx_align_baseline">
+                                                          <td class="ltx_eqn_center_padleft"/>
+                                                          <td class="ltx_td ltx_align_right">
+                                                            <span class="math inline" id="S8.Ex41.m1">\(\displaystyle 1.21095x\)</span>
+                                                          </td>
+                                                          <td class="ltx_td ltx_align_center">
+                                                            <span class="math inline" id="S8.Ex41.m2">\(\displaystyle=\)</span>
+                                                          </td>
+                                                          <td class="ltx_td ltx_align_left">
+                                                            <span class="math inline" id="S8.Ex41.m3">\(\displaystyle 2.691\log p_{m}&lt;\log p_{m+u}\)</span>
+                                                          </td>
+                                                          <td class="ltx_eqn_center_padright"/>
+                                                        </tr>
+                                                        <tr class="ltx_align_baseline">
+                                                          <td class="ltx_eqn_center_padleft"/>
+                                                          <td class="ltx_td ltx_align_right"/>
+                                                          <td class="ltx_td ltx_align_center">
+                                                            <span class="math inline" id="S8.Ex42.m2">\(\displaystyle&lt;\)</span>
+                                                          </td>
+                                                          <td class="ltx_td ltx_align_left">
+                                                            <span class="math inline" id="S8.Ex42.m3">\(\displaystyle x+(\log x+m/u)(1+1/\log u)+m/u(\log u)^{2}\)</span>
+                                                          </td>
+                                                          <td class="ltx_eqn_center_padright"/>
+                                                        </tr>
+                                                        <tr class="ltx_align_baseline">
+                                                          <td class="ltx_eqn_center_padleft"/>
+                                                          <td class="ltx_td ltx_align_right"/>
+                                                          <td class="ltx_td ltx_align_center">
+                                                            <span class="math inline" id="S8.Ex43.m2">\(\displaystyle&lt;\)</span>
+                                                          </td>
+                                                          <td class="ltx_td ltx_align_left">
+                                                            <span class="math inline" id="S8.Ex43.m3">\(\displaystyle x+(\log x+1/1000)(1+1/15)+1/1000\)</span>
+                                                          </td>
+                                                          <td class="ltx_eqn_center_padright"/>
+                                                        </tr>
+                                                        <tr class="ltx_align_baseline">
+                                                          <td class="ltx_eqn_center_padleft"/>
+                                                          <td class="ltx_td ltx_align_right"/>
+                                                          <td class="ltx_td ltx_align_center">
+                                                            <span class="math inline" id="S8.Ex44.m2">\(\displaystyle&lt;\)</span>
+                                                          </td>
+                                                          <td class="ltx_td ltx_align_left">
+                                                            <span class="math inline" id="S8.Ex44.m3">\(\displaystyle x+(16\log x)/15+1/100\)</span>
+                                                          </td>
+                                                          <td class="ltx_eqn_center_padright"/>
+                                                        </tr>
+                                                      </table>
+                                                      <p class="ltx_p">However <span class="math inline" id="S8.p16.m3">\(.21095x>(16\log x)/15+.01\)</span> for <span class="math inline" id="S8.p16.m4">\(x>14\)</span>, which means for <span class="math inline" id="S8.p16.m5">\(\log p_{m}>7\)</span>,
+and we have a contradiction. Thus <span class="math inline" id="S8.p16.m6">\(u\geq p_{m}^{20/9}\)</span>.</p>
+                                                    </div>
+                                                    <div id="S8.p17" class="ltx_para">
+                                                      <p class="ltx_p">For primes <span class="math inline" id="S8.p17.m1">\(p_{m}=71\)</span> through <span class="math inline" id="S8.p17.m2">\(p_{m}=857\)</span> (<span class="math inline" id="S8.p17.m3">\(m=20\)</span> to <span class="math inline" id="S8.p17.m4">\(m=148\)</span>), we verified through
+computation that if
+<span class="math inline" id="S8.p17.m5">\(\sum_{1\leq j}^{u}1/p_{m+i}>1-1/2p_{m}\)</span>, then
+<span class="math inline" id="S8.p17.m6">\(\log u/\log p_{m}>20/9\)</span>. In particular for <span class="math inline" id="S8.p17.m7">\(u\)</span> as low as <span class="math inline" id="S8.p17.m8">\(13250&lt;e^{9.5}\)</span> and
+<span class="math inline" id="S8.p17.m9">\(n\)</span> a ratio of certain primorials the Improvement holds.
+Also,
+<span class="math inline" id="S8.p17.m10">\(\sum_{1\leq j}^{5761308}1/p_{148+j}>1-1/2p_{148}\)</span>, thus
+<span class="math inline" id="S8.p17.m11">\(\sum_{1\leq j}^{u}1/p_{m+j}>1-1/2p_{m}\)</span> implies <span class="math inline" id="S8.p17.m12">\(u>p_{m}^{20/9}\)</span> for <span class="math inline" id="S8.p17.m13">\(p_{m}\)</span>
+running up to <span class="math inline" id="S8.p17.m14">\(1102&lt;5761308^{9/20}\)</span>. So the implication holds for all <span class="math inline" id="S8.p17.m15">\(p_{m}\geq 71\)</span>.</p>
+                                                    </div>
+                                                    <div id="S8.p18" class="ltx_para">
+                                                      <p class="ltx_p">Now assume <span class="math inline" id="S8.p18.m1">\(n\)</span> with <span class="math inline" id="S8.p18.m2">\(k\geq e^{9.5}\)</span> and otherwise arbitrary. Find <span class="math inline" id="S8.p18.m3">\(l\)</span>
+smallest so that <span class="math inline" id="S8.p18.m4">\(\sum_{l\leq i}^{k}1/q_{i}&lt;1+1/2q_{l}\)</span>. Let <span class="math inline" id="S8.p18.m5">\(p_{m}=q_{l-1}\)</span>. Then
+<span class="math inline" id="S8.p18.m6">\(1-1/2q_{l-1}\leq\sum_{l\leq i}^{k}1/q_{i}\leq\sum_{1\leq j}^{k-l+1}1/p_{m+j}.\)</span>
+Either <span class="math inline" id="S8.p18.m7">\(p_{m}\geq 71\)</span> and so <span class="math inline" id="S8.p18.m8">\((k-l+1)^{0.45}\geq u^{0.45}\geq p_{m}\)</span>, or else
+<span class="math inline" id="S8.p18.m9">\(q_{l-1}&lt;71&lt;(e^{9.5})^{9/20}\leq k^{0.45}\)</span>.</p>
+                                                    </div>
+                                                  </section>
+                                                  <section id="S9" class="ltx_section">
+                                                    <h2 class="ltx_title ltx_title_section">
+                                                      <span class="ltx_tag ltx_tag_section">9 </span>Addendum</h2>
+                                                      <div id="S9.p1" class="ltx_para">
+                                                        <p class="ltx_p">Shortly after version 1 of this article was posted, we found an
+upper bound based on estimates of Euler’s totient which does
+better than the Improvement.</p>
+                                                      </div>
+                                                      <div id="S9.p2" class="ltx_para">
+                                                        <p class="ltx_p">Aaron Meyerowitz asked about these estimates in question 88777
+on MathOverflow. The
+key observation is that the number of totatives to <span class="math inline" id="S9.p2.m1">\(n\)</span> in the
+interval <span class="math inline" id="S9.p2.m2">\([0,x)\)</span> differs from <span class="math inline" id="S9.p2.m3">\(x\phi(n)\)</span> by a periodic function
+<span class="math inline" id="S9.p2.m4">\(E_{n}(x)\)</span> which has a maximum value at most <span class="math inline" id="S9.p2.m5">\(2^{k-1}\)</span>. Using
+this, we can generalize the Variation using a similar argument
+to show</p>
+                                                        <table id="S9.Ex45" class="ltx_equation">
+                                                          <tr class="ltx_equation ltx_align_baseline">
+                                                            <td class="ltx_eqn_center_padleft"/>
+                                                            <td class="ltx_align_center">
+                                                              <span class="math display" id="S9.Ex45.m1">\[g(n)\leq\frac{(k-m+1)(2^{m}+\pi^{-1}(d))}{\pi^{-1}(d)(1-\sigma^{-1}(n/d))},\]</span>
+                                                            </td>
+                                                            <td class="ltx_eqn_center_padright"/>
+                                                          </tr>
+                                                        </table>
+                                                        <p class="ltx_p">where one chooses <span class="math inline" id="S9.p2.m6">\(m&lt;k\)</span> so that <span class="math inline" id="S9.p2.m7">\(d=\prod_{1\leq i\leq m}q_{i}\)</span>
+divides <span class="math inline" id="S9.p2.m8">\(n\)</span> and also satisfies
+<span class="math inline" id="S9.p2.m9">\(t=1-\sigma^{-1}(n/d)>0\)</span>, and finally so that the
+right hand side above leads to an optimal bound. (Hint:
+the Proof sketch of the Variation introduces an error term of
+size at most <span class="math inline" id="S9.p2.m10">\(2\)</span> for counting multiples of <span class="math inline" id="S9.p2.m11">\(q_{i}\)</span> which are not
+multiples of <span class="math inline" id="S9.p2.m12">\(q_{1}\)</span>; now use an error of <span class="math inline" id="S9.p2.m13">\(2^{m}+\pi^{-1}(d)\)</span>
+for an interval <span class="math inline" id="S9.p2.m14">\([y,x]\)</span> of length <span class="math inline" id="S9.p2.m15">\(L\)</span> when counting multiples
+of <span class="math inline" id="S9.p2.m16">\(q_{i}\)</span> that are coprime to <span class="math inline" id="S9.p2.m17">\(d\)</span>.)</p>
+                                                      </div>
+                                                      <div id="S9.p3" class="ltx_para">
+                                                        <p class="ltx_p">When such an optimal <span class="math inline" id="S9.p3.m1">\(m>0\)</span> is found, one can easily show that
+<span class="math inline" id="S9.p3.m2">\(t>1/(3+q_{m+1})\)</span>, and the analysis from the Appendix can
+be adapted to show <span class="math inline" id="S9.p3.m3">\(m^{e}&lt;k\)</span>. As <span class="math inline" id="S9.p3.m4">\(1/\pi^{-1}(d)\)</span> is bounded by
+<span class="math inline" id="S9.p3.m5">\(2\log q_{m}\)</span>, this will beat our bound <span class="math inline" id="S9.p3.m6">\(k^{K{\sigma}^{-1}(n)}\)</span> when
+<span class="math inline" id="S9.p3.m7">\(2^{m}\)</span> is substantially smaller than <span class="math inline" id="S9.p3.m8">\(k^{K{\sigma}^{-1}(n)-3/2}\)</span>.
+Computing both bounds for <span class="math inline" id="S9.p3.m9">\(n=P_{k}\)</span> for <span class="math inline" id="S9.p3.m10">\(k&lt;10^{7}\)</span> show this new
+bound to be superior: we expect to show that it holds when
+<span class="math inline" id="S9.p3.m11">\(k&lt;10^{10}\)</span> and <span class="math inline" id="S9.p3.m12">\({\sigma}^{-1}(n)>1\)</span>, which would imply that <span class="math inline" id="S9.p3.m13">\(K\)</span> above
+can be taken near <span class="math inline" id="S9.p3.m14">\(3.6\)</span> for all <span class="math inline" id="S9.p3.m15">\(k>2\)</span>.</p>
+                                                      </div>
+                                                      <div id="S9.p4" class="ltx_para">
+                                                        <p class="ltx_p">This bound can be used to show Kanold’s bound <span class="math inline" id="S9.p4.m1">\(2^{\sqrt{k}}\)</span>
+actually holds for <span class="math inline" id="S9.p4.m2">\(k>e^{6}\)</span>. There are also improvements
+to be made on the error term <span class="math inline" id="S9.p4.m3">\((2^{m}+\pi^{-1}(d))\)</span>; with
+such improvements we expect to show in a followup article a
+subquadratic in <span class="math inline" id="S9.p4.m4">\(k\)</span> upper bound for <span class="math inline" id="S9.p4.m5">\(k&lt;10^{10}\)</span>.</p>
+                                                      </div>
+                                                      <div id="S9.p5" class="ltx_para">
+                                                        <p class="ltx_p">We also found a statement of the Observation in a 1975 work of
+Kanold’s. (We thank Prof. Dr. Heiko Harborth for making this
+part of the literature available to us.)
+We are still looking for a published proof of the
+Observation as well as an appearance in the literature of the
+Proposition that <span class="math inline" id="S9.p5.m1">\(g(n)\leq\lceil k/(1-{\sigma}^{-1}(n))\rceil\)</span> for those <span class="math inline" id="S9.p5.m2">\(n\)</span> with
+<span class="math inline" id="S9.p5.m3">\({\sigma}^{-1}(n)&lt;1\)</span>. We still believe that the explicit upper bound of
+<span class="math inline" id="S9.p5.m4">\(k^{3+3.81{\sigma}^{-1}(n)}\)</span> has not appeared in the literature.</p>
+                                                      </div>
+                                                      <div id="S9.p6" class="ltx_para">
+                                                        <p class="ltx_p">We have planned a series of forthcoming articles, tentatively titled
+’Adventures in finding bounds on Jacobsthal’s function.’ In addition
+to fleshing out some of the questions asked in an earlier section, we
+will consider the computational complexity of <span class="math inline" id="S9.p6.m1">\(g(n)\)</span> and approximations to
+<span class="math inline" id="S9.p6.m2">\(g(n)\)</span>,
+various lower bounds coming from elementary (and not so elementary)
+considerations, applications using both conjectured and actual bounds,
+and generalizations in geometric and algebraic realms.</p>
+                                                      </div>
+                                                    </section>
+                                                  </article>
+                                                </div>
+                                                <footer class="ltx_page_footer">
+                                                  <div class="ltx_page_logo">Generated  on Thu Jan 19 18:36:44 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"/>
+                                                  </a>
+                                                </div>
+                                              </footer>
+                                            </div>
+                                          </body>
+                                        </html>
