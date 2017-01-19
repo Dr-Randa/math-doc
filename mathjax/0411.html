@@ -1,0 +1,1290 @@
+<html>
+  <head>
+    <title>The Period Length of Euler’s Number e</title>
+    <!--Generated on Thu Jan 19 18:36:46 2017 by LaTeXML (version 0.8.1) http://dlmf.nist.gov/LaTeXML/.-->
+    <!--Document created on .-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="LaTeXML.css" type="text/css"/>
+    <link rel="stylesheet" href="ltx-article.css" type="text/css"/>
+    <script type="text/x-sre-config">
+{"json": "https://cdn.mathjax.org/mathjax/contrib/a11y/mathmaps"}
+</script>
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: {autoNumber: "AMS"} },
+  MMLorHTML: {MSIE: "HTML"},
+  AssistiveMML: {disabled: true},
+  "fast-preview": {disabled: true}
+});
+MathJax.Ajax.config.path["SRE"] = "../mathjax";
+</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"> </script>
+  </head>
+  <body>
+    <div class="ltx_page_main">
+      <div class="ltx_page_content">
+        <article class="ltx_document ltx_authors_1line">
+          <h1 class="ltx_title ltx_font_bold ltx_title_document">The Period Length of Euler’s Number <span class="math inline" id="m1">\(e\)</span>
+        </h1>
+        <div class="ltx_authors">
+          <span class="ltx_creator ltx_role_author">
+            <span class="ltx_personname">Kurt Girstmair
+</span>
+          </span>
+        </div>
+        <div class="ltx_abstract">
+          <h6 class="ltx_title ltx_title_abstract">Abstract</h6>
+          <p class="ltx_p">Let <span class="math inline" id="m2">\(s_{k}/t_{k}\)</span>, <span class="math inline" id="m3">\(k\geq 0\)</span>, be the convergents of the continued fraction expansion of a number <span class="math inline" id="m4">\(x\in\mathbb{R}\smallsetminus\mathbb{Q}\)</span>.
+We investigate the sequence of Jacobi symbols <span class="math inline" id="m5">\(\left(\frac{s_{k}}{t_{k}}\right)\)</span>, <span class="math inline" id="m6">\(k\geq 0\)</span>. We show that this sequence is
+purely periodic with shortest possible period length 24 for <span class="math inline" id="m7">\(x=e=2.718281\ldots\)</span> and shortest possible
+period length 40 for <span class="math inline" id="m8">\(x=e^{2}\)</span>. Further, we make
+the first steps towards a general theory of such sequences of Jacobi symbols. For instance, we show that there
+are uncountably many numbers <span class="math inline" id="m9">\(x\)</span> such that this sequence has the period 1 (of length 1), and that every natural number
+<span class="math inline" id="m10">\(L\)</span> actually occurs as the shortest possible period length of some <span class="math inline" id="m11">\(x\)</span>.</p>
+        </div>
+        <section id="Sx1" class="ltx_section">
+          <h2 class="ltx_title ltx_title_section">Introduction</h2>
+          <div id="Sx1.p1" class="ltx_para">
+            <p class="ltx_p">Let <span class="math inline" id="Sx1.p1.m1">\((a_{0},a_{1},a_{2},\ldots)\)</span> be the <span class="ltx_text ltx_font_italic">regular continued fraction expansion</span> of <span class="math inline" id="Sx1.p1.m2">\(x\in\mathbb{R}\smallsetminus\mathbb{Q}\)</span>.
+The sequence</p>
+            <table id="Sx1.Ex1" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="Sx1.Ex1.m1">\[s_{k}/t_{k}=[a_{0},\ldots,a_{k}],k\geq 0,\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">of convergents of <span class="math inline" id="Sx1.p1.m3">\(x\)</span> is defined in the well-known way by
+</p>
+            <table id="Sx1.E1" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="Sx1.E1.m1">\[\begin{array}[]{lll}s_{-1}=1,&amp;s_{0}=a_{0},&amp;s_{k}=a_{k}s_{k-1}+s_{k-2},\\
+t_{-1}=0,&amp;t_{0}=1,&amp;t_{k}=a_{k}t_{k-1}+t_{k-2},\@math@espace k\geq 1.\end{array}\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+                <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                  <span class="ltx_tag ltx_tag_equation">(1)</span>
+                </td>
+              </tr>
+            </table>
+            <p class="ltx_p">Accordingly, we may write</p>
+            <table id="Sx1.E2" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="Sx1.E2.m1">\[x=\lim_{k\to\infty}[a_{0},\ldots,a_{k}]=[a_{0},a_{1},a_{2},\ldots].\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+                <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                  <span class="ltx_tag ltx_tag_equation">(2)</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div id="Sx1.p2" class="ltx_para">
+            <p class="ltx_p">For odd natural numbers <span class="math inline" id="Sx1.p2.m1">\(n\)</span> and integers <span class="math inline" id="Sx1.p2.m2">\(m\)</span> with <span class="math inline" id="Sx1.p2.m3">\((m,n)=1\)</span>, the <span class="ltx_text ltx_font_italic">Jacobi symbol</span>
+          </p>
+          <table id="Sx1.Ex2" class="ltx_equation">
+            <tr class="ltx_equation ltx_align_baseline">
+              <td class="ltx_eqn_center_padleft"/>
+              <td class="ltx_align_center">
+                <span class="math display" id="Sx1.Ex2.m1">\[\left(\frac{m}{n}\right)\]</span>
+              </td>
+              <td class="ltx_eqn_center_padright"/>
+            </tr>
+          </table>
+          <p class="ltx_p">
+            generalizes the Legendre symbol in the usual way (see 
+            <cite class="ltx_cite">[]</cite>, p. 44).
+Note that the Jacobi symbol equals <span class="math inline" id="Sx1.p2.m4">\(1\)</span> in the case <span class="math inline" id="Sx1.p2.m5">\(m=0\)</span>, <span class="math inline" id="Sx1.p2.m6">\(n=1\)</span>. If <span class="math inline" id="Sx1.p2.m7">\(n\)</span> is even and
+<span class="math inline" id="Sx1.p2.m8">\((m,n)=1\)</span>, we put</p>
+            <table id="Sx1.Ex3" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="Sx1.Ex3.m1">\[\left(\frac{m}{n}\right)=*,\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">where <span class="math inline" id="Sx1.p2.m9">\(*\)</span> stands for an arbitrarily chosen symbol different from <span class="math inline" id="Sx1.p2.m10">\(\pm 1\)</span>. This means that the sequence of
+convergents of <span class="math inline" id="Sx1.p2.m11">\(x\)</span> defines a sequence
+</p>
+            <table id="Sx1.Ex4" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="Sx1.Ex4.m1">\[\left(\frac{s_{k}}{t_{k}}\right),\>k\geq 0,\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">of Jacobi symbols. We call this sequence the <span class="ltx_text ltx_font_italic">Jacobi sequence</span> of <span class="math inline" id="Sx1.p2.m12">\(x\)</span> (although this name
+is already in use in other fields of mathematics).
+One of our main results is</p>
+          </div>
+          <div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+            <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+              <span class="ltx_tag ltx_tag_theorem">Theorem 1</span>
+            </h6>
+            <div id="Thmtheorem1.p1" class="ltx_para">
+              <p class="ltx_p">
+                <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="Thmtheorem1.p1.m1">\(e=2.718281\ldots\)</span> be Eulers’s number. The Jacobi sequence of <span class="math inline" id="Thmtheorem1.p1.m2">\(e\)</span> is purely-periodic
+with period length 24. If, therefore <span class="math inline" id="Thmtheorem1.p1.m3">\(s_{k}/t_{k}\)</span> is the <span class="math inline" id="Thmtheorem1.p1.m4">\(k\)</span>th convergent of <span class="math inline" id="Thmtheorem1.p1.m5">\(e\)</span>, then</span>
+              </p>
+              <table id="Sx1.Ex5" class="ltx_equation">
+                <tr class="ltx_equation ltx_align_baseline">
+                  <td class="ltx_eqn_center_padleft"/>
+                  <td class="ltx_align_center">
+                    <span class="math display" id="Sx1.Ex5.m1">\[\left(\frac{s_{k}}{t_{k}}\right)=\left(\frac{s_{k+24}}{t_{k+24}}\right)\mbox{ %
+for all }k\geq 0.\]</span>
+                  </td>
+                  <td class="ltx_eqn_center_padright"/>
+                </tr>
+              </table>
+              <p class="ltx_p">
+                <span class="ltx_text ltx_font_italic">Moreover, 24 is the smallest possible period length of the Jacobi sequence of <span class="math inline" id="Thmtheorem1.p1.m6">\(e\)</span>.</span>
+              </p>
+            </div>
+          </div>
+          <div id="Sx1.p3" class="ltx_para">
+            <p class="ltx_p">It is easy to check that the period of the Jacobi sequence of <span class="math inline" id="Sx1.p3.m1">\(e\)</span> reads</p>
+            <table id="Sx1.Ex6" class="ltx_equation">
+              <tr class="ltx_equation ltx_align_baseline">
+                <td class="ltx_eqn_center_padleft"/>
+                <td class="ltx_align_center">
+                  <span class="math display" id="Sx1.Ex6.m1">\[1,1,-1,*,-1,*-1,-1,-1,*-1,*,\|-1,-1,1,*,1,*,1,1,1,*,1,*.\]</span>
+                </td>
+                <td class="ltx_eqn_center_padright"/>
+              </tr>
+            </table>
+            <p class="ltx_p">The symbol <span class="math inline" id="Sx1.p3.m2">\(\|\)</span> separates the first half of the period from the second.
+The latter arises from the former by interchanging <span class="math inline" id="Sx1.p3.m3">\(1\)</span> and <span class="math inline" id="Sx1.p3.m4">\(-1\)</span> (so one may say that
+the period is skew-symmetric). Hence the period does not arise from a sub-period of length <span class="math inline" id="Sx1.p3.m5">\(12\)</span>,
+but also not from one of length <span class="math inline" id="Sx1.p3.m6">\(8\)</span>.
+Accordingly, 24 is the smallest possible period length.</p>
+          </div>
+          <div id="Sx1.p4" class="ltx_para">
+            <p class="ltx_p">A basic tool for our investigation (and, in particular, for the proof of Theorem <a href="#Thmtheorem1" title="Theorem 1 ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+              <span class="ltx_text ltx_ref_tag">1</span>
+              </a>) is</p>
+            </div>
+            <div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+              <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                <span class="ltx_tag ltx_tag_theorem">Theorem 2</span>
+              </h6>
+              <div id="Thmtheorem2.p1" class="ltx_para">
+                <p class="ltx_p">
+                  <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="Thmtheorem2.p1.m1">\(x=[a_{0},a_{1},a_{2},\ldots]\in\mathbb{R}\smallsetminus\mathbb{Q}\)</span> and <span class="math inline" id="Thmtheorem2.p1.m2">\(s_{k}/t_{k}\)</span>, <span class="math inline" id="Thmtheorem2.p1.m3">\(k\geq 0\)</span>, be as above. The Jacobi symbol <span class="math inline" id="Thmtheorem2.p1.m4">\(\left(\frac{s_{k}}{t_{k}}\right)\)</span>
+depends only on the residue classes <span class="math inline" id="Thmtheorem2.p1.m5">\(\overline{a_{0}},\overline{a_{1}},\ldots,\overline{a_{k}}\in\mathbb{Z}/4%
+\mathbb{Z}\)</span>.
+The same is true for the reciprocal symbol <span class="math inline" id="Thmtheorem2.p1.m6">\(\left(\frac{t_{k}}{s_{k}}\right)\)</span>.</span>
+                </p>
+              </div>
+            </div>
+            <div id="Sx1.p5" class="ltx_para">
+              <p class="ltx_p">Possibly this theorem has been known implicitly, but we cannot give a reference where it is stated in the present
+form.</p>
+            </div>
+            <div id="Sx1.p6" class="ltx_para">
+              <p class="ltx_p">In view of Theorem <a href="#Thmtheorem2" title="Theorem 2 ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                <span class="ltx_text ltx_ref_tag">2</span>
+                </a> we say that two irrational numbers <span class="math inline" id="Sx1.p6.m1">\(x=[a_{0},a_{1},a_{2},\ldots]\)</span> and <span class="math inline" id="Sx1.p6.m2">\(y=[b_{0},b_{1},b_{2},\ldots]\)</span>
+are <span class="ltx_text ltx_font_italic">congruent mod 4</span>, if <span class="math inline" id="Sx1.p6.m3">\(a_{k}\equiv b_{k}\mbox{ mod }4\)</span> for all <span class="math inline" id="Sx1.p6.m4">\(k\geq 0\)</span>. In this case we write <span class="math inline" id="Sx1.p6.m5">\(x\equiv y\mbox{ mod }4\)</span>.
+Whenever <span class="math inline" id="Sx1.p6.m6">\(x\equiv y\mbox{ mod }4\)</span>, the numbers <span class="math inline" id="Sx1.p6.m7">\(x\)</span> and <span class="math inline" id="Sx1.p6.m8">\(y\)</span> have the same
+Jacobi sequence. Of course, for any <span class="math inline" id="Sx1.p6.m9">\(x\)</span> of the above shape there is a uniquely determined
+<span class="math inline" id="Sx1.p6.m10">\(y=[b_{0},b_{1},b_{2},\ldots]\)</span> such that
+<span class="math inline" id="Sx1.p6.m11">\(x\equiv y\mbox{ mod }4\)</span> and <span class="math inline" id="Sx1.p6.m12">\(b_{k}\in\{1,2,3,4\}\)</span> for all <span class="math inline" id="Sx1.p6.m13">\(i\geq 0\)</span>.
+We call <span class="math inline" id="Sx1.p6.m14">\(y\)</span> the 4-<span class="ltx_text ltx_font_italic">representative</span> of <span class="math inline" id="Sx1.p6.m15">\(x\)</span> or, if we disregard <span class="math inline" id="Sx1.p6.m16">\(x\)</span>, a 4-representative <span class="ltx_text ltx_font_italic">per se</span>.
+The set of all possible 4-representatives has Lebesgue measure
+0, since this is true for continued fractions with digits <span class="math inline" id="Sx1.p6.m17">\(a_{i}\leq C\)</span>, <span class="math inline" id="Sx1.p6.m18">\(i\geq 1\)</span>, for an arbitrary constant <span class="math inline" id="Sx1.p6.m19">\(C\)</span>
+(see <cite class="ltx_cite">[]</cite>, p. 138). Hence congruence mod 4 divides <span class="math inline" id="Sx1.p6.m20">\(\mathbb{R}\smallsetminus\mathbb{Q}\)</span> into a number of classes which can be
+represented by a set of measure 0.</p>
+              </div>
+              <div id="Sx1.p7" class="ltx_para">
+                <p class="ltx_p">In the case of Euler’s number <span class="math inline" id="Sx1.p7.m1">\(e\)</span> we have
+<span class="math inline" id="Sx1.p7.m2">\(e=[2,\{1,2j,1\}_{j=1}^{\infty}]\)</span>, where
+<span class="math inline" id="Sx1.p7.m3">\(\{1,2j,1\}_{j=1}^{\infty}\)</span> stands for the sequence</p>
+                <table id="Sx1.Ex7" class="ltx_equation">
+                  <tr class="ltx_equation ltx_align_baseline">
+                    <td class="ltx_eqn_center_padleft"/>
+                    <td class="ltx_align_center">
+                      <span class="math display" id="Sx1.Ex7.m1">\[1,2,1,1,4,1,1,6,1,\ldots\]</span>
+                    </td>
+                    <td class="ltx_eqn_center_padright"/>
+                  </tr>
+                </table>
+                <p class="ltx_p">
+                  (see 
+                  <cite class="ltx_cite">[]</cite>, p. 124).
+Therefore, the 4-representative of <span class="math inline" id="Sx1.p7.m4">\(e\)</span> is <span class="math inline" id="Sx1.p7.m5">\(e^{\prime}=[2,\{1,2,1,1,4,1\}_{j=1}^{\infty}]\)</span>, i. e., a periodic continued
+fraction with period <span class="math inline" id="Sx1.p7.m6">
+                  \(1,2,1,1,4,1\)</span>, whose value is <span class="math inline" id="Sx1.p7.m7">\(e^{\prime}=(7+\sqrt{15})/4\)</span>. In 
+                  <cite class="ltx_cite">[]</cite> we have shown that
+the Jacobi sequence of a periodic continued fraction <span class="math inline" id="Sx1.p7.m8">\(x\)</span> is periodic. More precisely, if the corresponding
+<span class="ltx_text ltx_font_italic">purely</span> periodic
+continued fraction <span class="math inline" id="Sx1.p7.m9">\(z\)</span> (here <span class="math inline" id="Sx1.p7.m10">\(z=[\{1,2,1,1,4,1\}_{j=1}^{\infty}]\)</span>) has a Jacobi sequence with even period length <span class="math inline" id="Sx1.p7.m11">\(L\)</span>,
+then <span class="math inline" id="Sx1.p7.m12">
+                  \(L\)</span> is also a possible period length for the Jacobi sequence of <span class="math inline" id="Sx1.p7.m13">\(x\)</span>. In 
+                  <cite class="ltx_cite">[]</cite> we have shown that
+a purely periodic continued fraction with period length <span class="math inline" id="Sx1.p7.m14">\(l\)</span> has a periodic Jacobi sequence
+with period length <span class="math inline" id="Sx1.p7.m15">\(L=dl\)</span>, where <span class="math inline" id="Sx1.p7.m16">\(d\)</span> is a divisor
+of <span class="math inline" id="Sx1.p7.m17">\(8\)</span> or <span class="math inline" id="Sx1.p7.m18">\(12\)</span>. In our example <span class="math inline" id="Sx1.p7.m19">\(e^{\prime}=[2,\{1,2,1,1,4,1\}_{j=1}^{\infty}]\)</span> this means that <span class="math inline" id="Sx1.p7.m20">\(L\)</span> can be chosen as a divisor
+of <span class="math inline" id="Sx1.p7.m21">\(48\)</span> or <span class="math inline" id="Sx1.p7.m22">\(72\)</span>. We shall show that <span class="math inline" id="Sx1.p7.m23">\(L=24\)</span> works for <span class="math inline" id="Sx1.p7.m24">\(e^{\prime}\)</span> and, by Theorem <a href="#Thmtheorem2" title="Theorem 2 ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                  <span class="ltx_text ltx_ref_tag">2</span>
+                  </a>, also for <span class="math inline" id="Sx1.p7.m25">\(e\)</span>.</p>
+                </div>
+                <div id="Sx1.p8" class="ltx_para">
+                  <p class="ltx_p">Theorem <a href="#Thmtheorem2" title="Theorem 2 ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                    <span class="ltx_text ltx_ref_tag">2</span>
+                    </a> says that for two irrationals <span class="math inline" id="Sx1.p8.m1">\(x\)</span>, <span class="math inline" id="Sx1.p8.m2">\(y\)</span> with <span class="math inline" id="Sx1.p8.m3">\(x\equiv y\mbox{ mod }4\)</span> the Jacobi sequences are the same.
+Ist the converse also true, i. e., does equality of Jacobi sequences imply congruence mod 4? The answer is “no”,
+as the following theorem shows.</p>
+                  </div>
+                  <div id="Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+                    <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                      <span class="ltx_tag ltx_tag_theorem">Theorem 3</span>
+                    </h6>
+                    <div id="Thmtheorem3.p1" class="ltx_para">
+                      <p class="ltx_p">
+                        <span class="ltx_text ltx_font_italic">For each <span class="math inline" id="Thmtheorem3.p1.m1">\(C>0\)</span> there is periodic 4-representative with period length <span class="math inline" id="Thmtheorem3.p1.m2">\(\geq C\)</span> and the Jacobi sequence
+<span class="math inline" id="Thmtheorem3.p1.m3">\(\{1\}_{j=1}^{\infty}=1,1,1,\ldots\)</span>
+Furthermore, there are uncountably many non-periodic 4-representatives having this Jacobi sequence.</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div id="Sx1.p9" class="ltx_para">
+                    <p class="ltx_p">Below we shall investigate the Jacobi sequence for numbers like <span class="math inline" id="Sx1.p9.m1">\(e^{2}\)</span>, for which it is periodic with period length 40.
+We shall also make the first steps towards a general theory of Jacobi sequences.
+In particular, we study questions that arise in the context of Theorem <a href="#Thmtheorem3" title="Theorem 3 ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                    <span class="ltx_text ltx_ref_tag">3</span>
+                    </a>, such as: Does every possible period
+length actually occur for some Jacobi sequence? Are there non-periodic Jacobi sequences? Are there short
+sequences of symbols <span class="math inline" id="Sx1.p9.m2">\(\pm 1\)</span> that do not occur as subsequences of Jacobi sequences — for non-obvious reasons?</p>
+                  </div>
+                </section>
+                <section id="Sx2" class="ltx_section">
+                  <h2 class="ltx_title ltx_title_section">1. Proof of Theorem <a href="#Thmtheorem2" title="Theorem 2 ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                    <span class="ltx_text ltx_ref_tag">2</span>
+                  </a>
+                </h2>
+                <div id="Sx2.p1" class="ltx_para">
+                  <p class="ltx_p">Let the above notations hold, in particular <span class="math inline" id="Sx2.p1.m1">\(x=[a_{0},a_{1},a_{2},\ldots]\)</span> (see (<a href="#Sx1.E2" title="(2) ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                    <span class="ltx_text ltx_ref_tag">2</span>
+                  </a>)) and <span class="math inline" id="Sx2.p1.m2">\(s_{k}/t_{k}\)</span> is defined by
+(<a href="#Sx1.E1" title="(1) ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                  <span class="ltx_text ltx_ref_tag">1</span>
+                  </a>).
+We have to show that the symbols <span class="math inline" id="Sx2.p1.m3">\(\left(\frac{s_{k}}{t_{k}}\right)\)</span> and <span class="math inline" id="Sx2.p1.m4">\(\left(\frac{t_{k}}{s_{k}}\right)\)</span> depend only on <span class="math inline" id="Sx2.p1.m5">\(\overline{a_{0}},\ldots,\overline{a_{k}}\in\mathbb{Z}/4\mathbb{Z}\)</span>.
+The proof is by induction over <span class="math inline" id="Sx2.p1.m6">\(k\)</span>.
+In the case <span class="math inline" id="Sx2.p1.m7">\(k=0\)</span> we have <span class="math inline" id="Sx2.p1.m8">\(s_{0}=a_{0},t_{0}=1\)</span>, and so <span class="math inline" id="Sx2.p1.m9">\(\left(\frac{s_{0}}{t_{0}}\right)=1\)</span>
+and</p>
+                  <table id="Sx2.Ex8" class="ltx_equation">
+                    <tr class="ltx_equation ltx_align_baseline">
+                      <td class="ltx_eqn_center_padleft"/>
+                      <td class="ltx_align_center">
+                        <span class="math display" id="Sx2.Ex8.m1">\[\left(\frac{t_{0}}{s_{0}}\right)=\left\{\begin{array}[]{cc}1&amp;\mbox{if }a_{0}%
+\mbox{ is odd},\\
+*&amp;\mbox{otherwise.}\end{array}\right.\]</span>
+                      </td>
+                      <td class="ltx_eqn_center_padright"/>
+                    </tr>
+                  </table>
+                  <p class="ltx_p">For the step from <span class="math inline" id="Sx2.p1.m10">\(k\)</span> to <span class="math inline" id="Sx2.p1.m11">\(k+1\)</span> we put <span class="math inline" id="Sx2.p1.m12">\(s=s_{k}\)</span>, <span class="math inline" id="Sx2.p1.m13">\(t=t_{k}\)</span>, <span class="math inline" id="Sx2.p1.m14">\(p=a_{k+1}\)</span>, <span class="math inline" id="Sx2.p1.m15">\(q=1\)</span>, <span class="math inline" id="Sx2.p1.m16">\(m=s_{k+1}\)</span>, <span class="math inline" id="Sx2.p1.m17">\(n=t_{k+1}\)</span>
+and apply three theorems of <cite class="ltx_cite">[]</cite>. We have to distinguish a number of cases.</p>
+                </div>
+                <div id="Sx2.p2" class="ltx_para">
+                  <p class="ltx_p">
+                    <span class="ltx_text ltx_font_italic">Case 1</span>: <span class="math inline" id="Sx2.p2.m1">\(n=t_{k+1}\)</span> is odd.</p>
+                  </div>
+                  <div id="Sx2.p3" class="ltx_para">
+                    <p class="ltx_p">
+                      (a) Let <span class="math inline" id="Sx2.p3.m1">\(t=t_{k}\)</span> be odd. Then Theorem 1 of 
+                      <cite class="ltx_cite">[]</cite> can be applied, since <span class="math inline" id="Sx2.p3.m2">\(q=1\)</span> is odd.
+It gives</p>
+                      <table id="Sx2.Ex9" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="Sx2.Ex9.m1">\[\left(\frac{-\delta s}{t}\right)\left(\frac{p}{q}\right)\left(\frac{\delta m}{%
+n}\right)=\varepsilon(t,q,n).\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">Here the symbol <span class="math inline" id="Sx2.p3.m3">\(\varepsilon(t,q,n)\)</span> equals 1, if at least two of <span class="math inline" id="Sx2.p3.m4">\(t,q,n\)</span> are <span class="math inline" id="Sx2.p3.m5">\(\equiv 1\)</span> mod 4, and <span class="math inline" id="Sx2.p3.m6">\(-1\)</span>, otherwise.
+Since <span class="math inline" id="Sx2.p3.m7">\(q=1\)</span>, this symbol depends only on <span class="math inline" id="Sx2.p3.m8">\(\overline{t}\)</span>, <span class="math inline" id="Sx2.p3.m9">\(\overline{n}\in\mathbb{Z}/4\mathbb{Z}\)</span>, which, in turn, depend only on
+<span class="math inline" id="Sx2.p3.m10">\(\overline{a_{0}},\ldots,\overline{a_{k+1}}\in\mathbb{Z}/4\mathbb{Z}\)</span>, by (<a href="#Sx1.E1" title="(1) ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                      <span class="ltx_text ltx_ref_tag">1</span>
+                      </a>). On the left hand side we have <span class="math inline" id="Sx2.p3.m11">\(\delta=(-1)^{k}\)</span>,
+hence the Jacobi symbols <span class="math inline" id="Sx2.p3.m12">\(\left(\frac{-\delta}{t}\right)\)</span>, <span class="math inline" id="Sx2.p3.m13">\(\left(\frac{\delta}{n}\right)\)</span> depend only on <span class="math inline" id="Sx2.p3.m14">\(k\)</span> and <span class="math inline" id="Sx2.p3.m15">\(\overline{t}\)</span>, <span class="math inline" id="Sx2.p3.m16">\(\overline{n}\in\mathbb{Z}/4\mathbb{Z}\)</span>,
+i. e., on <span class="math inline" id="Sx2.p3.m17">\(\overline{a_{0}},\ldots,\overline{a_{k+1}}\in\mathbb{Z}/4\mathbb{Z}\)</span>.
+Altogether, we obtain, since <span class="math inline" id="Sx2.p3.m18">\(\left(\frac{p}{q}\right)=1\)</span>,</p>
+                      <table id="Sx2.Ex10" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="Sx2.Ex10.m1">\[\left(\frac{m}{n}\right)=\left(\frac{-\delta}{t}\right)\left(\frac{\delta}{n}%
+\right)\varepsilon(t,q,n)\left(\frac{s}{t}\right).\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">By assumption, <span class="math inline" id="Sx2.p3.m19">\(\left(\frac{s}{t}\right)\)</span> depends only on <span class="math inline" id="Sx2.p3.m20">\(\overline{a_{0}},\ldots,\overline{a_{k}}\in\mathbb{Z}/4\mathbb{Z}\)</span>. As we have seen,
+the remaining quantities on the right hand side depend only on <span class="math inline" id="Sx2.p3.m21">\(\overline{a_{0}},\ldots,\overline{a_{k+1}}\in\mathbb{Z}/4\mathbb{Z}\)</span>,
+which, thus, holds for <span class="math inline" id="Sx2.p3.m22">\(\left(\frac{m}{n}\right)\)</span>.</p>
+                    </div>
+                    <div id="Sx2.p4" class="ltx_para">
+                      <p class="ltx_p">As to the reciprocal symbol <span class="math inline" id="Sx2.p4.m1">\(\left(\frac{n}{m}\right)\)</span>, we have <span class="math inline" id="Sx2.p4.m2">\(\left(\frac{n}{m}\right)=*\)</span>, if <span class="math inline" id="Sx2.p4.m3">\(m\)</span> is even,
+so it depends only on <span class="math inline" id="Sx2.p4.m4">\(\overline{m}\in\mathbb{Z}/4\mathbb{Z}\)</span> and thus on <span class="math inline" id="Sx2.p4.m5">\(\overline{a_{0}},\ldots,\overline{a_{k+1}}\in\mathbb{Z}/4\mathbb{Z}\)</span>.
+If, however, <span class="math inline" id="Sx2.p4.m6">\(m\)</span> is odd, we have, by quadratic reciprocity,</p>
+                      <table id="Sx2.Ex11" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="Sx2.Ex11.m1">\[\left(\frac{n}{m}\right)=\left(\frac{m}{n}\right)\varepsilon(m,n)\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">where <span class="math inline" id="Sx2.p4.m7">\(\varepsilon(m,n)=1\)</span> if <span class="math inline" id="Sx2.p4.m8">\(m\)</span> or <span class="math inline" id="Sx2.p4.m9">\(n\)</span> is <span class="math inline" id="Sx2.p4.m10">\(\equiv 1\)</span> mod 4, and <span class="math inline" id="Sx2.p4.m11">\(\varepsilon(m,n)=-1\)</span>, otherwise.
+Again, <span class="math inline" id="Sx2.p4.m12">\(\left(\frac{n}{m}\right)\)</span> depends only on <span class="math inline" id="Sx2.p4.m13">\(\overline{a_{0}},\ldots,\overline{a_{k+1}}\in\mathbb{Z}/4\mathbb{Z}\)</span>.</p>
+                    </div>
+                    <div id="Sx2.p5" class="ltx_para">
+                      <p class="ltx_p">
+                        (b) Let <span class="math inline" id="Sx2.p5.m1">\(t=t_{k}\)</span> be even. Here we can apply Theorem 2 of 
+                        <cite class="ltx_cite">[]</cite>. If <span class="math inline" id="Sx2.p5.m2">\(m\)</span> is odd, this
+theorem says</p>
+                        <table id="Sx2.E3" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="Sx2.E3.m1">\[\left(\frac{\delta t}{s}\right)\left(\frac{p}{q}\right)\left(\frac{-\delta n}{%
+m}\right)=\varepsilon(s,q,m)\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                            <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                              <span class="ltx_tag ltx_tag_equation">(3)</span>
+                            </td>
+                          </tr>
+                        </table>
+                        <p class="ltx_p">(observe that s is odd). Analogous considerations as in subcase (a) show that <span class="math inline" id="Sx2.p5.m3">\(\left(\frac{n}{m}\right)\)</span> depends only
+<span class="math inline" id="Sx2.p5.m4">\(\overline{a_{0}},\ldots,\overline{a_{k+1}}\in\mathbb{Z}/4\mathbb{Z}\)</span>. Further,</p>
+                        <table id="Sx2.Ex12" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="Sx2.Ex12.m1">\[\left(\frac{m}{n}\right)=\left(\frac{n}{m}\right)\varepsilon(n,m),\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                        <p class="ltx_p">which gives the corresponding assertion for <span class="math inline" id="Sx2.p5.m5">\(\left(\frac{m}{n}\right)\)</span>.
+If <span class="math inline" id="Sx2.p5.m6">\(m\)</span> is even, the symbol <span class="math inline" id="Sx2.p5.m7">\(\left(\frac{n}{m}\right)(=*)\)</span> depends only on <span class="math inline" id="Sx2.p5.m8">\(\overline{m}\in\mathbb{Z}/4\mathbb{Z}\)</span> and, hence only, on
+<span class="math inline" id="Sx2.p5.m9">\(\overline{a_{0}},\ldots,\overline{a_{k+1}}\in\mathbb{Z}/4\mathbb{Z}\)</span>.
+As to <span class="math inline" id="Sx2.p5.m10">
+                        \(\rule{0.0pt}{14.226378pt}\left(\frac{m}{n}\right)\)</span>, we have, by Theorem 2 of 
+                        <cite class="ltx_cite">[]</cite>,</p>
+                        <table id="Sx2.E4" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="Sx2.E4.m1">\[\left(\frac{-\delta s}{s+t}\right)\left(\frac{p}{q}\right)\left(\frac{\delta m%
+}{m+n}\right)=\varepsilon(s+t,q,m+n).\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                            <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                              <span class="ltx_tag ltx_tag_equation">(4)</span>
+                            </td>
+                          </tr>
+                        </table>
+                        <p class="ltx_p">Since <span class="math inline" id="Sx2.p5.m11">\(t\)</span> is even, <span class="math inline" id="Sx2.p5.m12">\(s\)</span> is odd, and, by quadratic reciprocity,</p>
+                        <table id="Sx2.Ex13" class="ltx_equation">
+                          <tr class="ltx_equation ltx_align_baseline">
+                            <td class="ltx_eqn_center_padleft"/>
+                            <td class="ltx_align_center">
+                              <span class="math display" id="Sx2.Ex13.m1">\[\left(\frac{s}{s+t}\right)=\left(\frac{s+t}{s}\right)\varepsilon(s,s+t)=\left(%
+\frac{t}{s}\right)\varepsilon(s,s+t),\]</span>
+                            </td>
+                            <td class="ltx_eqn_center_padright"/>
+                          </tr>
+                        </table>
+                        <p class="ltx_p">so <span class="math inline" id="Sx2.p5.m13">\(\left(\frac{s}{s+t}\right)\)</span> depends only on <span class="math inline" id="Sx2.p5.m14">\(\overline{a_{0}},\ldots,\overline{a_{k}}\in\mathbb{Z}/4\mathbb{Z}\)</span>, because this is true for <span class="math inline" id="Sx2.p5.m15">\(\left(\frac{t}{s}\right)\)</span>.
+Therefore, the identity (<a href="#Sx2.E4" title="(4) ‣ 1. Proof of Theorem 2 ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                        <span class="ltx_text ltx_ref_tag">4</span>
+                      </a>) shows that <span class="math inline" id="Sx2.p5.m16">\(\left(\frac{m}{m+n}\right)\)</span> depends only on <span class="math inline" id="Sx2.p5.m17">\(\overline{a_{0}},\ldots,\overline{a_{k+1}}\in\mathbb{Z}/4\mathbb{Z}\)</span>.
+Since <span class="math inline" id="Sx2.p5.m18">\(n\)</span> is odd and <span class="math inline" id="Sx2.p5.m19">\(m\equiv-n\mbox{ mod }m+n\)</span>, we have
+</p>
+                      <table id="Sx2.Ex14" class="ltx_equation">
+                        <tr class="ltx_equation ltx_align_baseline">
+                          <td class="ltx_eqn_center_padleft"/>
+                          <td class="ltx_align_center">
+                            <span class="math display" id="Sx2.Ex14.m1">\[\left(\frac{m}{m+n}\right)=\left(\frac{-n}{m+n}\right)=\left(\frac{-1}{m+n}%
+\right)\left(\frac{m+n}{n}\right)\varepsilon(n,m+n)=\left(\frac{-1}{m+n}\right%
+)\left(\frac{m}{n}\right)\varepsilon(n,m+n),\]</span>
+                          </td>
+                          <td class="ltx_eqn_center_padright"/>
+                        </tr>
+                      </table>
+                      <p class="ltx_p">where we have used quadratic reciprocity again. But <span class="math inline" id="Sx2.p5.m20">\(\left(\frac{m}{m+n}\right)\)</span> depends only on <span class="math inline" id="Sx2.p5.m21">\(\overline{a_{0}},\ldots,\overline{a_{k+1}}\in\mathbb{Z}/4\mathbb{Z}\)</span>,
+so the same must be true for <span class="math inline" id="Sx2.p5.m22">\(\left(\frac{m}{n}\right)\)</span>.</p>
+                    </div>
+                    <div id="Sx2.p6" class="ltx_para">
+                      <p class="ltx_p">
+                        <span class="ltx_text ltx_font_italic">Case 2</span>: <span class="math inline" id="Sx2.p6.m1">\(n=t_{k+1}\)</span> is even.</p>
+                      </div>
+                      <div id="Sx2.p7" class="ltx_para">
+                        <p class="ltx_p">Then <span class="math inline" id="Sx2.p7.m1">\(\left(\frac{m}{n}\right)=*\)</span>, so it depends only on <span class="math inline" id="Sx2.p7.m2">\(\overline{n}\in\mathbb{Z}/4\mathbb{Z}\)</span> and, thus,
+only on <span class="math inline" id="Sx2.p7.m3">\(\overline{a_{0}},\ldots,\overline{a_{k+1}}\in\mathbb{Z}/4\mathbb{Z}\)</span>. In the case of <span class="math inline" id="Sx2.p7.m4">\(\left(\frac{n}{m}\right)\)</span> we observe that <span class="math inline" id="Sx2.p7.m5">\(t\)</span> must be odd,
+since <span class="math inline" id="Sx2.p7.m6">
+                        \(t_{k},t_{k+1}\)</span> cannot both be even. We apply Theorem 5 of 
+                        <cite class="ltx_cite">[]</cite>.</p>
+                      </div>
+                      <div id="Sx2.p8" class="ltx_para">
+                        <p class="ltx_p">(a) Suppose that <span class="math inline" id="Sx2.p8.m1">\(s\)</span> is odd. Then this theorem says that (<a href="#Sx2.E3" title="(3) ‣ 1. Proof of Theorem 2 ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                          <span class="ltx_text ltx_ref_tag">3</span>
+                        </a>) holds.
+By assumption, <span class="math inline" id="Sx2.p8.m2">\(\left(\frac{t}{s}\right)\)</span> depends only on <span class="math inline" id="Sx2.p8.m3">\(\overline{a_{0}},\ldots,\overline{a_{k}}\in\mathbb{Z}/4\mathbb{Z}\)</span>. As in Part (b) of Case 1,
+(<a href="#Sx2.E3" title="(3) ‣ 1. Proof of Theorem 2 ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                        <span class="ltx_text ltx_ref_tag">3</span>
+                        </a>) shows that <span class="math inline" id="Sx2.p8.m4">\(\left(\frac{n}{m}\right)\)</span> depends only on <span class="math inline" id="Sx2.p8.m5">\(\overline{a_{0}},\ldots,\overline{a_{k+1}}\in\mathbb{Z}/4\mathbb{Z}\)</span>.</p>
+                      </div>
+                      <div id="Sx2.p9" class="ltx_para">
+                        <p class="ltx_p">(b) Let <span class="math inline" id="Sx2.p9.m1">\(s\)</span> be even. By the said theorem, (<a href="#Sx2.E4" title="(4) ‣ 1. Proof of Theorem 2 ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                          <span class="ltx_text ltx_ref_tag">4</span>
+                          </a>)
+holds in this case.
+We use</p>
+                          <table id="Sx2.Ex15" class="ltx_equation">
+                            <tr class="ltx_equation ltx_align_baseline">
+                              <td class="ltx_eqn_center_padleft"/>
+                              <td class="ltx_align_center">
+                                <span class="math display" id="Sx2.Ex15.m1">\[\left(\frac{s}{s+t}\right)=\left(\frac{-t}{s+t}\right)=\left(\frac{-1}{s+t}%
+\right)\left(\frac{s+t}{t}\right)\varepsilon(s,s+t)=\left(\frac{-1}{s+t}\right%
+)\left(\frac{s}{t}\right)\varepsilon(s,s+t),\]</span>
+                              </td>
+                              <td class="ltx_eqn_center_padright"/>
+                            </tr>
+                          </table>
+                          <p class="ltx_p">which shows that <span class="math inline" id="Sx2.p9.m2">\(\left(\frac{s}{s+t}\right)\)</span> depends only on <span class="math inline" id="Sx2.p9.m3">\(\overline{a_{0}},\ldots,\overline{a_{k}}\in\mathbb{Z}/4\mathbb{Z}\)</span>.
+Since <span class="math inline" id="Sx2.p9.m4">\(n\)</span> is even, <span class="math inline" id="Sx2.p9.m5">\(m\)</span> must be odd, and</p>
+                          <table id="Sx2.Ex16" class="ltx_equation">
+                            <tr class="ltx_equation ltx_align_baseline">
+                              <td class="ltx_eqn_center_padleft"/>
+                              <td class="ltx_align_center">
+                                <span class="math display" id="Sx2.Ex16.m1">\[\left(\frac{m}{m+n}\right)=\left(\frac{m+n}{m}\right)\varepsilon(m,m+n)=\left(%
+\frac{n}{m}\right)\varepsilon(m,m+n).\]</span>
+                              </td>
+                              <td class="ltx_eqn_center_padright"/>
+                            </tr>
+                          </table>
+                          <p class="ltx_p">Together with (<a href="#Sx2.E4" title="(4) ‣ 1. Proof of Theorem 2 ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                            <span class="ltx_text ltx_ref_tag">4</span>
+                          </a>), this identity shows that <span class="math inline" id="Sx2.p9.m6">\(\left(\frac{n}{m}\right)\)</span> depends only on
+<span class="math inline" id="Sx2.p9.m7">\(\overline{a_{0}},\ldots,\overline{a_{k+1}}\in\mathbb{Z}/4\mathbb{Z}\)</span>.
+<br class="ltx_break"/>
+                          <span class="ltx_rule" style="width:14.2pt;height:0.0pt;background:black;display:inline-block;"/>
+                          <span class="math inline" id="Sx2.p9.m8">\(\blacksquare\)</span>
+                        </p>
+                      </div>
+                      <div id="Sx2.p10" class="ltx_para">
+                        <p class="ltx_p">
+                          <span class="ltx_text ltx_font_italic">Remark.</span> It would be desirable to have a more elegant proof of Theorem <a href="#Thmtheorem2" title="Theorem 2 ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                            <span class="ltx_text ltx_ref_tag">2</span>
+                            </a>,
+in particular, a proof that avoids the above cases.</p>
+                          </div>
+                        </section>
+                        <section id="Sx3" class="ltx_section">
+                          <h2 class="ltx_title ltx_title_section">2. Jacobi sequences for <span class="math inline" id="Sx3.m1">\(e\)</span> and its relatives</h2>
+                          <div id="Sx3.p1" class="ltx_para">
+                            <p class="ltx_p">
+                              <span class="ltx_text ltx_font_italic">Proof of Theorem 1.</span>
+We start with the 4-representative <span class="math inline" id="Sx3.p1.m1">\(e^{\prime}=[2,\{1,2,1,1,4,1\}_{j=1}^{\infty}]\)</span> of Euler’s number <span class="math inline" id="Sx3.p1.m2">\(e\)</span>.
+The purely periodic number that belongs to <span class="math inline" id="Sx3.p1.m3">\(e^{\prime}\)</span> is <span class="math inline" id="Sx3.p1.m4">\(z=[\{1,2,1,1,4,1\}_{j=1}^{\infty}]\)</span>.
+Let <span class="math inline" id="Sx3.p1.m5">\(s_{k}/t_{k}\)</span> be the convergents of <span class="math inline" id="Sx3.p1.m6">\(z\)</span> and <span class="math inline" id="Sx3.p1.m7">\(L\)</span> an even multiple of the period length 6 of <span class="math inline" id="Sx3.p1.m8">\(z\)</span>.
+Suppose that <span class="math inline" id="Sx3.p1.m9">\(L\)</span> has the property</p>
+                              <table id="Sx3.E5" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="Sx3.E5.m1">\[\left(\begin{array}[]{cc}s_{L-1}&amp;s_{L-2}\\
+t_{L-1}&amp;t_{L-2}\\
+\end{array}\right)\equiv I\mbox{ mod }4,\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                  <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                    <span class="ltx_tag ltx_tag_equation">(5)</span>
+                                  </td>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">where <span class="math inline" id="Sx3.p1.m10">\(I\)</span> is the <span class="math inline" id="Sx3.p1.m11">\(2\times 2\)</span>-unit matrix and the congruence has to be understood entry-by-entry.
+Suppose, further, that</p>
+                              <table id="Sx3.E6" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="Sx3.E6.m1">\[\left(\frac{t_{L-1}}{s_{L-1}}\right)=1.\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                  <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                    <span class="ltx_tag ltx_tag_equation">(6)</span>
+                                  </td>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">
+                                Then Proposition 1 of 
+                                <cite class="ltx_cite">[]</cite> says</p>
+                                <table id="Sx3.E7" class="ltx_equation">
+                                  <tr class="ltx_equation ltx_align_baseline">
+                                    <td class="ltx_eqn_center_padleft"/>
+                                    <td class="ltx_align_center">
+                                      <span class="math display" id="Sx3.E7.m1">\[\left(\frac{s_{k}}{t_{k}}\right)=\left(\frac{s_{k+L}}{t_{k+L}}\right)\]</span>
+                                    </td>
+                                    <td class="ltx_eqn_center_padright"/>
+                                    <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                      <span class="ltx_tag ltx_tag_equation">(7)</span>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <p class="ltx_p">for all <span class="math inline" id="Sx3.p1.m12">\(k\geq 0\)</span>.
+If we choose <span class="math inline" id="Sx3.p1.m13">\(L=24\)</span>, we obtain (observe <span class="math inline" id="Sx3.p1.m14">\(z=(2+2\sqrt{15})/7)\)</span>
+                              </p>
+                              <table id="Sx3.Ex17" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="Sx3.Ex17.m1">\[\left(\begin{array}[]{cc}s_{23}&amp;s_{22}\\
+t_{23}&amp;t_{22}\\
+\end{array}\right)=\left(\begin{array}[]{cc}9286113&amp;7622528\\
+6669712&amp;5474849\\
+\end{array}\right),\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">which is obviously <span class="math inline" id="Sx3.p1.m15">\(\equiv I\)</span> mod 4. Moreover,</p>
+                              <table id="Sx3.Ex18" class="ltx_equation">
+                                <tr class="ltx_equation ltx_align_baseline">
+                                  <td class="ltx_eqn_center_padleft"/>
+                                  <td class="ltx_align_center">
+                                    <span class="math display" id="Sx3.Ex18.m1">\[\left(\frac{t_{23}}{s_{23}}\right)=\left(\frac{6669712}{9286113}\right)=1.\]</span>
+                                  </td>
+                                  <td class="ltx_eqn_center_padright"/>
+                                </tr>
+                              </table>
+                              <p class="ltx_p">Hence (<a href="#Sx3.E7" title="(7) ‣ 2. Jacobi sequences for e and its relatives ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                <span class="ltx_text ltx_ref_tag">7</span>
+                                </a>) holds for <span class="math inline" id="Sx3.p1.m16">\(L=24\)</span>.
+The number <span class="math inline" id="Sx3.p1.m17">\(e^{\prime}\)</span> is mixed periodic, the number 2 forming its pre-period. We denote the sequence of
+its convergents by</p>
+                                <table id="Sx3.Ex19" class="ltx_equation">
+                                  <tr class="ltx_equation ltx_align_baseline">
+                                    <td class="ltx_eqn_center_padleft"/>
+                                    <td class="ltx_align_center">
+                                      <span class="math display" id="Sx3.Ex19.m1">\[\frac{p_{0}}{q_{0}},\frac{s_{0}^{\prime}}{t_{0}^{\prime}},\frac{s_{1}^{\prime}%
+}{t_{1}^{\prime}},\frac{s_{2}^{\prime}}{t_{2}^{\prime}},\ldots,\]</span>
+                                    </td>
+                                    <td class="ltx_eqn_center_padright"/>
+                                  </tr>
+                                </table>
+                                <p class="ltx_p">
+                                  in accordance with the pre-period of length 1. In 
+                                  <cite class="ltx_cite">[]</cite> we have shown that our assumptions on <span class="math inline" id="Sx3.p1.m18">\(L\)</span>
+imply</p>
+                                  <table id="Sx3.Ex20" class="ltx_equation">
+                                    <tr class="ltx_equation ltx_align_baseline">
+                                      <td class="ltx_eqn_center_padleft"/>
+                                      <td class="ltx_align_center">
+                                        <span class="math display" id="Sx3.Ex20.m1">\[\left(\frac{s_{k}^{\prime}}{t_{k}^{\prime}}\right)=\left(\frac{s_{k+L}^{\prime%
+}}{t_{k+L}^{\prime}}\right)\]</span>
+                                      </td>
+                                      <td class="ltx_eqn_center_padright"/>
+                                    </tr>
+                                  </table>
+                                  <p class="ltx_p">for all <span class="math inline" id="Sx3.p1.m19">\(k\geq 0\)</span>.
+In order to prove Theorem <a href="#Thmtheorem1" title="Theorem 1 ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                  <span class="ltx_text ltx_ref_tag">1</span>
+                                  </a>, we have only to compare the Jacobi symbols <span class="math inline" id="Sx3.p1.m20">\(\left(\frac{p_{0}}{q_{0}}\right)\)</span> and <span class="math inline" id="Sx3.p1.m21">\(\left(\frac{s_{23}^{\prime}}{t_{23}^{\prime}}\right)\)</span>.
+Since they have the same value <span class="math inline" id="Sx3.p1.m22">\((=1)\)</span>, the Jacobi sequence of <span class="math inline" id="Sx3.p1.m23">\(e^{\prime}\)</span> is purely periodic with period length 24.
+ <span class="math inline" id="Sx3.p1.m24">\(\blacksquare\)</span>
+                                </p>
+                              </div>
+                              <div id="Sx3.p2" class="ltx_para">
+                                <p class="ltx_p">Next we consider the numbers <span class="math inline" id="Sx3.p2.m1">\(e^{1/n}\)</span> for positive integers <span class="math inline" id="Sx3.p2.m2">\(n\geq 2\)</span>. We obtain</p>
+                              </div>
+                              <div id="Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+                                <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                  <span class="ltx_tag ltx_tag_theorem">Theorem 4</span>
+                                </h6>
+                                <div id="Thmtheorem4.p1" class="ltx_para">
+                                  <p class="ltx_p">
+                                    <span class="ltx_text ltx_font_italic">The Jacobi sequence of <span class="math inline" id="Thmtheorem4.p1.m1">\(e^{1/n}\)</span>, <span class="math inline" id="Thmtheorem4.p1.m2">\(n\geq 2\)</span>, is purely periodic, the smallest possible period length being</span>
+                                  </p>
+                                  <table id="Sx3.Ex21" class="ltx_equation">
+                                    <tr class="ltx_equation ltx_align_baseline">
+                                      <td class="ltx_eqn_center_padleft"/>
+                                      <td class="ltx_align_center">
+                                        <span class="math display" id="Sx3.Ex21.m1">\[\left\{\begin{array}[]{rl}24&amp;\mbox{ if }n\equiv 1,3\mbox{ mod }4,\\
+12&amp;\mbox{ if }n\equiv 2\mbox{ mod }4,\\
+3&amp;\mbox{ if }n\equiv 0\mbox{ mod }4.\end{array}\right.\]</span>
+                                      </td>
+                                      <td class="ltx_eqn_center_padright"/>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                              <div id="Sx3.p3" class="ltx_para">
+                                <p class="ltx_p">
+                                  <span class="ltx_text ltx_font_italic">
+                                    Proof.</span> By 
+                                    <cite class="ltx_cite">[]</cite>, p. 124, <span class="math inline" id="Sx3.p3.m1">\(e^{1/n}=[\{1,n(2j-1)-1,1\}_{j=1}^{\infty}]\)</span>, <span class="math inline" id="Sx3.p3.m2">\(n\geq 2\)</span>.
+Accordingly, the 4-representative of <span class="math inline" id="Sx3.p3.m3">\(e^{1/n}\)</span> is
+<br class="ltx_break"/>
+                                    <span class="ltx_rule" style="width:42.7pt;height:0.0pt;background:black;display:inline-block;"/>
+                                    <span class="ltx_tabular ltx_align_middle">
+                                      <span class="ltx_tbody">
+                                        <span class="ltx_tr">
+                                          <span class="ltx_td ltx_align_left">
+                                            <span class="math inline" id="Sx3.p3.m4">\([\{1,4,1,1,2,1\}_{j=1}^{\infty}]\)</span>
+                                            <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                          </span>
+                                          <span class="ltx_td ltx_align_left">if</span>
+                                          <span class="ltx_td ltx_align_left">
+                                            <span class="math inline" id="Sx3.p3.m5">\(n\equiv 1\mbox{ mod }4\)</span>,</span>
+                                          </span>
+                                          <span class="ltx_tr">
+                                            <span class="ltx_td ltx_align_left">
+                                              <span class="math inline" id="Sx3.p3.m6">\([\{1,2,1,1,4,1\}_{j=1}^{\infty}]\)</span>
+                                              <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                            </span>
+                                            <span class="ltx_td ltx_align_left">if</span>
+                                            <span class="ltx_td ltx_align_left">
+                                              <span class="math inline" id="Sx3.p3.m7">\(n\equiv 3\mbox{ mod }4\)</span>,</span>
+                                            </span>
+                                            <span class="ltx_tr">
+                                              <span class="ltx_td ltx_align_left">
+                                                <span class="math inline" id="Sx3.p3.m8">\([\{1\}_{j=1}^{\infty}]\)</span>
+                                                <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                              </span>
+                                              <span class="ltx_td ltx_align_left">if</span>
+                                              <span class="ltx_td ltx_align_left">
+                                                <span class="math inline" id="Sx3.p3.m9">\(n\equiv 2\mbox{ mod }4\)</span>,</span>
+                                              </span>
+                                              <span class="ltx_tr">
+                                                <span class="ltx_td ltx_align_left">
+                                                  <span class="math inline" id="Sx3.p3.m10">\([\{1,3,1,\}_{j=1}^{\infty}]\)</span>
+                                                  <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                                </span>
+                                                <span class="ltx_td ltx_align_left">if</span>
+                                                <span class="ltx_td ltx_align_left">
+                                                  <span class="math inline" id="Sx3.p3.m11">\(n\equiv 0\mbox{ mod }4\)</span>.</span>
+                                                </span>
+                                              </span>
+                                            </span>
+                                          </p>
+                                        </div>
+                                        <div id="Sx3.p4" class="ltx_para">
+                                          <p class="ltx_p">We investigate the period length of the Jacobi sequences of these four periodic continued fractions
+in the same way as for <span class="math inline" id="Sx3.p4.m1">\(e^{\prime}\)</span>, in particular, we use (<a href="#Sx3.E5" title="(5) ‣ 2. Jacobi sequences for e and its relatives ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                          <span class="ltx_text ltx_ref_tag">5</span>
+                                        </a>) and (<a href="#Sx3.E6" title="(6) ‣ 2. Jacobi sequences for e and its relatives ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                        <span class="ltx_text ltx_ref_tag">6</span>
+                                        </a>) for <span class="math inline" id="Sx3.p4.m2">\(L=24\)</span> if <span class="math inline" id="Sx3.p4.m3">\(n\equiv 1,3\)</span>
+mod 4, for <span class="math inline" id="Sx3.p4.m4">\(L=12\)</span> if <span class="math inline" id="Sx3.p4.m5">\(n\equiv 2\mbox{ mod }4\)</span>, and for <span class="math inline" id="Sx3.p4.m6">\(L=6\)</span> if <span class="math inline" id="Sx3.p4.m7">\(n\equiv 0\mbox{ mod }4\)</span>. In the last-mentioned case it turns out that
+the smallest possible period length is not 6 but 3. Note that these cases are simpler than the case of <span class="math inline" id="Sx3.p4.m8">\(e\)</span> since no
+pre-period occurs.
+ <span class="math inline" id="Sx3.p4.m9">\(\blacksquare\)</span>
+                                      </p>
+                                    </div>
+                                    <div id="Sx3.p5" class="ltx_para">
+                                      <p class="ltx_p">Even simpler than the case of <span class="math inline" id="Sx3.p5.m1">\(e^{1/n}\)</span> is the case of the number <span class="math inline" id="Sx3.p5.m2">\((e^{2/n}+1)/(e^{2/n}-1)\)</span>, <span class="math inline" id="Sx3.p5.m3">\(n\geq 1.\)</span>
+Indeed, we have <span class="math inline" id="Sx3.p5.m4">
+                                      \((e^{2/n}+1)/(e^{2/n}-1)=[n,3n,5n,7n,\ldots]\equiv[\{n,3n\}_{j=1}^{\infty}]\)</span> mod 4 (see 
+                                      <cite class="ltx_cite">[]</cite>, p. 124).
+Accordingly, the 4-representative of this number is
+
+<br class="ltx_break"/>
+                                      <span class="ltx_rule" style="width:42.7pt;height:0.0pt;background:black;display:inline-block;"/>
+                                      <span class="ltx_tabular ltx_align_middle">
+                                        <span class="ltx_tbody">
+                                          <span class="ltx_tr">
+                                            <span class="ltx_td ltx_align_left">
+                                              <span class="math inline" id="Sx3.p5.m5">\([\{1,3\}_{j=1}^{\infty}]\)</span>
+                                              <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                            </span>
+                                            <span class="ltx_td ltx_align_left">if</span>
+                                            <span class="ltx_td ltx_align_left">
+                                              <span class="math inline" id="Sx3.p5.m6">\(n\equiv 1\mbox{ mod }4\)</span>,</span>
+                                            </span>
+                                            <span class="ltx_tr">
+                                              <span class="ltx_td ltx_align_left">
+                                                <span class="math inline" id="Sx3.p5.m7">\([\{3,1\}_{j=1}^{\infty}]\)</span>
+                                                <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                              </span>
+                                              <span class="ltx_td ltx_align_left">if</span>
+                                              <span class="ltx_td ltx_align_left">
+                                                <span class="math inline" id="Sx3.p5.m8">\(n\equiv 3\mbox{ mod }4\)</span>,</span>
+                                              </span>
+                                              <span class="ltx_tr">
+                                                <span class="ltx_td ltx_align_left">
+                                                  <span class="math inline" id="Sx3.p5.m9">\([\{2\}_{j=1}^{\infty}]\)</span>
+                                                  <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                                </span>
+                                                <span class="ltx_td ltx_align_left">if</span>
+                                                <span class="ltx_td ltx_align_left">
+                                                  <span class="math inline" id="Sx3.p5.m10">\(n\equiv 2\mbox{ mod }4\)</span>,</span>
+                                                </span>
+                                                <span class="ltx_tr">
+                                                  <span class="ltx_td ltx_align_left">
+                                                    <span class="math inline" id="Sx3.p5.m11">\([\{4\}_{j=1}^{\infty}]\)</span>
+                                                    <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                                  </span>
+                                                  <span class="ltx_td ltx_align_left">if</span>
+                                                  <span class="ltx_td ltx_align_left">
+                                                    <span class="math inline" id="Sx3.p5.m12">\(n\equiv 0\mbox{ mod }4\)</span>.</span>
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </p>
+                                          </div>
+                                          <div id="Sx3.p6" class="ltx_para">
+                                            <p class="ltx_p">If we inspect these cases in the above way, we obtain
+</p>
+                                          </div>
+                                          <div id="Thmtheorem5" class="ltx_theorem ltx_theorem_theorem">
+                                            <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                              <span class="ltx_tag ltx_tag_theorem">Theorem 5</span>
+                                            </h6>
+                                            <div id="Thmtheorem5.p1" class="ltx_para">
+                                              <p class="ltx_p">
+                                                <span class="ltx_text ltx_font_italic">The Jacobi sequence of <span class="math inline" id="Thmtheorem5.p1.m1">\((e^{1/n}+1)/(e^{1/n}-1)\)</span>, <span class="math inline" id="Thmtheorem5.p1.m2">\(n\geq 2\)</span>, is purely periodic, the smallest possible
+period length being</span>
+                                              </p>
+                                              <table id="Sx3.Ex22" class="ltx_equation">
+                                                <tr class="ltx_equation ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_align_center">
+                                                    <span class="math display" id="Sx3.Ex22.m1">\[\left\{\begin{array}[]{rl}24&amp;\mbox{ if }n\equiv 1,3\mbox{ mod }4,\\
+8&amp;\mbox{ if }n\equiv 2\mbox{ mod }4,\\
+2&amp;\mbox{ if }n\equiv 0\mbox{ mod }4.\end{array}\right.\]</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                              </table>
+                                            </div>
+                                          </div>
+                                          <div id="Sx3.p7" class="ltx_para">
+                                            <p class="ltx_p">
+                                              Finally, we consider the number <span class="math inline" id="Sx3.p7.m1">\(e^{2}=[7,\{2+3(j-1),1,1,3+3(j-1),18+12(j-1)\}_{j=1}^{\infty}]\)</span> (see 
+                                              <cite class="ltx_cite">[]</cite>, p. 125).
+Its 4-representative is</p>
+                                              <table id="Sx3.Ex23" class="ltx_equation">
+                                                <tr class="ltx_equation ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_align_center">
+                                                    <span class="math display" id="Sx3.Ex23.m1">\[e^{\prime\prime}=[3,\{2,1,1,3,2,1,1,1,2,2,4,1,1,1,2,3,1,1,4,2\}_{j=1}^{\infty}],\]</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                              </table>
+                                              <p class="ltx_p">i. e.,
+the quadratic irrational</p>
+                                              <table id="Sx3.Ex24" class="ltx_equation">
+                                                <tr class="ltx_equation ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_align_center">
+                                                    <span class="math display" id="Sx3.Ex24.m1">\[e^{\prime\prime}=\frac{370619+11\sqrt{444198255}}{177718}.\]</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                              </table>
+                                              <p class="ltx_p">As in the case of <span class="math inline" id="Sx3.p7.m2">\(e\)</span> we consider the purely periodic part of <span class="math inline" id="Sx3.p7.m3">\(e^{\prime\prime}\)</span>.
+For this purely periodic number and <span class="math inline" id="Sx3.p7.m4">\(L=40\)</span>, (<a href="#Sx3.E5" title="(5) ‣ 2. Jacobi sequences for e and its relatives ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                              <span class="ltx_text ltx_ref_tag">5</span>
+                                              </a>) holds, namely</p>
+                                              <table id="Sx3.Ex25" class="ltx_equation">
+                                                <tr class="ltx_equation ltx_align_baseline">
+                                                  <td class="ltx_eqn_center_padleft"/>
+                                                  <td class="ltx_align_center">
+                                                    <span class="math display" id="Sx3.Ex25.m1">\[\left(\begin{array}[]{cc}11702972599281&amp;5273785915232\\
+4563573565840&amp;2056512547601\\
+\end{array}\right)\equiv I\mbox{ mod }4.\]</span>
+                                                  </td>
+                                                  <td class="ltx_eqn_center_padright"/>
+                                                </tr>
+                                              </table>
+                                              <p class="ltx_p">Furthermore, (<a href="#Sx3.E6" title="(6) ‣ 2. Jacobi sequences for e and its relatives ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                <span class="ltx_text ltx_ref_tag">6</span>
+                                                </a>) is also fulfilled.
+By the same arguments as in the case of the number <span class="math inline" id="Sx3.p7.m5">\(e\)</span>, we obtain
+that <span class="math inline" id="Sx3.p7.m6">\(40\)</span> is a possible period length of the Jacobi sequence of <span class="math inline" id="Sx3.p7.m7">\(e^{2}\)</span>.
+Indeed, it turns out that this sequence is purely periodic with the period</p>
+                                                <table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray">
+                                                  <tr id="Sx3.Ex26" class="ltx_equation ltx_align_baseline">
+                                                    <td class="ltx_eqn_center_padleft"/>
+                                                    <td class="ltx_td ltx_align_left">
+                                                      <span class="math inline" id="Sx3.Ex26.m3">\(\displaystyle\rule{5.690551pt}{0.0pt}1,*,\rule{5.690551pt}{0.0pt}1,-1,*,\rule{%
+5.690551pt}{0.0pt}1,-1,*,-1,*,\rule{5.690551pt}{0.0pt}1,*,-1,-1,*,-1,-1,*,-1,*\)</span>
+                                                    </td>
+                                                    <td class="ltx_eqn_center_padright"/>
+                                                  </tr>
+                                                  <tr id="Sx3.Ex27" class="ltx_equation ltx_align_baseline">
+                                                    <td class="ltx_eqn_center_padleft"/>
+                                                    <td class="ltx_td ltx_align_left">
+                                                      <span class="math inline" id="Sx3.Ex27.m3">\(\displaystyle-1,*,-1,\rule{5.690551pt}{0.0pt}1,*,-1,\rule{5.690551pt}{0.0pt}1,%
+*,\rule{5.690551pt}{0.0pt}1,*,-1,*,\rule{5.690551pt}{0.0pt}1,\rule{5.690551pt}%
+{0.0pt}1,*,\rule{5.690551pt}{0.0pt}1,\rule{5.690551pt}{0.0pt}1,*,\rule{5.69055%
+1pt}{0.0pt}1,*.\)</span>
+                                                    </td>
+                                                    <td class="ltx_eqn_center_padright"/>
+                                                  </tr>
+                                                </table>
+                                                <p class="ltx_p">As in the case of <span class="math inline" id="Sx3.p7.m8">\(e\)</span>, we see that this period does not consist of subperiods of length 20 or 8.
+Altogether, we obtain</p>
+                                              </div>
+                                              <div id="Thmtheorem6" class="ltx_theorem ltx_theorem_theorem">
+                                                <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                                  <span class="ltx_tag ltx_tag_theorem">Theorem 6</span>
+                                                </h6>
+                                                <div id="Thmtheorem6.p1" class="ltx_para">
+                                                  <p class="ltx_p">
+                                                    <span class="ltx_text ltx_font_italic">The Jacobi sequence of <span class="math inline" id="Thmtheorem6.p1.m1">\(e^{2}\)</span> is purely-periodic
+with smallest possible period length 40.</span>
+                                                  </p>
+                                                </div>
+                                              </div>
+                                              <div id="Sx3.p8" class="ltx_para">
+                                                <p class="ltx_p">
+                                                  <span class="ltx_text ltx_font_italic">Remark.</span> It is not difficult to obtain analogues of Theorem <a href="#Thmtheorem6" title="Theorem 6 ‣ 2. Jacobi sequences for e and its relatives ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                    <span class="ltx_text ltx_ref_tag">6</span>
+                                                  </a> for the numbers
+<span class="math inline" id="Sx3.p8.m1">
+                                                  \(e^{2/(2n+1)}\)</span>, <span class="math inline" id="Sx3.p8.m2">\(n\geq 1\)</span> (their continued fraction expansion can be found in 
+                                                  <cite class="ltx_cite">[]</cite>, p. 125).
+It turns out that the respective 4-representatives
+have to be checked only for the cases <span class="math inline" id="Sx3.p8.m3">\(n=1,2,3,4\)</span>. In each of these cases one obtains
+40 as the smallest possible period length for
+the Jacobi sequence. We leave these details to the reader.</p>
+                                                </div>
+                                              </section>
+                                              <section id="Sx4" class="ltx_section">
+                                                <h2 class="ltx_title ltx_title_section">3. Some period lengths of Jacobi sequences</h2>
+                                                <div id="Sx4.p1" class="ltx_para">
+                                                  <p class="ltx_p">We start with a small table that displays the shortest possible period lengths of the Jacobi sequences of some periodic
+continued fractions.</p>
+                                                </div>
+                                                <div id="Sx4.p2" class="ltx_para">
+                                                  <br class="ltx_break"/>
+                                                  <p class="ltx_p">
+                                                    <span class="ltx_rule" style="width:56.9pt;height:0.0pt;background:black;display:inline-block;"/>
+                                                    <span class="ltx_tabular ltx_align_middle">
+                                                      <span class="ltx_thead">
+                                                        <span class="ltx_tr">
+                                                          <span class="ltx_td ltx_align_left ltx_border_r">
+                                                            <span class="math inline" id="Sx4.p2.m1">\([\{1\}_{j=1}^{\infty}]\)</span>, <span class="math inline" id="Sx4.p2.m2">\([\{3\}_{j=1}^{\infty}]\)</span>
+                                                          </span>
+                                                          <span class="ltx_td ltx_align_center">12</span>
+                                                        </span>
+                                                      </span>
+                                                      <span class="ltx_tbody">
+                                                        <span class="ltx_tr">
+                                                          <span class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+                                                            <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                                            <span class="math inline" id="Sx4.p2.m3">\([\{2\}_{j=1}^{\infty}]\)</span>
+                                                          </span>
+                                                          <span class="ltx_td ltx_align_center ltx_border_t">8</span>
+                                                        </span>
+                                                        <span class="ltx_tr">
+                                                          <span class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+                                                            <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                                            <span class="math inline" id="Sx4.p2.m4">\([\{4\}_{j=1}^{\infty}]\)</span>
+                                                          </span>
+                                                          <span class="ltx_td ltx_align_center ltx_border_t">2</span>
+                                                        </span>
+                                                        <span class="ltx_tr">
+                                                          <span class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+                                                            <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                                            <span class="math inline" id="Sx4.p2.m5">\([1,1,\{4\}_{j=1}^{\infty}]\)</span>
+                                                          </span>
+                                                          <span class="ltx_td ltx_align_center ltx_border_t">1</span>
+                                                        </span>
+                                                        <span class="ltx_tr">
+                                                          <span class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+                                                            <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                                            <span class="math inline" id="Sx4.p2.m6">\([\{1,2,3\}_{j=1}^{\infty}]\)</span>
+                                                          </span>
+                                                          <span class="ltx_td ltx_align_center ltx_border_t">6</span>
+                                                        </span>
+                                                        <span class="ltx_tr">
+                                                          <span class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+                                                            <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                                            <span class="math inline" id="Sx4.p2.m7">\([\{1,2,2\}_{j=1}^{\infty}]\)</span>
+                                                          </span>
+                                                          <span class="ltx_td ltx_align_center ltx_border_t">36</span>
+                                                        </span>
+                                                        <span class="ltx_tr">
+                                                          <span class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+                                                            <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                                            <span class="math inline" id="Sx4.p2.m8">\([\{1,2,2,2\}_{j=1}^{\infty}]\)</span>
+                                                          </span>
+                                                          <span class="ltx_td ltx_align_center ltx_border_t">8</span>
+                                                        </span>
+                                                        <span class="ltx_tr">
+                                                          <span class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+                                                            <span class="ltx_rule" style="width:0.0pt;height:14.2pt;background:black;display:inline-block;"/>
+                                                            <span class="math inline" id="Sx4.p2.m9">\([\{1,3,3\}_{j=1}^{\infty}]\)</span>
+                                                          </span>
+                                                          <span class="ltx_td ltx_align_center ltx_border_t">3</span>
+                                                        </span>
+                                                      </span>
+                                                    </span>
+                                                  </p>
+                                                </div>
+                                                <div id="Sx4.p3" class="ltx_para">
+                                                  <br class="ltx_break"/>
+                                                  <p class="ltx_p">This table shows that the shortest possible period length of a Jacobi sequence may be hard to predict from
+the appearance of the continued fraction. But it leaves the impression that this period length is always a multiple of
+the shortest possible period length of the latter. Theorem <a href="#Thmtheorem3" title="Theorem 3 ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                  <span class="ltx_text ltx_ref_tag">3</span>
+                                                  </a>, however, suggests that this
+impression may be misleading. We are going to prove this theorem now. A fundamental ingredient of the proof
+is the following lemma.</p>
+                                                </div>
+                                                <div id="Thmlemma1" class="ltx_theorem ltx_theorem_lemma">
+                                                  <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                                    <span class="ltx_tag ltx_tag_theorem">Lemma 1</span>
+                                                  </h6>
+                                                  <div id="Thmlemma1.p1" class="ltx_para">
+                                                    <p class="ltx_p">
+                                                      <span class="ltx_text ltx_font_italic">Let <span class="math inline" id="Thmlemma1.p1.m1">\(x=[a_{0},a_{1},a_{2},\ldots]\in\mathbb{R}\smallsetminus\mathbb{Q}\)</span> be such that the denominators <span class="math inline" id="Thmlemma1.p1.m2">\(t_{k}\)</span>
+and <span class="math inline" id="Thmlemma1.p1.m3">\(t_{k+1}\)</span>, <span class="math inline" id="Thmlemma1.p1.m4">\(k\geq 0\)</span>, are odd. Then</span>
+                                                    </p>
+                                                    <table id="Sx4.Ex28" class="ltx_equation">
+                                                      <tr class="ltx_equation ltx_align_baseline">
+                                                        <td class="ltx_eqn_center_padleft"/>
+                                                        <td class="ltx_align_center">
+                                                          <span class="math display" id="Sx4.Ex28.m1">\[\left(\frac{s_{k}}{t_{k}}\right)=\left(\frac{s_{k+1}}{t_{k+1}}\right),\]</span>
+                                                        </td>
+                                                        <td class="ltx_eqn_center_padright"/>
+                                                      </tr>
+                                                    </table>
+                                                    <p class="ltx_p">
+                                                      <span class="ltx_text ltx_font_italic">except when</span>
+                                                    </p>
+                                                    <table id="Sx4.Ex29" class="ltx_equation">
+                                                      <tr class="ltx_equation ltx_align_baseline">
+                                                        <td class="ltx_eqn_center_padleft"/>
+                                                        <td class="ltx_align_center">
+                                                          <span class="math display" id="Sx4.Ex29.m1">\[\left\{\begin{array}[]{l}t_{k}\equiv 1\mbox{ mod }4,\>t_{k+1}\equiv 3\mbox{ %
+mod }4,\>k\mbox{ odd},\\
+t_{k}\equiv 3\mbox{ mod }4,\>t_{k+1}\equiv 1\mbox{ mod }4,\>k\mbox{ even},%
+\rule{0.0pt}{11.381102pt}\end{array}\right.\]</span>
+                                                        </td>
+                                                        <td class="ltx_eqn_center_padright"/>
+                                                      </tr>
+                                                    </table>
+                                                  </div>
+                                                </div>
+                                                <div id="Sx4.p4" class="ltx_para">
+                                                  <p class="ltx_p">in which cases</p>
+                                                  <table id="Sx4.Ex30" class="ltx_equation">
+                                                    <tr class="ltx_equation ltx_align_baseline">
+                                                      <td class="ltx_eqn_center_padleft"/>
+                                                      <td class="ltx_align_center">
+                                                        <span class="math display" id="Sx4.Ex30.m1">\[\left(\frac{s_{k}}{t_{k}}\right)=-\left(\frac{s_{k+1}}{t_{k+1}}\right).\]</span>
+                                                      </td>
+                                                      <td class="ltx_eqn_center_padright"/>
+                                                    </tr>
+                                                  </table>
+                                                </div>
+                                                <div id="Sx4.p5" class="ltx_para">
+                                                  <p class="ltx_p">
+                                                    <span class="ltx_text ltx_font_italic">Proof.</span> As in Section 1, we put <span class="math inline" id="Sx4.p5.m1">\(s=s_{k}\)</span>, <span class="math inline" id="Sx4.p5.m2">\(t=t_{k}\)</span>, <span class="math inline" id="Sx4.p5.m3">\(p=a_{k+1}\)</span>, <span class="math inline" id="Sx4.p5.m4">\(q=1\)</span>, <span class="math inline" id="Sx4.p5.m5">\(m=s_{k+1}\)</span>, <span class="math inline" id="Sx4.p5.m6">\(n=t_{k+1}\)</span> and apply Theorem 1
+of <cite class="ltx_cite">[]</cite>. In our case it says</p>
+                                                    <table id="Sx4.Ex31" class="ltx_equation">
+                                                      <tr class="ltx_equation ltx_align_baseline">
+                                                        <td class="ltx_eqn_center_padleft"/>
+                                                        <td class="ltx_align_center">
+                                                          <span class="math display" id="Sx4.Ex31.m1">\[\left(\frac{-\delta s}{t}\right)\left(\frac{\delta m}{n}\right)=\varepsilon(t,%
+n),\]</span>
+                                                        </td>
+                                                        <td class="ltx_eqn_center_padright"/>
+                                                      </tr>
+                                                    </table>
+                                                    <p class="ltx_p">where <span class="math inline" id="Sx4.p5.m7">\(\delta=(-1)^{k}\)</span>. We have to distinguish eight cases depending on <span class="math inline" id="Sx4.p5.m8">\(t\equiv 1,3\)</span> mod 4,
+<span class="math inline" id="Sx4.p5.m9">\(n\equiv 1,3\)</span> mod 4 and <span class="math inline" id="Sx4.p5.m10">\(k\equiv 0,1\)</span> mod 2. Thereby we obtain the lemma.  <span class="math inline" id="Sx4.p5.m11">\(\blacksquare\)</span>
+                                                  </p>
+                                                </div>
+                                                <div id="Sx4.p6" class="ltx_para">
+                                                  <p class="ltx_p">
+                                                    <span class="ltx_text ltx_font_italic">Proof of Theorem <a href="#Thmtheorem3" title="Theorem 3 ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                      <span class="ltx_text ltx_ref_tag">3</span>
+                                                    </a>
+                                                    </span>.
+Let <span class="math inline" id="Sx4.p6.m1">\(k_{j}\)</span>, <span class="math inline" id="Sx4.p6.m2">\(j\geq 1\)</span>, be a sequence of <span class="ltx_text ltx_font_italic">even</span> natural numbers such that <span class="math inline" id="Sx4.p6.m3">\(k_{1}\geq 6\)</span> and <span class="math inline" id="Sx4.p6.m4">\(k_{j+1}-k_{j}\geq 6\)</span> for
+all <span class="math inline" id="Sx4.p6.m5">\(j\geq 1\)</span>. We put</p>
+                                                    <table id="Sx4.Ex32" class="ltx_equation">
+                                                      <tr class="ltx_equation ltx_align_baseline">
+                                                        <td class="ltx_eqn_center_padleft"/>
+                                                        <td class="ltx_align_center">
+                                                          <span class="math display" id="Sx4.Ex32.m1">\[a_{k}=\left\{\begin{array}[]{ll}1&amp;\mbox{if }k=0,1,\\
+2&amp;\mbox{if }k=k_{j}-1\mbox{ or }k=k_{j}+1\mbox{ for some }j\geq 1,\\
+4&amp;\mbox{ otherwise. }\end{array}\right.\]</span>
+                                                        </td>
+                                                        <td class="ltx_eqn_center_padright"/>
+                                                      </tr>
+                                                    </table>
+                                                    <p class="ltx_p">Let <span class="math inline" id="Sx4.p6.m6">\(x=[a_{0},a_{1},a_{2},\ldots]\)</span> and let <span class="math inline" id="Sx4.p6.m7">\(s_{k}/t_{k}\)</span>, <span class="math inline" id="Sx4.p6.m8">\(k\geq 0\)</span>, be the convergents of <span class="math inline" id="Sx4.p6.m9">\(x\)</span>.
+Then</p>
+                                                    <table id="Sx4.E8" class="ltx_equation">
+                                                      <tr class="ltx_equation ltx_align_baseline">
+                                                        <td class="ltx_eqn_center_padleft"/>
+                                                        <td class="ltx_align_center">
+                                                          <span class="math display" id="Sx4.E8.m1">\[t_{k}\equiv\left\{\begin{array}[]{ll}3\mbox{ mod }4&amp;\mbox{if }k=k_{j}-1\mbox{ %
+for some }j,\\
+1\mbox{ mod }4&amp;\mbox{ otherwise.}\end{array}\right.\]</span>
+                                                        </td>
+                                                        <td class="ltx_eqn_center_padright"/>
+                                                        <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
+                                                          <span class="ltx_tag ltx_tag_equation">(8)</span>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                    <p class="ltx_p">In order to prove (<a href="#Sx4.E8" title="(8) ‣ 3. Some period lengths of Jacobi sequences ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                      <span class="ltx_text ltx_ref_tag">8</span>
+                                                      </a>), we put <span class="math inline" id="Sx4.p6.m10">\(k_{0}=0\)</span> and use induction over <span class="math inline" id="Sx4.p6.m11">\(j\)</span>, <span class="math inline" id="Sx4.p6.m12">\(j\geq 0\)</span>.
+Since <span class="math inline" id="Sx4.p6.m13">\(t_{0}=t_{1}=1\)</span> and <span class="math inline" id="Sx4.p6.m14">\(t_{k}=4t_{k-1}+t_{k-2}\)</span>, we see that <span class="math inline" id="Sx4.p6.m15">\(t_{k}\equiv 1\mbox{ mod }4\)</span> for <span class="math inline" id="Sx4.p6.m16">\(k_{0}+2\leq k\leq k_{1}-2\)</span>.
+Suppose we have shown <span class="math inline" id="Sx4.p6.m17">\(t_{k}\equiv 1\mbox{ mod }4\)</span> for <span class="math inline" id="Sx4.p6.m18">\(k_{j}+2\leq k\leq k_{j+1}-2\)</span> and <span class="math inline" id="Sx4.p6.m19">\(j\geq 0\)</span>.
+Then <span class="math inline" id="Sx4.p6.m20">\(t_{k_{j+1}-1}=2t_{k_{j+1}-2}+t_{k_{j+1}-3}\)</span>, and since <span class="math inline" id="Sx4.p6.m21">\(k_{j+1}-3\geq k_{j}+2\)</span>,
+we have <span class="math inline" id="Sx4.p6.m22">\(t_{k_{j+1}-1}\equiv 2\cdot 1+1\equiv 3\)</span> mod 4. Further,
+<span class="math inline" id="Sx4.p6.m23">\(t_{k_{j+1}}=4t_{k_{j+1}-1}+t_{k_{j+1}-2}\equiv 4\cdot 3+1\equiv 1\)</span> mod 4,
+<span class="math inline" id="Sx4.p6.m24">\(t_{k_{j+1}+1}=2t_{k_{j+1}}+t_{k_{j+1}-1}\equiv 2\cdot 1+3\equiv 1\)</span> mod 4,
+and <span class="math inline" id="Sx4.p6.m25">\(t_{k_{j+1}+2}=4t_{k_{j+1}+1}+t_{k_{j+1}}\equiv 4\cdot 1+1\equiv 1\)</span> mod 4.
+Since <span class="math inline" id="Sx4.p6.m26">\(t_{k}=4t_{k-1}+t_{k-2}\)</span>, <span class="math inline" id="Sx4.p6.m27">\(k_{j+1}+3\leq k\leq k_{j+2}-2\)</span>, we have <span class="math inline" id="Sx4.p6.m28">\(t_{k}\equiv 1\mbox{ mod }4\)</span> for these <span class="math inline" id="Sx4.p6.m29">\(k\)</span>.</p>
+                                                    </div>
+                                                    <div id="Sx4.p7" class="ltx_para">
+                                                      <p class="ltx_p">Because of (<a href="#Sx4.E8" title="(8) ‣ 3. Some period lengths of Jacobi sequences ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                        <span class="ltx_text ltx_ref_tag">8</span>
+                                                      </a>) and Lemma <a href="#Thmlemma1" title="Lemma 1 ‣ 3. Some period lengths of Jacobi sequences ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                      <span class="ltx_text ltx_ref_tag">1</span>
+                                                      </a>,
+<span class="math inline" id="Sx4.p7.m1">\(\left(\frac{s_{k+1}}{t_{k+1}}\right)=-\left(\frac{s_{k}}{t_{k}}\right)\)</span> only if <span class="math inline" id="Sx4.p7.m2">\(k=k_{j}-2\)</span> or <span class="math inline" id="Sx4.p7.m3">\(k=k_{j}-1\)</span>.
+In the first case <span class="math inline" id="Sx4.p7.m4">\(t_{k}\equiv 1\mbox{ mod }4\)</span> and <span class="math inline" id="Sx4.p7.m5">\(k\)</span> is even, so the lemma says that this sign change is impossible.
+In the second case <span class="math inline" id="Sx4.p7.m6">\(t_{k}\equiv 3\mbox{ mod }4\)</span> and <span class="math inline" id="Sx4.p7.m7">\(k\)</span> is odd, which excludes this sign change again. Hence the
+symbol <span class="math inline" id="Sx4.p7.m8">\(\left(\frac{s_{k}}{t_{k}}\right)\)</span> remains constant for all <span class="math inline" id="Sx4.p7.m9">\(k\geq 0\)</span>, and since <span class="math inline" id="Sx4.p7.m10">\(\left(\frac{s_{0}}{t_{0}}\right)=1\)</span>, the Jacobi sequence
+of <span class="math inline" id="Sx4.p7.m11">\(x\)</span> is <span class="math inline" id="Sx4.p7.m12">\(\{1\}_{j=1}^{\infty}\)</span>.
+If we choose the numbers <span class="math inline" id="Sx4.p7.m13">\(k_{j}\)</span> such that <span class="math inline" id="Sx4.p7.m14">\(k_{j+1}-k_{j}=k_{1}\)</span> for all <span class="math inline" id="Sx4.p7.m15">\(j\geq 1\)</span>, the number <span class="math inline" id="Sx4.p7.m16">\(x\)</span> is a periodic
+4-representative with period length <span class="math inline" id="Sx4.p7.m17">\(k_{1}\)</span>, which can be made arbitrarily large. If we choose these numbers such
+that the difference <span class="math inline" id="Sx4.p7.m18">\(k_{j+1}-k_{j}\)</span> tends to infinity for <span class="math inline" id="Sx4.p7.m19">\(j\to\infty\)</span>, the 4-representative <span class="math inline" id="Sx4.p7.m20">\(x\)</span> is not periodic.
+Since there are uncountably many sequences <span class="math inline" id="Sx4.p7.m21">\(k_{1},k_{2},k_{3},\ldots\)</span> with this property, we obtain uncountably many
+4-representatives of this kind.  <span class="math inline" id="Sx4.p7.m22">\(\blacksquare\)</span>
+                                                    </p>
+                                                  </div>
+                                                  <div id="Sx4.p8" class="ltx_para">
+                                                    <p class="ltx_p">A modification of the construction of <span class="math inline" id="Sx4.p8.m1">\(a_{k}\)</span> in the proof of Theorem <a href="#Thmtheorem3" title="Theorem 3 ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                      <span class="ltx_text ltx_ref_tag">3</span>
+                                                      </a> gives the following result.</p>
+                                                    </div>
+                                                    <div id="Thmtheorem7" class="ltx_theorem ltx_theorem_theorem">
+                                                      <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                                        <span class="ltx_tag ltx_tag_theorem">Theorem 7</span>
+                                                      </h6>
+                                                      <div id="Thmtheorem7.p1" class="ltx_para">
+                                                        <p class="ltx_p">
+                                                          <span class="ltx_text ltx_font_italic">For each even number <span class="math inline" id="Thmtheorem7.p1.m1">\(L\geq 2\)</span> there is a periodic 4-representative such that
+its Jacobi sequence has the period <span class="math inline" id="Thmtheorem7.p1.m2">\(1,1,\ldots,1,-1\)</span>, where the number <span class="math inline" id="Thmtheorem7.p1.m3">\(1\)</span> is repeated <span class="math inline" id="Thmtheorem7.p1.m4">\(L-1\)</span> times.
+Furthermore, there are uncountably many non-periodic Jacobi sequences
+belonging to 4-representatives <span class="math inline" id="Thmtheorem7.p1.m5">\(x\in\mathbb{R}\smallsetminus\mathbb{Q}\)</span>.</span>
+                                                        </p>
+                                                      </div>
+                                                    </div>
+                                                    <div id="Sx4.p9" class="ltx_para">
+                                                      <p class="ltx_p">
+                                                        <span class="ltx_text ltx_font_italic">Proof.</span>
+As in the proof of Theorem <a href="#Thmtheorem3" title="Theorem 3 ‣ Introduction ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                        <span class="ltx_text ltx_ref_tag">3</span>
+                                                        </a> let <span class="math inline" id="Sx4.p9.m1">\(k_{j}\)</span>, <span class="math inline" id="Sx4.p9.m2">\(j\geq 1\)</span>, be a sequence of <span class="ltx_text ltx_font_italic">even</span> natural numbers
+such that <span class="math inline" id="Sx4.p9.m3">\(k_{1}\geq 6\)</span> and <span class="math inline" id="Sx4.p9.m4">\(k_{j+1}-k_{j}\geq 6\)</span> for
+all <span class="math inline" id="Sx4.p9.m5">\(j\geq 1\)</span>. We put</p>
+                                                        <table id="Sx4.Ex33" class="ltx_equation">
+                                                          <tr class="ltx_equation ltx_align_baseline">
+                                                            <td class="ltx_eqn_center_padleft"/>
+                                                            <td class="ltx_align_center">
+                                                              <span class="math display" id="Sx4.Ex33.m1">\[a_{k}=\left\{\begin{array}[]{ll}1&amp;\mbox{if }k=0,1,\\
+2&amp;\mbox{if }k=k_{j}\mbox{ or }k=k_{j}+2\mbox{ for some }j\geq 1,\\
+4&amp;\mbox{ otherwise. }\end{array}\right.\]</span>
+                                                            </td>
+                                                            <td class="ltx_eqn_center_padright"/>
+                                                          </tr>
+                                                        </table>
+                                                        <p class="ltx_p">Let <span class="math inline" id="Sx4.p9.m6">\(x=[a_{0},a_{1},a_{2},\ldots]\)</span> and let <span class="math inline" id="Sx4.p9.m7">\(s_{k}/t_{k}\)</span>, <span class="math inline" id="Sx4.p9.m8">\(k\geq 0\)</span>, be the convergents of <span class="math inline" id="Sx4.p9.m9">\(x\)</span>.
+By the arguments of the proof of (<a href="#Sx4.E8" title="(8) ‣ 3. Some period lengths of Jacobi sequences ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                        <span class="ltx_text ltx_ref_tag">8</span>
+                                                        </a>),</p>
+                                                        <table id="Sx4.Ex34" class="ltx_equation">
+                                                          <tr class="ltx_equation ltx_align_baseline">
+                                                            <td class="ltx_eqn_center_padleft"/>
+                                                            <td class="ltx_align_center">
+                                                              <span class="math display" id="Sx4.Ex34.m1">\[t_{k}\equiv\left\{\begin{array}[]{ll}3\mbox{ mod }4&amp;\mbox{if }k=k_{j}\mbox{ %
+for some }j,\\
+1\mbox{ mod }4&amp;\mbox{ otherwise.}\end{array}\right.\]</span>
+                                                            </td>
+                                                            <td class="ltx_eqn_center_padright"/>
+                                                          </tr>
+                                                        </table>
+                                                        <p class="ltx_p">Because of Lemma <a href="#Thmlemma1" title="Lemma 1 ‣ 3. Some period lengths of Jacobi sequences ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                          <span class="ltx_text ltx_ref_tag">1</span>
+                                                          </a>,
+<span class="math inline" id="Sx4.p9.m10">\(\left(\frac{s_{k+1}}{t_{k+1}}\right)=-\left(\frac{s_{k}}{t_{k}}\right)\)</span> only if <span class="math inline" id="Sx4.p9.m11">\(k=k_{j}-1\)</span> or <span class="math inline" id="Sx4.p9.m12">\(k=k_{j}\)</span>.
+In the former case we have <span class="math inline" id="Sx4.p9.m13">\(t_{k}\equiv 1\mbox{ mod }4\)</span>, <span class="math inline" id="Sx4.p9.m14">\(t_{k+1}\equiv 3\mbox{ mod }4\)</span>, and <span class="math inline" id="Sx4.p9.m15">\(k\)</span> is odd, so this sign change actually occurs.
+In the latter case we have <span class="math inline" id="Sx4.p9.m16">\(t_{k}\equiv 3\mbox{ mod }4\)</span>, <span class="math inline" id="Sx4.p9.m17">\(t_{k+1}\equiv 1\mbox{ mod }4\)</span>, and <span class="math inline" id="Sx4.p9.m18">\(k\)</span> is even, so the sign changes again.
+Altogether, <span class="math inline" id="Sx4.p9.m19">\(\left(\frac{s_{k}}{t_{k}}\right)=1\)</span> except for <span class="math inline" id="Sx4.p9.m20">\(k=k_{j}\)</span>, where <span class="math inline" id="Sx4.p9.m21">\(\left(\frac{s_{k}}{t_{k}}\right)=-1\)</span>.</p>
+                                                        </div>
+                                                        <div id="Sx4.p10" class="ltx_para">
+                                                          <p class="ltx_p">As to the first assertion of the theorem, one chooses
+the numbers <span class="math inline" id="Sx4.p10.m1">\(k_{j}\)</span> such that <span class="math inline" id="Sx4.p10.m2">\(k_{j+1}-k_{j}=k_{1}\)</span> for all <span class="math inline" id="Sx4.p10.m3">\(j\geq 1\)</span>. This proves the assertion for even numbers <span class="math inline" id="Sx4.p10.m4">\(L\geq 6\)</span>.
+For <span class="math inline" id="Sx4.p10.m5">\(L=4\)</span>, we put <span class="math inline" id="Sx4.p10.m6">\(x=[1,1,4,\{4,2\}_{j=1}^{\infty}]\)</span>, which has the period <span class="math inline" id="Sx4.p10.m7">\(1,1,1,-1\)</span>,
+and for <span class="math inline" id="Sx4.p10.m8">\(L=2\)</span>,
+we put <span class="math inline" id="Sx4.p10.m9">\(x=[1,1,2,\{4\}_{j=1}^{\infty}]\)</span>, which has the period <span class="math inline" id="Sx4.p10.m10">\(1,-1\)</span> (for all of these numbers <span class="math inline" id="Sx4.p10.m11">\(x\)</span> the Jacobi sequence
+has the pre-period 1).</p>
+                                                        </div>
+                                                        <div id="Sx4.p11" class="ltx_para">
+                                                          <p class="ltx_p">As to the second assertion, we choose <span class="math inline" id="Sx4.p11.m1">\(k_{j}\)</span> such that <span class="math inline" id="Sx4.p11.m2">\(k_{j+1}-k_{j}\)</span> tends to infinity for <span class="math inline" id="Sx4.p11.m3">\(j\to\infty\)</span>. This gives
+uncountably many non-periodic Jacobi sequences.  <span class="math inline" id="Sx4.p11.m4">\(\blacksquare\)</span>
+                                                        </p>
+                                                      </div>
+                                                      <div id="Sx4.p12" class="ltx_para">
+                                                        <p class="ltx_p">Theorem <a href="#Thmtheorem7" title="Theorem 7 ‣ 3. Some period lengths of Jacobi sequences ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                          <span class="ltx_text ltx_ref_tag">7</span>
+                                                        </a> shows that each even number <span class="math inline" id="Sx4.p12.m1">\(L\geq 2\)</span> actually occurs as the period length of some Jacobi sequence.
+Hence the case of odd numbers <span class="math inline" id="Sx4.p12.m2">\(L\)</span> remains to be investigated.
+The period <span class="math inline" id="Sx4.p12.m3">\(1,1,-1\)</span> is impossible (see Theorem <a href="#Thmtheorem9" title="Theorem 9 ‣ 3. Some period lengths of Jacobi sequences ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                        <span class="ltx_text ltx_ref_tag">9</span>
+                                                        </a>). The construction
+of the period <span class="math inline" id="Sx4.p12.m4">\(1,1,\ldots,1,-1\)</span> for the Jacobi sequence is always possible for odd period lengths <span class="math inline" id="Sx4.p12.m5">\(L\geq 5\)</span>,
+but it is considerably more complicated than for even ones. Therefore, we restrict
+ourselves to the following theorem which we obtain in a simpler way.</p>
+                                                      </div>
+                                                      <div id="Thmtheorem8" class="ltx_theorem ltx_theorem_theorem">
+                                                        <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                                          <span class="ltx_tag ltx_tag_theorem">Theorem 8</span>
+                                                        </h6>
+                                                        <div id="Thmtheorem8.p1" class="ltx_para">
+                                                          <p class="ltx_p">
+                                                            <span class="ltx_text ltx_font_italic">For each natural number <span class="math inline" id="Thmtheorem8.p1.m1">\(L\geq 2\)</span> there is a periodic 4-representative such that
+its Jacobi sequence has the period <span class="math inline" id="Thmtheorem8.p1.m2">\(1,1,\ldots,1,*\)</span>, where the number <span class="math inline" id="Thmtheorem8.p1.m3">\(1\)</span> is repeated <span class="math inline" id="Thmtheorem8.p1.m4">\(L-1\)</span> times.</span>
+                                                          </p>
+                                                        </div>
+                                                      </div>
+                                                      <div id="Sx4.p13" class="ltx_para">
+                                                        <p class="ltx_p">
+                                                          <span class="ltx_text ltx_font_italic">Proof.</span> Let <span class="math inline" id="Sx4.p13.m1">\(L\geq 3\)</span>. We put</p>
+                                                          <table id="Sx4.Ex35" class="ltx_equation">
+                                                            <tr class="ltx_equation ltx_align_baseline">
+                                                              <td class="ltx_eqn_center_padleft"/>
+                                                              <td class="ltx_align_center">
+                                                                <span class="math display" id="Sx4.Ex35.m1">\[a_{k}=\left\{\begin{array}[]{ll}1&amp;\mbox{if }k\equiv 0,1\mbox{ mod }L,\\
+3&amp;\mbox{if }k\equiv-1\mbox{ mod }L,\\
+4&amp;\mbox{ otherwise. }\end{array}\right.\]</span>
+                                                              </td>
+                                                              <td class="ltx_eqn_center_padright"/>
+                                                            </tr>
+                                                          </table>
+                                                          <p class="ltx_p">As above, we obtain</p>
+                                                          <table id="Sx4.Ex36" class="ltx_equation">
+                                                            <tr class="ltx_equation ltx_align_baseline">
+                                                              <td class="ltx_eqn_center_padleft"/>
+                                                              <td class="ltx_align_center">
+                                                                <span class="math display" id="Sx4.Ex36.m1">\[t_{k}\equiv\left\{\begin{array}[]{ll}0\mbox{ mod }4&amp;\mbox{if }k\equiv-1\mbox{ %
+mod }L,\\
+1\mbox{ mod }4&amp;\mbox{ otherwise.}\end{array}\right.\]</span>
+                                                              </td>
+                                                              <td class="ltx_eqn_center_padright"/>
+                                                            </tr>
+                                                          </table>
+                                                          <p class="ltx_p">Hence Lemma <a href="#Thmlemma1" title="Lemma 1 ‣ 3. Some period lengths of Jacobi sequences ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                            <span class="ltx_text ltx_ref_tag">1</span>
+                                                          </a> shows that <span class="math inline" id="Sx4.p13.m2">\(\left(\frac{s_{k}}{t_{k}}\right)\)</span> remains constant except in the cases <span class="math inline" id="Sx4.p13.m3">\(k\equiv-1\mbox{ mod }L\)</span>, where
+<span class="math inline" id="Sx4.p13.m4">\(\left(\frac{s_{k}}{t_{k}}\right)=*\)</span>, and <span class="math inline" id="Sx4.p13.m5">\(k\equiv 0\mbox{ mod }L\)</span>, where the lemma cannot be applied. Here, however,
+we put <span class="math inline" id="Sx4.p13.m6">
+                                                          \(s/t=s_{k-2}/t_{k-2}\)</span>, <span class="math inline" id="Sx4.p13.m7">\(p/q=[3,1]=4/1\)</span>, <span class="math inline" id="Sx4.p13.m8">\(m/n=s_{k}/t_{k}\)</span>. Since <span class="math inline" id="Sx4.p13.m9">\(\left(\frac{p}{q}\right)=1\)</span>, Theorem 1 of 
+                                                          <cite class="ltx_cite">[]</cite> yields</p>
+                                                          <table id="Sx4.Ex37" class="ltx_equation">
+                                                            <tr class="ltx_equation ltx_align_baseline">
+                                                              <td class="ltx_eqn_center_padleft"/>
+                                                              <td class="ltx_align_center">
+                                                                <span class="math display" id="Sx4.Ex37.m1">\[\left(\frac{-\delta s}{t}\right)\left(\frac{\delta m}{n}\right)=\varepsilon(t,%
+n).\]</span>
+                                                              </td>
+                                                              <td class="ltx_eqn_center_padright"/>
+                                                            </tr>
+                                                          </table>
+                                                          <p class="ltx_p">Since <span class="math inline" id="Sx4.p13.m10">\(t\equiv n\equiv 1\)</span> mod 4, we obtain <span class="math inline" id="Sx4.p13.m11">\(\left(\frac{m}{n}\right)=\left(\frac{s}{t}\right)\)</span>, i. e., <span class="math inline" id="Sx4.p13.m12">\(\left(\frac{s_{k}}{t_{k}}\right)=\left(\frac{s_{k-2}}{t_{k-2}}\right)\)</span>.
+Accordingly, <span class="math inline" id="Sx4.p13.m13">\(\left(\frac{s_{k}}{t_{k}}\right)=1\)</span> if <span class="math inline" id="Sx4.p13.m14">\(k\not\equiv{-1}\)</span> mod <span class="math inline" id="Sx4.p13.m15">\(L\)</span>, and <span class="math inline" id="Sx4.p13.m16">\(*\)</span>, otherwise.
+In the case <span class="math inline" id="Sx4.p13.m17">\(L=2\)</span>, the Jacobi sequence of <span class="math inline" id="Sx4.p13.m18">\([\{4\}_{j=1}^{\infty}]\)</span> has the desired property.  <span class="math inline" id="Sx4.p13.m19">\(\blacksquare\)</span>
+                                                        </p>
+                                                      </div>
+                                                      <div id="Thmtheorem9" class="ltx_theorem ltx_theorem_theorem">
+                                                        <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+                                                          <span class="ltx_tag ltx_tag_theorem">Theorem 9</span>
+                                                        </h6>
+                                                        <div id="Thmtheorem9.p1" class="ltx_para">
+                                                          <p class="ltx_p">
+                                                            <span class="ltx_text ltx_font_italic">There is no number <span class="math inline" id="Thmtheorem9.p1.m1">\(x\in\mathbb{R}\smallsetminus\mathbb{Q}\)</span> whose Jacobi sequence contains the subsequence
+<span class="math inline" id="Thmtheorem9.p1.m2">\(-1,1,1,-1\)</span>. In particular, <span class="math inline" id="Thmtheorem9.p1.m3">\(1,1,-1\)</span> cannot be the period of the Jacobi sequence of such
+a number <span class="math inline" id="Thmtheorem9.p1.m4">\(x\)</span>.</span>
+                                                          </p>
+                                                        </div>
+                                                      </div>
+                                                      <div id="Sx4.p14" class="ltx_para">
+                                                        <p class="ltx_p">
+                                                          <span class="ltx_text ltx_font_italic">Proof.</span> Suppose <span class="math inline" id="Sx4.p14.m1">\(\left(\frac{s_{k}}{t_{k}}\right)=-1\)</span>, <span class="math inline" id="Sx4.p14.m2">\(\left(\frac{s_{k+1}}{t_{k+1}}\right)=\left(\frac{s_{k+2}}{t_{k+2}}\right)=1\)</span>,
+<span class="math inline" id="Sx4.p14.m3">\(\left(\frac{s_{k+3}}{t_{k+3}}\right)=-1\)</span>.</p>
+                                                        </div>
+                                                        <div id="Sx4.p15" class="ltx_para">
+                                                          <p class="ltx_p">
+                                                            <span class="ltx_text ltx_font_italic">Case 1.</span> Let <span class="math inline" id="Sx4.p15.m1">\(k\)</span> be odd. Then <span class="math inline" id="Sx4.p15.m2">\(k+2\)</span> is also odd and due to the sign change from <span class="math inline" id="Sx4.p15.m3">\(k+2\)</span> to <span class="math inline" id="Sx4.p15.m4">\(k+3\)</span>,
+<span class="math inline" id="Sx4.p15.m5">\(t_{k+2}\equiv 1\mbox{ mod }4\)</span>, by Lemma <a href="#Thmlemma1" title="Lemma 1 ‣ 3. Some period lengths of Jacobi sequences ‣ The Period Length of Euler’s Number e" class="ltx_ref">
+                                                            <span class="ltx_text ltx_ref_tag">1</span>
+                                                            </a>. Since <span class="math inline" id="Sx4.p15.m6">\(k+1\)</span> is even, <span class="math inline" id="Sx4.p15.m7">\(t_{k+1}\equiv 1\mbox{ mod }4\)</span>,
+for otherwise there would be a sign change from <span class="math inline" id="Sx4.p15.m8">\(k+1\)</span> to <span class="math inline" id="Sx4.p15.m9">\(k+2\)</span>, which is not the case.
+Finally, <span class="math inline" id="Sx4.p15.m10">\(k\)</span> is odd, and since there is a sign change from <span class="math inline" id="Sx4.p15.m11">\(k\)</span> to <span class="math inline" id="Sx4.p15.m12">\(k+1\)</span>, we obtain <span class="math inline" id="Sx4.p15.m13">\(t_{k}\equiv 1\mbox{ mod }4\)</span>,
+<span class="math inline" id="Sx4.p15.m14">\(t_{k+1}\equiv 3\mbox{ mod }4\)</span>. This, however, contradicts <span class="math inline" id="Sx4.p15.m15">\(t_{k+1}\equiv 1\mbox{ mod }4\)</span>.</p>
+                                                          </div>
+                                                          <div id="Sx4.p16" class="ltx_para">
+                                                            <p class="ltx_p">
+                                                              <span class="ltx_text ltx_font_italic">Case 2.</span> Let <span class="math inline" id="Sx4.p16.m1">\(k\)</span> be even. Then <span class="math inline" id="Sx4.p16.m2">\(k+2\)</span> is also even and the sign change from <span class="math inline" id="Sx4.p16.m3">\(k+2\)</span> to <span class="math inline" id="Sx4.p16.m4">\(k+3\)</span>
+requires <span class="math inline" id="Sx4.p16.m5">\(t_{k+2}\equiv 3\mbox{ mod }4\)</span>.
+Now <span class="math inline" id="Sx4.p16.m6">\(k+1\)</span> is odd, and since there is no sign change
+from <span class="math inline" id="Sx4.p16.m7">\(k+1\)</span> to <span class="math inline" id="Sx4.p16.m8">\(k+2\)</span>, we have <span class="math inline" id="Sx4.p16.m9">\(t_{k+1}\equiv 3\mbox{ mod }4\)</span>. But <span class="math inline" id="Sx4.p16.m10">\(k\)</span> is even and there is a sign change from
+<span class="math inline" id="Sx4.p16.m11">\(k\)</span> to <span class="math inline" id="Sx4.p16.m12">\(k+1\)</span>, so <span class="math inline" id="Sx4.p16.m13">\(t_{k}\equiv 3\mbox{ mod }4\)</span> and <span class="math inline" id="Sx4.p16.m14">\(t_{k+1}\equiv 1\mbox{ mod }4\)</span>. This is a contradiction again.  <span class="math inline" id="Sx4.p16.m15">\(\blacksquare\)</span>
+                                                            </p>
+                                                          </div>
+                                                          <div id="Sx4.p17" class="ltx_para">
+                                                            <p class="ltx_p">
+                                                              <span class="ltx_text ltx_font_italic">Remark.</span> The proof also shows that <span class="math inline" id="Sx4.p17.m1">\(1,-1,-1,1\)</span> is an impossible subsequence of a Jacobi sequence.</p>
+                                                            </div>
+                                                          </section>
+                                                          <div id="p1" class="ltx_para">
+                                                            <p class="ltx_p">Kurt Girstmair 
+<br class="ltx_break"/>Institut für Mathematik 
+<br class="ltx_break"/>Universität Innsbruck 
+<br class="ltx_break"/>Technikerstr. 13/7 
+<br class="ltx_break"/>A-6020 Innsbruck, Austria 
+<br class="ltx_break"/>Kurt.Girstmair@uibk.ac.at</p>
+                                                          </div>
+                                                        </article>
+                                                      </div>
+                                                      <footer class="ltx_page_footer">
+                                                        <div class="ltx_page_logo">Generated  on Thu Jan 19 18:36:46 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"/>
+                                                        </a>
+                                                      </div>
+                                                    </footer>
+                                                  </div>
+                                                </body>
+                                              </html>
