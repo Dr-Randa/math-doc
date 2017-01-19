@@ -1,1 +1,1 @@
-HTML files with MathML generated with latexmlpost
+HTML files with MathML generated with latexmlpost.
